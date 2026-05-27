@@ -10,10 +10,6 @@
 
   <ItemGroup>
     <Folder Include="App\DbHelper\" />
-    <Folder Include="App\Controllers\" />
-    <Folder Include="App\Models\" />
-    <Folder Include="App\Views\User\" />
-    <Folder Include="App\Views\Admin\" />
   </ItemGroup>
 
 </Project>
