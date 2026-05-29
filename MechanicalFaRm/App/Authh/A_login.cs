@@ -10,6 +10,7 @@ namespace MechanicalFaRm.App.Authh
         public A_login()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
             username = "rossi";
             password = "rossi123";
             //this._dashboarduser = dashboardUser;
@@ -80,6 +81,11 @@ namespace MechanicalFaRm.App.Authh
             {
                 MessageBox.Show("Pssword atau Usernamw salah. Silahkan Login ulang", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
