@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\mechanicalfarm\\app\\views\\v_dashboarduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|c:\\users\\advan\\source\\repos\\mechanicalfarm\\mechanicalfarm\\app\\dbhelper\\dbconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\dbhelper\\dbconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|c:\\users\\advan\\source\\repos\\mechanicalfarm\\mechanicalfarm\\app\\views\\v_dashboarduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\views\\v_dashboarduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -11,7 +15,7 @@
       "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\views\\v_dashboarduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|c:\\users\\advan\\source\\repos\\mechanicalfarm\\mechanicalfarm\\app\\authh\\a_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\mechanicalfarm\\app\\authh\\a_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\authh\\a_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -42,11 +46,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\Program.cs",
               "RelativeDocumentMoniker": "MechanicalFaRm\\Program.cs",
@@ -59,15 +63,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "A_login.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Authh\\A_login.cs",
-              "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Authh\\A_login.cs",
-              "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Authh\\A_login.cs [Design]",
-              "RelativeToolTip": "MechanicalFaRm\\App\\Authh\\A_login.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "dbconnect.cs",
+              "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\DbHelper\\dbconnect.cs",
+              "RelativeDocumentMoniker": "MechanicalFaRm\\App\\DbHelper\\dbconnect.cs",
+              "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\DbHelper\\dbconnect.cs",
+              "RelativeToolTip": "MechanicalFaRm\\App\\DbHelper\\dbconnect.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-29T20:21:00.677Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-30T01:26:53.072Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -91,7 +96,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
+              "Title": "A_login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Authh\\A_login.cs",
+              "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Authh\\A_login.cs",
+              "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Authh\\A_login.cs [Design]",
+              "RelativeToolTip": "MechanicalFaRm\\App\\Authh\\A_login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-29T20:21:00.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "MechanicalFaRm.csproj",
               "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\MechanicalFaRm.csproj",
               "RelativeDocumentMoniker": "MechanicalFaRm\\MechanicalFaRm.csproj",
@@ -99,12 +115,11 @@
               "RelativeToolTip": "MechanicalFaRm\\MechanicalFaRm.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-29T01:00:01.641Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-29T01:00:01.641Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "M_user.cs",
               "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Models\\M_user.cs",
               "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Models\\M_user.cs",
@@ -112,12 +127,11 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Models\\M_user.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-27T23:03:18.562Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-27T23:03:18.562Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "A_login.cs",
               "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Authh\\A_login.cs",
               "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Authh\\A_login.cs",
@@ -125,12 +139,11 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Authh\\A_login.cs",
               "ViewState": "AgIAAC4AAAAAAAAAAAAvwDgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T18:21:29.006Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-28T18:21:29.006Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "V_dashboardUser.cs",
               "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_dashboardUser.cs",
               "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Views\\V_dashboardUser.cs",
@@ -143,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "V_dashboardUser.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_dashboardUser.cs",
               "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Views\\V_dashboardUser.cs",
@@ -155,7 +168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "A_login.Designer.cs",
               "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Authh\\A_login.Designer.cs",
               "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Authh\\A_login.Designer.cs",
@@ -163,8 +176,7 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Authh\\A_login.Designer.cs",
               "ViewState": "AgIAAFIAAAAAAAAAAAAIwF0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-27T22:39:04.731Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-27T22:39:04.731Z"
             }
           ]
         }
