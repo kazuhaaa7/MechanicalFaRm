@@ -4,6 +4,12 @@
     <Compile Update="App\Authh\A_login.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="App\Authh\A_regis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="App\Views\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="App\Views\V_dashboardUser.cs">
       <SubType>Form</SubType>
     </Compile>

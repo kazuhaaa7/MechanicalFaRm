@@ -1,4 +1,4 @@
-using MechanicalFaRm.App.Authh;
+using MechanicalFaRm.App.Views;
 
 namespace MechanicalFaRm
 {
@@ -13,7 +13,7 @@ namespace MechanicalFaRm
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new A_login());
+            Application.Run(new MainForm());
 
         }
     }

@@ -31,66 +31,111 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(A_login));
             panel1 = new Panel();
             panel2 = new Panel();
-            btnCancel = new Button();
-            tbPassword = new TextBox();
+            btnRegist = new Button();
+            panel3 = new Panel();
             tbUsername = new TextBox();
+            panel4 = new Panel();
+            tbPassword = new TextBox();
+            btnCancel = new Button();
             btnLogin = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            panel4.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.Transparent;
             panel1.Controls.Add(panel2);
-            panel1.Location = new Point(0, 3);
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1527, 978);
+            panel1.Size = new Size(1527, 981);
             panel1.TabIndex = 0;
             // 
             // panel2
             // 
+            panel2.Controls.Add(btnRegist);
+            panel2.Controls.Add(panel3);
+            panel2.Controls.Add(panel4);
             panel2.Controls.Add(btnCancel);
-            panel2.Controls.Add(tbPassword);
-            panel2.Controls.Add(tbUsername);
             panel2.Controls.Add(btnLogin);
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(479, 978);
+            panel2.Size = new Size(631, 981);
             panel2.TabIndex = 0;
+            // 
+            // btnRegist
+            // 
+            btnRegist.BackColor = Color.Silver;
+            btnRegist.BackgroundImage = (Image)resources.GetObject("btnRegist.BackgroundImage");
+            btnRegist.BackgroundImageLayout = ImageLayout.Stretch;
+            btnRegist.CausesValidation = false;
+            btnRegist.Location = new Point(440, 855);
+            btnRegist.Name = "btnRegist";
+            btnRegist.Size = new Size(180, 71);
+            btnRegist.TabIndex = 8;
+            btnRegist.UseVisualStyleBackColor = false;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.Moccasin;
+            panel3.Controls.Add(tbUsername);
+            panel3.Location = new Point(237, 582);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(383, 59);
+            panel3.TabIndex = 7;
+            // 
+            // tbUsername
+            // 
+            tbUsername.BackColor = Color.Moccasin;
+            tbUsername.BorderStyle = BorderStyle.None;
+            tbUsername.Location = new Point(18, 19);
+            tbUsername.Name = "tbUsername";
+            tbUsername.Size = new Size(350, 20);
+            tbUsername.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            panel4.BackColor = Color.Moccasin;
+            panel4.Controls.Add(tbPassword);
+            panel4.Location = new Point(237, 704);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(383, 59);
+            panel4.TabIndex = 6;
+            // 
+            // tbPassword
+            // 
+            tbPassword.BackColor = Color.Moccasin;
+            tbPassword.BorderStyle = BorderStyle.None;
+            tbPassword.ForeColor = SystemColors.ActiveBorder;
+            tbPassword.Location = new Point(18, 23);
+            tbPassword.Name = "tbPassword";
+            tbPassword.Size = new Size(350, 20);
+            tbPassword.TabIndex = 2;
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(215, 575);
+            btnCancel.Location = new Point(237, 787);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(115, 34);
             btnCancel.TabIndex = 3;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = true;
-            // 
-            // tbPassword
-            // 
-            tbPassword.Location = new Point(176, 821);
-            tbPassword.Name = "tbPassword";
-            tbPassword.Size = new Size(230, 27);
-            tbPassword.TabIndex = 2;
-            // 
-            // tbUsername
-            // 
-            tbUsername.Location = new Point(176, 660);
-            tbUsername.Name = "tbUsername";
-            tbUsername.Size = new Size(230, 27);
-            tbUsername.TabIndex = 1;
+            btnCancel.Click += btnCancel_Click;
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(176, 925);
+            btnLogin.BackColor = Color.Silver;
+            btnLogin.BackgroundImage = (Image)resources.GetObject("btnLogin.BackgroundImage");
+            btnLogin.BackgroundImageLayout = ImageLayout.Stretch;
+            btnLogin.CausesValidation = false;
+            btnLogin.Location = new Point(228, 855);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(230, 50);
+            btnLogin.Size = new Size(180, 71);
             btnLogin.TabIndex = 0;
-            btnLogin.Text = "Login";
-            btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
             // 
             // A_login
@@ -108,7 +153,10 @@
             Load += A_login_Load;
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -123,5 +171,8 @@
         private TextBox tbPassword;
         private TextBox tbUsername;
         private Button btnCancel;
+        private Panel panel3;
+        private Panel panel4;
+        private Button btnRegist;
     }
 }

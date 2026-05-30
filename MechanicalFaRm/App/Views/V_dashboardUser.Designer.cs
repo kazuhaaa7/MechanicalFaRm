@@ -92,12 +92,17 @@
             // 
             // button5
             // 
-            button5.Location = new Point(31, 30);
+            button5.BackColor = Color.IndianRed;
+            button5.BackgroundImage = (Image)resources.GetObject("button5.BackgroundImage");
+            button5.BackgroundImageLayout = ImageLayout.Stretch;
+            button5.ForeColor = SystemColors.ActiveCaptionText;
+            button5.Location = new Point(29, 16);
             button5.Name = "button5";
-            button5.Size = new Size(314, 242);
+            button5.Size = new Size(328, 260);
             button5.TabIndex = 0;
             button5.Text = "button5";
-            button5.UseVisualStyleBackColor = true;
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // panel3
             // 
@@ -129,6 +134,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             Name = "V_dashboardUser";
             Text = "dashboardUser";
             Load += V_dashboardUser_Load;
