@@ -1,14 +1,23 @@
-﻿namespace database_mechanical_farm.Models
+﻿namespace MechanicalFaRm.App.Models
 {
-    public class m_Barang
+    internal class M_Barang
     {
-        public int id_barang { get; set; }
-        public int id_users { get; set; }
+        public int idBarang;
+        public int idUsers;
+        public string namaBarang;
+        public string deskripsi;
+        public int hargaSewa;
+        public decimal stok;
 
-        public string nama_barang { get; set; }
-        public string deskripsi { get; set; }
-
-        public int harga_sewa { get; set; }
-        public decimal stok { get; set; }
+        public M_Barang(int idbarang, int idusers, string namabarang,
+                        string deskripsi, int hargasewa, decimal stok)
+        {
+            this.idBarang = idbarang;
+            this.idUsers = idusers;
+            this.namaBarang = namabarang;
+            this.deskripsi = deskripsi;
+            this.hargaSewa = hargasewa;
+            this.stok = stok;
+        }
     }
 }
