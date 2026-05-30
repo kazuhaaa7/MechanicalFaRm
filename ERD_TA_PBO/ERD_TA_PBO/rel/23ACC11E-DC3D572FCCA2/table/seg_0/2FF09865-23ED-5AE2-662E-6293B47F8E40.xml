@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2FF09865-23ED-5AE2-662E-6293B47F8E40" name="user">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>784D0154-FFC9-FE76-C517-AA53E6B83FFC</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_user" id="14D1A06D-23D6-1622-ECB5-9A2FCE6BC443">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>B1B235E4-5F7C-EBDA-E6FD-4E65B6D42985</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="username" id="D2D93AE2-D7A0-9CA3-4577-197FFC869570">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>3A59EDEF-F42C-24BA-7E13-43FA4859BCAD</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="passsword" id="38BC66C8-AE56-47FA-C3FB-1D7B668C5712">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>DDEF8CC9-62CB-03C9-6442-35EBA8A30E3C</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="no_telp" id="3BA92520-684A-F249-D494-83F196B50EB7">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>F2F35317-CA27-AA91-08C4-0E5A0CF9CF8D</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipe_pengguna" id="033ABFEB-C967-8E89-AF17-9980D55190BC">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>714879E5-AF79-938C-50D2-57305617BE01</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3866B125-8E91-D705-031E-D491684B1228" name="user_PK">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>177CADAA-36AE-4140-F045-0C4ABE629A6B</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="14D1A06D-23D6-1622-ECB5-9A2FCE6BC443"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A0B101FA-350A-5870-4627-C67933E5E392" name="user_no_telp_UN">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>5F949CEF-BD4E-0577-CCAF-A15A27ED48C6</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3BA92520-684A-F249-D494-83F196B50EB7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

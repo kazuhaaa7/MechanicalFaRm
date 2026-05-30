@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6E6FCE8D-EDB8-2D89-DBAF-61BCFFC0A341" name="pesanan">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 21:01:08 UTC</createdTime>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<engineerTo>
+<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_pesanan" id="26D635EB-C7FB-8F81-651F-1C7C70BCF908">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 22:49:51 UTC</createdTime>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<engineerTo>
+<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="status_pesanan" id="B12DE388-5C61-25A8-E147-565A7FFE9930">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 22:50:16 UTC</createdTime>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<engineerTo>
+<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tanggal_pesanan" id="8DC27AA4-6483-59DA-6241-79CD6A608A98">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 22:51:45 UTC</createdTime>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<engineerTo>
+<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_customer" id="DAAF0676-7C67-D632-EB68-C74D2D9E1B33">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:09:02 UTC</createdTime>
+<generatorID>9416E3F9-D3AB-58B2-FF03-E4CEED9987AD</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<engineerTo>
+<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
+</engineerTo>
+<referedAttribute>B06E14CA-BA13-7D3A-ED39-7767F9C0B05B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5B607038-4BE1-F2C4-503B-167975D91A08" name="pesanan PK">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 22:50:01 UTC</createdTime>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<engineerTo>
+<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>26D635EB-C7FB-8F81-651F-1C7C70BCF908</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

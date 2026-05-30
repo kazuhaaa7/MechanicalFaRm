@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="94719C8B-6762-8412-87BF-6DAF6E20C1F5" name="barang">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>EBCF1E22-5E23-A15B-F840-766630122CB4</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_barang" id="2753457D-F842-1AF0-BCBB-9F6D781886A9">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>AB264033-558A-91F9-3B42-9D5472109867</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nama_barang" id="7B188EFD-4751-BC05-E3E3-370DBA4ECC4D">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>D97730BE-0BCE-2C8B-12E3-D28DB0CC3958</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="deskripsi" id="889A3D47-ADC1-39D0-32CE-A234E5DA7E11">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>74131089-354C-63DD-4E30-AFC6EB398BDC</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="harga_sewa" id="521FDE11-0331-42BF-8EBC-0BB0F2BF937F">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>59FB31C7-DB5F-3D3C-A9A1-1B4D108476C5</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="stok" id="2B499793-1C4A-7C91-AE67-11640EAE50CF">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>3E2F7592-2B7D-7D4B-954E-04DFA01062FD</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="admin_id_admin" id="FABE58D4-F781-D2A3-D6E4-B28161BFC5BE">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>C5136985-CD3A-67EB-C63A-A9074AC9AF9D</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5FF512AE-3DA8-46C1-3523-A0903168A153" referredColumn="C4799F4D-4715-30E4-CB26-50D3B702243F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="835CF78E-C209-2A8A-868C-2131D7AC76C8" name="barang_PK">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>D5E1E483-9457-8308-D400-C56ADA486879</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2753457D-F842-1AF0-BCBB-9F6D781886A9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="46B2757F-9504-B1AD-F67B-9F4650B3E33C" name="barang_admin_FK">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>6DC6B2F5-C80E-DE04-2BA8-18882D7CE052</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FABE58D4-F781-D2A3-D6E4-B28161BFC5BE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

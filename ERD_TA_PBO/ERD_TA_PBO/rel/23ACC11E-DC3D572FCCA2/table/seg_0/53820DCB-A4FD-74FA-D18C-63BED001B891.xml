@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="53820DCB-A4FD-74FA-D18C-63BED001B891" name="customer">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>8849DFF8-E121-91DD-CF5E-C837CD4208E4</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_user" id="4D9BF835-D4C0-C14B-6E96-6892CF89ACC5">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>B1B235E4-5F7C-EBDA-E6FD-4E65B6D42985</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A9DFBFF5-7373-6F5E-A59F-C260E3246E19" referredColumn="14D1A06D-23D6-1622-ECB5-9A2FCE6BC443"/>
+</associations>
+</Column>
+<Column name="id_customer" id="4BBD93BB-26FF-DBCC-4769-26CB6068C05F">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>B06E14CA-BA13-7D3A-ED39-7767F9C0B05B</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="alamat" id="971314FD-96F4-7BAA-293C-48C3484958CB">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>BD5F576F-D6F8-4050-B451-F84037E2677B</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nama_customer" id="36DA0FD8-D3C4-12EA-A5A2-B1732CC411F6">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>CDB2C782-5B63-19DB-2762-1977999A8150</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C0B0BAEE-ACDE-469D-7397-5C6EE3BD5ED7" name="customer_PK">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>177CADAA-36AE-4140-F045-0C4ABE629A6B</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4D9BF835-D4C0-C14B-6E96-6892CF89ACC5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E96474FC-B3D2-94E8-1CF2-F005E9D5CA0E" name="customer_PKv1">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>766E80DE-0D77-A27C-38F4-2CF383E584C2</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4BBD93BB-26FF-DBCC-4769-26CB6068C05F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F5A1C180-01E9-1AE6-742E-E4D2FB64BBF4" name="customer_user_FK">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>647A62D8-EB50-44D6-F881-D315A53AC0F8</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4D9BF835-D4C0-C14B-6E96-6892CF89ACC5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

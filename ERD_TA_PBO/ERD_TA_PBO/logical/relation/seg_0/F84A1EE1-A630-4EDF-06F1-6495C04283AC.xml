@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_4" directorySegmentName="seg_0" id="F84A1EE1-A630-4EDF-06F1-6495C04283AC">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:14:38 UTC</createdTime>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<engineerTo>
+<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
+</engineerTo>
+<sourcePk>C292C8A2-30FB-865D-57B5-44BE7749DE08</sourcePk>
+<targetPk>D5E1E483-9457-8308-D400-C56ADA486879</targetPk>
+<identifying>false</identifying>
+<nameOnSource>berisi</nameOnSource>
+<nameOnTarget>dicatat</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>791F20DC-95B4-7FDC-6A98-7E44556A8ED9</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>EBCF1E22-5E23-A15B-F840-766630122CB4</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

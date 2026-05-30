@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E8072208-BDBE-664E-319C-DD7C275D1991" name="pesanan">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>6E6FCE8D-EDB8-2D89-DBAF-61BCFFC0A341</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_pesanan" id="7FB00B66-CEF4-0949-DBB1-D3C4D067A0F9">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>26D635EB-C7FB-8F81-651F-1C7C70BCF908</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="status_pesanan" id="BF328160-B21A-6F59-F8D0-0E8C3999093E">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>B12DE388-5C61-25A8-E147-565A7FFE9930</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tanggal_pesanan" id="A185F693-A192-4F13-8DC1-89B00600A48D">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>8DC27AA4-6483-59DA-6241-79CD6A608A98</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="customer_id_customer" id="F54F7A73-677B-454F-EE05-0FBFBB453356">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>DAAF0676-7C67-D632-EB68-C74D2D9E1B33</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0915E13E-2D99-C6B5-98E9-A19A1678F169" referredColumn="4BBD93BB-26FF-DBCC-4769-26CB6068C05F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="53E07E57-047F-9AF3-6ADF-6D52D5C8BA46" name="pesanan_PK">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>5B607038-4BE1-F2C4-503B-167975D91A08</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7FB00B66-CEF4-0949-DBB1-D3C4D067A0F9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6B9D37BA-382F-712F-FDF1-18B6E332610B" name="pesanan_customer_FK">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>9416E3F9-D3AB-58B2-FF03-E4CEED9987AD</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F54F7A73-677B-454F-EE05-0FBFBB453356"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

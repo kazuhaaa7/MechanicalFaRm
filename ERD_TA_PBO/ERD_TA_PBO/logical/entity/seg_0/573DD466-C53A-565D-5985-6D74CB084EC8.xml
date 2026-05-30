@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="573DD466-C53A-565D-5985-6D74CB084EC8" name="keranjang">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 21:00:37 UTC</createdTime>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<engineerTo>
+<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_keranjang" id="7BB02A43-FCF1-9183-A907-FD6EBEA713BA">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 22:48:36 UTC</createdTime>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<engineerTo>
+<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="jumlah" id="35628D01-36C9-0A8A-E287-28049D2E8A18">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 22:48:51 UTC</createdTime>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<engineerTo>
+<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_customer" id="7E4207E8-8458-3E47-F40C-639B27371F04">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:15:50 UTC</createdTime>
+<generatorID>F2E79343-7AFD-FDF9-0C29-9A91D090D8FB</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<engineerTo>
+<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
+</engineerTo>
+<referedAttribute>B06E14CA-BA13-7D3A-ED39-7767F9C0B05B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_barang" id="8608DA03-EE83-0C2C-77AC-1EAE791F8466">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:21:28 UTC</createdTime>
+<generatorID>BBF4AD72-C70F-C078-6A49-E09C3E83DC49</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<engineerTo>
+<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
+</engineerTo>
+<referedAttribute>AB264033-558A-91F9-3B42-9D5472109867</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="74D05012-5C61-17AA-6E1D-D9569B64CB02" name="keranjang PK">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 22:48:49 UTC</createdTime>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<engineerTo>
+<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7BB02A43-FCF1-9183-A907-FD6EBEA713BA</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

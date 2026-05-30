@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="784D0154-FFC9-FE76-C517-AA53E6B83FFC" name="user">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 22:40:32 UTC</createdTime>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<engineerTo>
+<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_user" id="B1B235E4-5F7C-EBDA-E6FD-4E65B6D42985">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 22:41:11 UTC</createdTime>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<engineerTo>
+<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="username" id="3A59EDEF-F42C-24BA-7E13-43FA4859BCAD">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 22:41:26 UTC</createdTime>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<engineerTo>
+<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="passsword" id="DDEF8CC9-62CB-03C9-6442-35EBA8A30E3C">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 22:42:08 UTC</createdTime>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<engineerTo>
+<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="no_telp" id="F2F35317-CA27-AA91-08C4-0E5A0CF9CF8D">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 22:43:00 UTC</createdTime>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<engineerTo>
+<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipe_pengguna" id="714879E5-AF79-938C-50D2-57305617BE01">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 22:43:43 UTC</createdTime>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<engineerTo>
+<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="177CADAA-36AE-4140-F045-0C4ABE629A6B" name="user PK">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 22:41:25 UTC</createdTime>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<engineerTo>
+<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B1B235E4-5F7C-EBDA-E6FD-4E65B6D42985</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="5F949CEF-BD4E-0577-CCAF-A15A27ED48C6" name="no_telp_U">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 22:43:18 UTC</createdTime>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<engineerTo>
+<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
+</engineerTo>
+<newElementsIDs>F2F35317-CA27-AA91-08C4-0E5A0CF9CF8D</newElementsIDs>
+<usedAttributes>
+<attributeRef>F2F35317-CA27-AA91-08C4-0E5A0CF9CF8D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

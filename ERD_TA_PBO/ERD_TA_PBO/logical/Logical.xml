@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="45A9ED57-352B-AB08-237D-02DC4E28DDD0" mainViewID="DF2EBDB0-7AB5-97A4-FBD4-FFAE52B3D075">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 20:59:47 UTC</createdTime>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

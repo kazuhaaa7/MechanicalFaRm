@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BA183583-8FA8-5748-F379-3647D8FDD68F" name="detail_pesanan">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>791F20DC-95B4-7FDC-6A98-7E44556A8ED9</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_detail_pesanan" id="73DA23D4-9BFE-4726-FB5C-5D023A2BFE50">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>D97AB02A-BD1B-3D29-2EC3-A99995626569</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="jumlah" id="8AE1147E-26B5-BB36-ED02-768C0AAABE43">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>5FBF71E2-706F-78C4-6456-48D1E6A37DEB</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="subtotal" id="85B0CD91-BDC5-4E70-52DA-A272D5C73FC4">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>BEC021FB-19D0-42B4-1540-D86A085663FD</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pesanan_id_pesanan" id="2F685A37-3718-9FE2-9CE2-71F2373CC1B5">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>EF490109-1D56-EF51-B812-4409A426E23E</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B317EB5B-34C7-B113-39AF-210A0C49BB83" referredColumn="7FB00B66-CEF4-0949-DBB1-D3C4D067A0F9"/>
+</associations>
+</Column>
+<Column name="barang_id_barang" id="AF63D0E8-E773-C9DD-B8BE-8780F905FA0B">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>74491D53-E8B2-6F61-B511-67643CD75C3F</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="78F18562-3C17-304E-AEEA-1571387A20A2" referredColumn="2753457D-F842-1AF0-BCBB-9F6D781886A9"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="ED333E8A-50DF-CB3E-315A-CE7E0A5CC0DC" name="detail_pesanan_PK">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>C292C8A2-30FB-865D-57B5-44BE7749DE08</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="73DA23D4-9BFE-4726-FB5C-5D023A2BFE50"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="509220A6-3077-8C25-CAC8-3701CA5F86D4" name="detail_pesanan_pesanan_FK">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>4B1C2709-135F-0700-9D33-9F61C1094ADB</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2F685A37-3718-9FE2-9CE2-71F2373CC1B5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="41436B2F-859A-5FB7-CD4D-8ED1A9CCA21B" name="detail_pesanan_barang_FK">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>F84A1EE1-A630-4EDF-06F1-6495C04283AC</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AF63D0E8-E773-C9DD-B8BE-8780F905FA0B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

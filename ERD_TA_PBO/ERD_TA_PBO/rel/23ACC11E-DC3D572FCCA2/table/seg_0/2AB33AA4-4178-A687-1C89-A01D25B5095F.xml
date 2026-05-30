@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2AB33AA4-4178-A687-1C89-A01D25B5095F" name="keranjang">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>573DD466-C53A-565D-5985-6D74CB084EC8</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_keranjang" id="B8F63108-1ABE-B0EC-BE08-DE0F63FD40FD">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>7BB02A43-FCF1-9183-A907-FD6EBEA713BA</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="jumlah" id="4243488E-F331-A4DE-368A-EBC42A58424F">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>35628D01-36C9-0A8A-E287-28049D2E8A18</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="customer_id_customer" id="E2BE67A9-FE48-01CF-C467-DC92BCFB91DD">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>7E4207E8-8458-3E47-F40C-639B27371F04</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FE042F0E-D03A-5EE4-8F42-A87D39840940" referredColumn="4BBD93BB-26FF-DBCC-4769-26CB6068C05F"/>
+</associations>
+</Column>
+<Column name="barang_id_barang" id="A2F7D329-165B-B4C1-102E-9CD689B7BD40">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>8608DA03-EE83-0C2C-77AC-1EAE791F8466</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E0B04829-6B40-9B37-46A4-395EECE031A0" referredColumn="2753457D-F842-1AF0-BCBB-9F6D781886A9"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="536B04EF-CC8F-7C31-5106-54F3F29D7767" name="keranjang_PK">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>74D05012-5C61-17AA-6E1D-D9569B64CB02</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B8F63108-1ABE-B0EC-BE08-DE0F63FD40FD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CD0CD7EC-4E81-5DF0-1709-E5515C65D763" name="keranjang_customer_FK">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>F2E79343-7AFD-FDF9-0C29-9A91D090D8FB</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E2BE67A9-FE48-01CF-C467-DC92BCFB91DD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0F882FBA-48E2-2D35-9EEE-DF851A60F5A8" name="keranjang_barang_FK">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:26:09 UTC</createdTime>
+<generatorID>BBF4AD72-C70F-C078-6A49-E09C3E83DC49</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A2F7D329-165B-B4C1-102E-9CD689B7BD40"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

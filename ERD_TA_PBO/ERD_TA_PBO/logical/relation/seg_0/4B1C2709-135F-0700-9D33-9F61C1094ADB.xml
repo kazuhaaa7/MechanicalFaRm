@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_3" directorySegmentName="seg_0" id="4B1C2709-135F-0700-9D33-9F61C1094ADB">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-05-29 23:09:20 UTC</createdTime>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<engineerTo>
+<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
+</engineerTo>
+<sourcePk>5B607038-4BE1-F2C4-503B-167975D91A08</sourcePk>
+<targetPk>C292C8A2-30FB-865D-57B5-44BE7749DE08</targetPk>
+<identifying>false</identifying>
+<nameOnSource>memilki </nameOnSource>
+<nameOnTarget>dimilki</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>6E6FCE8D-EDB8-2D89-DBAF-61BCFFC0A341</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>791F20DC-95B4-7FDC-6A98-7E44556A8ED9</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
