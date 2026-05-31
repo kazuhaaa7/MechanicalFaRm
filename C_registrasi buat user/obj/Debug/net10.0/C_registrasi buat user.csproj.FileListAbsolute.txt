@@ -1,0 +1,14 @@
+D:\Project PBO\C_registrasi buat user\C_registrasi buat user\bin\Debug\net10.0\C_registrasi buat user.exe
+D:\Project PBO\C_registrasi buat user\C_registrasi buat user\bin\Debug\net10.0\C_registrasi buat user.deps.json
+D:\Project PBO\C_registrasi buat user\C_registrasi buat user\bin\Debug\net10.0\C_registrasi buat user.runtimeconfig.json
+D:\Project PBO\C_registrasi buat user\C_registrasi buat user\bin\Debug\net10.0\C_registrasi buat user.dll
+D:\Project PBO\C_registrasi buat user\C_registrasi buat user\bin\Debug\net10.0\C_registrasi buat user.pdb
+D:\Project PBO\C_registrasi buat user\C_registrasi buat user\obj\Debug\net10.0\C_registrasi buat user.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project PBO\C_registrasi buat user\C_registrasi buat user\obj\Debug\net10.0\C_registrasi buat user.AssemblyInfoInputs.cache
+D:\Project PBO\C_registrasi buat user\C_registrasi buat user\obj\Debug\net10.0\C_registrasi buat user.AssemblyInfo.cs
+D:\Project PBO\C_registrasi buat user\C_registrasi buat user\obj\Debug\net10.0\C_registrasi buat user.csproj.CoreCompileInputs.cache
+D:\Project PBO\C_registrasi buat user\C_registrasi buat user\obj\Debug\net10.0\C_registrasi buat user.dll
+D:\Project PBO\C_registrasi buat user\C_registrasi buat user\obj\Debug\net10.0\refint\C_registrasi buat user.dll
+D:\Project PBO\C_registrasi buat user\C_registrasi buat user\obj\Debug\net10.0\C_registrasi buat user.pdb
+D:\Project PBO\C_registrasi buat user\C_registrasi buat user\obj\Debug\net10.0\C_registrasi buat user.genruntimeconfig.cache
+D:\Project PBO\C_registrasi buat user\C_registrasi buat user\obj\Debug\net10.0\ref\C_registrasi buat user.dll
