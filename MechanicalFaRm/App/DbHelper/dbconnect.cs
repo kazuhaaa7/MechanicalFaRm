@@ -17,7 +17,7 @@ namespace MechanicalFaRm.App.DbHelper
             db_user = "postgres";
             db_pw = "postgre7";
 
-            connstring = $"Host={db_host}; Username={db_user};Password={db_pw}; Database{db_name};";
+            connstring = "Host=localhost; Username=postgres; Password=postgre7; Database=MechanicalFaRm;";
         }
 
         public NpgsqlConnection getConn()

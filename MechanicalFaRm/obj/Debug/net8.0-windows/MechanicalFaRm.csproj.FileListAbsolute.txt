@@ -6,7 +6,10 @@ C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\bin\Debug\net8.0-windo
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\bin\Debug\net8.0-windows\System.Diagnostics.DiagnosticSource.dll
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net8.0-windows\MechanicalFaRm.csproj.AssemblyReference.cache
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net8.0-windows\MechanicalFaRm.App.Authh.A_login.resources
+C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net8.0-windows\MechanicalFaRm.App.Authh.A_regis.resources
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net8.0-windows\MechanicalFaRm.App.Views.V_dashboardUser.resources
+C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net8.0-windows\MechanicalFaRm.App.Views.v_mainForm.resources
+C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net8.0-windows\MechanicalFaRm.App.Views.V_profle.resources
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net8.0-windows\MechanicalFaRm.Properties.Resources.resources
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net8.0-windows\MechanicalFaRm.csproj.GenerateResource.cache
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net8.0-windows\MechanicalFaRm.GeneratedMSBuildEditorConfig.editorconfig
@@ -21,7 +24,5 @@ C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net8.0-windo
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\bin\Debug\net8.0-windows\MechanicalFaRm.deps.json
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\bin\Debug\net8.0-windows\MechanicalFaRm.runtimeconfig.json
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\bin\Debug\net8.0-windows\MechanicalFaRm.pdb
-C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net8.0-windows\MechanicalFaRm.App.Authh.A_regis.resources
-C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net8.0-windows\MechanicalFaRm.App.Views.MainForm.resources
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net8.0-windows\MechanicalFaRm.genruntimeconfig.cache
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net8.0-windows\ref\MechanicalFaRm.dll
