@@ -4,25 +4,19 @@ namespace MechanicalFaRm.App.DbHelper
 {
     internal class dbconnect
     {
-        string db_name;
-        string db_host;
-        string db_pw;
-        string db_user;
-        public string connstring;
 
-        public dbconnect()
+
+        public static  NpgsqlConnection getConn()
         {
-            db_host = "localhost";
-            db_name = "MechanicalFaRm";
-            db_user = "postgres";
-            db_pw = "postgre7";
+            string host = Environment.GetEnvironmentVariable("DB_HOST");
+            string db = Environment.GetEnvironmentVariable("DB_NAME");
+            string user = Environment.GetEnvironmentVariable("DB_USER");
+            string pass = Environment.GetEnvironmentVariable("DB_PASS");
 
-            connstring = $"Host={db_host}; Username={db_user};Password={db_pw}; Database{db_name};";
-        }
 
-        public NpgsqlConnection getConn()
-        {
-            return new NpgsqlConnection(connstring);
+            string connString = $"Host={host}; Username={user};Password={pass}; Database={db};";
+
+            return new NpgsqlConnection(connString);
         }
 
 
