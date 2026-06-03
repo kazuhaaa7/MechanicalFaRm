@@ -1,4 +1,5 @@
-﻿namespace MechanicalFaRm.App.Models
+﻿
+namespace MechanicalFaRm.App.Models
 {
     public class M_barang
     {
