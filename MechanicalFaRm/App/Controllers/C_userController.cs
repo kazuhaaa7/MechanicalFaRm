@@ -6,18 +6,18 @@ namespace MechanicalFaRm.App.Controllers
 {
     internal class C_userController
     {
-        private M_userContext ucontext = new M_userContext();
-        private M_userContext GetAllUser()
-        {
-            return ucontext;
-        }
+        //private M_userContext ucontext = new M_userContext();
+        //private M_userContext GetAllUser()
+        //{
+        //    return ucontext;
+        //}
 
         private readonly string connString;
 
         public C_userController()
         {
             dbconnect db = new dbconnect();
-            connString = db.connstring;
+            connString = db.getConn().ConnectionString;
         }
 
         public static M_user CurrentUser { get; private set; }
