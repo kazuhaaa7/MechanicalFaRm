@@ -58,8 +58,9 @@ namespace MechanicalFaRm.App.Views
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(-18, -6);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1597, 940);
+            panel1.Size = new Size(1571, 940);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
             // 
             // panel2
             // 
@@ -147,7 +148,7 @@ namespace MechanicalFaRm.App.Views
             // txtPassword
             // 
             txtPassword.BackgroundImage = (Image)resources.GetObject("txtPassword.BackgroundImage");
-            txtPassword.Location = new Point(687, 588);
+            txtPassword.Location = new Point(671, 588);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(495, 53);
             txtPassword.TabIndex = 4;
@@ -155,7 +156,7 @@ namespace MechanicalFaRm.App.Views
             // txtNoTelp
             // 
             txtNoTelp.BackgroundImage = (Image)resources.GetObject("txtNoTelp.BackgroundImage");
-            txtNoTelp.Location = new Point(687, 499);
+            txtNoTelp.Location = new Point(671, 490);
             txtNoTelp.Name = "txtNoTelp";
             txtNoTelp.Size = new Size(495, 53);
             txtNoTelp.TabIndex = 3;
@@ -163,7 +164,7 @@ namespace MechanicalFaRm.App.Views
             // txtEmail
             // 
             txtEmail.BackgroundImage = (Image)resources.GetObject("txtEmail.BackgroundImage");
-            txtEmail.Location = new Point(687, 408);
+            txtEmail.Location = new Point(671, 411);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(495, 53);
             txtEmail.TabIndex = 2;
@@ -171,7 +172,7 @@ namespace MechanicalFaRm.App.Views
             // txtName
             // 
             txtName.BackgroundImage = (Image)resources.GetObject("txtName.BackgroundImage");
-            txtName.Location = new Point(687, 315);
+            txtName.Location = new Point(671, 315);
             txtName.Name = "txtName";
             txtName.Size = new Size(495, 53);
             txtName.TabIndex = 1;

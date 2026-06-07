@@ -31,15 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_kelolaAkunAdmin));
             flowLayoutPanel1 = new FlowLayoutPanel();
             panel1 = new Panel();
-            dataGridView1 = new DataGridView();
             button1 = new Button();
             panel2 = new Panel();
             button2 = new Button();
             button3 = new Button();
+            dataGridView1 = new DataGridView();
             flowLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -60,15 +60,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1619, 1058);
             panel1.TabIndex = 0;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(355, 217);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1224, 811);
-            dataGridView1.TabIndex = 0;
             // 
             // button1
             // 
@@ -119,6 +110,16 @@
             button3.Text = "Edit";
             button3.UseVisualStyleBackColor = false;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(355, 217);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(1224, 811);
+            dataGridView1.TabIndex = 0;
+            // 
             // V_kelolaAkunAdmin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -129,8 +130,8 @@
             Text = "V_kelolaAkun";
             flowLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 

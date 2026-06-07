@@ -64,6 +64,8 @@
             // 
             btnLogin.BackColor = Color.White;
             btnLogin.BackgroundImageLayout = ImageLayout.Center;
+            btnLogin.FlatAppearance.BorderSize = 0;
+            btnLogin.FlatStyle = FlatStyle.Flat;
             btnLogin.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.Location = new Point(372, 795);
             btnLogin.Name = "btnLogin";
@@ -97,7 +99,7 @@
             tbUsername.TabIndex = 0;
             tbUsername.TextChanged += tbUsername_TextChanged;
             // 
-            // A_login
+            // V_login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -106,7 +108,7 @@
             ClientSize = new Size(1855, 1083);
             Controls.Add(panel1);
             DoubleBuffered = true;
-            Name = "A_login";
+            Name = "V_login";
             Text = "Form Login";
             Load += A_login_Load;
             panel1.ResumeLayout(false);

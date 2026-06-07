@@ -124,9 +124,11 @@
             // 
             btnLogin.BackgroundImage = (Image)resources.GetObject("btnLogin.BackgroundImage");
             btnLogin.BackgroundImageLayout = ImageLayout.Stretch;
-            btnLogin.Location = new Point(13, 0);
+            btnLogin.FlatAppearance.BorderSize = 0;
+            btnLogin.FlatStyle = FlatStyle.Flat;
+            btnLogin.Location = new Point(28, 7);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(186, 66);
+            btnLogin.Size = new Size(162, 54);
             btnLogin.TabIndex = 5;
             btnLogin.UseVisualStyleBackColor = true;
             btnLogin.Click += btnLogin_Click;
@@ -135,14 +137,16 @@
             // 
             btnRegist.BackgroundImage = (Image)resources.GetObject("btnRegist.BackgroundImage");
             btnRegist.BackgroundImageLayout = ImageLayout.Stretch;
-            btnRegist.Location = new Point(237, 0);
+            btnRegist.FlatAppearance.BorderSize = 0;
+            btnRegist.FlatStyle = FlatStyle.Flat;
+            btnRegist.Location = new Point(235, 5);
             btnRegist.Name = "btnRegist";
-            btnRegist.Size = new Size(182, 69);
+            btnRegist.Size = new Size(171, 61);
             btnRegist.TabIndex = 6;
             btnRegist.UseVisualStyleBackColor = true;
             btnRegist.Click += btnRegist_Click;
             // 
-            // A_regis
+            // V_regis
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -150,7 +154,7 @@
             ClientSize = new Size(1898, 1084);
             Controls.Add(panel1);
             DoubleBuffered = true;
-            Name = "A_regis";
+            Name = "V_regis";
             Text = "Form1";
             Load += A_regis_Load;
             panel1.ResumeLayout(false);

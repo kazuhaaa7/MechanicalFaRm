@@ -25,7 +25,7 @@ namespace MechanicalFaRm.App.Views
 
                 var user = C_userController.CurrentUser;
 
-                if (userController!= null)
+                if (userController != null)
                 {
                     txtName.Text = user.username;
                     txtEmail.Text = user.email;
@@ -41,10 +41,14 @@ namespace MechanicalFaRm.App.Views
 
         private void V_profle_Load(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
         }
 
         private void btnEditProfileA_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
