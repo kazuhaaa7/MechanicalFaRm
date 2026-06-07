@@ -45,7 +45,7 @@ namespace MechanicalFaRm.App.Authh
                 return;
             }
 
-            if (username.Length <5)
+            if (username.Length < 5)
             {
                 MessageBox.Show("username minimal 5 character");
                 return;
@@ -87,6 +87,11 @@ namespace MechanicalFaRm.App.Authh
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tbNoTelpR_TextChanged(object sender, EventArgs e)
         {
 
         }

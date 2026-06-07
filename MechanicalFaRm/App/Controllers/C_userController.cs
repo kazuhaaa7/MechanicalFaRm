@@ -17,7 +17,7 @@ namespace MechanicalFaRm.App.Controllers
         public C_userController()
         {
             dbconnect db = new dbconnect();
-            connString = db.getConn().ConnectionString;
+            connString = dbconnect.GetConn().ConnectionString;
         }
 
         public static M_user CurrentUser { get; private set; }
@@ -29,16 +29,16 @@ namespace MechanicalFaRm.App.Controllers
                 return "Semua data harus diisi";
             try
             {
-                string checkQuery = "SELECT 1 FROM public.users WHERE username=@u LIMIT 1";
                 using var conn = new NpgsqlConnection(connString);
                 conn.Open();
+                string checkQuery = "SELECT 1 FROM public.user WHERE username=@u LIMIT 1";
                 using (var cmd = new NpgsqlCommand(checkQuery, conn))
                 {
                     cmd.Parameters.AddWithValue("@u", username);
                     if (cmd.ExecuteScalar() != null)
                         return "Username sudah digunakan";
                 }
-                string insertQuery = @"INSERT INTO users  (username, password, no_telp, email) VALUES (@username, @password, @no_telp, @email)";
+                string insertQuery = @"INSERT INTO user  (username, password, no_telp, email) VALUES (@username, @password, @no_telp, @email)";
                 using (var cmd = new NpgsqlCommand(insertQuery, conn))
                 {
                     cmd.Parameters.AddWithValue("@username", username);
@@ -64,9 +64,10 @@ namespace MechanicalFaRm.App.Controllers
 
             try
             {
-                string query = @"SELECT * FROM public.users WHERE username=@u AND password=@p LIMIT 1";
+
                 using var conn = new NpgsqlConnection(connString);
                 conn.Open();
+                string query = @"SELECT * FROM public.user WHERE username=@u AND password=@p LIMIT 1";
                 using var cmd = new NpgsqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@u", username);
                 cmd.Parameters.AddWithValue("@p", password);
@@ -103,7 +104,7 @@ namespace MechanicalFaRm.App.Controllers
         {
             try
             {
-                string query = @"SELECT * FROM public.users WHERE id_user=@id LIMIT 1";
+                string query = @"SELECT * FROM public.user WHERE id_user=@id LIMIT 1";
                 using var conn = new NpgsqlConnection(connString);
                 conn.Open();
                 using var cmd = new NpgsqlCommand(query, conn);

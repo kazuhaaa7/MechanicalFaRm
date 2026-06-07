@@ -1,14 +1,9 @@
-C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\bin\Debug\net9.0-windows8.0\MechanicalFaRm.exe
-C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\bin\Debug\net9.0-windows8.0\MechanicalFaRm.dll
-C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\bin\Debug\net9.0-windows8.0\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\bin\Debug\net9.0-windows8.0\Npgsql.dll
-C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\bin\Debug\net9.0-windows8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net9.0-windows8.0\MechanicalFaRm.csproj.AssemblyReference.cache
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net9.0-windows8.0\MechanicalFaRm.App.Authh.A_login.resources
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net9.0-windows8.0\MechanicalFaRm.App.Authh.A_regis.resources
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net9.0-windows8.0\MechanicalFaRm.App.Views.V_dashboardUser.resources
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net9.0-windows8.0\MechanicalFaRm.App.Views.v_mainForm.resources
-C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net9.0-windows8.0\MechanicalFaRm.App.Views.V_profle.resources
+C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net9.0-windows8.0\MechanicalFaRm.App.Views.V_profleAdmin.resources
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net9.0-windows8.0\MechanicalFaRm.Properties.Resources.resources
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net9.0-windows8.0\MechanicalFaRm.csproj.GenerateResource.cache
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net9.0-windows8.0\MechanicalFaRm.GeneratedMSBuildEditorConfig.editorconfig
@@ -16,8 +11,3 @@ C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net9.0-windo
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net9.0-windows8.0\MechanicalFaRm.AssemblyInfo.cs
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net9.0-windows8.0\MechanicalFaRm.csproj.CoreCompileInputs.cache
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net9.0-windows8.0\MechanicalFaRm.sourcelink.json
-C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net9.0-windows8.0\Mechanic.89810661.Up2Date
-C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net9.0-windows8.0\MechanicalFaRm.dll
-C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net9.0-windows8.0\refint\MechanicalFaRm.dll
-C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net9.0-windows8.0\MechanicalFaRm.pdb
-C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net9.0-windows8.0\MechanicalFaRm.App.Views.V_profleAdmin.resources

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MechanicalFaRm.App.Service
 {
-    internal class IBarangService
+    internal interface IBarangService
     {
         List<M_barang> GetListBarang();
         List<M_barang> GetListBarang(int limit);

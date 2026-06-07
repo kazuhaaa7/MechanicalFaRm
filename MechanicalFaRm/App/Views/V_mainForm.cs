@@ -6,14 +6,14 @@ namespace MechanicalFaRm.App.Views
     {
 
         System.Windows.Forms.Timer timer;
-        A_login pagelogin;
+        A_regis pageregis;
         public v_mainForm()
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
-            pagelogin = new A_login();
+            //pageregis = new A_regis();
 
-            //this.Controls.Add(pagelogin);
+            //this.Controls.Add(pageregis);
 
             timer = new System.Windows.Forms.Timer();
             timer.Interval = 5000;
@@ -24,13 +24,13 @@ namespace MechanicalFaRm.App.Views
         public void Timer_Tick(object sender, EventArgs e)
         {
             timer.Stop();
-            ShowLogin();
+            ShowRegis();
         }
 
-        public void ShowLogin()
+        public void ShowRegis()
         {
-            pagelogin = new A_login();
-            pagelogin.Show();
+            pageregis = new A_regis();
+            pageregis.Show();
             this.Hide();
         }
 

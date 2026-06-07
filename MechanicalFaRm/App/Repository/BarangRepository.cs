@@ -15,7 +15,7 @@ namespace MechanicalFaRm.App.Repository
         public List<M_barang> GetListBarang() //public: supaya bisa diakses lewat class interface(IBarangRepo)
         {
             var daftarBarang = new List<M_barang>();
-            using var conn = dbconnect.getConn();
+            using var conn = dbconnect.GetConn();
             conn.Open();
 
             string rawsql = "SELECT * FROM barang WHERE stok >1 ORDER BY id_users ASC";
@@ -40,7 +40,7 @@ namespace MechanicalFaRm.App.Repository
         public List<M_barang> GetListBarang(int limit)
         {
             var daftarBarang = new List<M_barang>();
-            using var conn = dbconnect.getConn();
+            using var conn = dbconnect.GetConn();
             conn.Open();
             string rawsql = $"SELECT * FROM barang WHERE stok >1 ORDER BY id_users ASC LIMIT @limit";
 
@@ -65,7 +65,7 @@ namespace MechanicalFaRm.App.Repository
         }
         public M_barang? GetBarangById(int id)
         {
-            using var conn = dbconnect.getConn();
+            using var conn = dbconnect.GetConn();
             conn.Open();
 
             string rawsql = "SELECT * FROM barang WHERE id = @id";
@@ -89,7 +89,7 @@ namespace MechanicalFaRm.App.Repository
         }
         public M_barang? GetStok()
         {
-            using var conn = dbconnect.getConn();
+            using var conn = dbconnect.GetConn();
             conn.Open();
             string rawsql = @"SELECT * FROM 
             barang WHERE stok >0 AND stok < 5
@@ -113,7 +113,7 @@ namespace MechanicalFaRm.App.Repository
         }
         public void InsertBarang(M_barang barang)
         {
-            using var conn = dbconnect.getConn();
+            using var conn = dbconnect.GetConn();
             conn.Open();
 
             string rawsql = 
@@ -131,7 +131,7 @@ namespace MechanicalFaRm.App.Repository
         }
         public void UpdateBarang(M_barang barang)
         {
-            using var conn = dbconnect.getConn();
+            using var conn = dbconnect.GetConn();
             conn.Open();
 
             string rawsql = 
@@ -149,7 +149,7 @@ namespace MechanicalFaRm.App.Repository
         }
         public void UpdateStokBarang(int barangId, int qtyNew)
         {
-            using var conn = dbconnect.getConn();
+            using var conn = dbconnect.GetConn();
             conn.Open();
 
             string rawsql = "UPDATE barang SET stok = @stok WHERE id=@id";
@@ -161,7 +161,7 @@ namespace MechanicalFaRm.App.Repository
         }
         public void DeleteBarang(int barangId)
         {
-            using var conn = dbconnect.getConn();
+            using var conn = dbconnect.GetConn();
             conn.Open();
 
             string rawswql = "DELETE FROM barang WHERE id = @id";
