@@ -38,7 +38,7 @@ namespace MechanicalFaRm.App.Controllers
                     if (cmd.ExecuteScalar() != null)
                         return "Username sudah digunakan";
                 }
-                string insertQuery = @"INSERT INTO user  (username, password, no_telp, email) VALUES (@username, @password, @no_telp, @email)";
+                string insertQuery = @"INSERT INTO public.user  (username, password, no_telp, email) VALUES (@username, @password, @no_telp, @email)";
                 using (var cmd = new NpgsqlCommand(insertQuery, conn))
                 {
                     cmd.Parameters.AddWithValue("@username", username);
