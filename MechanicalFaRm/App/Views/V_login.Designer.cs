@@ -1,6 +1,6 @@
 ﻿namespace MechanicalFaRm.App.Authh
 {
-    partial class A_login
+    partial class V_login
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(A_login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_login));
             panel1 = new Panel();
             panel2 = new Panel();
             btnLogin = new Button();

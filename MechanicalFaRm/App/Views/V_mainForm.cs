@@ -6,7 +6,7 @@ namespace MechanicalFaRm.App.Views
     {
 
         System.Windows.Forms.Timer timer;
-        A_regis pageregis;
+        V_regis pageregis;
         public v_mainForm()
         {
             InitializeComponent();
@@ -29,7 +29,7 @@ namespace MechanicalFaRm.App.Views
 
         public void ShowRegis()
         {
-            pageregis = new A_regis();
+            pageregis = new V_regis();
             pageregis.Show();
             this.Hide();
         }

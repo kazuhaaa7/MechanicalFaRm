@@ -34,10 +34,9 @@ namespace MechanicalFaRm.App.Views
             panel1 = new Panel();
             panel2 = new Panel();
             panel9 = new Panel();
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            btnLogout = new Button();
+            btnRiwayat = new Button();
+            btnDashboard = new Button();
             panel8 = new Panel();
             btnEditProfileA = new Button();
             txtPassword = new Panel();
@@ -55,7 +54,7 @@ namespace MechanicalFaRm.App.Views
             // panel1
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
-            panel1.BackgroundImageLayout = ImageLayout.Center;
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(-18, -6);
             panel1.Name = "panel1";
@@ -72,79 +71,65 @@ namespace MechanicalFaRm.App.Views
             panel2.Controls.Add(txtEmail);
             panel2.Controls.Add(txtName);
             panel2.Controls.Add(panel3);
-            panel2.Location = new Point(-4, 3);
+            panel2.Location = new Point(21, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1387, 743);
+            panel2.Size = new Size(1387, 769);
             panel2.TabIndex = 0;
             // 
             // panel9
             // 
-            panel9.Controls.Add(button4);
-            panel9.Controls.Add(button3);
-            panel9.Controls.Add(button2);
-            panel9.Controls.Add(button1);
+            panel9.Controls.Add(btnLogout);
+            panel9.Controls.Add(btnRiwayat);
+            panel9.Controls.Add(btnDashboard);
             panel9.Dock = DockStyle.Left;
             panel9.Location = new Point(0, 0);
             panel9.Name = "panel9";
-            panel9.Size = new Size(381, 743);
+            panel9.Size = new Size(300, 769);
             panel9.TabIndex = 6;
             // 
-            // button4
+            // btnLogout
             // 
-            button4.BackColor = Color.Transparent;
-            button4.BackgroundImage = (Image)resources.GetObject("button4.BackgroundImage");
-            button4.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            button4.ForeColor = SystemColors.ActiveCaptionText;
-            button4.Location = new Point(66, 531);
-            button4.Name = "button4";
-            button4.Size = new Size(271, 57);
-            button4.TabIndex = 3;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = false;
+            btnLogout.BackColor = Color.Transparent;
+            btnLogout.BackgroundImage = (Image)resources.GetObject("btnLogout.BackgroundImage");
+            btnLogout.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnLogout.ForeColor = SystemColors.ActiveCaptionText;
+            btnLogout.Location = new Point(9, 391);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(271, 57);
+            btnLogout.TabIndex = 2;
+            btnLogout.Text = "Logout";
+            btnLogout.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnRiwayat
             // 
-            button3.BackColor = Color.Transparent;
-            button3.BackgroundImage = (Image)resources.GetObject("button3.BackgroundImage");
-            button3.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            button3.ForeColor = SystemColors.ActiveCaptionText;
-            button3.Location = new Point(66, 457);
-            button3.Name = "button3";
-            button3.Size = new Size(271, 57);
-            button3.TabIndex = 2;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = false;
+            btnRiwayat.BackColor = Color.Transparent;
+            btnRiwayat.BackgroundImage = (Image)resources.GetObject("btnRiwayat.BackgroundImage");
+            btnRiwayat.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnRiwayat.ForeColor = SystemColors.ActiveCaptionText;
+            btnRiwayat.Location = new Point(9, 328);
+            btnRiwayat.Name = "btnRiwayat";
+            btnRiwayat.Size = new Size(271, 57);
+            btnRiwayat.TabIndex = 1;
+            btnRiwayat.Text = "Riwayat Penyewaan";
+            btnRiwayat.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnDashboard
             // 
-            button2.BackColor = Color.Transparent;
-            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
-            button2.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(66, 384);
-            button2.Name = "button2";
-            button2.Size = new Size(271, 57);
-            button2.TabIndex = 1;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.Transparent;
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
-            button1.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(66, 309);
-            button1.Name = "button1";
-            button1.Size = new Size(271, 57);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = false;
+            btnDashboard.BackColor = Color.Transparent;
+            btnDashboard.BackgroundImage = (Image)resources.GetObject("btnDashboard.BackgroundImage");
+            btnDashboard.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnDashboard.ForeColor = SystemColors.ActiveCaptionText;
+            btnDashboard.Location = new Point(9, 265);
+            btnDashboard.Name = "btnDashboard";
+            btnDashboard.Size = new Size(271, 57);
+            btnDashboard.TabIndex = 0;
+            btnDashboard.Text = "Dashboard";
+            btnDashboard.UseVisualStyleBackColor = false;
             // 
             // panel8
             // 
             panel8.Controls.Add(btnEditProfileA);
-            panel8.Location = new Point(499, 664);
+            panel8.Location = new Point(362, 573);
             panel8.Name = "panel8";
             panel8.Size = new Size(285, 93);
             panel8.TabIndex = 5;
@@ -155,14 +140,14 @@ namespace MechanicalFaRm.App.Views
             btnEditProfileA.BackgroundImageLayout = ImageLayout.Stretch;
             btnEditProfileA.Location = new Point(17, 15);
             btnEditProfileA.Name = "btnEditProfileA";
-            btnEditProfileA.Size = new Size(268, 61);
+            btnEditProfileA.Size = new Size(241, 53);
             btnEditProfileA.TabIndex = 0;
             btnEditProfileA.UseVisualStyleBackColor = true;
             // 
             // txtPassword
             // 
             txtPassword.BackgroundImage = (Image)resources.GetObject("txtPassword.BackgroundImage");
-            txtPassword.Location = new Point(873, 679);
+            txtPassword.Location = new Point(687, 588);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(495, 53);
             txtPassword.TabIndex = 4;
@@ -170,7 +155,7 @@ namespace MechanicalFaRm.App.Views
             // txtNoTelp
             // 
             txtNoTelp.BackgroundImage = (Image)resources.GetObject("txtNoTelp.BackgroundImage");
-            txtNoTelp.Location = new Point(873, 577);
+            txtNoTelp.Location = new Point(687, 499);
             txtNoTelp.Name = "txtNoTelp";
             txtNoTelp.Size = new Size(495, 53);
             txtNoTelp.TabIndex = 3;
@@ -178,7 +163,7 @@ namespace MechanicalFaRm.App.Views
             // txtEmail
             // 
             txtEmail.BackgroundImage = (Image)resources.GetObject("txtEmail.BackgroundImage");
-            txtEmail.Location = new Point(873, 476);
+            txtEmail.Location = new Point(687, 408);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(495, 53);
             txtEmail.TabIndex = 2;
@@ -186,7 +171,7 @@ namespace MechanicalFaRm.App.Views
             // txtName
             // 
             txtName.BackgroundImage = (Image)resources.GetObject("txtName.BackgroundImage");
-            txtName.Location = new Point(873, 365);
+            txtName.Location = new Point(687, 315);
             txtName.Name = "txtName";
             txtName.Size = new Size(495, 53);
             txtName.TabIndex = 1;
@@ -195,9 +180,9 @@ namespace MechanicalFaRm.App.Views
             // 
             panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
             panel3.BackgroundImageLayout = ImageLayout.Stretch;
-            panel3.Location = new Point(479, 318);
+            panel3.Location = new Point(362, 276);
             panel3.Name = "panel3";
-            panel3.Size = new Size(341, 340);
+            panel3.Size = new Size(284, 291);
             panel3.TabIndex = 0;
             // 
             // contextMenuStrip1
@@ -239,10 +224,10 @@ namespace MechanicalFaRm.App.Views
         private Panel txtName;
         private Button btnEditProfileA;
         private Panel panel9;
-        private Button button1;
+        private Button btnDashboard;
         private Button button4;
-        private Button button3;
-        private Button button2;
+        private Button btnLogout;
+        private Button btnRiwayat;
         private ContextMenuStrip contextMenuStrip1;
     }
 }

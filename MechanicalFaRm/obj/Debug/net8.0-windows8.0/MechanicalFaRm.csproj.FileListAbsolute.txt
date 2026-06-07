@@ -26,3 +26,8 @@ C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net8.0-windo
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net8.0-windows8.0\MechanicalFaRm.pdb
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net8.0-windows8.0\MechanicalFaRm.genruntimeconfig.cache
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net8.0-windows8.0\ref\MechanicalFaRm.dll
+C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net8.0-windows8.0\MechanicalFaRm.App.Views.V_kelolaAkunAdmin.resources
+C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net8.0-windows8.0\MechanicalFaRm.App.Views.V_kelolaAlatAdmin.resources
+C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net8.0-windows8.0\MechanicalFaRm.App.Authh.V_login.resources
+C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net8.0-windows8.0\MechanicalFaRm.App.Authh.V_regis.resources
+C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net8.0-windows8.0\MechanicalFaRm.App.Views.V_riwayatPembelian.resources

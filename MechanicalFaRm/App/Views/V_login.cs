@@ -3,13 +3,13 @@ using MechanicalFaRm.App.Models;
 using MechanicalFaRm.App.Views;
 namespace MechanicalFaRm.App.Authh
 {
-    public partial class A_login : Form
+    public partial class V_login : Form
     {
         private V_dashboardUser _dashboarduser;
         private C_userController controlUser;
         private readonly C_loginAuthController _authLogin;
 
-        public A_login()
+        public V_login()
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
@@ -138,7 +138,7 @@ namespace MechanicalFaRm.App.Authh
         private void btnRegist_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Move to Form Regist", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            A_regis regis = new A_regis();
+            V_regis regis = new V_regis();
             regis.Show();
             this.Hide();
         }

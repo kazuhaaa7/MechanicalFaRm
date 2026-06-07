@@ -1,6 +1,6 @@
 ﻿namespace MechanicalFaRm.App.Authh
 {
-    partial class A_regis
+    partial class V_regis
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(A_regis));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_regis));
             panel1 = new Panel();
             panel2 = new Panel();
             tbEmailR = new TextBox();

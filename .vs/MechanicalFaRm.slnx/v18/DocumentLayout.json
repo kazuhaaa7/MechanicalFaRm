@@ -3,12 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|c:\\users\\advan\\source\\repos\\mechanicalfarm\\mechanicalfarm\\mechanicalfarm.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\mechanicalfarm.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|c:\\users\\advan\\source\\repos\\mechanicalfarm\\mechanicalfarm\\app\\views\\v_riwayatpembelian.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\views\\v_riwayatpembelian.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|c:\\users\\advan\\source\\repos\\mechanicalfarm\\mechanicalfarm\\app\\views\\v_riwayatpembelian.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\views\\v_riwayatpembelian.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|c:\\users\\advan\\source\\repos\\mechanicalfarm\\mechanicalfarm\\app\\views\\v_kelolaakunadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\views\\v_kelolaakunadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|c:\\users\\advan\\source\\repos\\mechanicalfarm\\mechanicalfarm\\app\\views\\v_kelolaalatadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\views\\v_kelolaalatadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|c:\\users\\advan\\source\\repos\\mechanicalfarm\\mechanicalfarm\\app\\views\\v_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\views\\v_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|c:\\users\\advan\\source\\repos\\mechanicalfarm\\mechanicalfarm\\app\\views\\v_login.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\views\\v_login.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|c:\\users\\advan\\source\\repos\\mechanicalfarm\\mechanicalfarm\\app\\views\\v_regis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\views\\v_regis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|c:\\users\\advan\\source\\repos\\mechanicalfarm\\mechanicalfarm\\app\\controllers\\c_loginauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\controllers\\c_loginauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|c:\\users\\advan\\source\\repos\\mechanicalfarm\\mechanicalfarm\\app\\controllers\\c_usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\controllers\\c_usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|c:\\users\\advan\\source\\repos\\mechanicalfarm\\mechanicalfarm\\mechanicalfarm.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\mechanicalfarm.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|c:\\users\\advan\\source\\repos\\mechanicalfarm\\mechanicalfarm\\app\\models\\m_user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,24 +55,12 @@
       "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|c:\\users\\advan\\source\\repos\\mechanicalfarm\\mechanicalfarm\\app\\views\\a_regis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\views\\a_regis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|c:\\users\\advan\\source\\repos\\mechanicalfarm\\mechanicalfarm\\app\\controllers\\c_loginauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\controllers\\c_loginauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\mechanicalfarm\\app\\views\\a_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\views\\a_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\mechanicalfarm\\app\\views\\v_dashboarduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\views\\v_dashboarduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|c:\\users\\advan\\source\\repos\\mechanicalfarm\\mechanicalfarm\\app\\views\\a_regis.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\views\\a_regis.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|c:\\users\\advan\\source\\repos\\mechanicalfarm\\mechanicalfarm\\app\\views\\v_regis.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\views\\v_regis.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|c:\\users\\advan\\source\\repos\\mechanicalfarm\\mechanicalfarm\\app\\dbhelper\\dbconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,8 +82,8 @@
       "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\.env.example||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|c:\\users\\advan\\source\\repos\\mechanicalfarm\\mechanicalfarm\\app\\views\\a_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\views\\a_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|c:\\users\\advan\\source\\repos\\mechanicalfarm\\mechanicalfarm\\app\\views\\v_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\views\\v_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|c:\\users\\advan\\source\\repos\\mechanicalfarm\\mechanicalfarm\\app\\views\\v_mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -108,34 +128,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\Program.cs",
-              "RelativeDocumentMoniker": "MechanicalFaRm\\Program.cs",
-              "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\Program.cs",
-              "RelativeToolTip": "MechanicalFaRm\\Program.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T04:42:54.044Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "A_regis.cs",
-              "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\A_regis.cs",
-              "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Views\\A_regis.cs",
-              "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\A_regis.cs",
-              "RelativeToolTip": "MechanicalFaRm\\App\\Views\\A_regis.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAswF8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T04:58:34.06Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -158,7 +152,81 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "V_riwayatPembelian.cs",
+              "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_riwayatPembelian.cs",
+              "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Views\\V_riwayatPembelian.cs",
+              "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_riwayatPembelian.cs",
+              "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_riwayatPembelian.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAIwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T12:45:34.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "V_riwayatPembelian.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_riwayatPembelian.cs",
+              "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Views\\V_riwayatPembelian.cs",
+              "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_riwayatPembelian.cs [Design]",
+              "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_riwayatPembelian.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T12:45:28.586Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "V_kelolaAkunAdmin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_kelolaAkunAdmin.cs",
+              "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Views\\V_kelolaAkunAdmin.cs",
+              "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_kelolaAkunAdmin.cs [Design]",
+              "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_kelolaAkunAdmin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T12:44:15.691Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "V_kelolaAlatAdmin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_kelolaAlatAdmin.cs",
+              "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Views\\V_kelolaAlatAdmin.cs",
+              "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_kelolaAlatAdmin.cs [Design]",
+              "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_kelolaAlatAdmin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T12:39:31.725Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "V_login.resx",
+              "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_login.resx",
+              "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Views\\V_login.resx",
+              "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_login.resx",
+              "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_login.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2026-06-07T12:08:54.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "V_regis.cs",
+              "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_regis.cs",
+              "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Views\\V_regis.cs",
+              "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_regis.cs",
+              "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_regis.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAA9wF8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T04:58:34.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "C_loginAuthController.cs",
               "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Controllers\\C_loginAuthController.cs",
               "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Controllers\\C_loginAuthController.cs",
@@ -171,20 +239,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "C_userController.cs",
               "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Controllers\\C_userController.cs",
               "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Controllers\\C_userController.cs",
               "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Controllers\\C_userController.cs",
               "RelativeToolTip": "MechanicalFaRm\\App\\Controllers\\C_userController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwC8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAzwC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-31T17:02:11.072Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
               "Title": "MechanicalFaRm.csproj",
               "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\MechanicalFaRm.csproj",
               "RelativeDocumentMoniker": "MechanicalFaRm\\MechanicalFaRm.csproj",
@@ -197,20 +265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "M_user.cs",
-              "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Models\\M_user.cs",
-              "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Models\\M_user.cs",
-              "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Models\\M_user.cs",
-              "RelativeToolTip": "MechanicalFaRm\\App\\Models\\M_user.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T16:51:16.841Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "M_userContext.cs",
               "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Models\\M_userContext.cs",
               "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Models\\M_userContext.cs",
@@ -218,24 +273,47 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Models\\M_userContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T16:57:26.329Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-31T16:57:26.329Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "A_login.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\A_login.cs",
-              "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Views\\A_login.cs",
-              "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\A_login.cs [Design]",
-              "RelativeToolTip": "MechanicalFaRm\\App\\Views\\A_login.cs [Design]",
+              "DocumentIndex": 4,
+              "Title": "V_login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_login.cs",
+              "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Views\\V_login.cs",
+              "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_login.cs [Design]",
+              "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_login.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-07T04:44:47.132Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
+              "Title": "M_user.cs",
+              "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Models\\M_user.cs",
+              "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Models\\M_user.cs",
+              "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Models\\M_user.cs",
+              "RelativeToolTip": "MechanicalFaRm\\App\\Models\\M_user.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-31T16:51:16.841Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\Program.cs",
+              "RelativeDocumentMoniker": "MechanicalFaRm\\Program.cs",
+              "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\Program.cs",
+              "RelativeToolTip": "MechanicalFaRm\\Program.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T04:42:54.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "V_dashboardUser.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_dashboardUser.cs",
               "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Views\\V_dashboardUser.cs",
@@ -246,12 +324,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "A_regis.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\A_regis.Designer.cs",
-              "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Views\\A_regis.Designer.cs",
-              "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\A_regis.Designer.cs",
-              "RelativeToolTip": "MechanicalFaRm\\App\\Views\\A_regis.Designer.cs",
+              "DocumentIndex": 14,
+              "Title": "V_regis.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_regis.Designer.cs",
+              "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Views\\V_regis.Designer.cs",
+              "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_regis.Designer.cs",
+              "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_regis.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-07T10:27:56.086Z",
@@ -259,7 +337,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "D:\\VS-2026\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ToolTip": "D:\\VS-2026\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
@@ -269,7 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "BarangService.cs",
               "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Service\\BarangService.cs",
               "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Service\\BarangService.cs",
@@ -281,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "dbconnect.cs",
               "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\DbHelper\\dbconnect.cs",
               "RelativeDocumentMoniker": "MechanicalFaRm\\App\\DbHelper\\dbconnect.cs",
@@ -293,7 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Repository\\UserRepository.cs",
               "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Repository\\UserRepository.cs",
@@ -305,20 +383,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "A_login.cs",
-              "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\A_login.cs",
-              "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Views\\A_login.cs",
-              "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\A_login.cs",
-              "RelativeToolTip": "MechanicalFaRm\\App\\Views\\A_login.cs",
+              "DocumentIndex": 20,
+              "Title": "V_login.cs",
+              "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_login.cs",
+              "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Views\\V_login.cs",
+              "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_login.cs",
+              "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_login.cs",
               "ViewState": "AgIAAH4AAAAAAAAAAAAIwBEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T03:32:53.412Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-07T03:32:53.412Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": ".env.example",
               "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\.env.example",
               "RelativeDocumentMoniker": "MechanicalFaRm\\App\\.env.example",
@@ -330,7 +407,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 22,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\C_registrasi buat user\\Program.cs",
               "RelativeDocumentMoniker": "MechanicalFaRm\\C_registrasi buat user\\Program.cs",
@@ -342,7 +419,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "V_mainForm.cs",
               "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_mainForm.cs",
               "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Views\\V_mainForm.cs",
@@ -350,11 +427,12 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_mainForm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T04:45:04.642Z"
+              "WhenOpened": "2026-06-07T04:45:04.642Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 24,
               "Title": "IBarangService.cs",
               "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Service\\IBarangService.cs",
               "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Service\\IBarangService.cs",
@@ -366,7 +444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 25,
               "Title": "MechanicalFaRm",
               "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\MechanicalFaRm.csproj",
               "RelativeDocumentMoniker": "MechanicalFaRm\\MechanicalFaRm.csproj",
@@ -378,7 +456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 23,
               "Title": "BarangRepository.cs",
               "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Repository\\BarangRepository.cs",
               "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Repository\\BarangRepository.cs",
@@ -390,7 +468,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 26,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Repository\\IUserRepository.cs",
               "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Repository\\IUserRepository.cs",
@@ -402,7 +480,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 27,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
@@ -414,7 +492,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 29,
               "Title": "A_regis.Designer.cs",
               "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Authh\\A_regis.Designer.cs",
               "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Authh\\A_regis.Designer.cs",
@@ -426,7 +504,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 28,
               "Title": "M_DetailPesanan.cs",
               "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Models\\M_DetailPesanan.cs",
               "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Models\\M_DetailPesanan.cs",

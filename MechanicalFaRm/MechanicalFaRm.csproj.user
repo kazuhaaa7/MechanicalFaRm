@@ -1,10 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="App\Views\A_login.cs">
+    <Compile Update="App\Views\V_kelolaAkunAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="App\Views\A_regis.cs">
+    <Compile Update="App\Views\V_kelolaAlatAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="App\Views\V_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="App\Views\V_regis.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="App\Views\V_profleAdmin.cs">
@@ -14,6 +20,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="App\Views\V_dashboardUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="App\Views\V_riwayatPembelian.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

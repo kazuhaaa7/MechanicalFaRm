@@ -2,10 +2,10 @@
 
 namespace MechanicalFaRm.App.Authh
 {
-    public partial class A_regis : Form
+    public partial class V_regis : Form
     {
         private C_userController controlUser;
-        public A_regis()
+        public V_regis()
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
@@ -16,7 +16,7 @@ namespace MechanicalFaRm.App.Authh
         public void OpenFormLogin()
         {
             MessageBox.Show("Move to Form login", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            new A_login().Show();
+            new V_login().Show();
             this.Hide();
         }
 
