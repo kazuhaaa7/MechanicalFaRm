@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MechanicalFaRm.App.Service
+namespace MechanicalFaRm.App.Repository
 {
-    internal interface IBarangService
+    internal interface R_IBarangRepository
     {
         List<M_barang> GetListBarang();
         List<M_barang> GetListBarang(int limit);
@@ -15,6 +15,9 @@ namespace MechanicalFaRm.App.Service
         M_barang GetBarangById(int id);
         void InsertBarang(M_barang barang);
         void UpdateBarang(M_barang barang);
+        void UpdateStokBarang(int barangId, int qtyNew);
         void DeleteBarang(int barangId);
+
+
     }
 }

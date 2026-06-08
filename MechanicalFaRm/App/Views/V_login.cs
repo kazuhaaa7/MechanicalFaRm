@@ -54,12 +54,6 @@ namespace MechanicalFaRm.App.Authh
 
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            //MessageBox.Show("Verifikasi 2 Langkah", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
-            this.Close();
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string usernameInput = tbUsername.Text.Trim();
@@ -106,7 +100,7 @@ namespace MechanicalFaRm.App.Authh
                 }
                 else if (result == "pw atau user salah")
                 {
-                    MessageBox.Show("Pssword atau Username salah. Silahkan Login ulang", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Password atau Username salah. Silahkan Login ulang", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MechanicalFaRm.App.Views
 {
-    public partial class V_riwayatPembelian : Form
+    public partial class V_riwayatPenyewaan : Form
     {
-        public V_riwayatPembelian()
+        public V_riwayatPenyewaan()
         {
             InitializeComponent();
         }

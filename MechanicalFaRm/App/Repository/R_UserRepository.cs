@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 
 namespace MechanicalFaRm.App.Repository
 {
-    internal class UserRepository
+    internal class R_UserRepository
     {
         public M_user? GetById(int id)
         {
             var daftarUser = new M_user();
             using var conn = dbconnect.GetConn();
             conn.Open();
-            string rawsql = @"SELECT * FROM user WHERE id=@id";
+            string rawsql = @"SELECT * FROM public.user WHERE id=@id";
 
             using var cmd = new NpgsqlCommand(rawsql, conn);
             cmd.Parameters.AddWithValue("id", id);
@@ -33,6 +33,7 @@ namespace MechanicalFaRm.App.Repository
                 email = reader.GetString(4),
                 role = reader.GetString(5)
             };
+            return daftarUser;
         }
         public M_user? GetByEmail(string email)
         {
@@ -40,7 +41,7 @@ namespace MechanicalFaRm.App.Repository
             using var conn = dbconnect.GetConn();
             conn.Open();
 
-            string rawsql = @"SELECT * FROM user WHERE email=@email";
+            string rawsql = @"SELECT * FROM public.user WHERE email=@email";
             using var cmd = new NpgsqlCommand(rawsql, conn);
             cmd.Parameters.AddWithValue("@email", email);
 
@@ -63,7 +64,7 @@ namespace MechanicalFaRm.App.Repository
         {
             using var conn = dbconnect.GetConn();  
             conn.Open();
-            string rawsql = @"INSERT INTO user (username, password, no_telepon, email, role) 
+            string rawsql = @"INSERT INTO public.user (username, password, no_telepon, email, role) 
             VALUES(@u, @p, @n, @e, @r)";
             using var cmd = new NpgsqlCommand(rawsql, conn);
             cmd.Parameters.AddWithValue("@u", user.username);
@@ -76,13 +77,13 @@ namespace MechanicalFaRm.App.Repository
 
 
         }
-        public void Update(M_user user)
+        public void UpdateUser(M_user user)
         {
             using var conn = dbconnect.GetConn();
             conn.Open();
 
-            string rawsql = @"UPDATE barang SET 
-            usernam=@u, password=@p, no_telepon=@n, email=@e, role=@r";
+            string rawsql = @"UPDATE public.user SET 
+            username=@u, password=@p, no_telepon=@n, email=@e, role=@r";
 
             using var cmd = new NpgsqlCommand(rawsql, conn);
 
@@ -99,7 +100,7 @@ namespace MechanicalFaRm.App.Repository
             using var conn = dbconnect.GetConn();
             conn.Open();
 
-            string rawsql = @"DELETE FROM user WHERE id=@id";
+            string rawsql = @"DELETE FROM public.user WHERE id=@id";
             using var cmd = new NpgsqlCommand(rawsql, conn);
             cmd.Parameters.AddWithValue("@id", user._id_user);
 
@@ -111,7 +112,7 @@ namespace MechanicalFaRm.App.Repository
             using var conn = dbconnect.GetConn();
             conn.Open();
 
-            string rawsql = @"SELECT * FROM user WHERE role='admin'";
+            string rawsql = @"SELECT * FROM public.user WHERE role='admin'";
             using var cmd = new NpgsqlCommand(rawsql, conn);
             using var reader = cmd.ExecuteReader();
             

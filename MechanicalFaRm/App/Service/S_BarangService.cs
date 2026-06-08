@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace MechanicalFaRm.App.Service
 {
-    internal class BarangService : IBarangService
+    internal class S_BarangService : S_IBarangService
     {
-        private readonly BarangRepository _torepo;
+        private readonly R_BarangRepository _torepo;
 
-        public BarangService()
+        public S_BarangService()
         {
-            _torepo = new BarangRepository();
+            _torepo = new R_BarangRepository();
         }
         public List<M_barang> GetListBarang()
         {

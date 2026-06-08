@@ -30,33 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_dashboardUser));
             panel1 = new Panel();
-            panel2 = new Panel();
-            panel7 = new Panel();
-            button6 = new Button();
-            panel6 = new Panel();
-            button4 = new Button();
-            panel5 = new Panel();
-            button3 = new Button();
-            panel4 = new Panel();
-            button2 = new Button();
-            panel3 = new Panel();
-            button1 = new Button();
-            panel8 = new Panel();
-            button5 = new Button();
             panel9 = new Panel();
-            btnDashboard = new Button();
-            btnRiwayatPenyewaan = new Button();
-            btnProfile = new Button();
             btnLogout = new Button();
+            btnProfile = new Button();
+            btnRiwayatPenyewaan = new Button();
+            btnDashboard = new Button();
+            panel2 = new Panel();
+            btnSewaAlat6 = new Button();
+            btnSewaAlat3 = new Button();
+            btnSewaAlat5 = new Button();
+            btnSewaAlat4 = new Button();
+            btnSewaAlat2 = new Button();
+            btnSewaAlat1 = new Button();
             panel1.SuspendLayout();
-            panel2.SuspendLayout();
-            panel7.SuspendLayout();
-            panel6.SuspendLayout();
-            panel5.SuspendLayout();
-            panel4.SuspendLayout();
-            panel3.SuspendLayout();
-            panel8.SuspendLayout();
             panel9.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -67,148 +55,8 @@
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(1, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1865, 902);
+            panel1.Size = new Size(1919, 1171);
             panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.Transparent;
-            panel2.Controls.Add(panel7);
-            panel2.Controls.Add(panel6);
-            panel2.Controls.Add(panel5);
-            panel2.Controls.Add(panel4);
-            panel2.Controls.Add(panel3);
-            panel2.Controls.Add(panel8);
-            panel2.Location = new Point(394, 129);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1457, 760);
-            panel2.TabIndex = 0;
-            // 
-            // panel7
-            // 
-            panel7.BackColor = Color.Transparent;
-            panel7.Controls.Add(button6);
-            panel7.Location = new Point(1026, 421);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(382, 307);
-            panel7.TabIndex = 12;
-            // 
-            // button6
-            // 
-            button6.BackColor = Color.IndianRed;
-            button6.BackgroundImageLayout = ImageLayout.Stretch;
-            button6.ForeColor = SystemColors.ActiveCaptionText;
-            button6.Location = new Point(3, 187);
-            button6.Name = "button6";
-            button6.Size = new Size(379, 102);
-            button6.TabIndex = 0;
-            button6.Text = "button6";
-            button6.UseVisualStyleBackColor = false;
-            // 
-            // panel6
-            // 
-            panel6.BackColor = Color.Transparent;
-            panel6.Controls.Add(button4);
-            panel6.Location = new Point(1029, 45);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(382, 307);
-            panel6.TabIndex = 11;
-            // 
-            // button4
-            // 
-            button4.BackColor = Color.IndianRed;
-            button4.BackgroundImageLayout = ImageLayout.Stretch;
-            button4.ForeColor = SystemColors.ActiveCaptionText;
-            button4.Location = new Point(3, 187);
-            button4.Name = "button4";
-            button4.Size = new Size(379, 102);
-            button4.TabIndex = 0;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = false;
-            // 
-            // panel5
-            // 
-            panel5.BackColor = Color.Transparent;
-            panel5.Controls.Add(button3);
-            panel5.Location = new Point(528, 409);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(382, 307);
-            panel5.TabIndex = 8;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.IndianRed;
-            button3.BackgroundImageLayout = ImageLayout.Stretch;
-            button3.ForeColor = SystemColors.ActiveCaptionText;
-            button3.Location = new Point(3, 187);
-            button3.Name = "button3";
-            button3.Size = new Size(379, 102);
-            button3.TabIndex = 0;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = false;
-            // 
-            // panel4
-            // 
-            panel4.BackColor = Color.Transparent;
-            panel4.Controls.Add(button2);
-            panel4.Location = new Point(30, 409);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(382, 307);
-            panel4.TabIndex = 9;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.IndianRed;
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(3, 187);
-            button2.Name = "button2";
-            button2.Size = new Size(379, 102);
-            button2.TabIndex = 0;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = false;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.Transparent;
-            panel3.Controls.Add(button1);
-            panel3.Location = new Point(525, 45);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(382, 307);
-            panel3.TabIndex = 10;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.IndianRed;
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(3, 187);
-            button1.Name = "button1";
-            button1.Size = new Size(379, 102);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // panel8
-            // 
-            panel8.BackColor = Color.Transparent;
-            panel8.Controls.Add(button5);
-            panel8.Location = new Point(27, 45);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(382, 307);
-            panel8.TabIndex = 7;
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.IndianRed;
-            button5.BackgroundImageLayout = ImageLayout.Stretch;
-            button5.ForeColor = SystemColors.ActiveCaptionText;
-            button5.Location = new Point(3, 187);
-            button5.Name = "button5";
-            button5.Size = new Size(379, 102);
-            button5.TabIndex = 0;
-            button5.Text = "button5";
-            button5.UseVisualStyleBackColor = false;
             // 
             // panel9
             // 
@@ -220,47 +68,8 @@
             panel9.Dock = DockStyle.Left;
             panel9.Location = new Point(0, 0);
             panel9.Name = "panel9";
-            panel9.Size = new Size(337, 902);
+            panel9.Size = new Size(371, 1171);
             panel9.TabIndex = 8;
-            // 
-            // btnDashboard
-            // 
-            btnDashboard.BackColor = Color.DarkGray;
-            btnDashboard.BackgroundImageLayout = ImageLayout.Stretch;
-            btnDashboard.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDashboard.ForeColor = SystemColors.ActiveCaptionText;
-            btnDashboard.Location = new Point(24, 330);
-            btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(288, 49);
-            btnDashboard.TabIndex = 0;
-            btnDashboard.Text = "Dasboard";
-            btnDashboard.UseVisualStyleBackColor = false;
-            // 
-            // btnRiwayatPenyewaan
-            // 
-            btnRiwayatPenyewaan.BackColor = Color.DarkGray;
-            btnRiwayatPenyewaan.BackgroundImageLayout = ImageLayout.Stretch;
-            btnRiwayatPenyewaan.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRiwayatPenyewaan.ForeColor = SystemColors.ActiveCaptionText;
-            btnRiwayatPenyewaan.Location = new Point(24, 385);
-            btnRiwayatPenyewaan.Name = "btnRiwayatPenyewaan";
-            btnRiwayatPenyewaan.Size = new Size(288, 49);
-            btnRiwayatPenyewaan.TabIndex = 1;
-            btnRiwayatPenyewaan.Text = "Riwayat Penyewaan";
-            btnRiwayatPenyewaan.UseVisualStyleBackColor = false;
-            // 
-            // btnProfile
-            // 
-            btnProfile.BackColor = Color.DarkGray;
-            btnProfile.BackgroundImageLayout = ImageLayout.Stretch;
-            btnProfile.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnProfile.ForeColor = SystemColors.ActiveCaptionText;
-            btnProfile.Location = new Point(24, 440);
-            btnProfile.Name = "btnProfile";
-            btnProfile.Size = new Size(288, 49);
-            btnProfile.TabIndex = 2;
-            btnProfile.Text = "Profile";
-            btnProfile.UseVisualStyleBackColor = false;
             // 
             // btnLogout
             // 
@@ -268,19 +77,161 @@
             btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
             btnLogout.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogout.ForeColor = SystemColors.ActiveCaptionText;
-            btnLogout.Location = new Point(24, 495);
+            btnLogout.Location = new Point(49, 618);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(288, 49);
+            btnLogout.Size = new Size(302, 65);
             btnLogout.TabIndex = 3;
             btnLogout.Text = "Logout";
             btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.Click += btnLogout_Click;
+            // 
+            // btnProfile
+            // 
+            btnProfile.BackColor = Color.DarkGray;
+            btnProfile.BackgroundImageLayout = ImageLayout.Stretch;
+            btnProfile.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnProfile.ForeColor = SystemColors.ActiveCaptionText;
+            btnProfile.Location = new Point(49, 546);
+            btnProfile.Name = "btnProfile";
+            btnProfile.Size = new Size(302, 66);
+            btnProfile.TabIndex = 2;
+            btnProfile.Text = "Profile";
+            btnProfile.UseVisualStyleBackColor = false;
+            btnProfile.Click += btnProfile_Click;
+            // 
+            // btnRiwayatPenyewaan
+            // 
+            btnRiwayatPenyewaan.BackColor = Color.DarkGray;
+            btnRiwayatPenyewaan.BackgroundImageLayout = ImageLayout.Stretch;
+            btnRiwayatPenyewaan.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRiwayatPenyewaan.ForeColor = SystemColors.ActiveCaptionText;
+            btnRiwayatPenyewaan.Location = new Point(49, 469);
+            btnRiwayatPenyewaan.Name = "btnRiwayatPenyewaan";
+            btnRiwayatPenyewaan.Size = new Size(302, 71);
+            btnRiwayatPenyewaan.TabIndex = 1;
+            btnRiwayatPenyewaan.Text = "Riwayat Penyewaan";
+            btnRiwayatPenyewaan.UseVisualStyleBackColor = false;
+            btnRiwayatPenyewaan.Click += btnRiwayatPenyewaan_Click;
+            // 
+            // btnDashboard
+            // 
+            btnDashboard.BackColor = Color.DarkGray;
+            btnDashboard.BackgroundImageLayout = ImageLayout.Stretch;
+            btnDashboard.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDashboard.ForeColor = SystemColors.ActiveCaptionText;
+            btnDashboard.Location = new Point(49, 396);
+            btnDashboard.Name = "btnDashboard";
+            btnDashboard.Size = new Size(302, 67);
+            btnDashboard.TabIndex = 0;
+            btnDashboard.Text = "Dasboard";
+            btnDashboard.UseVisualStyleBackColor = false;
+            btnDashboard.Click += btnDashboard_Click;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.Transparent;
+            panel2.Controls.Add(btnSewaAlat6);
+            panel2.Controls.Add(btnSewaAlat3);
+            panel2.Controls.Add(btnSewaAlat5);
+            panel2.Controls.Add(btnSewaAlat4);
+            panel2.Controls.Add(btnSewaAlat2);
+            panel2.Controls.Add(btnSewaAlat1);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1919, 1171);
+            panel2.TabIndex = 0;
+            // 
+            // btnSewaAlat6
+            // 
+            btnSewaAlat6.BackColor = Color.WhiteSmoke;
+            btnSewaAlat6.BackgroundImageLayout = ImageLayout.Stretch;
+            btnSewaAlat6.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSewaAlat6.ForeColor = SystemColors.ActiveCaptionText;
+            btnSewaAlat6.Location = new Point(1456, 895);
+            btnSewaAlat6.Name = "btnSewaAlat6";
+            btnSewaAlat6.Size = new Size(379, 109);
+            btnSewaAlat6.TabIndex = 5;
+            btnSewaAlat6.Text = "Sewa Alat";
+            btnSewaAlat6.UseVisualStyleBackColor = false;
+            btnSewaAlat6.Click += btnSewaAlat6_Click;
+            // 
+            // btnSewaAlat3
+            // 
+            btnSewaAlat3.BackColor = Color.WhiteSmoke;
+            btnSewaAlat3.BackgroundImageLayout = ImageLayout.Stretch;
+            btnSewaAlat3.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSewaAlat3.ForeColor = SystemColors.ActiveCaptionText;
+            btnSewaAlat3.Location = new Point(1446, 447);
+            btnSewaAlat3.Name = "btnSewaAlat3";
+            btnSewaAlat3.Size = new Size(379, 109);
+            btnSewaAlat3.TabIndex = 4;
+            btnSewaAlat3.Text = "Sewa Alat";
+            btnSewaAlat3.UseVisualStyleBackColor = false;
+            btnSewaAlat3.Click += btnSewaAlat3_Click;
+            // 
+            // btnSewaAlat5
+            // 
+            btnSewaAlat5.BackColor = Color.WhiteSmoke;
+            btnSewaAlat5.BackgroundImageLayout = ImageLayout.Stretch;
+            btnSewaAlat5.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSewaAlat5.ForeColor = SystemColors.ActiveCaptionText;
+            btnSewaAlat5.Location = new Point(945, 895);
+            btnSewaAlat5.Name = "btnSewaAlat5";
+            btnSewaAlat5.Size = new Size(379, 109);
+            btnSewaAlat5.TabIndex = 3;
+            btnSewaAlat5.Text = "Sewa Alat";
+            btnSewaAlat5.UseVisualStyleBackColor = false;
+            btnSewaAlat5.Click += btnSewaAlat5_Click;
+            // 
+            // btnSewaAlat4
+            // 
+            btnSewaAlat4.BackColor = Color.WhiteSmoke;
+            btnSewaAlat4.BackgroundImageLayout = ImageLayout.Stretch;
+            btnSewaAlat4.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSewaAlat4.ForeColor = SystemColors.ActiveCaptionText;
+            btnSewaAlat4.Location = new Point(437, 895);
+            btnSewaAlat4.Name = "btnSewaAlat4";
+            btnSewaAlat4.Size = new Size(379, 109);
+            btnSewaAlat4.TabIndex = 2;
+            btnSewaAlat4.Text = "Sewa Alat";
+            btnSewaAlat4.UseVisualStyleBackColor = false;
+            btnSewaAlat4.Click += btnSewaAlat4_Click;
+            // 
+            // btnSewaAlat2
+            // 
+            btnSewaAlat2.BackColor = Color.WhiteSmoke;
+            btnSewaAlat2.BackgroundImageLayout = ImageLayout.Stretch;
+            btnSewaAlat2.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSewaAlat2.ForeColor = SystemColors.ActiveCaptionText;
+            btnSewaAlat2.Location = new Point(945, 447);
+            btnSewaAlat2.Name = "btnSewaAlat2";
+            btnSewaAlat2.Size = new Size(379, 109);
+            btnSewaAlat2.TabIndex = 1;
+            btnSewaAlat2.Text = "Sewa Alat";
+            btnSewaAlat2.UseVisualStyleBackColor = false;
+            btnSewaAlat2.Click += btnSewaAlat2_Click;
+            // 
+            // btnSewaAlat1
+            // 
+            btnSewaAlat1.BackColor = Color.WhiteSmoke;
+            btnSewaAlat1.BackgroundImageLayout = ImageLayout.Stretch;
+            btnSewaAlat1.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSewaAlat1.ForeColor = SystemColors.ActiveCaptionText;
+            btnSewaAlat1.Location = new Point(437, 447);
+            btnSewaAlat1.Name = "btnSewaAlat1";
+            btnSewaAlat1.Size = new Size(379, 109);
+            btnSewaAlat1.TabIndex = 0;
+            btnSewaAlat1.Text = "Sewa Alat";
+            btnSewaAlat1.UseVisualStyleBackColor = false;
+            btnSewaAlat1.Click += btnSewaAlat1_Click;
             // 
             // V_dashboardUser
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.Center;
-            ClientSize = new Size(1864, 901);
+            ClientSize = new Size(1920, 1171);
             Controls.Add(panel1);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.Fixed3D;
@@ -288,14 +239,8 @@
             Text = "dashboardUser";
             Load += V_dashboardUser_Load;
             panel1.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel7.ResumeLayout(false);
-            panel6.ResumeLayout(false);
-            panel5.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            panel3.ResumeLayout(false);
-            panel8.ResumeLayout(false);
             panel9.ResumeLayout(false);
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -308,17 +253,11 @@
         private Button btnRiwayatPenyewaan;
         private Button btnDashboard;
         private Panel panel2;
-        private Panel panel7;
-        private Button button6;
-        private Panel panel6;
-        private Button button4;
-        private Panel panel5;
-        private Button button3;
-        private Panel panel4;
-        private Button button2;
-        private Panel panel3;
-        private Button button1;
-        private Panel panel8;
-        private Button button5;
+        private Button btnSewaAlat1;
+        private Button btnSewaAlat5;
+        private Button btnSewaAlat4;
+        private Button btnSewaAlat2;
+        private Button btnSewaAlat6;
+        private Button btnSewaAlat3;
     }
 }

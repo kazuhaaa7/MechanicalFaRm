@@ -14,33 +14,27 @@ namespace MechanicalFaRm.App.Views
             this.WindowState = FormWindowState.Maximized;
             this.currentUserId = userId;
 
-            LoadUserData();
         }
 
-        private void LoadUserData()
-        {
-            try
-            {
-                userController.GetUserById(currentUserId);
-
-                var user = C_userController.CurrentUser;
-
-                if (userController != null)
-                {
-                    txtName.Text = user.username;
-                    txtEmail.Text = user.email;
-                    txtNoTelp.Text = user.no_telepon;
-                    txtPassword.Text = user.password;
-                }
-            }
-            catch
-            {
-            }
-
-        }
+       
 
         private void V_profle_Load(object sender, EventArgs e)
         {
+            int idUserLogin = 1;
+            C_userController userController = new C_userController();
+            M_user user = userController.TampilkanDataBasedId(idUserLogin);
+
+            if (user != null)
+            {
+                lblUsername.Text = user.username;
+                lblPassword.Text = user.password;
+                lblEmail.Text = user.email;
+                lblNoTelp.Text = user.no_telepon;
+            }
+            else
+            {
+                MessageBox.Show("Data pengguna tidak ditemukan.");
+            }
         }
 
         private void btnEditProfileA_Click(object sender, EventArgs e)
@@ -49,6 +43,30 @@ namespace MechanicalFaRm.App.Views
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            //ganti class dashbioard admin
+            V_dashboardUser du = new V_dashboardUser();
+            du.Show();
+            this.Hide();
+        }
+
+        private void btnRiwayat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Anda akan logout");
+            this.Close();
+        }
+
+        private void txtName_Paint(object sender, PaintEventArgs e)
         {
 
         }

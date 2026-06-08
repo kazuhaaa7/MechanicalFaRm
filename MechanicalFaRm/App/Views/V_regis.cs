@@ -5,6 +5,7 @@ namespace MechanicalFaRm.App.Authh
     public partial class V_regis : Form
     {
         private C_userController controlUser;
+        
         public V_regis()
         {
             InitializeComponent();
@@ -43,18 +44,21 @@ namespace MechanicalFaRm.App.Authh
             {
                 MessageBox.Show("Semua kolom data harus diisi");
                 return;
+                tbUsernameR.Focus();
             }
 
             if (username.Length < 5)
             {
                 MessageBox.Show("username minimal 5 character");
                 return;
+                tbUsernameR.Focus();
             }
 
             if (password.Length <= 4)
             {
                 MessageBox.Show("password minimal 4 character");
                 return;
+                tbUsernameR.Focus();
             }
 
             if (!long.TryParse(notelp, out _))//out ("_" = discard => ingin memeriksa apakah notelp bisa diconvert tanpa disimpan di dalam variabel) 
@@ -63,6 +67,7 @@ namespace MechanicalFaRm.App.Authh
                 if (notelp.Length > 13)
                 {
                     MessageBox.Show("no telepon harus 12 angka");
+                    tbUsernameR.Focus();
                 }
                 return;
             }

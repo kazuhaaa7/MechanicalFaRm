@@ -1,6 +1,6 @@
 ﻿namespace MechanicalFaRm.App.Views
 {
-    partial class V_riwayatPembelian
+    partial class V_riwayatPenyewaan
     {
         /// <summary>
         /// Required designer variable.

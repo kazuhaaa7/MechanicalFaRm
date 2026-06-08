@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MechanicalFaRm.App.Controllers;
+using MechanicalFaRm.App.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +21,7 @@ namespace MechanicalFaRm.App.Views
 
         private void V_kelolaAlatAdmin_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

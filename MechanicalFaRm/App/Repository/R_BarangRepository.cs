@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MechanicalFaRm.App.Repository
 {
-    internal class BarangRepository : IBarangRepository
+    internal class R_BarangRepository : R_IBarangRepository
     {
 
         public List<M_barang> GetListBarang() //public: supaya bisa diakses lewat class interface(IBarangRepo)

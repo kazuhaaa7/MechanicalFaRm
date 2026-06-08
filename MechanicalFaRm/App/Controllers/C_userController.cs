@@ -1,5 +1,6 @@
 ﻿using MechanicalFaRm.App.DbHelper;
 using MechanicalFaRm.App.Models;
+using MechanicalFaRm.App.Service;
 using Npgsql;
 
 namespace MechanicalFaRm.App.Controllers
@@ -100,39 +101,10 @@ namespace MechanicalFaRm.App.Controllers
 
         }
 
-        public void GetUserById(int userId)
+        private S_UserService userService = new S_UserService();
+        public M_user? TampilkanDataBasedId(int userId)
         {
-            try
-            {
-                string query = @"SELECT * FROM public.user WHERE id_user=@id LIMIT 1";
-                using var conn = new NpgsqlConnection(connString);
-                conn.Open();
-                using var cmd = new NpgsqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@id", userId);
-                using var reader = cmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    M_user user = new M_user
-                    {
-                        _id_user = reader.GetInt32(reader.GetOrdinal("id_user")),
-                        username = reader["username"].ToString(),
-                        password = reader["password"].ToString(),
-                        no_telepon = reader["no_telp"].ToString(),
-                        email = reader["email"].ToString(),
-                        role = reader["role"].ToString()
-                    };
-                    // Gunakan objek user sesuai kebutuhan
-                }
-                else
-                {
-                    MessageBox.Show("User tidak ditemukan.");
-                }
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show($"Error: {err.Message}");
-            }
-
+            return userService.GetUserById(userId);
         }
     }
 }
