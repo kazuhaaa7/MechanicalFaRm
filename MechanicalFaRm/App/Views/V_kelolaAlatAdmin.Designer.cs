@@ -28,43 +28,137 @@
         /// </summary>
         private void InitializeComponent()
         {
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            panel2 = new Panel();
+            button3 = new Button();
+            button2 = new Button();
+            button1 = new Button();
+            dataGridView1 = new DataGridView();
             panel1 = new Panel();
-            flowLayoutPanel1.SuspendLayout();
+            btnSImpan = new Button();
+            btnEdit = new Button();
+            btnHapus = new Button();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // panel2
             // 
-            flowLayoutPanel1.Controls.Add(panel1);
-            flowLayoutPanel1.Location = new Point(0, 0);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(250, 125);
-            flowLayoutPanel1.TabIndex = 0;
+            panel2.Controls.Add(panel1);
+            panel2.Controls.Add(dataGridView1);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1924, 1046);
+            panel2.TabIndex = 0;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(0, 0);
+            button3.Name = "button3";
+            button3.Size = new Size(75, 23);
+            button3.TabIndex = 0;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(0, 0);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 0;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(0, 0);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 0;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(12, 253);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(1909, 792);
+            dataGridView1.TabIndex = 0;
             // 
             // panel1
             // 
-            panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.Location = new Point(3, 3);
+            panel1.Controls.Add(btnHapus);
+            panel1.Controls.Add(btnEdit);
+            panel1.Controls.Add(btnSImpan);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1403, 719);
-            panel1.TabIndex = 0;
+            panel1.Size = new Size(1924, 247);
+            panel1.TabIndex = 1;
+            // 
+            // btnSImpan
+            // 
+            btnSImpan.BackColor = Color.ForestGreen;
+            btnSImpan.FlatAppearance.BorderSize = 0;
+            btnSImpan.FlatStyle = FlatStyle.Flat;
+            btnSImpan.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSImpan.ForeColor = SystemColors.ButtonHighlight;
+            btnSImpan.Location = new Point(12, 12);
+            btnSImpan.Name = "btnSImpan";
+            btnSImpan.Size = new Size(137, 42);
+            btnSImpan.TabIndex = 0;
+            btnSImpan.Text = "Simpan";
+            btnSImpan.UseVisualStyleBackColor = false;
+            // 
+            // btnEdit
+            // 
+            btnEdit.BackColor = Color.RoyalBlue;
+            btnEdit.FlatAppearance.BorderSize = 0;
+            btnEdit.FlatStyle = FlatStyle.Flat;
+            btnEdit.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEdit.ForeColor = SystemColors.ButtonFace;
+            btnEdit.Location = new Point(187, 12);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(137, 42);
+            btnEdit.TabIndex = 1;
+            btnEdit.Text = "Edit";
+            btnEdit.UseVisualStyleBackColor = false;
+            // 
+            // btnHapus
+            // 
+            btnHapus.BackColor = Color.IndianRed;
+            btnHapus.FlatAppearance.BorderSize = 0;
+            btnHapus.FlatStyle = FlatStyle.Flat;
+            btnHapus.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnHapus.ForeColor = SystemColors.ButtonHighlight;
+            btnHapus.Location = new Point(356, 12);
+            btnHapus.Name = "btnHapus";
+            btnHapus.Size = new Size(137, 42);
+            btnHapus.TabIndex = 2;
+            btnHapus.Text = "Hapus";
+            btnHapus.UseVisualStyleBackColor = false;
             // 
             // V_kelolaAlatAdmin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1409, 689);
-            Controls.Add(flowLayoutPanel1);
+            ClientSize = new Size(1924, 1046);
+            Controls.Add(panel2);
             Name = "V_kelolaAlatAdmin";
             Text = "V_kelolaAlatAdmin";
             Load += V_kelolaAlatAdmin_Load;
-            flowLayoutPanel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
-
-        private FlowLayoutPanel flowLayoutPanel1;
+        private Panel panel2;
+        private Button button3;
+        private Button button2;
+        private Button button1;
         private Panel panel1;
+        private Button btnSImpan;
+        private DataGridView dataGridView1;
+        private Button btnHapus;
+        private Button btnEdit;
     }
 }

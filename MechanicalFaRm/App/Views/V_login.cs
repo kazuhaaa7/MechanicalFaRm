@@ -5,7 +5,7 @@ namespace MechanicalFaRm.App.Authh
 {
     public partial class V_login : Form
     {
-        private V_dashboardUser _dashboarduser;
+        private V_dashboardCust _dashboarduser;
         private C_userController controlUser;
         private readonly C_loginAuthController _authLogin;
 
@@ -19,7 +19,7 @@ namespace MechanicalFaRm.App.Authh
 
         public void OpenDashboard()
         {
-            _dashboarduser = new V_dashboardUser();
+            _dashboarduser = new V_dashboardCust();
             _dashboarduser.Show();
             this.Hide();
         }

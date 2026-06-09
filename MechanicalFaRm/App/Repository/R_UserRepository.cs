@@ -27,10 +27,9 @@ namespace MechanicalFaRm.App.Repository
             {
                 _id_user = reader.GetInt32(0),
                 username = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
-                password = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
-                no_telepon = reader.IsDBNull(3) ? string.Empty : reader.GetString(3),
-                email = reader.IsDBNull(4) ? string.Empty : reader.GetString(4),
-                role = reader.IsDBNull(5) ? string.Empty : reader.GetString(5)
+                no_telepon = reader.IsDBNull(3) ? string.Empty : reader.GetString(2),
+                email = reader.IsDBNull(4) ? string.Empty : reader.GetString(3),
+                role = reader.IsDBNull(5) ? string.Empty : reader.GetString(4)
             };
         }
         public M_user? GetByEmail(string email)

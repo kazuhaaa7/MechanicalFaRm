@@ -1,10 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="App\Views\V_deskripsiAlat.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="App\Views\V_kelolaAkunAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="App\Views\V_kelolaAlatAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="App\Views\V_keranjangCust.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="App\Views\V_login.cs">
@@ -22,10 +28,10 @@
     <Compile Update="App\Views\V_mainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="App\Views\V_dashboardUser.cs">
+    <Compile Update="App\Views\V_dashboardCust.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="App\Views\V_riwayatPenyewaan.cs">
+    <Compile Update="App\Views\V_riwayatPenyewaanCust.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

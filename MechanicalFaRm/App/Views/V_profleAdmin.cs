@@ -28,7 +28,6 @@ namespace MechanicalFaRm.App.Views
             if (user != null)
             {
                 lblUsername.Text = user.username;
-                lblPassword.Text = user.password;
                 lblEmail.Text = user.email;
                 lblNoTelp.Text = user.no_telepon;
             }
@@ -51,7 +50,7 @@ namespace MechanicalFaRm.App.Views
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             //ganti class dashbioard admin
-            V_dashboardUser du = new V_dashboardUser();
+            V_dashboardCust du = new V_dashboardCust();
             du.Show();
             this.Hide();
         }

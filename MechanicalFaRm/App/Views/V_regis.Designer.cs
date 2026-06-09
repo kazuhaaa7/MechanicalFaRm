@@ -112,7 +112,7 @@
             // 
             // panel7
             // 
-            panel7.BackColor = Color.White;
+            panel7.BackColor = Color.Moccasin;
             panel7.Controls.Add(btnLogin);
             panel7.Controls.Add(btnRegist);
             panel7.Location = new Point(22, 778);
@@ -122,6 +122,7 @@
             // 
             // btnLogin
             // 
+            btnLogin.BackColor = Color.Transparent;
             btnLogin.BackgroundImage = (Image)resources.GetObject("btnLogin.BackgroundImage");
             btnLogin.BackgroundImageLayout = ImageLayout.Stretch;
             btnLogin.FlatAppearance.BorderSize = 0;
@@ -130,7 +131,7 @@
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(162, 54);
             btnLogin.TabIndex = 5;
-            btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
             // 
             // btnRegist
@@ -141,7 +142,7 @@
             btnRegist.FlatStyle = FlatStyle.Flat;
             btnRegist.Location = new Point(235, 5);
             btnRegist.Name = "btnRegist";
-            btnRegist.Size = new Size(171, 61);
+            btnRegist.Size = new Size(160, 56);
             btnRegist.TabIndex = 6;
             btnRegist.UseVisualStyleBackColor = true;
             btnRegist.Click += btnRegist_Click;

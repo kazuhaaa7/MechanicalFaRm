@@ -33,7 +33,6 @@ namespace MechanicalFaRm.App.Views
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_profleAdmin));
             panel1 = new Panel();
             panel2 = new Panel();
-            lblPassword = new Label();
             lblNoTelp = new Label();
             lblEmail = new Label();
             lblUsername = new Label();
@@ -66,7 +65,6 @@ namespace MechanicalFaRm.App.Views
             // panel2
             // 
             panel2.BackColor = Color.Transparent;
-            panel2.Controls.Add(lblPassword);
             panel2.Controls.Add(lblNoTelp);
             panel2.Controls.Add(lblEmail);
             panel2.Controls.Add(lblUsername);
@@ -78,17 +76,6 @@ namespace MechanicalFaRm.App.Views
             panel2.Name = "panel2";
             panel2.Size = new Size(1387, 832);
             panel2.TabIndex = 0;
-            // 
-            // lblPassword
-            // 
-            lblPassword.FlatStyle = FlatStyle.Flat;
-            lblPassword.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblPassword.ForeColor = SystemColors.ActiveCaptionText;
-            lblPassword.Location = new Point(856, 723);
-            lblPassword.Name = "lblPassword";
-            lblPassword.Size = new Size(471, 50);
-            lblPassword.TabIndex = 11;
-            lblPassword.TextAlign = ContentAlignment.TopCenter;
             // 
             // lblNoTelp
             // 
@@ -255,7 +242,6 @@ namespace MechanicalFaRm.App.Views
         private ContextMenuStrip contextMenuStrip1;
         private Label lblUsername;
         private Label label1;
-        private Label lblPassword;
         private Label lblNoTelp;
         private Label lblEmail;
     }

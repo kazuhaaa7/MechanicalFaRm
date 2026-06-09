@@ -29,37 +29,37 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            label7 = new Label();
+            tb = new TextBox();
             textBox4 = new TextBox();
             label6 = new Label();
             btnKeranjang = new Button();
             btnLanjut = new Button();
-            tbStoktersedia = new TextBox();
             textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
             npgsqlDataAdapter1 = new Npgsql.NpgsqlDataAdapter();
-            tb = new TextBox();
-            label7 = new Label();
+            lblNamaAlat = new Label();
+            lblStokAlat = new Label();
+            lblHargaAlat = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(lblHargaAlat);
+            panel1.Controls.Add(lblStokAlat);
+            panel1.Controls.Add(lblNamaAlat);
             panel1.Controls.Add(label7);
             panel1.Controls.Add(tb);
             panel1.Controls.Add(textBox4);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(btnKeranjang);
             panel1.Controls.Add(btnLanjut);
-            panel1.Controls.Add(tbStoktersedia);
             panel1.Controls.Add(textBox3);
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(textBox1);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label3);
@@ -69,6 +69,29 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(799, 452);
             panel1.TabIndex = 0;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.Red;
+            label7.Location = new Point(28, 240);
+            label7.Name = "label7";
+            label7.Size = new Size(164, 17);
+            label7.TabIndex = 15;
+            label7.Text = "*minimal penyewaan 3 hari";
+            label7.Click += label7_Click;
+            // 
+            // tb
+            // 
+            tb.BorderStyle = BorderStyle.None;
+            tb.Location = new Point(232, 260);
+            tb.Multiline = true;
+            tb.Name = "tb";
+            tb.PlaceholderText = "YYYY-MM-DD";
+            tb.Size = new Size(249, 34);
+            tb.TabIndex = 14;
             // 
             // textBox4
             // 
@@ -97,7 +120,7 @@
             btnKeranjang.TabIndex = 11;
             btnKeranjang.Text = "Keranjang";
             btnKeranjang.UseVisualStyleBackColor = true;
-            btnKeranjang.Click += button1_Click_1;
+            btnKeranjang.Click += btnKeranjang_Click;
             // 
             // btnLanjut
             // 
@@ -107,40 +130,16 @@
             btnLanjut.TabIndex = 10;
             btnLanjut.Text = "Lanjut";
             btnLanjut.UseVisualStyleBackColor = true;
-            btnLanjut.Click += button1_Click;
-            // 
-            // tbStoktersedia
-            // 
-            tbStoktersedia.Location = new Point(232, 177);
-            tbStoktersedia.Multiline = true;
-            tbStoktersedia.Name = "tbStoktersedia";
-            tbStoktersedia.Size = new Size(249, 34);
-            tbStoktersedia.TabIndex = 8;
-            tbStoktersedia.TextChanged += tbStoktersedia_TextChanged;
+            btnLanjut.Click += btnLanjut_Click;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(232, 127);
+            textBox3.Location = new Point(232, 116);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(249, 34);
             textBox3.TabIndex = 7;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(232, 83);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(249, 34);
-            textBox2.TabIndex = 6;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(232, 40);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(249, 34);
-            textBox1.TabIndex = 5;
+            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // label5
             // 
@@ -196,28 +195,41 @@
             npgsqlDataAdapter1.SelectCommand = null;
             npgsqlDataAdapter1.UpdateCommand = null;
             // 
-            // tb
+            // lblNamaAlat
             // 
-            tb.BorderStyle = BorderStyle.None;
-            tb.Location = new Point(232, 260);
-            tb.Multiline = true;
-            tb.Name = "tb";
-            tb.PlaceholderText = "YYYY-MM-DD";
-            tb.Size = new Size(249, 34);
-            tb.TabIndex = 14;
+            lblNamaAlat.BackColor = Color.Gainsboro;
+            lblNamaAlat.FlatStyle = FlatStyle.Flat;
+            lblNamaAlat.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNamaAlat.ForeColor = SystemColors.ActiveCaptionText;
+            lblNamaAlat.Location = new Point(232, 26);
+            lblNamaAlat.Name = "lblNamaAlat";
+            lblNamaAlat.Size = new Size(249, 33);
+            lblNamaAlat.TabIndex = 16;
+            lblNamaAlat.TextAlign = ContentAlignment.TopCenter;
             // 
-            // label7
+            // lblStokAlat
             // 
-            label7.AutoSize = true;
-            label7.BackColor = Color.Transparent;
-            label7.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.Red;
-            label7.Location = new Point(28, 240);
-            label7.Name = "label7";
-            label7.Size = new Size(164, 17);
-            label7.TabIndex = 15;
-            label7.Text = "*minimal penyewaan 3 hari";
-            label7.Click += label7_Click;
+            lblStokAlat.BackColor = Color.Gainsboro;
+            lblStokAlat.FlatStyle = FlatStyle.Flat;
+            lblStokAlat.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblStokAlat.ForeColor = SystemColors.ActiveCaptionText;
+            lblStokAlat.Location = new Point(232, 167);
+            lblStokAlat.Name = "lblStokAlat";
+            lblStokAlat.Size = new Size(249, 33);
+            lblStokAlat.TabIndex = 17;
+            lblStokAlat.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // lblHargaAlat
+            // 
+            lblHargaAlat.BackColor = Color.Gainsboro;
+            lblHargaAlat.FlatStyle = FlatStyle.Flat;
+            lblHargaAlat.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblHargaAlat.ForeColor = SystemColors.ActiveCaptionText;
+            lblHargaAlat.Location = new Point(232, 73);
+            lblHargaAlat.Name = "lblHargaAlat";
+            lblHargaAlat.Size = new Size(249, 33);
+            lblHargaAlat.TabIndex = 18;
+            lblHargaAlat.TextAlign = ContentAlignment.TopCenter;
             // 
             // V_popupBarang
             // 
@@ -239,7 +251,6 @@
         private Label label3;
         private Label label2;
         private Label label1;
-        private TextBox textBox1;
         private Label label5;
         private TextBox tbStoktersedia;
         private TextBox textBox3;
@@ -251,5 +262,8 @@
         private Npgsql.NpgsqlDataAdapter npgsqlDataAdapter1;
         private TextBox tb;
         private Label label7;
+        private Label lblNamaAlat;
+        private Label lblHargaAlat;
+        private Label lblStokAlat;
     }
 }

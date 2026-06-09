@@ -1,6 +1,6 @@
 ﻿namespace MechanicalFaRm.App.Views
 {
-    partial class V_riwayatPenyewaan
+    partial class V_keranjangCust
     {
         /// <summary>
         /// Required designer variable.
@@ -28,30 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.Location = new Point(1, 1);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1514, 882);
-            panel1.TabIndex = 0;
-            // 
-            // V_riwayatPembelian
-            // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1606, 883);
-            Controls.Add(panel1);
-            Name = "V_riwayatPembelian";
-            Text = "V_riwayatPembelian";
-            Load += V_riwayatPembelian_Load;
-            ResumeLayout(false);
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "V_keranjangCust";
         }
 
         #endregion
-
-        private Panel panel1;
     }
 }
