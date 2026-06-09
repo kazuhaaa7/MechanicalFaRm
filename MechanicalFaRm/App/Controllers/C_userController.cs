@@ -1,6 +1,7 @@
 ﻿using MechanicalFaRm.App.DbHelper;
 using MechanicalFaRm.App.Models;
 using MechanicalFaRm.App.Service;
+using MechanicalFaRm.App.Session;
 using Npgsql;
 
 namespace MechanicalFaRm.App.Controllers
@@ -86,6 +87,10 @@ namespace MechanicalFaRm.App.Controllers
                     member.role = member.username == "admin" ? "admin" : "customer"; // Tentukan role berdasarkan username
 
                     CurrentUser = member;
+                    SE_userSession.id_user = member._id_user;
+                    SE_userSession.userName = member.username;
+                    SE_userSession.Email = member.email;
+                    SE_userSession.role = member.role;
 
                     return "Login Berhasil";
                 }

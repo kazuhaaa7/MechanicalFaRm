@@ -13,13 +13,12 @@ namespace MechanicalFaRm.App.Repository
     {
         public M_user? GetById(int id)
         {
-            var daftarUser = new M_user();
             using var conn = dbconnect.GetConn();
             conn.Open();
-            string rawsql = @"SELECT * FROM public.user WHERE id=@id";
+            string rawsql = @"SELECT id_user, username, password, no_telp, email, role FROM public.user WHERE id_user=@id";
 
             using var cmd = new NpgsqlCommand(rawsql, conn);
-            cmd.Parameters.AddWithValue("id", id);
+            cmd.Parameters.AddWithValue("@id", id);
 
             using var reader = cmd.ExecuteReader();
             if (!reader.Read()) return null;
@@ -27,13 +26,12 @@ namespace MechanicalFaRm.App.Repository
             return new M_user
             {
                 _id_user = reader.GetInt32(0),
-                username = reader.GetString(1),
-                password = reader.GetString(2),
-                no_telepon = reader.GetString(3),
-                email = reader.GetString(4),
-                role = reader.GetString(5)
+                username = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
+                password = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
+                no_telepon = reader.IsDBNull(3) ? string.Empty : reader.GetString(3),
+                email = reader.IsDBNull(4) ? string.Empty : reader.GetString(4),
+                role = reader.IsDBNull(5) ? string.Empty : reader.GetString(5)
             };
-            return daftarUser;
         }
         public M_user? GetByEmail(string email)
         {

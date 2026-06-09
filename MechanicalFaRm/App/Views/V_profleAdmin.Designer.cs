@@ -33,6 +33,11 @@ namespace MechanicalFaRm.App.Views
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_profleAdmin));
             panel1 = new Panel();
             panel2 = new Panel();
+            lblPassword = new Label();
+            lblNoTelp = new Label();
+            lblEmail = new Label();
+            lblUsername = new Label();
+            label1 = new Label();
             panel9 = new Panel();
             btnLogout = new Button();
             btnRiwayat = new Button();
@@ -41,11 +46,6 @@ namespace MechanicalFaRm.App.Views
             btnEditProfileA = new Button();
             panel3 = new Panel();
             contextMenuStrip1 = new ContextMenuStrip(components);
-            label1 = new Label();
-            lblUsername = new Label();
-            lblEmail = new Label();
-            lblNoTelp = new Label();
-            lblPassword = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel9.SuspendLayout();
@@ -78,6 +78,59 @@ namespace MechanicalFaRm.App.Views
             panel2.Name = "panel2";
             panel2.Size = new Size(1387, 832);
             panel2.TabIndex = 0;
+            // 
+            // lblPassword
+            // 
+            lblPassword.FlatStyle = FlatStyle.Flat;
+            lblPassword.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPassword.ForeColor = SystemColors.ActiveCaptionText;
+            lblPassword.Location = new Point(856, 723);
+            lblPassword.Name = "lblPassword";
+            lblPassword.Size = new Size(471, 50);
+            lblPassword.TabIndex = 11;
+            lblPassword.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // lblNoTelp
+            // 
+            lblNoTelp.FlatStyle = FlatStyle.Flat;
+            lblNoTelp.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNoTelp.ForeColor = SystemColors.ActiveCaptionText;
+            lblNoTelp.Location = new Point(847, 615);
+            lblNoTelp.Name = "lblNoTelp";
+            lblNoTelp.Size = new Size(471, 50);
+            lblNoTelp.TabIndex = 10;
+            lblNoTelp.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // lblEmail
+            // 
+            lblEmail.FlatStyle = FlatStyle.Flat;
+            lblEmail.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblEmail.ForeColor = SystemColors.ActiveCaptionText;
+            lblEmail.Location = new Point(847, 502);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(471, 50);
+            lblEmail.TabIndex = 9;
+            lblEmail.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // lblUsername
+            // 
+            lblUsername.FlatStyle = FlatStyle.Flat;
+            lblUsername.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblUsername.ForeColor = SystemColors.ActiveCaptionText;
+            lblUsername.Location = new Point(856, 392);
+            lblUsername.Name = "lblUsername";
+            lblUsername.Size = new Size(471, 50);
+            lblUsername.TabIndex = 8;
+            lblUsername.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(901, 404);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 38);
+            label1.TabIndex = 7;
             // 
             // panel9
             // 
@@ -164,55 +217,6 @@ namespace MechanicalFaRm.App.Views
             contextMenuStrip1.ImageScalingSize = new Size(20, 20);
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(901, 404);
-            label1.Name = "label1";
-            label1.Size = new Size(0, 38);
-            label1.TabIndex = 7;
-            // 
-            // lblUsername
-            // 
-            lblUsername.FlatStyle = FlatStyle.Flat;
-            lblUsername.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblUsername.Location = new Point(856, 392);
-            lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(471, 50);
-            lblUsername.TabIndex = 8;
-            lblUsername.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // lblEmail
-            // 
-            lblEmail.FlatStyle = FlatStyle.Flat;
-            lblEmail.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblEmail.Location = new Point(847, 502);
-            lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(471, 50);
-            lblEmail.TabIndex = 9;
-            lblEmail.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // lblNoTelp
-            // 
-            lblNoTelp.FlatStyle = FlatStyle.Flat;
-            lblNoTelp.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNoTelp.Location = new Point(847, 615);
-            lblNoTelp.Name = "lblNoTelp";
-            lblNoTelp.Size = new Size(471, 50);
-            lblNoTelp.TabIndex = 10;
-            lblNoTelp.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // lblPassword
-            // 
-            lblPassword.FlatStyle = FlatStyle.Flat;
-            lblPassword.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblPassword.Location = new Point(856, 723);
-            lblPassword.Name = "lblPassword";
-            lblPassword.Size = new Size(471, 50);
-            lblPassword.TabIndex = 11;
-            lblPassword.TextAlign = ContentAlignment.TopCenter;
             // 
             // V_profleAdmin
             // 

@@ -1,5 +1,6 @@
 ﻿using MechanicalFaRm.App.Controllers;
 using MechanicalFaRm.App.Models;
+using MechanicalFaRm.App.Session;
 
 namespace MechanicalFaRm.App.Views
 {
@@ -20,7 +21,7 @@ namespace MechanicalFaRm.App.Views
 
         private void V_profle_Load(object sender, EventArgs e)
         {
-            int idUserLogin = 1;
+            int idUserLogin = SE_userSession.id_user;
             C_userController userController = new C_userController();
             M_user user = userController.TampilkanDataBasedId(idUserLogin);
 

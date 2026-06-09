@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            dateTimePicker1 = new DateTimePicker();
+            textBox4 = new TextBox();
+            label6 = new Label();
+            btnKeranjang = new Button();
+            btnLanjut = new Button();
             tbStoktersedia = new TextBox();
             textBox3 = new TextBox();
             textBox2 = new TextBox();
@@ -39,14 +42,20 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            btnSubmit = new Button();
+            npgsqlDataAdapter1 = new Npgsql.NpgsqlDataAdapter();
+            tb = new TextBox();
+            label7 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Controls.Add(btnSubmit);
-            panel1.Controls.Add(dateTimePicker1);
+            panel1.Controls.Add(label7);
+            panel1.Controls.Add(tb);
+            panel1.Controls.Add(textBox4);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(btnKeranjang);
+            panel1.Controls.Add(btnLanjut);
             panel1.Controls.Add(tbStoktersedia);
             panel1.Controls.Add(textBox3);
             panel1.Controls.Add(textBox2);
@@ -61,12 +70,44 @@
             panel1.Size = new Size(799, 452);
             panel1.TabIndex = 0;
             // 
-            // dateTimePicker1
+            // textBox4
             // 
-            dateTimePicker1.Location = new Point(230, 242);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(262, 27);
-            dateTimePicker1.TabIndex = 9;
+            textBox4.Location = new Point(232, 217);
+            textBox4.Multiline = true;
+            textBox4.Name = "textBox4";
+            textBox4.PlaceholderText = "YYYY-MM-DD";
+            textBox4.Size = new Size(249, 34);
+            textBox4.TabIndex = 13;
+            textBox4.TextChanged += textBox4_TextChanged;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(28, 263);
+            label6.Name = "label6";
+            label6.Size = new Size(122, 20);
+            label6.TabIndex = 12;
+            label6.Text = "Lama Penyewaan";
+            // 
+            // btnKeranjang
+            // 
+            btnKeranjang.Location = new Point(313, 343);
+            btnKeranjang.Name = "btnKeranjang";
+            btnKeranjang.Size = new Size(168, 42);
+            btnKeranjang.TabIndex = 11;
+            btnKeranjang.Text = "Keranjang";
+            btnKeranjang.UseVisualStyleBackColor = true;
+            btnKeranjang.Click += button1_Click_1;
+            // 
+            // btnLanjut
+            // 
+            btnLanjut.Location = new Point(515, 343);
+            btnLanjut.Name = "btnLanjut";
+            btnLanjut.Size = new Size(168, 42);
+            btnLanjut.TabIndex = 10;
+            btnLanjut.Text = "Lanjut";
+            btnLanjut.UseVisualStyleBackColor = true;
+            btnLanjut.Click += button1_Click;
             // 
             // tbStoktersedia
             // 
@@ -104,11 +145,12 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(28, 245);
+            label5.Location = new Point(28, 220);
             label5.Name = "label5";
-            label5.Size = new Size(138, 20);
+            label5.Size = new Size(123, 20);
             label5.TabIndex = 4;
-            label5.Text = "Tanggal Penyewaan";
+            label5.Text = "Mulai Penyewaan";
+            label5.Click += label5_Click;
             // 
             // label4
             // 
@@ -147,23 +189,43 @@
             label1.TabIndex = 0;
             label1.Text = "Nama Alat";
             // 
-            // btnSubmit
+            // npgsqlDataAdapter1
             // 
-            btnSubmit.Location = new Point(515, 343);
-            btnSubmit.Name = "btnSubmit";
-            btnSubmit.Size = new Size(168, 42);
-            btnSubmit.TabIndex = 10;
-            btnSubmit.Text = "Submit";
-            btnSubmit.UseVisualStyleBackColor = true;
-            btnSubmit.Click += button1_Click;
+            npgsqlDataAdapter1.DeleteCommand = null;
+            npgsqlDataAdapter1.InsertCommand = null;
+            npgsqlDataAdapter1.SelectCommand = null;
+            npgsqlDataAdapter1.UpdateCommand = null;
             // 
-            // V_popupBarang_cs
+            // tb
+            // 
+            tb.BorderStyle = BorderStyle.None;
+            tb.Location = new Point(232, 260);
+            tb.Multiline = true;
+            tb.Name = "tb";
+            tb.PlaceholderText = "YYYY-MM-DD";
+            tb.Size = new Size(249, 34);
+            tb.TabIndex = 14;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.Red;
+            label7.Location = new Point(28, 240);
+            label7.Name = "label7";
+            label7.Size = new Size(164, 17);
+            label7.TabIndex = 15;
+            label7.Text = "*minimal penyewaan 3 hari";
+            label7.Click += label7_Click;
+            // 
+            // V_popupBarang
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(panel1);
-            Name = "V_popupBarang_cs";
+            Name = "V_popupBarang";
             Text = "V_popupBarang_cs";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -182,7 +244,12 @@
         private TextBox tbStoktersedia;
         private TextBox textBox3;
         private TextBox textBox2;
-        private DateTimePicker dateTimePicker1;
-        private Button btnSubmit;
+        private Button btnLanjut;
+        private Button btnKeranjang;
+        private TextBox textBox4;
+        private Label label6;
+        private Npgsql.NpgsqlDataAdapter npgsqlDataAdapter1;
+        private TextBox tb;
+        private Label label7;
     }
 }
