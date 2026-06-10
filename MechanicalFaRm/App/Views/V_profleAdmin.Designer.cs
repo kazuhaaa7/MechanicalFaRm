@@ -58,7 +58,7 @@ namespace MechanicalFaRm.App.Views
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(-18, -6);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1945, 1151);
+            panel1.Size = new Size(1945, 1051);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
@@ -74,7 +74,7 @@ namespace MechanicalFaRm.App.Views
             panel2.Controls.Add(panel3);
             panel2.Location = new Point(21, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1387, 832);
+            panel2.Size = new Size(1387, 970);
             panel2.TabIndex = 0;
             // 
             // lblNoTelp
@@ -127,18 +127,19 @@ namespace MechanicalFaRm.App.Views
             panel9.Dock = DockStyle.Left;
             panel9.Location = new Point(0, 0);
             panel9.Name = "panel9";
-            panel9.Size = new Size(300, 832);
+            panel9.Size = new Size(361, 970);
             panel9.TabIndex = 6;
             // 
             // btnLogout
             // 
-            btnLogout.BackColor = Color.Transparent;
-            btnLogout.BackgroundImage = (Image)resources.GetObject("btnLogout.BackgroundImage");
+            btnLogout.BackColor = Color.DarkGray;
+            btnLogout.FlatAppearance.BorderSize = 0;
+            btnLogout.FlatStyle = FlatStyle.Flat;
             btnLogout.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnLogout.ForeColor = SystemColors.ActiveCaptionText;
-            btnLogout.Location = new Point(29, 479);
+            btnLogout.Location = new Point(39, 718);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(271, 73);
+            btnLogout.Size = new Size(302, 67);
             btnLogout.TabIndex = 2;
             btnLogout.Text = "Logout";
             btnLogout.UseVisualStyleBackColor = false;
@@ -146,13 +147,14 @@ namespace MechanicalFaRm.App.Views
             // 
             // btnRiwayat
             // 
-            btnRiwayat.BackColor = Color.Transparent;
-            btnRiwayat.BackgroundImage = (Image)resources.GetObject("btnRiwayat.BackgroundImage");
+            btnRiwayat.BackColor = Color.DarkGray;
+            btnRiwayat.FlatAppearance.BorderSize = 0;
+            btnRiwayat.FlatStyle = FlatStyle.Flat;
             btnRiwayat.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnRiwayat.ForeColor = SystemColors.ActiveCaptionText;
-            btnRiwayat.Location = new Point(26, 393);
+            btnRiwayat.Location = new Point(39, 362);
             btnRiwayat.Name = "btnRiwayat";
-            btnRiwayat.Size = new Size(271, 79);
+            btnRiwayat.Size = new Size(302, 67);
             btnRiwayat.TabIndex = 1;
             btnRiwayat.Text = "Riwayat Penyewaan";
             btnRiwayat.UseVisualStyleBackColor = false;
@@ -160,13 +162,14 @@ namespace MechanicalFaRm.App.Views
             // 
             // btnDashboard
             // 
-            btnDashboard.BackColor = Color.Transparent;
-            btnDashboard.BackgroundImage = (Image)resources.GetObject("btnDashboard.BackgroundImage");
+            btnDashboard.BackColor = Color.DarkGray;
+            btnDashboard.FlatAppearance.BorderSize = 0;
+            btnDashboard.FlatStyle = FlatStyle.Flat;
             btnDashboard.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnDashboard.ForeColor = SystemColors.ActiveCaptionText;
-            btnDashboard.Location = new Point(29, 306);
+            btnDashboard.Location = new Point(39, 289);
             btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(271, 81);
+            btnDashboard.Size = new Size(302, 67);
             btnDashboard.TabIndex = 0;
             btnDashboard.Text = "Dashboard";
             btnDashboard.UseVisualStyleBackColor = false;
@@ -175,28 +178,31 @@ namespace MechanicalFaRm.App.Views
             // panel8
             // 
             panel8.Controls.Add(btnEditProfileA);
-            panel8.Location = new Point(467, 694);
+            panel8.Location = new Point(445, 654);
             panel8.Name = "panel8";
-            panel8.Size = new Size(285, 93);
+            panel8.Size = new Size(363, 112);
             panel8.TabIndex = 5;
             // 
             // btnEditProfileA
             // 
+            btnEditProfileA.BackColor = Color.Transparent;
             btnEditProfileA.BackgroundImage = (Image)resources.GetObject("btnEditProfileA.BackgroundImage");
             btnEditProfileA.BackgroundImageLayout = ImageLayout.Stretch;
-            btnEditProfileA.Location = new Point(21, 22);
+            btnEditProfileA.FlatAppearance.BorderSize = 0;
+            btnEditProfileA.FlatStyle = FlatStyle.Flat;
+            btnEditProfileA.Location = new Point(50, 13);
             btnEditProfileA.Name = "btnEditProfileA";
-            btnEditProfileA.Size = new Size(261, 68);
+            btnEditProfileA.Size = new Size(258, 59);
             btnEditProfileA.TabIndex = 0;
-            btnEditProfileA.UseVisualStyleBackColor = true;
+            btnEditProfileA.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
             panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
             panel3.BackgroundImageLayout = ImageLayout.Stretch;
-            panel3.Location = new Point(445, 331);
+            panel3.Location = new Point(445, 306);
             panel3.Name = "panel3";
-            panel3.Size = new Size(350, 368);
+            panel3.Size = new Size(348, 326);
             panel3.TabIndex = 0;
             // 
             // contextMenuStrip1
@@ -210,7 +216,7 @@ namespace MechanicalFaRm.App.Views
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.Center;
-            ClientSize = new Size(1924, 1143);
+            ClientSize = new Size(1924, 1046);
             Controls.Add(panel1);
             DoubleBuffered = true;
             ForeColor = SystemColors.ActiveBorder;

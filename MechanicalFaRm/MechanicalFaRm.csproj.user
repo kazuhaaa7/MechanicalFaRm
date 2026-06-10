@@ -4,6 +4,9 @@
     <Compile Update="App\Views\V_deskripsiAlat.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="App\Views\V_editProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="App\Views\V_kelolaAkunAdmin.cs">
       <SubType>Form</SubType>
     </Compile>

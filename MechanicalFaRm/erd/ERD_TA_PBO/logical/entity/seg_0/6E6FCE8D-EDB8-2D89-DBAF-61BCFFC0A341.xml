@@ -27,7 +27,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="status_pesanan" id="B12DE388-5C61-25A8-E147-565A7FFE9930">
+<Attribute name="status" id="B12DE388-5C61-25A8-E147-565A7FFE9930">
 <createdBy>ADVAN</createdBy>
 <createdTime>2026-05-29 22:50:16 UTC</createdTime>
 <ownerDesignName>ERD_TA_PBO</ownerDesignName>
@@ -37,8 +37,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>20 CHAR</dataTypeSize>
-<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="tanggal_pesanan" id="8DC27AA4-6483-59DA-6241-79CD6A608A98">
 <createdBy>ADVAN</createdBy>
@@ -66,14 +66,29 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="id_admin" id="643FE032-6A02-2149-DA50-C7D79453ADEC">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-10 04:54:39 UTC</createdTime>
+<generatorID>0D8E858A-85CC-782B-5590-C062D0B7F345</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<engineerTo>
+<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
+</engineerTo>
+<referedAttribute>33A64A9B-3606-ED8C-7834-B122765F7D74</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="5B607038-4BE1-F2C4-503B-167975D91A08" name="pesanan PK">
 <createdBy>ADVAN</createdBy>
 <createdTime>2026-05-29 22:50:01 UTC</createdTime>
 <ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
+<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

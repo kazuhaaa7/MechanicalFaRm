@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8849DFF8-E121-91DD-CF5E-C837CD4208E4" name="customer">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F830219B-4A5A-3A4C-36DF-253A59542157" name="jalan">
 <createdBy>ADVAN</createdBy>
-<createdTime>2026-05-29 21:00:28 UTC</createdTime>
+<createdTime>2026-06-10 03:50:11 UTC</createdTime>
 <ownerDesignName>ERD_TA_PBO</ownerDesignName>
 <engineerTo>
 <item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
@@ -11,14 +11,13 @@
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
 <growthPercent>0</growthPercent>
 <growthType>Year</growthType>
-<hierarchicalParent>784D0154-FFC9-FE76-C517-AA53E6B83FFC</hierarchicalParent>
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id_customer" id="B06E14CA-BA13-7D3A-ED39-7767F9C0B05B">
+<Attribute name="id_jalan" id="CE706312-2DF8-026C-6728-C299D147D8FE">
 <createdBy>ADVAN</createdBy>
-<createdTime>2026-05-29 22:45:18 UTC</createdTime>
+<createdTime>2026-06-10 03:50:17 UTC</createdTime>
 <ownerDesignName>ERD_TA_PBO</ownerDesignName>
 <engineerTo>
 <item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
@@ -28,9 +27,9 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nama_customer" id="CDB2C782-5B63-19DB-2762-1977999A8150">
+<Attribute name="nama_jalan" id="8B371A5F-5F7F-1F39-D8C6-AE35F68A2A2D">
 <createdBy>ADVAN</createdBy>
-<createdTime>2026-05-29 22:45:45 UTC</createdTime>
+<createdTime>2026-06-10 03:50:24 UTC</createdTime>
 <ownerDesignName>ERD_TA_PBO</ownerDesignName>
 <engineerTo>
 <item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
@@ -38,21 +37,35 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>100 CHAR</dataTypeSize>
-<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<dataTypeSize>225 CHAR</dataTypeSize>
+<ownDataTypeParameters>225 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_kecamatan" id="B569B68E-EFE8-E9ED-A118-1E1C57ACC5C3">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-10 03:56:03 UTC</createdTime>
+<generatorID>A11D605B-9E4F-C2F0-3BC9-E640EEB1B99E</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<engineerTo>
+<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
+</engineerTo>
+<referedAttribute>FF7DA0E2-C887-3F0C-548B-FE19037CF09B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="766E80DE-0D77-A27C-38F4-2CF383E584C2" name="customer PK">
+<identifier id="E80CE264-97BB-17AA-861D-CA4F40A9EE5B" name="jalan PK">
 <createdBy>ADVAN</createdBy>
-<createdTime>2026-05-29 22:45:30 UTC</createdTime>
+<createdTime>2026-06-10 03:51:40 UTC</createdTime>
 <ownerDesignName>ERD_TA_PBO</ownerDesignName>
 <engineerTo>
 <item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>B06E14CA-BA13-7D3A-ED39-7767F9C0B05B</attributeRef>
+<attributeRef>CE706312-2DF8-026C-6728-C299D147D8FE</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

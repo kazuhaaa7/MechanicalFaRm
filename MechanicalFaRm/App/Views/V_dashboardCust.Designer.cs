@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_dashboardCust));
             panel1 = new Panel();
             panel9 = new Panel();
+            btnKeranjang = new Button();
             btnLogout = new Button();
             btnProfile = new Button();
             btnRiwayatPenyewaan = new Button();
@@ -61,6 +62,7 @@
             // panel9
             // 
             panel9.BackColor = Color.Transparent;
+            panel9.Controls.Add(btnKeranjang);
             panel9.Controls.Add(btnLogout);
             panel9.Controls.Add(btnProfile);
             panel9.Controls.Add(btnRiwayatPenyewaan);
@@ -71,15 +73,32 @@
             panel9.Size = new Size(371, 1120);
             panel9.TabIndex = 8;
             // 
+            // btnKeranjang
+            // 
+            btnKeranjang.BackColor = Color.DarkGray;
+            btnKeranjang.BackgroundImageLayout = ImageLayout.Stretch;
+            btnKeranjang.FlatAppearance.BorderSize = 0;
+            btnKeranjang.FlatStyle = FlatStyle.Flat;
+            btnKeranjang.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnKeranjang.ForeColor = SystemColors.ActiveCaptionText;
+            btnKeranjang.Location = new Point(33, 549);
+            btnKeranjang.Name = "btnKeranjang";
+            btnKeranjang.Size = new Size(302, 67);
+            btnKeranjang.TabIndex = 4;
+            btnKeranjang.Text = "Keranjang";
+            btnKeranjang.UseVisualStyleBackColor = false;
+            // 
             // btnLogout
             // 
             btnLogout.BackColor = Color.DarkGray;
             btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
-            btnLogout.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogout.FlatAppearance.BorderSize = 0;
+            btnLogout.FlatStyle = FlatStyle.Flat;
+            btnLogout.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnLogout.ForeColor = SystemColors.ActiveCaptionText;
-            btnLogout.Location = new Point(49, 596);
+            btnLogout.Location = new Point(33, 695);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(302, 65);
+            btnLogout.Size = new Size(302, 67);
             btnLogout.TabIndex = 3;
             btnLogout.Text = "Logout";
             btnLogout.UseVisualStyleBackColor = false;
@@ -89,11 +108,13 @@
             // 
             btnProfile.BackColor = Color.DarkGray;
             btnProfile.BackgroundImageLayout = ImageLayout.Stretch;
-            btnProfile.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnProfile.FlatAppearance.BorderSize = 0;
+            btnProfile.FlatStyle = FlatStyle.Flat;
+            btnProfile.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnProfile.ForeColor = SystemColors.ActiveCaptionText;
-            btnProfile.Location = new Point(49, 524);
+            btnProfile.Location = new Point(33, 622);
             btnProfile.Name = "btnProfile";
-            btnProfile.Size = new Size(302, 66);
+            btnProfile.Size = new Size(302, 67);
             btnProfile.TabIndex = 2;
             btnProfile.Text = "Profile";
             btnProfile.UseVisualStyleBackColor = false;
@@ -103,11 +124,13 @@
             // 
             btnRiwayatPenyewaan.BackColor = Color.DarkGray;
             btnRiwayatPenyewaan.BackgroundImageLayout = ImageLayout.Stretch;
-            btnRiwayatPenyewaan.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRiwayatPenyewaan.FlatAppearance.BorderSize = 0;
+            btnRiwayatPenyewaan.FlatStyle = FlatStyle.Flat;
+            btnRiwayatPenyewaan.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnRiwayatPenyewaan.ForeColor = SystemColors.ActiveCaptionText;
-            btnRiwayatPenyewaan.Location = new Point(49, 447);
+            btnRiwayatPenyewaan.Location = new Point(33, 476);
             btnRiwayatPenyewaan.Name = "btnRiwayatPenyewaan";
-            btnRiwayatPenyewaan.Size = new Size(302, 71);
+            btnRiwayatPenyewaan.Size = new Size(302, 67);
             btnRiwayatPenyewaan.TabIndex = 1;
             btnRiwayatPenyewaan.Text = "Riwayat Penyewaan";
             btnRiwayatPenyewaan.UseVisualStyleBackColor = false;
@@ -117,9 +140,11 @@
             // 
             btnDashboard.BackColor = Color.DarkGray;
             btnDashboard.BackgroundImageLayout = ImageLayout.Stretch;
-            btnDashboard.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDashboard.FlatAppearance.BorderSize = 0;
+            btnDashboard.FlatStyle = FlatStyle.Flat;
+            btnDashboard.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnDashboard.ForeColor = SystemColors.ActiveCaptionText;
-            btnDashboard.Location = new Point(49, 374);
+            btnDashboard.Location = new Point(33, 403);
             btnDashboard.Name = "btnDashboard";
             btnDashboard.Size = new Size(302, 67);
             btnDashboard.TabIndex = 0;
@@ -136,18 +161,20 @@
             panel2.Controls.Add(btnSewaAlat4);
             panel2.Controls.Add(btnSewaAlat2);
             panel2.Controls.Add(btnSewaAlat1);
-            panel2.Location = new Point(0, 0);
+            panel2.Location = new Point(0, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1928, 1117);
+            panel2.Size = new Size(1928, 1114);
             panel2.TabIndex = 0;
             // 
             // btnSewaAlat6
             // 
-            btnSewaAlat6.BackColor = Color.WhiteSmoke;
+            btnSewaAlat6.BackColor = Color.Silver;
             btnSewaAlat6.BackgroundImageLayout = ImageLayout.Stretch;
+            btnSewaAlat6.FlatAppearance.BorderSize = 0;
+            btnSewaAlat6.FlatStyle = FlatStyle.Flat;
             btnSewaAlat6.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSewaAlat6.ForeColor = SystemColors.ActiveCaptionText;
-            btnSewaAlat6.Location = new Point(1456, 846);
+            btnSewaAlat6.Location = new Point(1469, 913);
             btnSewaAlat6.Name = "btnSewaAlat6";
             btnSewaAlat6.Size = new Size(379, 109);
             btnSewaAlat6.TabIndex = 5;
@@ -157,11 +184,13 @@
             // 
             // btnSewaAlat3
             // 
-            btnSewaAlat3.BackColor = Color.WhiteSmoke;
+            btnSewaAlat3.BackColor = Color.Silver;
             btnSewaAlat3.BackgroundImageLayout = ImageLayout.Stretch;
+            btnSewaAlat3.FlatAppearance.BorderSize = 0;
+            btnSewaAlat3.FlatStyle = FlatStyle.Flat;
             btnSewaAlat3.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSewaAlat3.ForeColor = SystemColors.ActiveCaptionText;
-            btnSewaAlat3.Location = new Point(1456, 431);
+            btnSewaAlat3.Location = new Point(1469, 461);
             btnSewaAlat3.Name = "btnSewaAlat3";
             btnSewaAlat3.Size = new Size(379, 109);
             btnSewaAlat3.TabIndex = 4;
@@ -171,11 +200,13 @@
             // 
             // btnSewaAlat5
             // 
-            btnSewaAlat5.BackColor = Color.WhiteSmoke;
+            btnSewaAlat5.BackColor = Color.Silver;
             btnSewaAlat5.BackgroundImageLayout = ImageLayout.Stretch;
+            btnSewaAlat5.FlatAppearance.BorderSize = 0;
+            btnSewaAlat5.FlatStyle = FlatStyle.Flat;
             btnSewaAlat5.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSewaAlat5.ForeColor = SystemColors.ActiveCaptionText;
-            btnSewaAlat5.Location = new Point(945, 846);
+            btnSewaAlat5.Location = new Point(954, 913);
             btnSewaAlat5.Name = "btnSewaAlat5";
             btnSewaAlat5.Size = new Size(379, 109);
             btnSewaAlat5.TabIndex = 3;
@@ -185,11 +216,13 @@
             // 
             // btnSewaAlat4
             // 
-            btnSewaAlat4.BackColor = Color.WhiteSmoke;
+            btnSewaAlat4.BackColor = Color.Silver;
             btnSewaAlat4.BackgroundImageLayout = ImageLayout.Stretch;
+            btnSewaAlat4.FlatAppearance.BorderSize = 0;
+            btnSewaAlat4.FlatStyle = FlatStyle.Flat;
             btnSewaAlat4.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSewaAlat4.ForeColor = SystemColors.ActiveCaptionText;
-            btnSewaAlat4.Location = new Point(437, 846);
+            btnSewaAlat4.Location = new Point(437, 913);
             btnSewaAlat4.Name = "btnSewaAlat4";
             btnSewaAlat4.Size = new Size(379, 109);
             btnSewaAlat4.TabIndex = 2;
@@ -199,11 +232,13 @@
             // 
             // btnSewaAlat2
             // 
-            btnSewaAlat2.BackColor = Color.WhiteSmoke;
+            btnSewaAlat2.BackColor = Color.Silver;
             btnSewaAlat2.BackgroundImageLayout = ImageLayout.Stretch;
+            btnSewaAlat2.FlatAppearance.BorderSize = 0;
+            btnSewaAlat2.FlatStyle = FlatStyle.Flat;
             btnSewaAlat2.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSewaAlat2.ForeColor = SystemColors.ActiveCaptionText;
-            btnSewaAlat2.Location = new Point(945, 431);
+            btnSewaAlat2.Location = new Point(954, 461);
             btnSewaAlat2.Name = "btnSewaAlat2";
             btnSewaAlat2.Size = new Size(379, 109);
             btnSewaAlat2.TabIndex = 1;
@@ -213,11 +248,13 @@
             // 
             // btnSewaAlat1
             // 
-            btnSewaAlat1.BackColor = Color.WhiteSmoke;
+            btnSewaAlat1.BackColor = Color.Silver;
             btnSewaAlat1.BackgroundImageLayout = ImageLayout.Stretch;
+            btnSewaAlat1.FlatAppearance.BorderSize = 0;
+            btnSewaAlat1.FlatStyle = FlatStyle.Flat;
             btnSewaAlat1.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSewaAlat1.ForeColor = SystemColors.ActiveCaptionText;
-            btnSewaAlat1.Location = new Point(437, 431);
+            btnSewaAlat1.Location = new Point(437, 461);
             btnSewaAlat1.Name = "btnSewaAlat1";
             btnSewaAlat1.Size = new Size(379, 109);
             btnSewaAlat1.TabIndex = 0;
@@ -225,7 +262,7 @@
             btnSewaAlat1.UseVisualStyleBackColor = false;
             btnSewaAlat1.Click += btnSewaAlat1_Click;
             // 
-            // V_dashboardUser
+            // V_dashboardCust
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -234,7 +271,7 @@
             Controls.Add(panel1);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.Fixed3D;
-            Name = "V_dashboardUser";
+            Name = "V_dashboardCust";
             Text = "dashboardUser";
             Load += V_dashboardUser_Load;
             panel1.ResumeLayout(false);
@@ -258,5 +295,6 @@
         private Button btnSewaAlat2;
         private Button btnSewaAlat6;
         private Button btnSewaAlat3;
+        private Button btnKeranjang;
     }
 }

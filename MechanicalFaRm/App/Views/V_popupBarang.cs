@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MechanicalFaRm.App.Controllers;
+using MechanicalFaRm.App.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,11 +15,25 @@ namespace MechanicalFaRm.App.Views
     public partial class V_popupBarang : Form
     {
         //Form V_dashboardCust
+        public int idBarang;
+        private C_barangController barangController;
         public V_popupBarang()
         {
             InitializeComponent();
             //this.V_dashboardCust = induk;
-            
+            barangController = new C_barangController();
+
+        }
+        private void V_popupBarang_Load(object sender, EventArgs e)
+        {
+            M_barang barang = barangController.GetBarangById(idBarang);
+
+            if (barang != null)
+            {
+                lblNamaAlat.Text = barang.namaBarang;
+                lblHargaAlat.Text = barang.hargaSewa.ToString();
+                lblStokAlat.Text = barang.stok.ToString();
+            }
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -58,6 +74,21 @@ namespace MechanicalFaRm.App.Views
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblNamaAlat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }

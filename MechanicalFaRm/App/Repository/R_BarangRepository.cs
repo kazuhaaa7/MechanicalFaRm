@@ -42,7 +42,7 @@ namespace MechanicalFaRm.App.Repository
             var daftarBarang = new List<M_barang>();
             using var conn = dbconnect.GetConn();
             conn.Open();
-            string rawsql = $"SELECT * FROM barang WHERE stok >1 ORDER BY id_users ASC LIMIT @limit";
+            string rawsql = $"SELECT * FROM barang WHERE stok >1 ORDER BY id_user ASC LIMIT @limit";
 
             using var cmd = new NpgsqlCommand(rawsql, conn);
             cmd.Parameters.AddWithValue("limit", limit);
@@ -68,7 +68,7 @@ namespace MechanicalFaRm.App.Repository
             using var conn = dbconnect.GetConn();
             conn.Open();
 
-            string rawsql = "SELECT * FROM barang WHERE id = @id";
+            string rawsql = "SELECT * FROM barang WHERE id_barang = @id";
             using var cmd = new NpgsqlCommand(rawsql, conn);
             cmd.Parameters.AddWithValue("id", id);
 

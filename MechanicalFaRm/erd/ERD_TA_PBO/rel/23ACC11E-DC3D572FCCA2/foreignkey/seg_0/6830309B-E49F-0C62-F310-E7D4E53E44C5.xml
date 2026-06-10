@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="6830309B-E49F-0C62-F310-E7D4E53E44C5" containerWithKeyObject="CAA95C9A-4F39-24C7-2CAD-EDED18B4EE28" localFKIndex="F191980A-7DB7-76D7-91BB-68CA2791B1D5" name="alamat_jalan_FK">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-10 04:05:21 UTC</createdTime>
+<generatorID>9F91E398-F0B7-7436-351A-E8DD0918DA7D</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<referredTableLongName>jalan</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A4FB69DA-2217-8AD4-1695-EDE435DD584A</referredTableID>
+<keyObject>B560F56F-E6AB-417C-105A-78D234F4D9D6</keyObject>
+<referredKeyID>B560F56F-E6AB-417C-105A-78D234F4D9D6</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_jalan</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

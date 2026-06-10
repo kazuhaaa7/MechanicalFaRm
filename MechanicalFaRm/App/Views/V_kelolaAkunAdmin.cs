@@ -33,5 +33,10 @@ namespace MechanicalFaRm.App.Views
             MessageBox.Show("Anda akan logout.", "Logout", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

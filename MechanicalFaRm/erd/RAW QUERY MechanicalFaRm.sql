@@ -1,25 +1,26 @@
-CREATE TABLE users
+insert into barang()
+select * from public.barang
+CREATE TABLE public.user
     ( 
-     id_users serial PRIMARY KEY NOT NULL , 
+     id_user serial PRIMARY KEY NOT NULL , 
      username VARCHAR(100)  NOT NULL , 
      password VARCHAR(255)  NOT NULL , 
-	 nama varchar(100) not null,
      no_telp  varchar(15) not null UNIQUE,
 	 email varchar(100) not null,
-	 tipe_pengguna varchar(10) not null check(tipe_pengguna 
+	 role varchar(10) not null check(role  
 	 in ('customer', 'admin')) default 'customer',
-	 alamat text not null
+     nama varchar(255)
     );
 
 
 CREATE TABLE barang 
     ( 
      id_barang   serial PRIMARY KEY NOT NULL , 
-	 id_users integer not null,
      nama_barang VARCHAR(100)  NOT NULL , 
-     deskripsi   VARCHAR(255) not null, 
+     deskripsi   text not null, 
      harga_sewa  INT not null, 
      stok NUMERIC not null
+
     ) 
 ;
 
@@ -34,62 +35,72 @@ CREATE TABLE detail_pesanan
     ) 
 ;
 
-CREATE TABLE keranjang 
-    ( 
-     id_keranjang SERIAL PRIMARY KEY NOT NULL , 
-     id_users      INT  NOT NULL , 
-     id_barang    INT NOT NULL,
-     jumlah       NUMERIC NOT NULL
-    ) 
-;
 
 
 CREATE TABLE pesanan 
     ( 
      id_pesanan             SERIAL PRIMARY KEY NOT NULL , 
-     id_users                INT  NOT NULL , 
-     tanggal_pesan          DATE , 
-     status_pesanan varchar(20) NOT NULL check(status_pesanan in('progress pemesanan', 'sudah terpesan')) 
+     id_user             INT  NOT NULL , 
+     tanggal_pesan          DATE NOT NULL, 
+	 tanggal_kembali 		DATE NOT NULL,
+     status varchar(50) NOT NULL check(status in('progress pemesanan', 'sudah terpesan')) 
 	 default 'progress pemesanan'
     ) 
 ;
-CREATE UNIQUE INDEX pesanan__IDX ON pesanan 
-    ( 
-     keranjang_id_keranjang ASC 
-    ) 
-;
-
 
 
 ALTER TABLE pesanan 
     ADD CONSTRAINT id_users_FK FOREIGN KEY 
-    (id_users) 
-    REFERENCES users
-    (id_users);
+    (id_user) 
+    REFERENCES public.user
+    (id_user)
+		ON DELETE CASCADE
+	ON UPDATE CASCADE;
 
 ALTER TABLE detail_pesanan
     ADD CONSTRAINT id_pesanan_FK FOREIGN KEY 
     (id_pesanan) 
     REFERENCES pesanan 
-    (id_pesanan);
+    (id_pesanan)
+		ON DELETE CASCADE
+	ON UPDATE CASCADE;
 ALTER TABLE detail_pesanan
     ADD CONSTRAINT id_barang_FK FOREIGN KEY 
     (id_barang) 
     REFERENCES barang 
-    (id_barang);
+    (id_barang)
+		ON DELETE CASCADE
+	ON UPDATE CASCADE;
 
+CREATE TABLE alamat (
+	id_alamat SERIAL PRIMARY KEY NOT NULL,
+	id_user INT NOT NULL,
+	id_jalan INT NOT NULL,
 
-ALTER TABLE keranjang 
-    ADD CONSTRAINT id_user_FK FOREIGN KEY 
-    ( id_users) 
-    REFERENCES users (id_users);
+	CONSTRAINT id_user_fk
+	FOREIGN KEY (id_user)
+	REFERENCES public.user (id_user),
+	
+	CONSTRAINT id_jalan_fk
+	FOREIGN KEY (id_jalan)
+	REFERENCES jalan (id_jalan)
+	ON DELETE CASCADE
+	ON UPDATE CASCADE
+	)
 
-ALTER TABLE keranjang 
-    ADD CONSTRAINT id_barang_FK FOREIGN KEY 
-    ( id_barang) 
-    REFERENCES barang (id_barang);
+CREATE TABLE jalan (
+	id_jalan SERIAL PRIMARY KEY NOT NULL,
+	id_kecamatan INT NOT NULL,
+	nama_jalan VARCHAR(255) NOT NULL,
+	
+	CONSTRAINT id_kecamatan_fk
+	FOREIGN KEY (id_kecamatan)
+	REFERENCES kecamatan (id_kecamatan)
+		ON DELETE CASCADE
+	ON UPDATE CASCADE
+)
 
-ALTER TABLE barang 
-	ADD CONSTRAINT id_users FOREIGN KEY
-	(id_users)
-	REFERENCES users (id_users)
+CREATE TABLE kecamatan (
+	id_kecamatan SERIAL PRIMARY KEY NOT NULL,
+	nama_kacamatan VARCHAR(255) NOT NULL
+)

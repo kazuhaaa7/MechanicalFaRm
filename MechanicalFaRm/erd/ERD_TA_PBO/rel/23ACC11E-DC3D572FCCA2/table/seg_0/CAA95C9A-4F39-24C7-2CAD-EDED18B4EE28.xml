@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CAA95C9A-4F39-24C7-2CAD-EDED18B4EE28" name="alamat">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-10 04:05:21 UTC</createdTime>
+<generatorID>8671E66C-0DA7-8F06-CC1C-861CE9C51BAF</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_alamat" id="A3B96F0E-52C8-6FE1-C605-7D7A73B55339">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-10 04:05:21 UTC</createdTime>
+<generatorID>AA63C21F-460F-AAEF-BAF7-1A42DF6618C3</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="jalan_id_jalan" id="875777B5-BD7F-5EA5-75D9-00C5D405745D">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-10 04:05:21 UTC</createdTime>
+<generatorID>CDFC3ECE-3773-CA73-6DF9-B5447C6E39BC</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6830309B-E49F-0C62-F310-E7D4E53E44C5" referredColumn="E4F32730-5102-6F11-1751-A78804FA1E15"/>
+</associations>
+</Column>
+<Column name="customer_id_customer" id="37F1108F-1945-790C-F751-7638D39AD212">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-10 04:05:21 UTC</createdTime>
+<generatorID>7D8AB5A3-5374-9321-5581-539478330293</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0E17EB3A-9B13-A629-D5C0-78532C94907A" referredColumn="4BBD93BB-26FF-DBCC-4769-26CB6068C05F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1639A53C-49D7-57F2-AF49-AACE30CFD9C1" name="alamat_PK">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-10 04:05:21 UTC</createdTime>
+<generatorID>21FC456A-6653-3D9A-0BF1-38C31F2D7786</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A3B96F0E-52C8-6FE1-C605-7D7A73B55339"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="52412336-DC2A-EA24-4FBA-EC3E14C04CCA" name="alamat_customer_FK">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-10 04:05:21 UTC</createdTime>
+<generatorID>710EF192-D3D8-CD7D-6E45-C03315A099ED</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="37F1108F-1945-790C-F751-7638D39AD212"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F191980A-7DB7-76D7-91BB-68CA2791B1D5" name="alamat_jalan_FK">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-10 04:05:21 UTC</createdTime>
+<generatorID>9F91E398-F0B7-7436-351A-E8DD0918DA7D</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="875777B5-BD7F-5EA5-75D9-00C5D405745D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

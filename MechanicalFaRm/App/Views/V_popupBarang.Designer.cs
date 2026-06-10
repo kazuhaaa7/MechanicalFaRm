@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            lblHargaAlat = new Label();
+            lblStokAlat = new Label();
+            lblNamaAlat = new Label();
             label7 = new Label();
             tb = new TextBox();
             textBox4 = new TextBox();
@@ -42,14 +45,13 @@
             label2 = new Label();
             label1 = new Label();
             npgsqlDataAdapter1 = new Npgsql.NpgsqlDataAdapter();
-            lblNamaAlat = new Label();
-            lblStokAlat = new Label();
-            lblHargaAlat = new Label();
+            label8 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(label8);
             panel1.Controls.Add(lblHargaAlat);
             panel1.Controls.Add(lblStokAlat);
             panel1.Controls.Add(lblNamaAlat);
@@ -65,10 +67,50 @@
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(2, 2);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(799, 452);
+            panel1.Size = new Size(800, 450);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
+            // 
+            // lblHargaAlat
+            // 
+            lblHargaAlat.BackColor = Color.Gainsboro;
+            lblHargaAlat.FlatStyle = FlatStyle.Flat;
+            lblHargaAlat.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblHargaAlat.ForeColor = SystemColors.ActiveCaptionText;
+            lblHargaAlat.Location = new Point(232, 73);
+            lblHargaAlat.Name = "lblHargaAlat";
+            lblHargaAlat.Size = new Size(249, 33);
+            lblHargaAlat.TabIndex = 18;
+            lblHargaAlat.Text = "juta";
+            lblHargaAlat.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // lblStokAlat
+            // 
+            lblStokAlat.BackColor = Color.Gainsboro;
+            lblStokAlat.FlatStyle = FlatStyle.Flat;
+            lblStokAlat.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblStokAlat.ForeColor = SystemColors.ActiveCaptionText;
+            lblStokAlat.Location = new Point(232, 167);
+            lblStokAlat.Name = "lblStokAlat";
+            lblStokAlat.Size = new Size(249, 33);
+            lblStokAlat.TabIndex = 17;
+            lblStokAlat.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // lblNamaAlat
+            // 
+            lblNamaAlat.BackColor = Color.Gainsboro;
+            lblNamaAlat.FlatStyle = FlatStyle.Flat;
+            lblNamaAlat.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNamaAlat.ForeColor = SystemColors.ActiveCaptionText;
+            lblNamaAlat.Location = new Point(232, 26);
+            lblNamaAlat.Name = "lblNamaAlat";
+            lblNamaAlat.Size = new Size(249, 33);
+            lblNamaAlat.TabIndex = 16;
+            lblNamaAlat.TextAlign = ContentAlignment.TopCenter;
+            lblNamaAlat.Click += lblNamaAlat_Click;
             // 
             // label7
             // 
@@ -106,7 +148,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(28, 263);
+            label6.Location = new Point(15, 260);
             label6.Name = "label6";
             label6.Size = new Size(122, 20);
             label6.TabIndex = 12;
@@ -144,7 +186,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(28, 220);
+            label5.Location = new Point(14, 217);
             label5.Name = "label5";
             label5.Size = new Size(123, 20);
             label5.TabIndex = 4;
@@ -164,7 +206,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(28, 130);
+            label3.Location = new Point(25, 130);
             label3.Name = "label3";
             label3.Size = new Size(109, 20);
             label3.TabIndex = 2;
@@ -173,7 +215,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(28, 86);
+            label2.Location = new Point(28, 90);
             label2.Name = "label2";
             label2.Size = new Size(50, 20);
             label2.TabIndex = 1;
@@ -182,7 +224,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(28, 43);
+            label1.Location = new Point(25, 39);
             label1.Name = "label1";
             label1.Size = new Size(80, 20);
             label1.TabIndex = 0;
@@ -195,41 +237,17 @@
             npgsqlDataAdapter1.SelectCommand = null;
             npgsqlDataAdapter1.UpdateCommand = null;
             // 
-            // lblNamaAlat
+            // label8
             // 
-            lblNamaAlat.BackColor = Color.Gainsboro;
-            lblNamaAlat.FlatStyle = FlatStyle.Flat;
-            lblNamaAlat.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNamaAlat.ForeColor = SystemColors.ActiveCaptionText;
-            lblNamaAlat.Location = new Point(232, 26);
-            lblNamaAlat.Name = "lblNamaAlat";
-            lblNamaAlat.Size = new Size(249, 33);
-            lblNamaAlat.TabIndex = 16;
-            lblNamaAlat.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // lblStokAlat
-            // 
-            lblStokAlat.BackColor = Color.Gainsboro;
-            lblStokAlat.FlatStyle = FlatStyle.Flat;
-            lblStokAlat.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblStokAlat.ForeColor = SystemColors.ActiveCaptionText;
-            lblStokAlat.Location = new Point(232, 167);
-            lblStokAlat.Name = "lblStokAlat";
-            lblStokAlat.Size = new Size(249, 33);
-            lblStokAlat.TabIndex = 17;
-            lblStokAlat.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // lblHargaAlat
-            // 
-            lblHargaAlat.BackColor = Color.Gainsboro;
-            lblHargaAlat.FlatStyle = FlatStyle.Flat;
-            lblHargaAlat.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblHargaAlat.ForeColor = SystemColors.ActiveCaptionText;
-            lblHargaAlat.Location = new Point(232, 73);
-            lblHargaAlat.Name = "lblHargaAlat";
-            lblHargaAlat.Size = new Size(249, 33);
-            lblHargaAlat.TabIndex = 18;
-            lblHargaAlat.TextAlign = ContentAlignment.TopCenter;
+            label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
+            label8.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.Red;
+            label8.Location = new Point(28, 110);
+            label8.Name = "label8";
+            label8.Size = new Size(76, 17);
+            label8.TabIndex = 19;
+            label8.Text = "*satuan juta";
             // 
             // V_popupBarang
             // 
@@ -239,6 +257,7 @@
             Controls.Add(panel1);
             Name = "V_popupBarang";
             Text = "V_popupBarang_cs";
+            Load += V_popupBarang_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -265,5 +284,6 @@
         private Label lblNamaAlat;
         private Label lblHargaAlat;
         private Label lblStokAlat;
+        private Label label8;
     }
 }

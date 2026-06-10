@@ -55,7 +55,7 @@
             flowLayoutPanel1.Controls.Add(panel1);
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1627, 1065);
+            flowLayoutPanel1.Size = new Size(1940, 1092);
             flowLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -67,7 +67,7 @@
             panel1.Controls.Add(dataGridView1);
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1619, 1058);
+            panel1.Size = new Size(1619, 1063);
             panel1.TabIndex = 0;
             // 
             // panel3
@@ -82,14 +82,16 @@
             panel3.Dock = DockStyle.Left;
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(315, 1058);
+            panel3.Size = new Size(315, 1063);
             panel3.TabIndex = 3;
             // 
             // btnLogout
             // 
             btnLogout.BackColor = Color.DarkGray;
             btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
-            btnLogout.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogout.FlatAppearance.BorderSize = 0;
+            btnLogout.FlatStyle = FlatStyle.Flat;
+            btnLogout.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnLogout.ForeColor = SystemColors.ActiveCaptionText;
             btnLogout.Location = new Point(9, 729);
             btnLogout.Name = "btnLogout";
@@ -103,7 +105,9 @@
             // 
             btnDeskripsiAlat.BackColor = Color.DarkGray;
             btnDeskripsiAlat.BackgroundImageLayout = ImageLayout.Stretch;
-            btnDeskripsiAlat.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDeskripsiAlat.FlatAppearance.BorderSize = 0;
+            btnDeskripsiAlat.FlatStyle = FlatStyle.Flat;
+            btnDeskripsiAlat.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnDeskripsiAlat.ForeColor = SystemColors.ActiveCaptionText;
             btnDeskripsiAlat.Location = new Point(10, 656);
             btnDeskripsiAlat.Name = "btnDeskripsiAlat";
@@ -117,7 +121,9 @@
             // 
             btnProfile.BackColor = Color.DarkGray;
             btnProfile.BackgroundImageLayout = ImageLayout.Stretch;
-            btnProfile.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnProfile.FlatAppearance.BorderSize = 0;
+            btnProfile.FlatStyle = FlatStyle.Flat;
+            btnProfile.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnProfile.ForeColor = SystemColors.ActiveCaptionText;
             btnProfile.Location = new Point(9, 583);
             btnProfile.Name = "btnProfile";
@@ -130,7 +136,9 @@
             // 
             btnHistoriPenyewaan.BackColor = Color.DarkGray;
             btnHistoriPenyewaan.BackgroundImageLayout = ImageLayout.Stretch;
-            btnHistoriPenyewaan.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnHistoriPenyewaan.FlatAppearance.BorderSize = 0;
+            btnHistoriPenyewaan.FlatStyle = FlatStyle.Flat;
+            btnHistoriPenyewaan.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnHistoriPenyewaan.ForeColor = SystemColors.ActiveCaptionText;
             btnHistoriPenyewaan.Location = new Point(9, 510);
             btnHistoriPenyewaan.Name = "btnHistoriPenyewaan";
@@ -143,7 +151,9 @@
             // 
             btnKelolaAkun.BackColor = Color.DarkGray;
             btnKelolaAkun.BackgroundImageLayout = ImageLayout.Stretch;
-            btnKelolaAkun.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnKelolaAkun.FlatAppearance.BorderSize = 0;
+            btnKelolaAkun.FlatStyle = FlatStyle.Flat;
+            btnKelolaAkun.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnKelolaAkun.ForeColor = SystemColors.ActiveCaptionText;
             btnKelolaAkun.Location = new Point(10, 437);
             btnKelolaAkun.Name = "btnKelolaAkun";
@@ -157,7 +167,9 @@
             // 
             btnKelolaAlat.BackColor = Color.DarkGray;
             btnKelolaAlat.BackgroundImageLayout = ImageLayout.Stretch;
-            btnKelolaAlat.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnKelolaAlat.FlatAppearance.BorderSize = 0;
+            btnKelolaAlat.FlatStyle = FlatStyle.Flat;
+            btnKelolaAlat.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnKelolaAlat.ForeColor = SystemColors.ActiveCaptionText;
             btnKelolaAlat.Location = new Point(9, 364);
             btnKelolaAlat.Name = "btnKelolaAlat";
@@ -173,7 +185,7 @@
             panel2.Controls.Add(button3);
             panel2.Controls.Add(button2);
             panel2.Controls.Add(button1);
-            panel2.Location = new Point(378, 138);
+            panel2.Location = new Point(371, 207);
             panel2.Name = "panel2";
             panel2.Size = new Size(1192, 73);
             panel2.TabIndex = 2;
@@ -181,11 +193,13 @@
             // button3
             // 
             button3.BackColor = Color.SteelBlue;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button3.ForeColor = Color.WhiteSmoke;
-            button3.Location = new Point(737, 3);
+            button3.Location = new Point(400, 5);
             button3.Name = "button3";
-            button3.Size = new Size(210, 67);
+            button3.Size = new Size(180, 56);
             button3.TabIndex = 3;
             button3.Text = "Edit";
             button3.UseVisualStyleBackColor = false;
@@ -194,11 +208,13 @@
             // 
             button2.BackColor = Color.IndianRed;
             button2.BackgroundImageLayout = ImageLayout.Zoom;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.Gainsboro;
-            button2.Location = new Point(470, 3);
+            button2.Location = new Point(203, 5);
             button2.Name = "button2";
-            button2.Size = new Size(210, 67);
+            button2.Size = new Size(180, 56);
             button2.TabIndex = 2;
             button2.Text = "Hapus";
             button2.UseVisualStyleBackColor = false;
@@ -206,11 +222,13 @@
             // button1
             // 
             button1.BackColor = Color.Green;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = SystemColors.ButtonFace;
-            button1.Location = new Point(208, 6);
+            button1.Location = new Point(3, 5);
             button1.Name = "button1";
-            button1.Size = new Size(210, 67);
+            button1.Size = new Size(180, 56);
             button1.TabIndex = 1;
             button1.Text = "Tambah";
             button1.UseVisualStyleBackColor = false;
@@ -219,10 +237,10 @@
             // 
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(355, 217);
+            dataGridView1.Location = new Point(347, 286);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1224, 811);
+            dataGridView1.Size = new Size(1241, 749);
             dataGridView1.TabIndex = 0;
             // 
             // V_kelolaAkunAdmin
