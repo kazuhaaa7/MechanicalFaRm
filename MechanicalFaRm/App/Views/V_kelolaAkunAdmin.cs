@@ -38,5 +38,32 @@ namespace MechanicalFaRm.App.Views
         {
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnKelolaCust_Click(object sender, EventArgs e)
+        {
+            V_kelolaAkunAdmin kelolaAkunAdmin = new V_kelolaAkunAdmin();
+            kelolaAkunAdmin.Show();
+            this.Hide();
+        }
     }
 }

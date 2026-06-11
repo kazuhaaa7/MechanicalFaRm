@@ -79,7 +79,7 @@
             // 
             tbPassword.BackColor = Color.White;
             tbPassword.BorderStyle = BorderStyle.None;
-            tbPassword.ForeColor = Color.WhiteSmoke;
+            tbPassword.ForeColor = Color.Black;
             tbPassword.Location = new Point(327, 582);
             tbPassword.Multiline = true;
             tbPassword.Name = "tbPassword";

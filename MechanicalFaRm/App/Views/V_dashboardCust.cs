@@ -59,6 +59,9 @@
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
+            V_profileCust profile = new V_profileCust();
+            profile.Show();
+            this.Hide();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -123,6 +126,13 @@
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnKeranjang_Click(object sender, EventArgs e)
+        {
+            V_keranjangCust kc = new V_keranjangCust();
+            kc.Show();
+            this.Hide();    
         }
     }
 }

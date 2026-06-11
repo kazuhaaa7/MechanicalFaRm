@@ -92,5 +92,10 @@ namespace MechanicalFaRm.App.Views
         {
 
         }
+
+        private void tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

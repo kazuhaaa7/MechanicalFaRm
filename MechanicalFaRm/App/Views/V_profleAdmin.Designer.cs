@@ -39,12 +39,15 @@ namespace MechanicalFaRm.App.Views
             label1 = new Label();
             panel9 = new Panel();
             btnLogout = new Button();
-            btnRiwayat = new Button();
-            btnDashboard = new Button();
+            btnRiwayatPenyewaan = new Button();
+            btnKelolaAlat = new Button();
             panel8 = new Panel();
             btnEditProfileA = new Button();
             panel3 = new Panel();
             contextMenuStrip1 = new ContextMenuStrip(components);
+            btnKelolaCust = new Button();
+            btnDeskripsiAlat = new Button();
+            btnProfil = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel9.SuspendLayout();
@@ -121,9 +124,12 @@ namespace MechanicalFaRm.App.Views
             // 
             // panel9
             // 
+            panel9.Controls.Add(btnProfil);
+            panel9.Controls.Add(btnDeskripsiAlat);
+            panel9.Controls.Add(btnKelolaCust);
             panel9.Controls.Add(btnLogout);
-            panel9.Controls.Add(btnRiwayat);
-            panel9.Controls.Add(btnDashboard);
+            panel9.Controls.Add(btnRiwayatPenyewaan);
+            panel9.Controls.Add(btnKelolaAlat);
             panel9.Dock = DockStyle.Left;
             panel9.Location = new Point(0, 0);
             panel9.Name = "panel9";
@@ -137,7 +143,7 @@ namespace MechanicalFaRm.App.Views
             btnLogout.FlatStyle = FlatStyle.Flat;
             btnLogout.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnLogout.ForeColor = SystemColors.ActiveCaptionText;
-            btnLogout.Location = new Point(39, 718);
+            btnLogout.Location = new Point(39, 654);
             btnLogout.Name = "btnLogout";
             btnLogout.Size = new Size(302, 67);
             btnLogout.TabIndex = 2;
@@ -145,35 +151,35 @@ namespace MechanicalFaRm.App.Views
             btnLogout.UseVisualStyleBackColor = false;
             btnLogout.Click += btnLogout_Click;
             // 
-            // btnRiwayat
+            // btnRiwayatPenyewaan
             // 
-            btnRiwayat.BackColor = Color.DarkGray;
-            btnRiwayat.FlatAppearance.BorderSize = 0;
-            btnRiwayat.FlatStyle = FlatStyle.Flat;
-            btnRiwayat.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnRiwayat.ForeColor = SystemColors.ActiveCaptionText;
-            btnRiwayat.Location = new Point(39, 362);
-            btnRiwayat.Name = "btnRiwayat";
-            btnRiwayat.Size = new Size(302, 67);
-            btnRiwayat.TabIndex = 1;
-            btnRiwayat.Text = "Riwayat Penyewaan";
-            btnRiwayat.UseVisualStyleBackColor = false;
-            btnRiwayat.Click += btnRiwayat_Click;
+            btnRiwayatPenyewaan.BackColor = Color.DarkGray;
+            btnRiwayatPenyewaan.FlatAppearance.BorderSize = 0;
+            btnRiwayatPenyewaan.FlatStyle = FlatStyle.Flat;
+            btnRiwayatPenyewaan.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnRiwayatPenyewaan.ForeColor = SystemColors.ActiveCaptionText;
+            btnRiwayatPenyewaan.Location = new Point(39, 435);
+            btnRiwayatPenyewaan.Name = "btnRiwayatPenyewaan";
+            btnRiwayatPenyewaan.Size = new Size(302, 67);
+            btnRiwayatPenyewaan.TabIndex = 1;
+            btnRiwayatPenyewaan.Text = "Riwayat Penyewaan";
+            btnRiwayatPenyewaan.UseVisualStyleBackColor = false;
+            btnRiwayatPenyewaan.Click += btnRiwayat_Click;
             // 
-            // btnDashboard
+            // btnKelolaAlat
             // 
-            btnDashboard.BackColor = Color.DarkGray;
-            btnDashboard.FlatAppearance.BorderSize = 0;
-            btnDashboard.FlatStyle = FlatStyle.Flat;
-            btnDashboard.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnDashboard.ForeColor = SystemColors.ActiveCaptionText;
-            btnDashboard.Location = new Point(39, 289);
-            btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(302, 67);
-            btnDashboard.TabIndex = 0;
-            btnDashboard.Text = "Dashboard";
-            btnDashboard.UseVisualStyleBackColor = false;
-            btnDashboard.Click += btnDashboard_Click;
+            btnKelolaAlat.BackColor = Color.DarkGray;
+            btnKelolaAlat.FlatAppearance.BorderSize = 0;
+            btnKelolaAlat.FlatStyle = FlatStyle.Flat;
+            btnKelolaAlat.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnKelolaAlat.ForeColor = SystemColors.ActiveCaptionText;
+            btnKelolaAlat.Location = new Point(39, 289);
+            btnKelolaAlat.Name = "btnKelolaAlat";
+            btnKelolaAlat.Size = new Size(302, 67);
+            btnKelolaAlat.TabIndex = 0;
+            btnKelolaAlat.Text = "Kelola Alat";
+            btnKelolaAlat.UseVisualStyleBackColor = false;
+            btnKelolaAlat.Click += btnDashboard_Click;
             // 
             // panel8
             // 
@@ -211,6 +217,48 @@ namespace MechanicalFaRm.App.Views
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
             // 
+            // btnKelolaCust
+            // 
+            btnKelolaCust.BackColor = Color.DarkGray;
+            btnKelolaCust.FlatAppearance.BorderSize = 0;
+            btnKelolaCust.FlatStyle = FlatStyle.Flat;
+            btnKelolaCust.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnKelolaCust.ForeColor = SystemColors.ActiveCaptionText;
+            btnKelolaCust.Location = new Point(39, 362);
+            btnKelolaCust.Name = "btnKelolaCust";
+            btnKelolaCust.Size = new Size(302, 67);
+            btnKelolaCust.TabIndex = 3;
+            btnKelolaCust.Text = "Kelola Customer";
+            btnKelolaCust.UseVisualStyleBackColor = false;
+            // 
+            // btnDeskripsiAlat
+            // 
+            btnDeskripsiAlat.BackColor = Color.DarkGray;
+            btnDeskripsiAlat.FlatAppearance.BorderSize = 0;
+            btnDeskripsiAlat.FlatStyle = FlatStyle.Flat;
+            btnDeskripsiAlat.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnDeskripsiAlat.ForeColor = SystemColors.ActiveCaptionText;
+            btnDeskripsiAlat.Location = new Point(39, 508);
+            btnDeskripsiAlat.Name = "btnDeskripsiAlat";
+            btnDeskripsiAlat.Size = new Size(302, 67);
+            btnDeskripsiAlat.TabIndex = 4;
+            btnDeskripsiAlat.Text = "Deskripsi Alat";
+            btnDeskripsiAlat.UseVisualStyleBackColor = false;
+            // 
+            // btnProfil
+            // 
+            btnProfil.BackColor = Color.DarkGray;
+            btnProfil.FlatAppearance.BorderSize = 0;
+            btnProfil.FlatStyle = FlatStyle.Flat;
+            btnProfil.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnProfil.ForeColor = SystemColors.ActiveCaptionText;
+            btnProfil.Location = new Point(39, 581);
+            btnProfil.Name = "btnProfil";
+            btnProfil.Size = new Size(302, 67);
+            btnProfil.TabIndex = 5;
+            btnProfil.Text = "Profil";
+            btnProfil.UseVisualStyleBackColor = false;
+            // 
             // V_profleAdmin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -241,14 +289,17 @@ namespace MechanicalFaRm.App.Views
         private Panel panel8;
         private Button btnEditProfileA;
         private Panel panel9;
-        private Button btnDashboard;
+        private Button btnKelolaAlat;
         private Button button4;
         private Button btnLogout;
-        private Button btnRiwayat;
+        private Button btnRiwayatPenyewaan;
         private ContextMenuStrip contextMenuStrip1;
         private Label lblUsername;
         private Label label1;
         private Label lblNoTelp;
         private Label lblEmail;
+        private Button btnKelolaCust;
+        private Button btnProfil;
+        private Button btnDeskripsiAlat;
     }
 }

@@ -22,6 +22,9 @@
     <Compile Update="App\Views\V_popupBarang.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="App\Views\V_profileCust.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="App\Views\V_regis.cs">
       <SubType>Form</SubType>
     </Compile>

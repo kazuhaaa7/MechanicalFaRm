@@ -28,29 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_popupBarang));
             panel1 = new Panel();
+            label8 = new Label();
             lblHargaAlat = new Label();
             lblStokAlat = new Label();
             lblNamaAlat = new Label();
             label7 = new Label();
             tb = new TextBox();
             textBox4 = new TextBox();
-            label6 = new Label();
             btnKeranjang = new Button();
             btnLanjut = new Button();
             textBox3 = new TextBox();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
             npgsqlDataAdapter1 = new Npgsql.NpgsqlDataAdapter();
-            label8 = new Label();
+            panel2 = new Panel();
+            tbNamaPenyewa = new TextBox();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Controls.Add(tbNamaPenyewa);
+            panel1.Controls.Add(panel2);
             panel1.Controls.Add(label8);
             panel1.Controls.Add(lblHargaAlat);
             panel1.Controls.Add(lblStokAlat);
@@ -58,15 +60,7 @@
             panel1.Controls.Add(label7);
             panel1.Controls.Add(tb);
             panel1.Controls.Add(textBox4);
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(btnKeranjang);
-            panel1.Controls.Add(btnLanjut);
             panel1.Controls.Add(textBox3);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -74,40 +68,52 @@
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
+            label8.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.Red;
+            label8.Location = new Point(155, 110);
+            label8.Name = "label8";
+            label8.Size = new Size(76, 17);
+            label8.TabIndex = 19;
+            label8.Text = "*satuan juta";
+            // 
             // lblHargaAlat
             // 
-            lblHargaAlat.BackColor = Color.Gainsboro;
+            lblHargaAlat.BackColor = Color.Transparent;
             lblHargaAlat.FlatStyle = FlatStyle.Flat;
             lblHargaAlat.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblHargaAlat.ForeColor = SystemColors.ActiveCaptionText;
-            lblHargaAlat.Location = new Point(232, 73);
+            lblHargaAlat.Location = new Point(320, 80);
             lblHargaAlat.Name = "lblHargaAlat";
-            lblHargaAlat.Size = new Size(249, 33);
+            lblHargaAlat.Size = new Size(217, 33);
             lblHargaAlat.TabIndex = 18;
             lblHargaAlat.Text = "juta";
             lblHargaAlat.TextAlign = ContentAlignment.TopCenter;
             // 
             // lblStokAlat
             // 
-            lblStokAlat.BackColor = Color.Gainsboro;
+            lblStokAlat.BackColor = Color.Transparent;
             lblStokAlat.FlatStyle = FlatStyle.Flat;
             lblStokAlat.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblStokAlat.ForeColor = SystemColors.ActiveCaptionText;
-            lblStokAlat.Location = new Point(232, 167);
+            lblStokAlat.Location = new Point(320, 167);
             lblStokAlat.Name = "lblStokAlat";
-            lblStokAlat.Size = new Size(249, 33);
+            lblStokAlat.Size = new Size(208, 33);
             lblStokAlat.TabIndex = 17;
             lblStokAlat.TextAlign = ContentAlignment.TopCenter;
             // 
             // lblNamaAlat
             // 
-            lblNamaAlat.BackColor = Color.Gainsboro;
+            lblNamaAlat.BackColor = Color.Transparent;
             lblNamaAlat.FlatStyle = FlatStyle.Flat;
             lblNamaAlat.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblNamaAlat.ForeColor = SystemColors.ActiveCaptionText;
-            lblNamaAlat.Location = new Point(232, 26);
+            lblNamaAlat.Location = new Point(320, 42);
             lblNamaAlat.Name = "lblNamaAlat";
-            lblNamaAlat.Size = new Size(249, 33);
+            lblNamaAlat.Size = new Size(217, 27);
             lblNamaAlat.TabIndex = 16;
             lblNamaAlat.TextAlign = ContentAlignment.TopCenter;
             lblNamaAlat.Click += lblNamaAlat_Click;
@@ -118,7 +124,7 @@
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.Red;
-            label7.Location = new Point(28, 240);
+            label7.Location = new Point(145, 231);
             label7.Name = "label7";
             label7.Size = new Size(164, 17);
             label7.TabIndex = 15;
@@ -127,36 +133,36 @@
             // 
             // tb
             // 
+            tb.BackColor = Color.Moccasin;
             tb.BorderStyle = BorderStyle.None;
-            tb.Location = new Point(232, 260);
+            tb.Location = new Point(318, 254);
             tb.Multiline = true;
             tb.Name = "tb";
             tb.PlaceholderText = "YYYY-MM-DD";
-            tb.Size = new Size(249, 34);
+            tb.Size = new Size(219, 31);
             tb.TabIndex = 14;
+            tb.TextChanged += tb_TextChanged;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(232, 217);
+            textBox4.BackColor = Color.Moccasin;
+            textBox4.BorderStyle = BorderStyle.None;
+            textBox4.Location = new Point(323, 214);
             textBox4.Multiline = true;
             textBox4.Name = "textBox4";
             textBox4.PlaceholderText = "YYYY-MM-DD";
-            textBox4.Size = new Size(249, 34);
+            textBox4.Size = new Size(205, 34);
             textBox4.TabIndex = 13;
             textBox4.TextChanged += textBox4_TextChanged;
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(15, 260);
-            label6.Name = "label6";
-            label6.Size = new Size(122, 20);
-            label6.TabIndex = 12;
-            label6.Text = "Lama Penyewaan";
-            // 
             // btnKeranjang
             // 
-            btnKeranjang.Location = new Point(313, 343);
+            btnKeranjang.BackgroundImage = (Image)resources.GetObject("btnKeranjang.BackgroundImage");
+            btnKeranjang.FlatAppearance.BorderSize = 0;
+            btnKeranjang.FlatStyle = FlatStyle.Flat;
+            btnKeranjang.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnKeranjang.ForeColor = SystemColors.ButtonHighlight;
+            btnKeranjang.Location = new Point(3, 12);
             btnKeranjang.Name = "btnKeranjang";
             btnKeranjang.Size = new Size(168, 42);
             btnKeranjang.TabIndex = 11;
@@ -166,69 +172,31 @@
             // 
             // btnLanjut
             // 
-            btnLanjut.Location = new Point(515, 343);
+            btnLanjut.BackColor = Color.Transparent;
+            btnLanjut.BackgroundImage = (Image)resources.GetObject("btnLanjut.BackgroundImage");
+            btnLanjut.BackgroundImageLayout = ImageLayout.Stretch;
+            btnLanjut.FlatAppearance.BorderSize = 0;
+            btnLanjut.FlatStyle = FlatStyle.Flat;
+            btnLanjut.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLanjut.ForeColor = SystemColors.ButtonHighlight;
+            btnLanjut.Location = new Point(216, 12);
             btnLanjut.Name = "btnLanjut";
             btnLanjut.Size = new Size(168, 42);
             btnLanjut.TabIndex = 10;
             btnLanjut.Text = "Lanjut";
-            btnLanjut.UseVisualStyleBackColor = true;
+            btnLanjut.UseVisualStyleBackColor = false;
             btnLanjut.Click += btnLanjut_Click;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(232, 116);
+            textBox3.BackColor = Color.Moccasin;
+            textBox3.BorderStyle = BorderStyle.None;
+            textBox3.Location = new Point(320, 127);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(249, 34);
+            textBox3.Size = new Size(217, 34);
             textBox3.TabIndex = 7;
             textBox3.TextChanged += textBox3_TextChanged;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(14, 217);
-            label5.Name = "label5";
-            label5.Size = new Size(123, 20);
-            label5.TabIndex = 4;
-            label5.Text = "Mulai Penyewaan";
-            label5.Click += label5_Click;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(28, 180);
-            label4.Name = "label4";
-            label4.Size = new Size(97, 20);
-            label4.TabIndex = 3;
-            label4.Text = "Stok Tersedia";
-            label4.Click += label4_Click;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(25, 130);
-            label3.Name = "label3";
-            label3.Size = new Size(109, 20);
-            label3.TabIndex = 2;
-            label3.Text = "Qty Penyewaan";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(28, 90);
-            label2.Name = "label2";
-            label2.Size = new Size(50, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Harga";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(25, 39);
-            label1.Name = "label1";
-            label1.Size = new Size(80, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Nama Alat";
             // 
             // npgsqlDataAdapter1
             // 
@@ -237,17 +205,25 @@
             npgsqlDataAdapter1.SelectCommand = null;
             npgsqlDataAdapter1.UpdateCommand = null;
             // 
-            // label8
+            // panel2
             // 
-            label8.AutoSize = true;
-            label8.BackColor = Color.Transparent;
-            label8.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.ForeColor = Color.Red;
-            label8.Location = new Point(28, 110);
-            label8.Name = "label8";
-            label8.Size = new Size(76, 17);
-            label8.TabIndex = 19;
-            label8.Text = "*satuan juta";
+            panel2.BackColor = Color.Transparent;
+            panel2.Controls.Add(btnLanjut);
+            panel2.Controls.Add(btnKeranjang);
+            panel2.Location = new Point(392, 381);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(396, 57);
+            panel2.TabIndex = 21;
+            // 
+            // tbNamaPenyewa
+            // 
+            tbNamaPenyewa.BackColor = Color.Moccasin;
+            tbNamaPenyewa.BorderStyle = BorderStyle.None;
+            tbNamaPenyewa.Location = new Point(323, 301);
+            tbNamaPenyewa.Multiline = true;
+            tbNamaPenyewa.Name = "tbNamaPenyewa";
+            tbNamaPenyewa.Size = new Size(215, 32);
+            tbNamaPenyewa.TabIndex = 22;
             // 
             // V_popupBarang
             // 
@@ -260,24 +236,19 @@
             Load += V_popupBarang_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
-        private Label label4;
-        private Label label3;
-        private Label label2;
-        private Label label1;
-        private Label label5;
         private TextBox tbStoktersedia;
         private TextBox textBox3;
         private TextBox textBox2;
         private Button btnLanjut;
         private Button btnKeranjang;
         private TextBox textBox4;
-        private Label label6;
         private Npgsql.NpgsqlDataAdapter npgsqlDataAdapter1;
         private TextBox tb;
         private Label label7;
@@ -285,5 +256,7 @@
         private Label lblHargaAlat;
         private Label lblStokAlat;
         private Label label8;
+        private Panel panel2;
+        private TextBox tbNamaPenyewa;
     }
 }

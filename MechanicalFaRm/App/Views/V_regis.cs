@@ -23,7 +23,7 @@ namespace MechanicalFaRm.App.Authh
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            OpenFormLogin();
+            OpenFormLogin(); 
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)

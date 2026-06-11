@@ -1,6 +1,6 @@
 ﻿namespace MechanicalFaRm.App.Views
 {
-    partial class V_riwayatPenyewaanCust
+    partial class V_profileCust
     {
         /// <summary>
         /// Required designer variable.
@@ -28,31 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1924, 1049);
-            panel1.TabIndex = 1;
-            // 
-            // V_riwayatPenyewaanCust
-            // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1924, 1049);
-            Controls.Add(panel1);
-            Name = "V_riwayatPenyewaanCust";
-            Text = "V_riwayatPembelian";
-            Load += V_riwayatPembelian_Load;
-            ResumeLayout(false);
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "V_profileCust";
         }
 
         #endregion
-
-        private Panel panel1;
     }
 }

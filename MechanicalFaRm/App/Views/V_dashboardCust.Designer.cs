@@ -87,6 +87,7 @@
             btnKeranjang.TabIndex = 4;
             btnKeranjang.Text = "Keranjang";
             btnKeranjang.UseVisualStyleBackColor = false;
+            btnKeranjang.Click += btnKeranjang_Click;
             // 
             // btnLogout
             // 

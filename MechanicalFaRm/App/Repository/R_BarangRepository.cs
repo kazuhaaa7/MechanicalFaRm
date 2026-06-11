@@ -12,13 +12,13 @@ namespace MechanicalFaRm.App.Repository
     internal class R_BarangRepository : R_IBarangRepository
     {
 
-        public List<M_barang> GetListBarang() //public: supaya bisa diakses lewat class interface(IBarangRepo)
-        {
+        public List<M_barang> GetListBarang() //public: supaya bisa diakses lewat class interface(IBarangRepo)  
+        { 
             var daftarBarang = new List<M_barang>();
             using var conn = dbconnect.GetConn();
             conn.Open();
 
-            string rawsql = "SELECT * FROM barang WHERE stok >1 ORDER BY id_users ASC";
+            string rawsql = "SELECT * FROM barang WHERE stok >1 ORDER BY id_barang ASC";
             using var cmd = new NpgsqlCommand(rawsql, conn);
             using var reader = cmd.ExecuteReader();
 

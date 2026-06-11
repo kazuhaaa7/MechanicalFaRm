@@ -8,16 +8,11 @@ using System.Windows.Forms;
 
 namespace MechanicalFaRm.App.Views
 {
-    public partial class V_keranjangCust : Form
+    public partial class V_profileCust : Form
     {
-        public V_keranjangCust()
+        public V_profileCust()
         {
             InitializeComponent();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
