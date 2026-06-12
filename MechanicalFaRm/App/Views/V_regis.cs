@@ -5,7 +5,7 @@ namespace MechanicalFaRm.App.Authh
     public partial class V_regis : Form
     {
         private C_userController controlUser;
-        
+
         public V_regis()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace MechanicalFaRm.App.Authh
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            OpenFormLogin(); 
+            OpenFormLogin();
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -43,22 +43,22 @@ namespace MechanicalFaRm.App.Authh
             if (username == "" || password == "" || notelp == "" || email == "")
             {
                 MessageBox.Show("Semua kolom data harus diisi");
-                return;
                 tbUsernameR.Focus();
+                return;
             }
 
             if (username.Length < 5)
             {
                 MessageBox.Show("username minimal 5 character");
-                return;
                 tbUsernameR.Focus();
+                return;
             }
 
-            if (password.Length <= 4)
+            if (password.Length < 3)
             {
                 MessageBox.Show("password minimal 4 character");
-                return;
                 tbUsernameR.Focus();
+                return;
             }
 
             if (!long.TryParse(notelp, out _))//out ("_" = discard => ingin memeriksa apakah notelp bisa diconvert tanpa disimpan di dalam variabel) 
@@ -97,6 +97,11 @@ namespace MechanicalFaRm.App.Authh
         }
 
         private void tbNoTelpR_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
         {
 
         }

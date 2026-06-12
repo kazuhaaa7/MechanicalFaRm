@@ -51,7 +51,7 @@
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(-24, -8);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1935, 1092);
+            panel1.Size = new Size(1950, 1092);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
@@ -62,10 +62,9 @@
             panel2.Controls.Add(tbPasswordR);
             panel2.Controls.Add(tbUsernameR);
             panel2.Controls.Add(panel7);
-            panel2.Dock = DockStyle.Right;
-            panel2.Location = new Point(1264, 0);
+            panel2.Location = new Point(1166, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(671, 1092);
+            panel2.Size = new Size(784, 1092);
             panel2.TabIndex = 0;
             panel2.Paint += panel2_Paint;
             // 
@@ -73,7 +72,7 @@
             // 
             tbEmailR.BackColor = Color.White;
             tbEmailR.BorderStyle = BorderStyle.None;
-            tbEmailR.Location = new Point(62, 563);
+            tbEmailR.Location = new Point(163, 555);
             tbEmailR.Multiline = true;
             tbEmailR.Name = "tbEmailR";
             tbEmailR.Size = new Size(332, 39);
@@ -83,7 +82,7 @@
             // 
             tbNoTelpR.BackColor = Color.White;
             tbNoTelpR.BorderStyle = BorderStyle.None;
-            tbNoTelpR.Location = new Point(50, 667);
+            tbNoTelpR.Location = new Point(163, 666);
             tbNoTelpR.Multiline = true;
             tbNoTelpR.Name = "tbNoTelpR";
             tbNoTelpR.Size = new Size(332, 47);
@@ -94,7 +93,7 @@
             // 
             tbPasswordR.BackColor = Color.White;
             tbPasswordR.BorderStyle = BorderStyle.None;
-            tbPasswordR.Location = new Point(50, 440);
+            tbPasswordR.Location = new Point(163, 442);
             tbPasswordR.Multiline = true;
             tbPasswordR.Name = "tbPasswordR";
             tbPasswordR.Size = new Size(332, 45);
@@ -104,7 +103,7 @@
             // 
             tbUsernameR.BackColor = Color.White;
             tbUsernameR.BorderStyle = BorderStyle.None;
-            tbUsernameR.Location = new Point(50, 344);
+            tbUsernameR.Location = new Point(163, 344);
             tbUsernameR.Multiline = true;
             tbUsernameR.Name = "tbUsernameR";
             tbUsernameR.Size = new Size(332, 36);
@@ -112,37 +111,36 @@
             // 
             // panel7
             // 
-            panel7.BackColor = Color.Moccasin;
+            panel7.BackColor = Color.Transparent;
             panel7.Controls.Add(btnLogin);
             panel7.Controls.Add(btnRegist);
-            panel7.Location = new Point(22, 778);
+            panel7.Location = new Point(94, 766);
             panel7.Name = "panel7";
-            panel7.Size = new Size(435, 69);
+            panel7.Size = new Size(454, 84);
             panel7.TabIndex = 11;
+            panel7.Paint += panel7_Paint;
             // 
             // btnLogin
             // 
             btnLogin.BackColor = Color.Transparent;
-            btnLogin.BackgroundImage = (Image)resources.GetObject("btnLogin.BackgroundImage");
             btnLogin.BackgroundImageLayout = ImageLayout.Stretch;
             btnLogin.FlatAppearance.BorderSize = 0;
             btnLogin.FlatStyle = FlatStyle.Flat;
-            btnLogin.Location = new Point(28, 7);
+            btnLogin.Location = new Point(28, 16);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(162, 54);
+            btnLogin.Size = new Size(157, 41);
             btnLogin.TabIndex = 5;
             btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
             // 
             // btnRegist
             // 
-            btnRegist.BackgroundImage = (Image)resources.GetObject("btnRegist.BackgroundImage");
             btnRegist.BackgroundImageLayout = ImageLayout.Stretch;
             btnRegist.FlatAppearance.BorderSize = 0;
             btnRegist.FlatStyle = FlatStyle.Flat;
-            btnRegist.Location = new Point(235, 5);
+            btnRegist.Location = new Point(268, 16);
             btnRegist.Name = "btnRegist";
-            btnRegist.Size = new Size(160, 56);
+            btnRegist.Size = new Size(146, 42);
             btnRegist.TabIndex = 6;
             btnRegist.UseVisualStyleBackColor = true;
             btnRegist.Click += btnRegist_Click;
@@ -152,7 +150,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.Center;
-            ClientSize = new Size(1898, 1084);
+            ClientSize = new Size(1924, 1045);
             Controls.Add(panel1);
             DoubleBuffered = true;
             Name = "V_regis";

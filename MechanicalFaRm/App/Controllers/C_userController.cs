@@ -61,50 +61,50 @@ namespace MechanicalFaRm.App.Controllers
 
         }
 
-        public string Login(string username, string password)
-        {
+        //public string Login(string username, string password)
+        //{
 
-            try
-            {
+        //    try
+        //    {
 
-                using var conn = new NpgsqlConnection(connString);
-                conn.Open();
-                string query = @"SELECT * FROM public.user WHERE username=@u AND password=@p LIMIT 1";
-                using var cmd = new NpgsqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@u", username);
-                cmd.Parameters.AddWithValue("@p", password);
+        //        using var conn = new NpgsqlConnection(connString);
+        //        conn.Open();
+        //        string query = @"SELECT * FROM public.user WHERE username=@u AND password=@p LIMIT 1";
+        //        using var cmd = new NpgsqlCommand(query, conn);
+        //        cmd.Parameters.AddWithValue("@u", username);
+        //        cmd.Parameters.AddWithValue("@p", password);
 
 
-                using var reader = cmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    M_user member = new M_user();
-                    member._id_user = reader.GetInt32(reader.GetOrdinal("id_user"));
-                    member.username = reader["username"].ToString();
-                    member.password = reader["password"].ToString();
-                    member.no_telepon = reader["no_telp"].ToString();
-                    member.email = reader["email"].ToString();
-                    member.role = member.username == "admin" ? "admin" : "customer"; // Tentukan role berdasarkan username
+        //        using var reader = cmd.ExecuteReader();
+        //        if (reader.Read())
+        //        {
+        //            M_user member = new M_user();
+        //            member._id_user = reader.GetInt32(reader.GetOrdinal("id_user"));
+        //            member.username = reader["username"].ToString();
+        //            member.password = reader["password"].ToString();
+        //            member.no_telepon = reader["no_telp"].ToString();
+        //            member.email = reader["email"].ToString();
+        //            member.role = member.username == "admin" ? "admin" : "customer"; // Tentukan role berdasarkan username
 
-                    CurrentUser = member;
-                    SE_userSession.id_user = member._id_user;
-                    SE_userSession.userName = member.username;
-                    SE_userSession.Email = member.email;
-                    SE_userSession.role = member.role;
+        //            CurrentUser = member;
+        //            SE_userSession.id_user = member._id_user;
+        //            SE_userSession.userName = member.username;
+        //            SE_userSession.Email = member.email;
+        //            SE_userSession.role = member.role;
 
-                    return "Login Berhasil";
-                }
-                else
-                {
-                    return "pw atau user salah";
-                }
-            }
-            catch (Exception err)
-            {
-                return $"terjadi kesalahan pada {err.Message}";
-            }
+        //            return "Login Berhasil";
+        //        }
+        //        else
+        //        {
+        //            return "pw atau user salah";
+        //        }
+        //    }
+        //    catch (Exception err)
+        //    {
+        //        return $"terjadi kesalahan pada {err.Message}";
+        //    }
 
-        }
+        //}
 
         private S_UserService userService = new S_UserService();
         public M_user? TampilkanDataBasedId(int userId)

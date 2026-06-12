@@ -1,11 +1,13 @@
 ﻿using MechanicalFaRm.App.Controllers;
 using MechanicalFaRm.App.Models;
+using MechanicalFaRm.App.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +16,7 @@ namespace MechanicalFaRm.App.Views
 {
     public partial class V_popupBarang : Form
     {
+        public M_Keranjang? DataKeranjangBaru { get; private set; }
         //Form V_dashboardCust
         public int idBarang;
         private C_barangController barangController;
@@ -47,15 +50,41 @@ namespace MechanicalFaRm.App.Views
 
         private void btnLanjut_Click(object sender, EventArgs e)
         {
-            V_keranjangCust keranjang = new V_keranjangCust();
-            keranjang.Show();
-            this.Hide();
+            //V_keranjangCust keranjang = new V_keranjangCust();
+            //keranjang.Show();
+            this.Close();
         }
 
         private void btnKeranjang_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Alat berhasil ditambahkan ke keranjang.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
             //getbarang yg bisa menambhakan ke class keranjang
+            
+            int qty = int.TryParse(tbQty.Text, out qty) ? qty : 0;
+            DateTime tglSewa = dtpSewa.Value.Date;
+            DateTime tglKembali = dtpKembali.Value.Date;
+            M_user namaUser = new M_user()
+            {
+                namaPenyewa = tbNamaPenyewa.Text
+            };
+
+            DataKeranjangBaru = new M_Keranjang
+            {
+                namaBarang = lblNamaAlat.Text,
+                jumlah = qty,
+                tglSewa = tglSewa,
+                tglKembali = tglKembali,
+                Penyewa = namaUser
+            };
+            S_PesananService service = new S_PesananService();
+            string status = service.AddToKeranjang(DataKeranjangBaru);
+
+            if(status == "sukses")
+            {
+                MessageBox.Show("Berhasil menambahkan data");
+            }
+            //this.DialogResult = DialogResult.OK;    
+            this.Close();
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -94,6 +123,11 @@ namespace MechanicalFaRm.App.Views
         }
 
         private void tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
         }

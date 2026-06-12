@@ -44,9 +44,9 @@
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Center;
             panel1.Controls.Add(panel2);
-            panel1.Location = new Point(-52, -4);
+            panel1.Location = new Point(-8, -7);
             panel1.Name = "panel1";
-            panel1.Size = new Size(2052, 1087);
+            panel1.Size = new Size(1935, 1056);
             panel1.TabIndex = 0;
             // 
             // panel2
@@ -57,7 +57,7 @@
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(852, 1087);
+            panel2.Size = new Size(852, 1056);
             panel2.TabIndex = 0;
             // 
             // btnLogin
@@ -67,7 +67,7 @@
             btnLogin.FlatAppearance.BorderSize = 0;
             btnLogin.FlatStyle = FlatStyle.Flat;
             btnLogin.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogin.Location = new Point(372, 795);
+            btnLogin.Location = new Point(319, 801);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(211, 51);
             btnLogin.TabIndex = 0;
@@ -80,7 +80,7 @@
             tbPassword.BackColor = Color.White;
             tbPassword.BorderStyle = BorderStyle.None;
             tbPassword.ForeColor = Color.Black;
-            tbPassword.Location = new Point(327, 582);
+            tbPassword.Location = new Point(265, 583);
             tbPassword.Multiline = true;
             tbPassword.Name = "tbPassword";
             tbPassword.PasswordChar = '*';
@@ -92,7 +92,7 @@
             // 
             tbUsername.BackColor = Color.White;
             tbUsername.BorderStyle = BorderStyle.None;
-            tbUsername.Location = new Point(317, 469);
+            tbUsername.Location = new Point(265, 473);
             tbUsername.Multiline = true;
             tbUsername.Name = "tbUsername";
             tbUsername.Size = new Size(346, 33);
@@ -105,7 +105,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             BackgroundImageLayout = ImageLayout.Center;
-            ClientSize = new Size(1855, 1083);
+            ClientSize = new Size(1924, 1049);
             Controls.Add(panel1);
             DoubleBuffered = true;
             Name = "V_login";

@@ -1,12 +1,13 @@
 ﻿namespace MechanicalFaRm.App.Models
 {
-    internal class M_user
+    public class M_user
     {
         private string _username;
         private string _password;
         private string _no_telp;
         private string _email;
         public int _id_user;
+        public string namaPenyewa;
         public string role = "customer";
 
 

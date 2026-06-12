@@ -43,6 +43,7 @@
             btnSewaAlat4 = new Button();
             btnSewaAlat2 = new Button();
             btnSewaAlat1 = new Button();
+            btnDeskripsiAlat = new Button();
             panel1.SuspendLayout();
             panel9.SuspendLayout();
             panel2.SuspendLayout();
@@ -62,6 +63,7 @@
             // panel9
             // 
             panel9.BackColor = Color.Transparent;
+            panel9.Controls.Add(btnDeskripsiAlat);
             panel9.Controls.Add(btnKeranjang);
             panel9.Controls.Add(btnLogout);
             panel9.Controls.Add(btnProfile);
@@ -97,7 +99,7 @@
             btnLogout.FlatStyle = FlatStyle.Flat;
             btnLogout.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnLogout.ForeColor = SystemColors.ActiveCaptionText;
-            btnLogout.Location = new Point(33, 695);
+            btnLogout.Location = new Point(33, 768);
             btnLogout.Name = "btnLogout";
             btnLogout.Size = new Size(302, 67);
             btnLogout.TabIndex = 3;
@@ -263,6 +265,22 @@
             btnSewaAlat1.UseVisualStyleBackColor = false;
             btnSewaAlat1.Click += btnSewaAlat1_Click;
             // 
+            // btnDeskripsiAlat
+            // 
+            btnDeskripsiAlat.BackColor = Color.DarkGray;
+            btnDeskripsiAlat.BackgroundImageLayout = ImageLayout.Stretch;
+            btnDeskripsiAlat.FlatAppearance.BorderSize = 0;
+            btnDeskripsiAlat.FlatStyle = FlatStyle.Flat;
+            btnDeskripsiAlat.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnDeskripsiAlat.ForeColor = SystemColors.ActiveCaptionText;
+            btnDeskripsiAlat.Location = new Point(33, 695);
+            btnDeskripsiAlat.Name = "btnDeskripsiAlat";
+            btnDeskripsiAlat.Size = new Size(302, 67);
+            btnDeskripsiAlat.TabIndex = 5;
+            btnDeskripsiAlat.Text = "Deskripsi Alat";
+            btnDeskripsiAlat.UseVisualStyleBackColor = false;
+            btnDeskripsiAlat.Click += btnDeskripsiAlat_Click;
+            // 
             // V_dashboardCust
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -297,5 +315,6 @@
         private Button btnSewaAlat6;
         private Button btnSewaAlat3;
         private Button btnKeranjang;
+        private Button btnDeskripsiAlat;
     }
 }

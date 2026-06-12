@@ -45,6 +45,7 @@ namespace MechanicalFaRm.App.Views
                 item.stok,
                 item.hargaSewa);
             }
+            
 
 
             dgvKelolaAlat.DataSource = dt;

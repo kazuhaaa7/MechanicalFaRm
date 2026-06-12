@@ -132,7 +132,14 @@
         {
             V_keranjangCust kc = new V_keranjangCust();
             kc.Show();
-            this.Hide();    
+            this.Hide();
+        }
+
+        private void btnDeskripsiAlat_Click(object sender, EventArgs e)
+        {
+            V_deskripsiAlat des =  new V_deskripsiAlat();
+            des.Show();
+            this.Hide();
         }
     }
 }

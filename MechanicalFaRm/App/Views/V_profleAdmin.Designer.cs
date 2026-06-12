@@ -38,6 +38,9 @@ namespace MechanicalFaRm.App.Views
             lblUsername = new Label();
             label1 = new Label();
             panel9 = new Panel();
+            btnProfil = new Button();
+            btnDeskripsiAlat = new Button();
+            btnKelolaCust = new Button();
             btnLogout = new Button();
             btnRiwayatPenyewaan = new Button();
             btnKelolaAlat = new Button();
@@ -45,9 +48,6 @@ namespace MechanicalFaRm.App.Views
             btnEditProfileA = new Button();
             panel3 = new Panel();
             contextMenuStrip1 = new ContextMenuStrip(components);
-            btnKelolaCust = new Button();
-            btnDeskripsiAlat = new Button();
-            btnProfil = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel9.SuspendLayout();
@@ -85,9 +85,9 @@ namespace MechanicalFaRm.App.Views
             lblNoTelp.FlatStyle = FlatStyle.Flat;
             lblNoTelp.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblNoTelp.ForeColor = SystemColors.ActiveCaptionText;
-            lblNoTelp.Location = new Point(847, 615);
+            lblNoTelp.Location = new Point(858, 566);
             lblNoTelp.Name = "lblNoTelp";
-            lblNoTelp.Size = new Size(471, 50);
+            lblNoTelp.Size = new Size(471, 38);
             lblNoTelp.TabIndex = 10;
             lblNoTelp.TextAlign = ContentAlignment.TopCenter;
             // 
@@ -96,9 +96,9 @@ namespace MechanicalFaRm.App.Views
             lblEmail.FlatStyle = FlatStyle.Flat;
             lblEmail.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblEmail.ForeColor = SystemColors.ActiveCaptionText;
-            lblEmail.Location = new Point(847, 502);
+            lblEmail.Location = new Point(858, 466);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(471, 50);
+            lblEmail.Size = new Size(471, 36);
             lblEmail.TabIndex = 9;
             lblEmail.TextAlign = ContentAlignment.TopCenter;
             // 
@@ -107,7 +107,7 @@ namespace MechanicalFaRm.App.Views
             lblUsername.FlatStyle = FlatStyle.Flat;
             lblUsername.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblUsername.ForeColor = SystemColors.ActiveCaptionText;
-            lblUsername.Location = new Point(856, 392);
+            lblUsername.Location = new Point(858, 354);
             lblUsername.Name = "lblUsername";
             lblUsername.Size = new Size(471, 50);
             lblUsername.TabIndex = 8;
@@ -135,6 +135,48 @@ namespace MechanicalFaRm.App.Views
             panel9.Name = "panel9";
             panel9.Size = new Size(361, 970);
             panel9.TabIndex = 6;
+            // 
+            // btnProfil
+            // 
+            btnProfil.BackColor = Color.DarkGray;
+            btnProfil.FlatAppearance.BorderSize = 0;
+            btnProfil.FlatStyle = FlatStyle.Flat;
+            btnProfil.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnProfil.ForeColor = SystemColors.ActiveCaptionText;
+            btnProfil.Location = new Point(39, 581);
+            btnProfil.Name = "btnProfil";
+            btnProfil.Size = new Size(302, 67);
+            btnProfil.TabIndex = 5;
+            btnProfil.Text = "Profil";
+            btnProfil.UseVisualStyleBackColor = false;
+            // 
+            // btnDeskripsiAlat
+            // 
+            btnDeskripsiAlat.BackColor = Color.DarkGray;
+            btnDeskripsiAlat.FlatAppearance.BorderSize = 0;
+            btnDeskripsiAlat.FlatStyle = FlatStyle.Flat;
+            btnDeskripsiAlat.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnDeskripsiAlat.ForeColor = SystemColors.ActiveCaptionText;
+            btnDeskripsiAlat.Location = new Point(39, 508);
+            btnDeskripsiAlat.Name = "btnDeskripsiAlat";
+            btnDeskripsiAlat.Size = new Size(302, 67);
+            btnDeskripsiAlat.TabIndex = 4;
+            btnDeskripsiAlat.Text = "Deskripsi Alat";
+            btnDeskripsiAlat.UseVisualStyleBackColor = false;
+            // 
+            // btnKelolaCust
+            // 
+            btnKelolaCust.BackColor = Color.DarkGray;
+            btnKelolaCust.FlatAppearance.BorderSize = 0;
+            btnKelolaCust.FlatStyle = FlatStyle.Flat;
+            btnKelolaCust.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnKelolaCust.ForeColor = SystemColors.ActiveCaptionText;
+            btnKelolaCust.Location = new Point(39, 362);
+            btnKelolaCust.Name = "btnKelolaCust";
+            btnKelolaCust.Size = new Size(302, 67);
+            btnKelolaCust.TabIndex = 3;
+            btnKelolaCust.Text = "Kelola Customer";
+            btnKelolaCust.UseVisualStyleBackColor = false;
             // 
             // btnLogout
             // 
@@ -216,48 +258,6 @@ namespace MechanicalFaRm.App.Views
             contextMenuStrip1.ImageScalingSize = new Size(20, 20);
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
-            // 
-            // btnKelolaCust
-            // 
-            btnKelolaCust.BackColor = Color.DarkGray;
-            btnKelolaCust.FlatAppearance.BorderSize = 0;
-            btnKelolaCust.FlatStyle = FlatStyle.Flat;
-            btnKelolaCust.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnKelolaCust.ForeColor = SystemColors.ActiveCaptionText;
-            btnKelolaCust.Location = new Point(39, 362);
-            btnKelolaCust.Name = "btnKelolaCust";
-            btnKelolaCust.Size = new Size(302, 67);
-            btnKelolaCust.TabIndex = 3;
-            btnKelolaCust.Text = "Kelola Customer";
-            btnKelolaCust.UseVisualStyleBackColor = false;
-            // 
-            // btnDeskripsiAlat
-            // 
-            btnDeskripsiAlat.BackColor = Color.DarkGray;
-            btnDeskripsiAlat.FlatAppearance.BorderSize = 0;
-            btnDeskripsiAlat.FlatStyle = FlatStyle.Flat;
-            btnDeskripsiAlat.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnDeskripsiAlat.ForeColor = SystemColors.ActiveCaptionText;
-            btnDeskripsiAlat.Location = new Point(39, 508);
-            btnDeskripsiAlat.Name = "btnDeskripsiAlat";
-            btnDeskripsiAlat.Size = new Size(302, 67);
-            btnDeskripsiAlat.TabIndex = 4;
-            btnDeskripsiAlat.Text = "Deskripsi Alat";
-            btnDeskripsiAlat.UseVisualStyleBackColor = false;
-            // 
-            // btnProfil
-            // 
-            btnProfil.BackColor = Color.DarkGray;
-            btnProfil.FlatAppearance.BorderSize = 0;
-            btnProfil.FlatStyle = FlatStyle.Flat;
-            btnProfil.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnProfil.ForeColor = SystemColors.ActiveCaptionText;
-            btnProfil.Location = new Point(39, 581);
-            btnProfil.Name = "btnProfil";
-            btnProfil.Size = new Size(302, 67);
-            btnProfil.TabIndex = 5;
-            btnProfil.Text = "Profil";
-            btnProfil.UseVisualStyleBackColor = false;
             // 
             // V_profleAdmin
             // 

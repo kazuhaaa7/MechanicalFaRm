@@ -32,15 +32,15 @@ namespace MechanicalFaRm.App.Repository
                 role = reader.IsDBNull(5) ? string.Empty : reader.GetString(4)
             };
         }
-        public M_user? GetByEmail(string email)
+        public M_user? GetByUsername(string username)
         {
             var daftarUser = new M_user();
             using var conn = dbconnect.GetConn();
             conn.Open();
 
-            string rawsql = @"SELECT * FROM public.user WHERE email=@email";
+            string rawsql = "SELECT * FROM public.user WHERE username=@u";
             using var cmd = new NpgsqlCommand(rawsql, conn);
-            cmd.Parameters.AddWithValue("@email", email);
+            cmd.Parameters.AddWithValue("@u", username);
 
             using var reader = cmd.ExecuteReader();
 

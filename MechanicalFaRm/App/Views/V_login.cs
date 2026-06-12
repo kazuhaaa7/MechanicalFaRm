@@ -61,56 +61,25 @@ namespace MechanicalFaRm.App.Authh
             tbUsername.Text = "";//gunanya untuk otomatis menghilangkan value yg ada di textbox untuk mengurangi kemungkinan terjadinya shoulder surfing
             tbPassword.Text = "";
 
-            bool suksesLogin = _authLogin.Login(usernameInput, passwordInput);
+            if (string.IsNullOrEmpty(usernameInput))
+            {
+                MessageBox.Show("Username tidak boleh kosong", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tbUsername.Focus();
+                return;
+            }
+            if (string.IsNullOrEmpty(passwordInput))
+            {
+                MessageBox.Show("Password tidak boleh kosong", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tbPassword.Focus();
+                return;
+            }
+            bool succes = _authLogin.Login(usernameInput, passwordInput);
+            if (!succes)
+            {
+                MessageBox.Show("Username atau Password salah. Silahkan Coba Lagi!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
-            if (!suksesLogin)
-            {
-                MessageBox.Show("Pw atau Username salah");
-            }
-            try
-            {
-                if (string.IsNullOrEmpty(usernameInput))
-                {
-                    MessageBox.Show("Username tidak boleh kosong", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    tbUsername.Focus();
-                    return;
-                }
-                else if (string.IsNullOrEmpty(passwordInput))
-                {
-                    MessageBox.Show("Password tidak boleh kosong", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    tbPassword.Focus();
-                    return;
-                }
-                string result = controlUser.Login(usernameInput, passwordInput);
-                if (result == "Login Berhasil")
-                {
-                    MessageBox.Show("Berhasil Login.");
-                    if (C_userController.CurrentUser.role == "admin")
-                    {
-                        // Assuming CurrentUser has a property 'id' or similar for userId
-                        V_profleAdmin admin = new(C_userController.CurrentUser._id_user);
-                        admin.Show();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        OpenDashboard();
 
-                    }
-                }
-                else if (result == "pw atau user salah")
-                {
-                    MessageBox.Show("Password atau Username salah. Silahkan Login ulang", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    MessageBox.Show(result, "Informasi Sistem", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show($"error {err.Message}");
-            }
 
             //if (usernameInput == this.username && passwordInput == this.password)
             //{

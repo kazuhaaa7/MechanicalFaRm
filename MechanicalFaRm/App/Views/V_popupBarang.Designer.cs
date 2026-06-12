@@ -30,19 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_popupBarang));
             panel1 = new Panel();
+            dtpKembali = new DateTimePicker();
+            dtpSewa = new DateTimePicker();
+            tbNamaPenyewa = new TextBox();
+            panel2 = new Panel();
+            btnLanjut = new Button();
+            btnKeranjang = new Button();
             label8 = new Label();
             lblHargaAlat = new Label();
             lblStokAlat = new Label();
             lblNamaAlat = new Label();
             label7 = new Label();
-            tb = new TextBox();
-            textBox4 = new TextBox();
-            btnKeranjang = new Button();
-            btnLanjut = new Button();
-            textBox3 = new TextBox();
+            tbQty = new TextBox();
             npgsqlDataAdapter1 = new Npgsql.NpgsqlDataAdapter();
-            panel2 = new Panel();
-            tbNamaPenyewa = new TextBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -51,6 +51,8 @@
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Controls.Add(dtpKembali);
+            panel1.Controls.Add(dtpSewa);
             panel1.Controls.Add(tbNamaPenyewa);
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(label8);
@@ -58,15 +60,80 @@
             panel1.Controls.Add(lblStokAlat);
             panel1.Controls.Add(lblNamaAlat);
             panel1.Controls.Add(label7);
-            panel1.Controls.Add(tb);
-            panel1.Controls.Add(textBox4);
-            panel1.Controls.Add(textBox3);
+            panel1.Controls.Add(tbQty);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(800, 450);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
+            // 
+            // dtpKembali
+            // 
+            dtpKembali.Location = new Point(313, 257);
+            dtpKembali.Name = "dtpKembali";
+            dtpKembali.Size = new Size(250, 27);
+            dtpKembali.TabIndex = 24;
+            // 
+            // dtpSewa
+            // 
+            dtpSewa.Location = new Point(313, 212);
+            dtpSewa.Name = "dtpSewa";
+            dtpSewa.Size = new Size(250, 27);
+            dtpSewa.TabIndex = 23;
+            dtpSewa.ValueChanged += dateTimePicker1_ValueChanged;
+            // 
+            // tbNamaPenyewa
+            // 
+            tbNamaPenyewa.BackColor = Color.Moccasin;
+            tbNamaPenyewa.BorderStyle = BorderStyle.None;
+            tbNamaPenyewa.Location = new Point(323, 301);
+            tbNamaPenyewa.Multiline = true;
+            tbNamaPenyewa.Name = "tbNamaPenyewa";
+            tbNamaPenyewa.Size = new Size(215, 32);
+            tbNamaPenyewa.TabIndex = 22;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.Transparent;
+            panel2.Controls.Add(btnLanjut);
+            panel2.Controls.Add(btnKeranjang);
+            panel2.Location = new Point(392, 381);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(396, 66);
+            panel2.TabIndex = 21;
+            // 
+            // btnLanjut
+            // 
+            btnLanjut.BackColor = Color.Transparent;
+            btnLanjut.BackgroundImage = (Image)resources.GetObject("btnLanjut.BackgroundImage");
+            btnLanjut.BackgroundImageLayout = ImageLayout.Stretch;
+            btnLanjut.FlatAppearance.BorderSize = 0;
+            btnLanjut.FlatStyle = FlatStyle.Flat;
+            btnLanjut.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLanjut.ForeColor = SystemColors.ButtonHighlight;
+            btnLanjut.Location = new Point(216, 12);
+            btnLanjut.Name = "btnLanjut";
+            btnLanjut.Size = new Size(168, 42);
+            btnLanjut.TabIndex = 10;
+            btnLanjut.Text = "Lanjut";
+            btnLanjut.UseVisualStyleBackColor = false;
+            btnLanjut.Click += btnLanjut_Click;
+            // 
+            // btnKeranjang
+            // 
+            btnKeranjang.BackgroundImage = (Image)resources.GetObject("btnKeranjang.BackgroundImage");
+            btnKeranjang.FlatAppearance.BorderSize = 0;
+            btnKeranjang.FlatStyle = FlatStyle.Flat;
+            btnKeranjang.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnKeranjang.ForeColor = SystemColors.ButtonHighlight;
+            btnKeranjang.Location = new Point(3, 12);
+            btnKeranjang.Name = "btnKeranjang";
+            btnKeranjang.Size = new Size(168, 42);
+            btnKeranjang.TabIndex = 11;
+            btnKeranjang.Text = "Keranjang";
+            btnKeranjang.UseVisualStyleBackColor = true;
+            btnKeranjang.Click += btnKeranjang_Click;
             // 
             // label8
             // 
@@ -131,72 +198,16 @@
             label7.Text = "*minimal penyewaan 3 hari";
             label7.Click += label7_Click;
             // 
-            // tb
+            // tbQty
             // 
-            tb.BackColor = Color.Moccasin;
-            tb.BorderStyle = BorderStyle.None;
-            tb.Location = new Point(318, 254);
-            tb.Multiline = true;
-            tb.Name = "tb";
-            tb.PlaceholderText = "YYYY-MM-DD";
-            tb.Size = new Size(219, 31);
-            tb.TabIndex = 14;
-            tb.TextChanged += tb_TextChanged;
-            // 
-            // textBox4
-            // 
-            textBox4.BackColor = Color.Moccasin;
-            textBox4.BorderStyle = BorderStyle.None;
-            textBox4.Location = new Point(323, 214);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "YYYY-MM-DD";
-            textBox4.Size = new Size(205, 34);
-            textBox4.TabIndex = 13;
-            textBox4.TextChanged += textBox4_TextChanged;
-            // 
-            // btnKeranjang
-            // 
-            btnKeranjang.BackgroundImage = (Image)resources.GetObject("btnKeranjang.BackgroundImage");
-            btnKeranjang.FlatAppearance.BorderSize = 0;
-            btnKeranjang.FlatStyle = FlatStyle.Flat;
-            btnKeranjang.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnKeranjang.ForeColor = SystemColors.ButtonHighlight;
-            btnKeranjang.Location = new Point(3, 12);
-            btnKeranjang.Name = "btnKeranjang";
-            btnKeranjang.Size = new Size(168, 42);
-            btnKeranjang.TabIndex = 11;
-            btnKeranjang.Text = "Keranjang";
-            btnKeranjang.UseVisualStyleBackColor = true;
-            btnKeranjang.Click += btnKeranjang_Click;
-            // 
-            // btnLanjut
-            // 
-            btnLanjut.BackColor = Color.Transparent;
-            btnLanjut.BackgroundImage = (Image)resources.GetObject("btnLanjut.BackgroundImage");
-            btnLanjut.BackgroundImageLayout = ImageLayout.Stretch;
-            btnLanjut.FlatAppearance.BorderSize = 0;
-            btnLanjut.FlatStyle = FlatStyle.Flat;
-            btnLanjut.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLanjut.ForeColor = SystemColors.ButtonHighlight;
-            btnLanjut.Location = new Point(216, 12);
-            btnLanjut.Name = "btnLanjut";
-            btnLanjut.Size = new Size(168, 42);
-            btnLanjut.TabIndex = 10;
-            btnLanjut.Text = "Lanjut";
-            btnLanjut.UseVisualStyleBackColor = false;
-            btnLanjut.Click += btnLanjut_Click;
-            // 
-            // textBox3
-            // 
-            textBox3.BackColor = Color.Moccasin;
-            textBox3.BorderStyle = BorderStyle.None;
-            textBox3.Location = new Point(320, 127);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(217, 34);
-            textBox3.TabIndex = 7;
-            textBox3.TextChanged += textBox3_TextChanged;
+            tbQty.BackColor = Color.Moccasin;
+            tbQty.BorderStyle = BorderStyle.None;
+            tbQty.Location = new Point(320, 127);
+            tbQty.Multiline = true;
+            tbQty.Name = "tbQty";
+            tbQty.Size = new Size(217, 34);
+            tbQty.TabIndex = 7;
+            tbQty.TextChanged += textBox3_TextChanged;
             // 
             // npgsqlDataAdapter1
             // 
@@ -204,26 +215,6 @@
             npgsqlDataAdapter1.InsertCommand = null;
             npgsqlDataAdapter1.SelectCommand = null;
             npgsqlDataAdapter1.UpdateCommand = null;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.Transparent;
-            panel2.Controls.Add(btnLanjut);
-            panel2.Controls.Add(btnKeranjang);
-            panel2.Location = new Point(392, 381);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(396, 57);
-            panel2.TabIndex = 21;
-            // 
-            // tbNamaPenyewa
-            // 
-            tbNamaPenyewa.BackColor = Color.Moccasin;
-            tbNamaPenyewa.BorderStyle = BorderStyle.None;
-            tbNamaPenyewa.Location = new Point(323, 301);
-            tbNamaPenyewa.Multiline = true;
-            tbNamaPenyewa.Name = "tbNamaPenyewa";
-            tbNamaPenyewa.Size = new Size(215, 32);
-            tbNamaPenyewa.TabIndex = 22;
             // 
             // V_popupBarang
             // 
@@ -244,13 +235,11 @@
 
         private Panel panel1;
         private TextBox tbStoktersedia;
-        private TextBox textBox3;
+        private TextBox tbQty;
         private TextBox textBox2;
         private Button btnLanjut;
         private Button btnKeranjang;
-        private TextBox textBox4;
         private Npgsql.NpgsqlDataAdapter npgsqlDataAdapter1;
-        private TextBox tb;
         private Label label7;
         private Label lblNamaAlat;
         private Label lblHargaAlat;
@@ -258,5 +247,7 @@
         private Label label8;
         private Panel panel2;
         private TextBox tbNamaPenyewa;
+        private DateTimePicker dtpSewa;
+        private DateTimePicker dtpKembali;
     }
 }
