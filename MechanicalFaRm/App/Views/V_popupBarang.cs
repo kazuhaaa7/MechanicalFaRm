@@ -20,11 +20,12 @@ namespace MechanicalFaRm.App.Views
         //Form V_dashboardCust
         public int idBarang;
         private C_barangController barangController;
-        public V_popupBarang()
+        public V_popupBarang(int idbarang)
         {
             InitializeComponent();
             //this.V_dashboardCust = induk;
             barangController = new C_barangController();
+            idBarang = idbarang;
 
         }
         private void V_popupBarang_Load(object sender, EventArgs e)
@@ -49,17 +50,8 @@ namespace MechanicalFaRm.App.Views
         }
 
         private void btnLanjut_Click(object sender, EventArgs e)
-        {
-            //V_keranjangCust keranjang = new V_keranjangCust();
-            //keranjang.Show();
-            this.Close();
-        }
 
-        private void btnKeranjang_Click(object sender, EventArgs e)
         {
-            
-            //getbarang yg bisa menambhakan ke class keranjang
-            
             int qty = int.TryParse(tbQty.Text, out qty) ? qty : 0;
             DateTime tglSewa = dtpSewa.Value.Date;
             DateTime tglKembali = dtpKembali.Value.Date;
@@ -67,23 +59,62 @@ namespace MechanicalFaRm.App.Views
             {
                 namaPenyewa = tbNamaPenyewa.Text
             };
-
+            var hargaBarang = 0;
+            int.TryParse(lblHargaAlat.Text, out hargaBarang);
+            var stok = 0;
+            int.TryParse(lblStokAlat.Text, out stok);
             DataKeranjangBaru = new M_Keranjang
             {
+                id_barang = idBarang,
                 namaBarang = lblNamaAlat.Text,
                 jumlah = qty,
                 tglSewa = tglSewa,
                 tglKembali = tglKembali,
+                hargaSewa = hargaBarang,
+                stok = stok,
                 Penyewa = namaUser
             };
             S_PesananService service = new S_PesananService();
             string status = service.AddToKeranjang(DataKeranjangBaru);
-
-            if(status == "sukses")
+            if (status == "sukses")
             {
                 MessageBox.Show("Berhasil menambahkan data");
             }
-            //this.DialogResult = DialogResult.OK;    
+            V_keranjangCust keranjang = new V_keranjangCust();
+            keranjang.Show();
+            this.Close();
+        }
+        private void btnKeranjang_Click(object sender, EventArgs e)
+        {
+            int qty = int.TryParse(tbQty.Text, out qty) ? qty : 0;
+
+            DateTime tglSewa = dtpSewa.Value.Date;
+            DateTime tglKembali = dtpKembali.Value.Date;
+            M_user namaUser = new M_user()
+            {
+                namaPenyewa = tbNamaPenyewa.Text
+            };
+            var hargaBarang = 0;
+            int.TryParse(lblHargaAlat.Text, out hargaBarang);
+            var stok = 0;
+            int.TryParse(lblStokAlat.Text, out stok);
+            DataKeranjangBaru = new M_Keranjang
+            {
+                id_barang = idBarang,
+                namaBarang = lblNamaAlat.Text,
+                jumlah = qty,
+                tglSewa = tglSewa,
+                tglKembali = tglKembali,
+                hargaSewa = hargaBarang,
+                stok = stok,
+                Penyewa = namaUser
+            };
+            S_PesananService service = new S_PesananService();
+            string status = service.AddToKeranjang(DataKeranjangBaru);
+            if (status == "sukses")
+            {
+                MessageBox.Show("Berhasil menambahkan data");
+            }
             this.Close();
         }
 

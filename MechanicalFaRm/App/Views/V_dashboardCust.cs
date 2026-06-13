@@ -78,7 +78,7 @@
         private void btnSewaAlat1_Click(object sender, EventArgs e)
         {
             int idBarangSewa = 1;
-            V_popupBarang popup1 = new V_popupBarang();
+            V_popupBarang popup1 = new V_popupBarang(idBarangSewa);
             popup1.idBarang = idBarangSewa;
             popup1.ShowDialog();
         }
@@ -86,7 +86,7 @@
         private void btnSewaAlat2_Click(object sender, EventArgs e)
         {
             int idBarangSewa = 2;
-            V_popupBarang popup2 = new V_popupBarang();
+            V_popupBarang popup2 = new V_popupBarang(idBarangSewa);
             popup2.idBarang = idBarangSewa;
             popup2.ShowDialog();
         }
@@ -94,7 +94,7 @@
         private void btnSewaAlat3_Click(object sender, EventArgs e)
         {
             int idBarangSewa = 3;
-            V_popupBarang popup3 = new V_popupBarang();
+            V_popupBarang popup3 = new V_popupBarang(idBarangSewa);
             popup3.idBarang = idBarangSewa;
             popup3.ShowDialog();
         }
@@ -102,7 +102,7 @@
         private void btnSewaAlat4_Click(object sender, EventArgs e)
         {
             int idBarangSewa = 4;
-            V_popupBarang popup4 = new V_popupBarang();
+            V_popupBarang popup4 = new V_popupBarang(idBarangSewa);
             popup4.idBarang = idBarangSewa;
             popup4.ShowDialog();
         }
@@ -110,7 +110,7 @@
         private void btnSewaAlat5_Click(object sender, EventArgs e)
         {
             int idBarangSewa = 5;
-            V_popupBarang popup5 = new V_popupBarang();
+            V_popupBarang popup5 = new V_popupBarang(idBarangSewa);
             popup5.idBarang = idBarangSewa;
             popup5.ShowDialog();
         }
@@ -118,7 +118,7 @@
         private void btnSewaAlat6_Click(object sender, EventArgs e)
         {
             int idBarangSewa = 6;
-            V_popupBarang popup6 = new V_popupBarang();
+            V_popupBarang popup6 = new V_popupBarang(idBarangSewa);
             popup6.idBarang = idBarangSewa;
             popup6.ShowDialog();
         }

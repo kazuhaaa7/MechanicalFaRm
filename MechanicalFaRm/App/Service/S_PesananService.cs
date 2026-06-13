@@ -31,7 +31,7 @@ namespace MechanicalFaRm.App.Service
                 MessageBox.Show("Tanggal kembali tidak boleh lebih awal dari tanggal sewa!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return "gagal";
             }
-            else if ((itemkeranjang.tglKembali - itemkeranjang.tglSewa).Days <= 3)
+            else if ((itemkeranjang.tglKembali - itemkeranjang.tglSewa).Days < 2)
             {
                 MessageBox.Show("Minimal penyewaan 3 hari!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return "gagal";
@@ -45,11 +45,11 @@ namespace MechanicalFaRm.App.Service
             return "sukses";
         }
 
-        //public string SubmitTransaksi(M_Keranjang itemkeranjang)
-        //{
-        //    // Implementation for submitting the transaction
-        //    _transaksiRepo.InsertTransaksi(itemkeranjang);
-        //    return "Transaction submitted successfully.";
-        //}
+        public string SubmitTransaksi(M_Keranjang itemkeranjang)
+        {
+            // Implementation for submitting the transaction
+            _transaksiRepo.InsertTransaksi(itemkeranjang);
+            return "Transaction submitted successfully.";
+        }
     }
 }

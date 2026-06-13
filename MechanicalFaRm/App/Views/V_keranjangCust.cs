@@ -46,8 +46,11 @@ namespace MechanicalFaRm.App.Views
         {
             var isiKeranjang = _servicePesanan.GetListKeranjang();
             DataTable datak = new DataTable();
+            datak.Columns.Add("id barang", typeof(int));
             datak.Columns.Add("Nama Alat", typeof(string));
             datak.Columns.Add("Jumlah Alat", typeof(int));
+            datak.Columns.Add("Stok", typeof(int));
+            datak.Columns.Add("Harga Alat", typeof(int));
             datak.Columns.Add("Tanggal Sewa", typeof(DateTime));
             datak.Columns.Add("Tanggal Kembali", typeof(DateTime));
             datak.Columns.Add("Nama Penyewa", typeof(string));
@@ -55,8 +58,11 @@ namespace MechanicalFaRm.App.Views
             foreach (var item in isiKeranjang)
             {
                 datak.Rows.Add(
+                item.id_barang,
                 item.namaBarang,
                 item.jumlah,
+                item.stok,
+                item.hargaSewa,
                 item.tglSewa,
                 item.tglKembali,
                 item.Penyewa.namaPenyewa);
