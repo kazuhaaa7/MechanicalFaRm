@@ -74,5 +74,10 @@ namespace MechanicalFaRm.App.Views
             dataGridView1.RowHeadersVisible = false;
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -167,10 +167,10 @@
             dgvKeranjang.BackgroundColor = SystemColors.Control;
             dgvKeranjang.BorderStyle = BorderStyle.Fixed3D;
             dgvKeranjang.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvKeranjang.Location = new Point(435, 172);
+            dgvKeranjang.Location = new Point(428, 216);
             dgvKeranjang.Name = "dgvKeranjang";
             dgvKeranjang.RowHeadersWidth = 51;
-            dgvKeranjang.Size = new Size(1416, 808);
+            dgvKeranjang.Size = new Size(1442, 808);
             dgvKeranjang.TabIndex = 3;
             dgvKeranjang.CellContentClick += dgvKeranjang_CellContentClick;
             // 
@@ -179,7 +179,7 @@
             btnSubmit.BackColor = Color.Silver;
             btnSubmit.FlatAppearance.BorderSize = 0;
             btnSubmit.FlatStyle = FlatStyle.Flat;
-            btnSubmit.Location = new Point(1680, 986);
+            btnSubmit.Location = new Point(1681, 161);
             btnSubmit.Name = "btnSubmit";
             btnSubmit.Size = new Size(171, 49);
             btnSubmit.TabIndex = 2;

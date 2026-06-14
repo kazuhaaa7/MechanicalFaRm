@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_riwayatPenyewaanCust));
             panel1 = new Panel();
             dataGridView1 = new DataGridView();
             panel1.SuspendLayout();
@@ -36,21 +37,23 @@
             // 
             // panel1
             // 
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.Controls.Add(dataGridView1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1924, 1049);
-            panel1.TabIndex = 1;
+            panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(324, 12);
+            dataGridView1.Location = new Point(421, 203);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1588, 1034);
-            dataGridView1.TabIndex = 0;
+            dataGridView1.Size = new Size(1447, 834);
+            dataGridView1.TabIndex = 1;
             // 
             // V_riwayatPenyewaanCust
             // 

@@ -10,13 +10,9 @@ namespace MechanicalFaRm.App.Service
 {
     internal class S_PesananService : S_IPesananService
     {
-        public string TambahKeranjanag(M_Keranjang newitem)
-        {
-            // Implementation for adding item to cart
-            return "item ditambahkan ke keranjang.";
-        }
         private static List<M_Keranjang> listKeranjang = new List<M_Keranjang>();
         private R_TransaksiRepository _transaksiRepo =  new R_TransaksiRepository();
+        private R_PesananRepository _repopesan = new R_PesananRepository();
 
         public List<M_Keranjang> GetListKeranjang()
         {
@@ -78,11 +74,11 @@ namespace MechanicalFaRm.App.Service
                 return "Gagal: Terjadi kesalahan saat menyimpan ke database.";
             }
         }
-        public string SubmitTransaksi(M_Keranjang itemkeranjang)
+        
+        public List<M_DetailPesanan> GetAllPesanan(int id)
         {
-            // Implementation for submitting the transaction
-            _transaksiRepo.InsertTransaksi(itemkeranjang);
-            return "Transaction submitted successfully.";
+            return _repopesan.GetAllPesananByUser(id);
+            
         }
     }
 }

@@ -145,11 +145,7 @@ namespace MechanicalFaRm.App.Views
 
             if (konfirmasi == DialogResult.Yes)
             {
-                // PENTING: Kamu harus mengambil ID User yang sedang login!
-                // Misalnya kamu menyimpannya di class Session statis:
                 int idUserYangLogin = SE_userSession.id_user;
-
-                // Panggil Controller
                 string hasil = _pesananControll.ProsesCo(idUserYangLogin);
 
                 if (hasil == "Sukses")

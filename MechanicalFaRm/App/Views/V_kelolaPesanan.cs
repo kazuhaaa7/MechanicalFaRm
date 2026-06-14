@@ -1,5 +1,6 @@
 ﻿using MechanicalFaRm.App.Models;
 using MechanicalFaRm.App.Service;
+using MechanicalFaRm.App.Session;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +24,7 @@ namespace MechanicalFaRm.App.Views
 
         public void DataPesanan()
         {
+            int id = SE_userSession.id_user;
             List<M_DetailPesanan> daftarR = servicePesan.GetAllPesanan(id);
 
             if(daftarR.Count == 0)
