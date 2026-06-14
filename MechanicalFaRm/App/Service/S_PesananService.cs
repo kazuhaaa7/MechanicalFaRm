@@ -13,7 +13,7 @@ namespace MechanicalFaRm.App.Service
         public string TambahKeranjanag(M_Keranjang newitem)
         {
             // Implementation for adding item to cart
-            return "Item added to cart successfully.";
+            return "item ditambahkan ke keranjang.";
         }
         private static List<M_Keranjang> listKeranjang = new List<M_Keranjang>();
         private R_TransaksiRepository _transaksiRepo =  new R_TransaksiRepository();
@@ -45,6 +45,39 @@ namespace MechanicalFaRm.App.Service
             return "sukses";
         }
 
+        public decimal HitungTotalKeseluruhan()
+        {
+            decimal gtotal = 0;
+            foreach (var item in listKeranjang) 
+            {
+                int durasi = (item.tglKembali - item.tglSewa).Days;
+                if (durasi == 0) durasi = 3;
+                gtotal += (item.hargaSewa * item.jumlah * durasi);
+            }
+            return gtotal;
+        }
+
+        public string SubmitCheckout(int idUser)
+        {
+            if (listKeranjang.Count == 0)
+            {
+                return "Gagal: Keranjang belanja Anda masih kosong!";
+            }
+
+            decimal totalBayar = HitungTotalKeseluruhan();
+
+            bool isSukses = _transaksiRepo.PesananBaru(listKeranjang, totalBayar, idUser);
+
+            if (isSukses)
+            {
+                listKeranjang.Clear(); 
+                return "Sukses";
+            }
+            else
+            {
+                return "Gagal: Terjadi kesalahan saat menyimpan ke database.";
+            }
+        }
         public string SubmitTransaksi(M_Keranjang itemkeranjang)
         {
             // Implementation for submitting the transaction

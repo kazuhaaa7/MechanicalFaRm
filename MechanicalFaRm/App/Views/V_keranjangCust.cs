@@ -1,5 +1,7 @@
-﻿using MechanicalFaRm.App.Models;
+﻿using MechanicalFaRm.App.Controllers;
+using MechanicalFaRm.App.Models;
 using MechanicalFaRm.App.Service;
+using MechanicalFaRm.App.Session;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,11 +16,13 @@ namespace MechanicalFaRm.App.Views
     public partial class V_keranjangCust : Form
     {
         private S_PesananService _servicePesanan;
+        private PesananController _pesananControll;
         public V_keranjangCust()
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
             _servicePesanan = new S_PesananService();
+            _pesananControll = new PesananController();
             RefreshData();
         }
 
@@ -48,11 +52,13 @@ namespace MechanicalFaRm.App.Views
             DataTable datak = new DataTable();
             datak.Columns.Add("id barang", typeof(int));
             datak.Columns.Add("Nama Alat", typeof(string));
+            datak.Columns.Add("Stok", typeof(int));
             datak.Columns.Add("Jumlah Alat", typeof(int));
             datak.Columns.Add("Stok", typeof(int));
             datak.Columns.Add("Harga Alat", typeof(int));
             datak.Columns.Add("Tanggal Sewa", typeof(DateTime));
             datak.Columns.Add("Tanggal Kembali", typeof(DateTime));
+            datak.Columns.Add("Harga", typeof(int));
             datak.Columns.Add("Nama Penyewa", typeof(string));
 
             foreach (var item in isiKeranjang)
@@ -60,11 +66,13 @@ namespace MechanicalFaRm.App.Views
                 datak.Rows.Add(
                 item.id_barang,
                 item.namaBarang,
+                item.stok,
                 item.jumlah,
                 item.stok,
                 item.hargaSewa,
                 item.tglSewa,
                 item.tglKembali,
+                item.hargaSewa,
                 item.Penyewa.namaPenyewa);
             }
             dgvKeranjang.DataSource = null;
@@ -130,5 +138,30 @@ namespace MechanicalFaRm.App.Views
             prof.Show();
             this.Close();
         }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            DialogResult konfirmasi = MessageBox.Show("Apakah Anda yakin ingin memproses pesanan ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (konfirmasi == DialogResult.Yes)
+            {
+                // PENTING: Kamu harus mengambil ID User yang sedang login!
+                // Misalnya kamu menyimpannya di class Session statis:
+                int idUserYangLogin = SE_userSession.id_user;
+
+                // Panggil Controller
+                string hasil = _pesananControll.ProsesCo(idUserYangLogin);
+
+                if (hasil == "Sukses")
+                {
+                    MessageBox.Show("Pesanan berhasil dibuat! Silakan lakukan pembayaran.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    RefreshData(); // Panggil ini agar tabel GridView langsung bersih/kosong
+                }
+                else
+                {
+                    MessageBox.Show(hasil, "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+        }
     }
-}

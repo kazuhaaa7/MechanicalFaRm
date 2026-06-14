@@ -1,6 +1,6 @@
 ﻿namespace MechanicalFaRm.App.Views
 {
-    partial class V_riwayatPenyewaanCust
+    partial class V_kelolaPesanan
     {
         /// <summary>
         /// Required designer variable.
@@ -40,27 +40,26 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1924, 1049);
-            panel1.TabIndex = 1;
+            panel1.Size = new Size(1924, 1043);
+            panel1.TabIndex = 0;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(324, 12);
+            dataGridView1.Location = new Point(151, 89);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1588, 1034);
+            dataGridView1.Size = new Size(1600, 823);
             dataGridView1.TabIndex = 0;
             // 
-            // V_riwayatPenyewaanCust
+            // V_kelolaPesanan
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1924, 1049);
+            ClientSize = new Size(1924, 1043);
             Controls.Add(panel1);
-            Name = "V_riwayatPenyewaanCust";
-            Text = "V_riwayatPembelian";
-            Load += V_riwayatPembelian_Load;
+            Name = "V_kelolaPesanan";
+            Text = "V_kelolaPesanan";
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

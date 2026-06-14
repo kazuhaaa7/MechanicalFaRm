@@ -17,7 +17,7 @@ namespace MechanicalFaRm.App.Views
 
         }
 
-       
+
 
         private void V_profle_Load(object sender, EventArgs e)
         {
@@ -37,11 +37,6 @@ namespace MechanicalFaRm.App.Views
             }
         }
 
-        private void btnEditProfileA_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -50,7 +45,7 @@ namespace MechanicalFaRm.App.Views
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             //ganti class dashbioard admin
-            V_dashboardCust du = new V_dashboardCust();
+            V_kelolaAlatAdmin du = new V_kelolaAlatAdmin();
             du.Show();
             this.Hide();
         }
@@ -69,6 +64,67 @@ namespace MechanicalFaRm.App.Views
         private void txtName_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void lblNoTelp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnKelolaCust_Click(object sender, EventArgs e)
+        {
+            V_kelolaAkunAdmin ka = new V_kelolaAkunAdmin();
+            ka.Show();
+            this.Close();
+        }
+
+        private void btnEditProfileA_Click(object sender, EventArgs e)
+        {
+            V_editProfile editProfile = new V_editProfile();
+            editProfile.Show();
+            this.Close();
+        }
+
+        private void lblUsername_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblEmail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblUsername_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnKelolaAlat_Click(object sender, EventArgs e)
+        {
+            V_kelolaAlatAdmin kal = new V_kelolaAlatAdmin();
+            kal.Show();
+            this.Close();
+        }
+
+        private void btnRiwayatPenyewaan_Click(object sender, EventArgs e)
+        {
+            V_riwayatPenyewaanAdmin riad = new V_riwayatPenyewaanAdmin();
+            riad.Show();
+            this.Close();
+        }
+
+        private void btnProfilA_Click(object sender, EventArgs e)
+        {
+            int id = SE_userSession.id_user;
+            V_profleAdmin pad = new V_profleAdmin(id);
+            pad.Show();
+            this.Close();
         }
     }
 }

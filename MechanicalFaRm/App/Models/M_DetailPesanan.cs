@@ -1,9 +1,14 @@
 ﻿namespace MechanicalFaRm.App.Models
 {
-    internal class M_DetailPesanan : M_Pesanan
+    public class M_DetailPesanan : M_Pesanan
     {
-        public int jumlah;
-        public decimal subtotal;
+        public int id_barang { get; set; }
+        public int idPesanan { get; set; }
+
+        public int jumlah {  get; set; }
+        public decimal subtotal { get; set; }
+        public DateTime tglSewa { get; set; }
+        public DateTime tglKembali { get; set; }
 
         //public M_DetailPesanan(int jumlah, decimal subtotal)
         //{

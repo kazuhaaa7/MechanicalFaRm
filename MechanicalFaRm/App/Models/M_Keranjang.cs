@@ -2,8 +2,10 @@
 
 namespace MechanicalFaRm.App.Models
 {
-    public class M_Keranjang : M_Pesanan
+    public class M_Keranjang : M_DetailPesanan
     {
+        public int id_barang { get; set; }
+        public int idKeranjang { get; set; } 
         public decimal jumlah;
         public M_user? Penyewa { get; set; }
 

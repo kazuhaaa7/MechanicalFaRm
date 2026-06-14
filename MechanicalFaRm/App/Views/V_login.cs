@@ -1,5 +1,6 @@
 ﻿using MechanicalFaRm.App.Controllers;
 using MechanicalFaRm.App.Models;
+using MechanicalFaRm.App.Session;
 using MechanicalFaRm.App.Views;
 namespace MechanicalFaRm.App.Authh
 {
@@ -7,7 +8,7 @@ namespace MechanicalFaRm.App.Authh
     {
         private V_dashboardCust _dashboarduser;
         private C_userController controlUser;
-        private readonly C_loginAuthController _authLogin;
+        private C_loginAuthController _authLogin;
 
         public V_login()
         {
@@ -21,6 +22,14 @@ namespace MechanicalFaRm.App.Authh
         {
             _dashboarduser = new V_dashboardCust();
             _dashboarduser.Show();
+            this.Hide();
+        }
+
+        public void ProfileAdmin()
+        {
+            int idlog = SE_userSession.id_user;
+            V_profleAdmin padmin = new V_profleAdmin(idlog);
+            padmin.Show();
             this.Hide();
         }
 
@@ -78,6 +87,7 @@ namespace MechanicalFaRm.App.Authh
             {
                 MessageBox.Show("Username atau Password salah. Silahkan Coba Lagi!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            this.Hide();
 
 
 

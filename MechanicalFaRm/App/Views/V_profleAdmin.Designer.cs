@@ -32,109 +32,123 @@ namespace MechanicalFaRm.App.Views
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_profleAdmin));
             panel1 = new Panel();
-            panel2 = new Panel();
-            lblNoTelp = new Label();
+            panel6 = new Panel();
             lblEmail = new Label();
+            lblNoTelp = new Label();
             lblUsername = new Label();
-            label1 = new Label();
-            panel9 = new Panel();
+            panel2 = new Panel();
+            panel3 = new Panel();
+            btnEditProfileA = new Button();
             btnProfil = new Button();
             btnDeskripsiAlat = new Button();
             btnKelolaCust = new Button();
             btnLogout = new Button();
             btnRiwayatPenyewaan = new Button();
             btnKelolaAlat = new Button();
-            panel8 = new Panel();
-            btnEditProfileA = new Button();
-            panel3 = new Panel();
             contextMenuStrip1 = new ContextMenuStrip(components);
             panel1.SuspendLayout();
+            panel6.SuspendLayout();
             panel2.SuspendLayout();
-            panel9.SuspendLayout();
-            panel8.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Controls.Add(panel6);
             panel1.Controls.Add(panel2);
-            panel1.Location = new Point(-18, -6);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1945, 1051);
+            panel1.Size = new Size(1924, 1051);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
-            // panel2
+            // panel6
             // 
-            panel2.BackColor = Color.Transparent;
-            panel2.Controls.Add(lblNoTelp);
-            panel2.Controls.Add(lblEmail);
-            panel2.Controls.Add(lblUsername);
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(panel9);
-            panel2.Controls.Add(panel8);
-            panel2.Controls.Add(panel3);
-            panel2.Location = new Point(21, 3);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1387, 970);
-            panel2.TabIndex = 0;
-            // 
-            // lblNoTelp
-            // 
-            lblNoTelp.FlatStyle = FlatStyle.Flat;
-            lblNoTelp.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNoTelp.ForeColor = SystemColors.ActiveCaptionText;
-            lblNoTelp.Location = new Point(858, 566);
-            lblNoTelp.Name = "lblNoTelp";
-            lblNoTelp.Size = new Size(471, 38);
-            lblNoTelp.TabIndex = 10;
-            lblNoTelp.TextAlign = ContentAlignment.TopCenter;
+            panel6.BackColor = Color.Transparent;
+            panel6.Controls.Add(lblEmail);
+            panel6.Controls.Add(lblNoTelp);
+            panel6.Controls.Add(lblUsername);
+            panel6.Dock = DockStyle.Right;
+            panel6.Location = new Point(938, 0);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(986, 1051);
+            panel6.TabIndex = 12;
             // 
             // lblEmail
             // 
             lblEmail.FlatStyle = FlatStyle.Flat;
             lblEmail.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblEmail.ForeColor = SystemColors.ActiveCaptionText;
-            lblEmail.Location = new Point(858, 466);
+            lblEmail.Location = new Point(31, 488);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(471, 36);
-            lblEmail.TabIndex = 9;
+            lblEmail.TabIndex = 29;
             lblEmail.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // lblNoTelp
+            // 
+            lblNoTelp.FlatStyle = FlatStyle.Flat;
+            lblNoTelp.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNoTelp.ForeColor = SystemColors.ActiveCaptionText;
+            lblNoTelp.Location = new Point(31, 632);
+            lblNoTelp.Name = "lblNoTelp";
+            lblNoTelp.Size = new Size(471, 38);
+            lblNoTelp.TabIndex = 30;
+            lblNoTelp.TextAlign = ContentAlignment.TopCenter;
             // 
             // lblUsername
             // 
             lblUsername.FlatStyle = FlatStyle.Flat;
             lblUsername.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblUsername.ForeColor = SystemColors.ActiveCaptionText;
-            lblUsername.Location = new Point(858, 354);
+            lblUsername.Location = new Point(31, 371);
             lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(471, 50);
-            lblUsername.TabIndex = 8;
+            lblUsername.Size = new Size(471, 36);
+            lblUsername.TabIndex = 28;
             lblUsername.TextAlign = ContentAlignment.TopCenter;
+            lblUsername.Click += lblUsername_Click_1;
             // 
-            // label1
+            // panel2
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(901, 404);
-            label1.Name = "label1";
-            label1.Size = new Size(0, 38);
-            label1.TabIndex = 7;
+            panel2.BackColor = Color.Transparent;
+            panel2.Controls.Add(panel3);
+            panel2.Controls.Add(btnEditProfileA);
+            panel2.Controls.Add(btnProfil);
+            panel2.Controls.Add(btnDeskripsiAlat);
+            panel2.Controls.Add(btnKelolaCust);
+            panel2.Controls.Add(btnLogout);
+            panel2.Controls.Add(btnRiwayatPenyewaan);
+            panel2.Controls.Add(btnKelolaAlat);
+            panel2.Dock = DockStyle.Left;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(932, 1051);
+            panel2.TabIndex = 11;
             // 
-            // panel9
+            // panel3
             // 
-            panel9.Controls.Add(btnProfil);
-            panel9.Controls.Add(btnDeskripsiAlat);
-            panel9.Controls.Add(btnKelolaCust);
-            panel9.Controls.Add(btnLogout);
-            panel9.Controls.Add(btnRiwayatPenyewaan);
-            panel9.Controls.Add(btnKelolaAlat);
-            panel9.Dock = DockStyle.Left;
-            panel9.Location = new Point(0, 0);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(361, 970);
-            panel9.TabIndex = 6;
+            panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
+            panel3.BackgroundImageLayout = ImageLayout.Stretch;
+            panel3.Location = new Point(468, 323);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(338, 330);
+            panel3.TabIndex = 23;
+            // 
+            // btnEditProfileA
+            // 
+            btnEditProfileA.BackColor = Color.Transparent;
+            btnEditProfileA.BackgroundImage = (Image)resources.GetObject("btnEditProfileA.BackgroundImage");
+            btnEditProfileA.BackgroundImageLayout = ImageLayout.Stretch;
+            btnEditProfileA.FlatAppearance.BorderSize = 0;
+            btnEditProfileA.FlatStyle = FlatStyle.Flat;
+            btnEditProfileA.Location = new Point(503, 681);
+            btnEditProfileA.Name = "btnEditProfileA";
+            btnEditProfileA.Size = new Size(271, 59);
+            btnEditProfileA.TabIndex = 24;
+            btnEditProfileA.UseVisualStyleBackColor = false;
+            btnEditProfileA.Click += btnEditProfileA_Click;
             // 
             // btnProfil
             // 
@@ -143,10 +157,10 @@ namespace MechanicalFaRm.App.Views
             btnProfil.FlatStyle = FlatStyle.Flat;
             btnProfil.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnProfil.ForeColor = SystemColors.ActiveCaptionText;
-            btnProfil.Location = new Point(39, 581);
+            btnProfil.Location = new Point(36, 601);
             btnProfil.Name = "btnProfil";
             btnProfil.Size = new Size(302, 67);
-            btnProfil.TabIndex = 5;
+            btnProfil.TabIndex = 22;
             btnProfil.Text = "Profil";
             btnProfil.UseVisualStyleBackColor = false;
             // 
@@ -157,10 +171,10 @@ namespace MechanicalFaRm.App.Views
             btnDeskripsiAlat.FlatStyle = FlatStyle.Flat;
             btnDeskripsiAlat.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnDeskripsiAlat.ForeColor = SystemColors.ActiveCaptionText;
-            btnDeskripsiAlat.Location = new Point(39, 508);
+            btnDeskripsiAlat.Location = new Point(36, 528);
             btnDeskripsiAlat.Name = "btnDeskripsiAlat";
             btnDeskripsiAlat.Size = new Size(302, 67);
-            btnDeskripsiAlat.TabIndex = 4;
+            btnDeskripsiAlat.TabIndex = 21;
             btnDeskripsiAlat.Text = "Deskripsi Alat";
             btnDeskripsiAlat.UseVisualStyleBackColor = false;
             // 
@@ -171,10 +185,10 @@ namespace MechanicalFaRm.App.Views
             btnKelolaCust.FlatStyle = FlatStyle.Flat;
             btnKelolaCust.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnKelolaCust.ForeColor = SystemColors.ActiveCaptionText;
-            btnKelolaCust.Location = new Point(39, 362);
+            btnKelolaCust.Location = new Point(36, 382);
             btnKelolaCust.Name = "btnKelolaCust";
             btnKelolaCust.Size = new Size(302, 67);
-            btnKelolaCust.TabIndex = 3;
+            btnKelolaCust.TabIndex = 20;
             btnKelolaCust.Text = "Kelola Customer";
             btnKelolaCust.UseVisualStyleBackColor = false;
             // 
@@ -185,13 +199,12 @@ namespace MechanicalFaRm.App.Views
             btnLogout.FlatStyle = FlatStyle.Flat;
             btnLogout.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnLogout.ForeColor = SystemColors.ActiveCaptionText;
-            btnLogout.Location = new Point(39, 654);
+            btnLogout.Location = new Point(36, 674);
             btnLogout.Name = "btnLogout";
             btnLogout.Size = new Size(302, 67);
-            btnLogout.TabIndex = 2;
+            btnLogout.TabIndex = 19;
             btnLogout.Text = "Logout";
             btnLogout.UseVisualStyleBackColor = false;
-            btnLogout.Click += btnLogout_Click;
             // 
             // btnRiwayatPenyewaan
             // 
@@ -200,13 +213,12 @@ namespace MechanicalFaRm.App.Views
             btnRiwayatPenyewaan.FlatStyle = FlatStyle.Flat;
             btnRiwayatPenyewaan.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnRiwayatPenyewaan.ForeColor = SystemColors.ActiveCaptionText;
-            btnRiwayatPenyewaan.Location = new Point(39, 435);
+            btnRiwayatPenyewaan.Location = new Point(36, 455);
             btnRiwayatPenyewaan.Name = "btnRiwayatPenyewaan";
             btnRiwayatPenyewaan.Size = new Size(302, 67);
-            btnRiwayatPenyewaan.TabIndex = 1;
+            btnRiwayatPenyewaan.TabIndex = 18;
             btnRiwayatPenyewaan.Text = "Riwayat Penyewaan";
             btnRiwayatPenyewaan.UseVisualStyleBackColor = false;
-            btnRiwayatPenyewaan.Click += btnRiwayat_Click;
             // 
             // btnKelolaAlat
             // 
@@ -215,43 +227,13 @@ namespace MechanicalFaRm.App.Views
             btnKelolaAlat.FlatStyle = FlatStyle.Flat;
             btnKelolaAlat.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnKelolaAlat.ForeColor = SystemColors.ActiveCaptionText;
-            btnKelolaAlat.Location = new Point(39, 289);
+            btnKelolaAlat.Location = new Point(36, 309);
             btnKelolaAlat.Name = "btnKelolaAlat";
             btnKelolaAlat.Size = new Size(302, 67);
-            btnKelolaAlat.TabIndex = 0;
+            btnKelolaAlat.TabIndex = 17;
             btnKelolaAlat.Text = "Kelola Alat";
             btnKelolaAlat.UseVisualStyleBackColor = false;
-            btnKelolaAlat.Click += btnDashboard_Click;
-            // 
-            // panel8
-            // 
-            panel8.Controls.Add(btnEditProfileA);
-            panel8.Location = new Point(445, 654);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(363, 112);
-            panel8.TabIndex = 5;
-            // 
-            // btnEditProfileA
-            // 
-            btnEditProfileA.BackColor = Color.Transparent;
-            btnEditProfileA.BackgroundImage = (Image)resources.GetObject("btnEditProfileA.BackgroundImage");
-            btnEditProfileA.BackgroundImageLayout = ImageLayout.Stretch;
-            btnEditProfileA.FlatAppearance.BorderSize = 0;
-            btnEditProfileA.FlatStyle = FlatStyle.Flat;
-            btnEditProfileA.Location = new Point(50, 13);
-            btnEditProfileA.Name = "btnEditProfileA";
-            btnEditProfileA.Size = new Size(258, 59);
-            btnEditProfileA.TabIndex = 0;
-            btnEditProfileA.UseVisualStyleBackColor = false;
-            // 
-            // panel3
-            // 
-            panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
-            panel3.BackgroundImageLayout = ImageLayout.Stretch;
-            panel3.Location = new Point(445, 306);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(348, 326);
-            panel3.TabIndex = 0;
+            btnKelolaAlat.Click += btnKelolaAlat_Click;
             // 
             // contextMenuStrip1
             // 
@@ -264,7 +246,7 @@ namespace MechanicalFaRm.App.Views
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.Center;
-            ClientSize = new Size(1924, 1046);
+            ClientSize = new Size(1924, 1051);
             Controls.Add(panel1);
             DoubleBuffered = true;
             ForeColor = SystemColors.ActiveBorder;
@@ -272,10 +254,8 @@ namespace MechanicalFaRm.App.Views
             Text = "V_editeprofle";
             Load += V_profle_Load;
             panel1.ResumeLayout(false);
+            panel6.ResumeLayout(false);
             panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            panel9.ResumeLayout(false);
-            panel8.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -301,5 +281,8 @@ namespace MechanicalFaRm.App.Views
         private Button btnKelolaCust;
         private Button btnProfil;
         private Button btnDeskripsiAlat;
+        private Panel panel4;
+        private Panel panel5;
+        private Panel panel6;
     }
 }

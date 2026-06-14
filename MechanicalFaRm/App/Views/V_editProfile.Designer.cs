@@ -30,12 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_editProfile));
             panel1 = new Panel();
+            tbNoTelp = new TextBox();
+            tbEmail = new TextBox();
+            tbUsername = new TextBox();
             panel2 = new Panel();
-            btnLanjut = new Button();
-            btnKeranjang = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            btnSimpan = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -44,9 +43,9 @@
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.Controls.Add(textBox3);
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(tbNoTelp);
+            panel1.Controls.Add(tbEmail);
+            panel1.Controls.Add(tbUsername);
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
@@ -54,72 +53,56 @@
             panel1.Size = new Size(800, 450);
             panel1.TabIndex = 0;
             // 
+            // tbNoTelp
+            // 
+            tbNoTelp.BackColor = Color.Moccasin;
+            tbNoTelp.BorderStyle = BorderStyle.None;
+            tbNoTelp.Location = new Point(214, 265);
+            tbNoTelp.Name = "tbNoTelp";
+            tbNoTelp.Size = new Size(205, 20);
+            tbNoTelp.TabIndex = 25;
+            // 
+            // tbEmail
+            // 
+            tbEmail.BackColor = Color.Moccasin;
+            tbEmail.BorderStyle = BorderStyle.None;
+            tbEmail.Location = new Point(214, 211);
+            tbEmail.Name = "tbEmail";
+            tbEmail.Size = new Size(205, 20);
+            tbEmail.TabIndex = 24;
+            // 
+            // tbUsername
+            // 
+            tbUsername.BackColor = Color.Moccasin;
+            tbUsername.BorderStyle = BorderStyle.None;
+            tbUsername.Location = new Point(214, 144);
+            tbUsername.Name = "tbUsername";
+            tbUsername.Size = new Size(205, 20);
+            tbUsername.TabIndex = 23;
+            // 
             // panel2
             // 
             panel2.BackColor = Color.Transparent;
-            panel2.Controls.Add(btnLanjut);
-            panel2.Controls.Add(btnKeranjang);
+            panel2.Controls.Add(btnSimpan);
             panel2.Location = new Point(373, 365);
             panel2.Name = "panel2";
             panel2.Size = new Size(396, 57);
             panel2.TabIndex = 22;
             // 
-            // btnLanjut
+            // btnSimpan
             // 
-            btnLanjut.BackColor = Color.Transparent;
-            btnLanjut.BackgroundImage = (Image)resources.GetObject("btnLanjut.BackgroundImage");
-            btnLanjut.BackgroundImageLayout = ImageLayout.Stretch;
-            btnLanjut.FlatAppearance.BorderSize = 0;
-            btnLanjut.FlatStyle = FlatStyle.Flat;
-            btnLanjut.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLanjut.ForeColor = SystemColors.ButtonHighlight;
-            btnLanjut.Location = new Point(216, 12);
-            btnLanjut.Name = "btnLanjut";
-            btnLanjut.Size = new Size(168, 42);
-            btnLanjut.TabIndex = 10;
-            btnLanjut.Text = "Lanjut";
-            btnLanjut.UseVisualStyleBackColor = false;
-            // 
-            // btnKeranjang
-            // 
-            btnKeranjang.BackgroundImage = (Image)resources.GetObject("btnKeranjang.BackgroundImage");
-            btnKeranjang.FlatAppearance.BorderSize = 0;
-            btnKeranjang.FlatStyle = FlatStyle.Flat;
-            btnKeranjang.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnKeranjang.ForeColor = SystemColors.ButtonHighlight;
-            btnKeranjang.Location = new Point(3, 12);
-            btnKeranjang.Name = "btnKeranjang";
-            btnKeranjang.Size = new Size(168, 42);
-            btnKeranjang.TabIndex = 11;
-            btnKeranjang.Text = "Keranjang";
-            btnKeranjang.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            textBox1.BackColor = Color.Moccasin;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Location = new Point(214, 144);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(205, 20);
-            textBox1.TabIndex = 23;
-            // 
-            // textBox2
-            // 
-            textBox2.BackColor = Color.Moccasin;
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Location = new Point(214, 211);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(205, 20);
-            textBox2.TabIndex = 24;
-            // 
-            // textBox3
-            // 
-            textBox3.BackColor = Color.Moccasin;
-            textBox3.BorderStyle = BorderStyle.None;
-            textBox3.Location = new Point(214, 265);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(205, 20);
-            textBox3.TabIndex = 25;
+            btnSimpan.BackgroundImage = (Image)resources.GetObject("btnSimpan.BackgroundImage");
+            btnSimpan.FlatAppearance.BorderSize = 0;
+            btnSimpan.FlatStyle = FlatStyle.Flat;
+            btnSimpan.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSimpan.ForeColor = SystemColors.ButtonHighlight;
+            btnSimpan.Location = new Point(125, 12);
+            btnSimpan.Name = "btnSimpan";
+            btnSimpan.Size = new Size(168, 42);
+            btnSimpan.TabIndex = 11;
+            btnSimpan.Text = "Simpan";
+            btnSimpan.UseVisualStyleBackColor = true;
+            btnSimpan.Click += btnSimpan_Click;
             // 
             // V_editProfile
             // 
@@ -139,10 +122,9 @@
 
         private Panel panel1;
         private Panel panel2;
-        private Button btnLanjut;
-        private Button btnKeranjang;
-        private TextBox textBox1;
-        private TextBox textBox3;
-        private TextBox textBox2;
+        private Button btnSimpan;
+        private TextBox tbUsername;
+        private TextBox tbNoTelp;
+        private TextBox tbEmail;
     }
 }

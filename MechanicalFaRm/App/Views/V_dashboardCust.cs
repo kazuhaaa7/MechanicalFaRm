@@ -1,4 +1,6 @@
-﻿namespace MechanicalFaRm.App.Views
+﻿using MechanicalFaRm.App.Session;
+
+namespace MechanicalFaRm.App.Views
 {
     public partial class V_dashboardCust : Form
     {

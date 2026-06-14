@@ -16,7 +16,7 @@ namespace MechanicalFaRm.App.Authh
 
         public void OpenFormLogin()
         {
-            MessageBox.Show("Move to Form login", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("berpindah ke Form login", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             new V_login().Show();
             this.Hide();
         }
@@ -34,50 +34,15 @@ namespace MechanicalFaRm.App.Authh
         private void btnRegist_Click(object sender, EventArgs e)
         {
             string username = tbUsernameR.Text.Trim();
-            string password = tbPasswordR.Text.Trim();
+            string password = tbPasswordR.Text;
             string notelp = tbNoTelpR.Text.Trim();
             string email = tbEmailR.Text.Trim();
 
-
-
-            if (username == "" || password == "" || notelp == "" || email == "")
-            {
-                MessageBox.Show("Semua kolom data harus diisi");
-                tbUsernameR.Focus();
-                return;
-            }
-
-            if (username.Length < 5)
-            {
-                MessageBox.Show("username minimal 5 character");
-                tbUsernameR.Focus();
-                return;
-            }
-
-            if (password.Length < 3)
-            {
-                MessageBox.Show("password minimal 4 character");
-                tbUsernameR.Focus();
-                return;
-            }
-
-            if (!long.TryParse(notelp, out _))//out ("_" = discard => ingin memeriksa apakah notelp bisa diconvert tanpa disimpan di dalam variabel) 
-            {
-                MessageBox.Show("no telepon harus berupa angka");
-                if (notelp.Length > 13)
-                {
-                    MessageBox.Show("no telepon harus 12 angka");
-                    tbUsernameR.Focus();
-                }
-                return;
-            }
-
-            string result = controlUser.RegisterCustomer(username, password, notelp, email);
-            if (result == "Registrasi akun berhasil")
+            bool result = controlUser.RegisterCustomer(username, password, notelp, email);
+            if (result == true)
             {
                 MessageBox.Show("Akun berhasil dibuat! Silahkan Login");
                 OpenFormLogin();
-
             }
         }
 

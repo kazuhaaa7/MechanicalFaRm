@@ -7,7 +7,7 @@ using System.Text;
 
 namespace MechanicalFaRm.App.Service
 {
-    internal class S_UserService : S_IUserService
+    public class S_UserService
     {
         private R_UserRepository _userRepository = new R_UserRepository();
 
@@ -16,25 +16,112 @@ namespace MechanicalFaRm.App.Service
             return _userRepository.GetById(id);
         }
 
-        public M_user GetByUsername(string username)
-        {
+        //public M_user GetByUsername(string username)
+        //{
 
-        }
+        //}
 
         public M_user? Login(string username, string password)
         {
             var user = _userRepository.GetByUsername(username);
             if (user == null) return null;
             SE_userSession.id_user = user._id_user;
-            SE_userSession.userName = user.username;
+            SE_userSession.username = user.username;
             SE_userSession.email = user.email;
+            SE_userSession.no_telp = user.no_telepon;
             SE_userSession.role = user.role;
 
             return user;
         }
-        public void Create(M_user user);
-        public void Update(M_user user);
-        public void Delete(M_user user);
-        public List<M_user> GetAllUser();
+
+        public bool Register(string username, string password, string no_telp, string email)
+        {
+            //---VALUDASI USERNAME
+            if (username.Length < 4)
+            {
+                MessageBox.Show("Username harus lebih dari 4 karater!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            //---VALUDASI PASSWORD
+            if (password.Length < 5)
+            {
+                MessageBox.Show("Password harus lebih dari 5 karater!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            //---VALIDASI EMAIL
+            if (!email.Contains("@"))
+            {
+                MessageBox.Show("Email TIdak Valid!","Invalid",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (_userRepository.GetByUsername(username) != null)
+            {
+                MessageBox.Show("Username sudah terpakai. Silahkan gunakan email lain!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            //---VALUDASI NO TELP
+            if (no_telp.Length<10 || no_telp.Length > 15 || !no_telp.All(char.IsDigit))
+            {
+                MessageBox.Show("No telp Tidak Valid!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            _userRepository.Register(new M_user
+            {
+                username = username,
+                password = password,
+                no_telepon  = no_telp,
+                email = email
+            });
+            return true;
+        }
+        public bool UpdateProfile (M_user user) 
+        {
+            int id=  SE_userSession.id_user;
+            M_user datalama = _userRepository.GetById(id);
+            if(datalama == null)
+            {
+                MessageBox.Show("Data tidak ditemukan!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            //--VALIDASI USERNAME
+            if(!string.IsNullOrEmpty(user.username))
+            {
+                if (user.username.Length < 4)
+                {
+                    MessageBox.Show("Username harus lebih dari 4 karater!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                datalama.username = user.username;
+            }
+            //--VALIDASI EMAIL
+            if (!string.IsNullOrEmpty(user.email))
+            {
+                if (!user.email.Contains("@"))
+                {
+                    MessageBox.Show("Email TIdak Valid!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                datalama.email = user.email;
+            }
+            //--VALIDASI Telepon
+            if (!string.IsNullOrEmpty(user.no_telepon))
+            {
+                if(user.no_telepon.Length < 10 || user.no_telepon.Length > 15 || !user.no_telepon.All(char.IsDigit))
+                {
+                    MessageBox.Show("No telp Tidak Valid!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                datalama.no_telepon = user.no_telepon;
+            }
+            //--VALIDASI PASSWORD
+            if (!string.IsNullOrEmpty(user.password))
+            {
+                datalama.password = user.password;
+            }
+
+            _userRepository.UpdateUser(datalama);
+            return true;
+        }
+        public void Delete(M_user user) { }
+        //public List<M_user> GetAllUser() { }
     }
 }

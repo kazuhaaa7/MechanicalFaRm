@@ -30,7 +30,7 @@ namespace MechanicalFaRm.App.Views
             var listBarang = _barangService.GetListBarang();
 
             DataTable dt = new DataTable();
-            dt.Columns.Add("ID Barang", typeof(int));
+            dt.Columns.Add("Barang", typeof(int));
             dt.Columns.Add("Nama Alat", typeof(string));
             dt.Columns.Add("Deskripsi", typeof(string));
             dt.Columns.Add("Stok", typeof(int));
@@ -50,7 +50,6 @@ namespace MechanicalFaRm.App.Views
 
             dgvKelolaAlat.DataSource = dt;
 
-            dgvKelolaAlat.Columns["ID Barang"].Visible = false;
 
             dgvKelolaAlat.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
             dgvKelolaAlat.ReadOnly = false;

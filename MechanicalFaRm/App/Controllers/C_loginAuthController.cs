@@ -1,4 +1,6 @@
-﻿using MechanicalFaRm.App.Service;
+﻿using MechanicalFaRm.App.Authh;
+using MechanicalFaRm.App.Service;
+using MechanicalFaRm.App.Session;
 using MechanicalFaRm.App.Views;
 using System;
 using System.Collections.Generic;
@@ -10,7 +12,7 @@ namespace MechanicalFaRm.App.Controllers
 {
     internal class C_loginAuthController
     {
-        public S_UserService _userService;
+        public S_UserService _userService = new S_UserService();
         public bool Login(string username, string password)
         {
 
@@ -18,7 +20,8 @@ namespace MechanicalFaRm.App.Controllers
             if (result == null) return false;
             if (result.role == "admin")
             {
-                new V_editProfile().Show();
+                int id = SE_userSession.id_user;
+                new V_profleAdmin(id).Show();
             }
             else if (result.role == "customer")
             {
@@ -26,6 +29,14 @@ namespace MechanicalFaRm.App.Controllers
             }
             MessageBox.Show("Berhasil Login.");
             return true;
+        }
+
+
+        public void logout(Form currentForm)
+        {
+            SE_userSession.ClearSession();
+            MessageBox.Show("Logout Berhasil", "Logout", MessageBoxButtons.OK, MessageBoxIcon.None);
+            currentForm.Close();
         }
     }
 }

@@ -121,7 +121,7 @@
   <data name="panel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAB3oAAAQ9CAYAAAC/cEygAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EgAACxIB0t1+/AAA/7JJREFUeF7s/QmsHVl63wmSzJVLJplJMplM7slkMknmNoAMDOSSyxi1jZZkjKft
+        EAAACxABrSO9dQAA/7JJREFUeF7s/QmsHVl63wmSzJVLJplJMplM7slkMknmNoAMDOSSyxi1jZZkjKft
         suSSDAkYWz220HB7LNmWjLHUxgAzpW672i17ZI+7Ve8ub+UjH9dMyuMpwzbK7RLQZbtljdUwqlx3f+++
         jczasxbF4H/O/eKee2K5EWeJG/e+7wG/fMl3Ik6cOHGWf5zzxfft28c//MM//MM//MM//MM//MM//MM/
         /MM//MM//MM//MM//MM//MM//MM//MM//MM//MM//MM//MM//MM//MM//MM//MM//MM//MM//MM//MM/
@@ -5273,21 +5273,10 @@
         jmzRjoWNYOgAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnLanjut.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnSimpan.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAS4AAABDCAYAAAAiXehzAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAAA50RVh0U29mdHdhcmUARmlnbWGesZZjAAAA+klEQVR4Xu3UMQ0AIADAMHTgC2+4
-        hR8FLOnRZwI29poHoGS8AeB3xgXkGBeQY1xAjnEBOcYF5BgXkGNcQI5xATnGBeQYF5BjXECOcQE5xgXk
-        GBeQY1xAjnEBOcYF5BgXkGNcQI5xATnGBeQYF5BjXECOcQE5xgXkGBeQY1xAjnEBOcYF5BgXkGNcQI5x
-        ATnGBeQYF5BjXECOcQE5xgXkGBeQY1xAjnEBOcYF5BgXkGNcQI5xATnGBeQYF5BjXECOcQE5xgXkGBeQ
-        Y1xAjnEBOcYF5BgXkGNcQI5xATnGBeQYF5BjXECOcQE5xgXkGBeQY1xAjnEBOcYF5FzbmfeOcUjiXgAA
-        AABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnKeranjang.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAS4AAABDCAYAAAAiXehzAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAAA50RVh0U29mdHdhcmUARmlnbWGesZZjAAAA+klEQVR4Xu3UMQ0AIADAMHTgC2+4
+        DwAACw8BkvkDpQAAAA50RVh0U29mdHdhcmUARmlnbWGesZZjAAAA+klEQVR4Xu3UMQ0AIADAMHTgC2+4
         hR8FLOnRZwI29poHoGS8AeB3xgXkGBeQY1xAjnEBOcYF5BgXkGNcQI5xATnGBeQYF5BjXECOcQE5xgXk
         GBeQY1xAjnEBOcYF5BgXkGNcQI5xATnGBeQYF5BjXECOcQE5xgXkGBeQY1xAjnEBOcYF5BgXkGNcQI5x
         ATnGBeQYF5BjXECOcQE5xgXkGBeQY1xAjnEBOcYF5BgXkGNcQI5xATnGBeQYF5BjXECOcQE5xgXkGBeQ

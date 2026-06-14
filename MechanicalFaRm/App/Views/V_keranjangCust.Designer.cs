@@ -185,6 +185,7 @@
             btnSubmit.TabIndex = 2;
             btnSubmit.Text = "Submit";
             btnSubmit.UseVisualStyleBackColor = false;
+            btnSubmit.Click += btnSubmit_Click;
             // 
             // V_keranjangCust
             // 

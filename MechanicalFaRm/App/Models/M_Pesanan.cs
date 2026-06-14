@@ -1,10 +1,11 @@
 ﻿namespace MechanicalFaRm.App.Models
 {
-    public class M_Pesanan : M_barang
+    public class M_Pesanan:M_barang
     {
-        public DateTime tglSewa { get; set; }
-        public DateTime tglKembali { get; set; }
-        public string statusPesanan { get; set; }= "menunggu konfirmasi";
+        public int id_pesanan { get; set; }
+        public int total {  get; set; }
+
+        public string status { get; set; }
 
         //public M_Pesanan(DateOnly tanggalpesan, DateOnly tanggalkembali, string statuspesanan)
         //{
