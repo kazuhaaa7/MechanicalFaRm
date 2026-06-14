@@ -13,6 +13,7 @@ namespace MechanicalFaRm.App.Views
         public V_profileCust()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
         }
     }
 }
