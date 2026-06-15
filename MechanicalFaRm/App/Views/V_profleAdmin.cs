@@ -1,19 +1,20 @@
 ﻿using MechanicalFaRm.App.Controllers;
 using MechanicalFaRm.App.Models;
 using MechanicalFaRm.App.Session;
+using System.Drawing.Design;
 
 namespace MechanicalFaRm.App.Views
 {
     public partial class V_profleAdmin : Form
     {
-        private static C_userController userController;
+        private C_loginAuthController logout;
         private int currentUserId;
         public V_profleAdmin(int userId)
         {
             InitializeComponent();
-            userController = new C_userController();
             this.WindowState = FormWindowState.Maximized;
             this.currentUserId = userId;
+            logout = new C_loginAuthController();
 
         }
 
@@ -21,9 +22,9 @@ namespace MechanicalFaRm.App.Views
 
         private void V_profle_Load(object sender, EventArgs e)
         {
-            int idUserLogin = SE_userSession.id_user;
+            currentUserId = SE_userSession.id_user;
             C_userController userController = new C_userController();
-            M_user user = userController.TampilkanDataBasedId(idUserLogin);
+            M_user user = userController.TampilkanDataBasedId(currentUserId);
 
             if (user != null)
             {
@@ -50,11 +51,6 @@ namespace MechanicalFaRm.App.Views
             this.Hide();
         }
 
-        private void btnRiwayat_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnLogout_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Anda akan logout");
@@ -62,11 +58,6 @@ namespace MechanicalFaRm.App.Views
         }
 
         private void txtName_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lblNoTelp_Click(object sender, EventArgs e)
         {
 
         }
@@ -82,17 +73,6 @@ namespace MechanicalFaRm.App.Views
         {
             V_editProfile editProfile = new V_editProfile();
             editProfile.Show();
-            this.Close();
-        }
-
-        private void lblUsername_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblEmail_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
@@ -125,6 +105,28 @@ namespace MechanicalFaRm.App.Views
             V_profleAdmin pad = new V_profleAdmin(id);
             pad.Show();
             this.Close();
+        }
+
+        private void lblNoTelp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDeskripsiAlat_Click(object sender, EventArgs e)
+        {
+            new V_deskripsiAlat().Show();
+            this.Close();
+        }
+
+        private void btnLogout_Click_1(object sender, EventArgs e)
+        {
+            logout.Logout(this);
+        }
+
+        private void btnKelolaCust_Click_1(object sender, EventArgs e)
+        {
+            new V_kelolaAkunAdmin().Show();
+            this.Hide();
         }
     }
 }

@@ -40,7 +40,6 @@
             btnKelolaCust = new Button();
             btnLogout = new Button();
             btnRiwayatPenyewaan = new Button();
-            btnKelolaAlat = new Button();
             panel3 = new Panel();
             btnHapus = new Button();
             btnEdit = new Button();
@@ -90,9 +89,9 @@
             panel2.Controls.Add(panel4);
             panel2.Controls.Add(panel3);
             panel2.Controls.Add(dgvKelolaAlat);
-            panel2.Location = new Point(0, 3);
+            panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1924, 1093);
+            panel2.Size = new Size(1924, 1096);
             panel2.TabIndex = 1;
             // 
             // panel4
@@ -102,98 +101,80 @@
             panel4.Controls.Add(btnKelolaCust);
             panel4.Controls.Add(btnLogout);
             panel4.Controls.Add(btnRiwayatPenyewaan);
-            panel4.Controls.Add(btnKelolaAlat);
             panel4.Dock = DockStyle.Left;
             panel4.Location = new Point(0, 0);
             panel4.Name = "panel4";
-            panel4.Size = new Size(383, 1093);
+            panel4.Size = new Size(383, 1096);
             panel4.TabIndex = 2;
             // 
             // btnProfil
             // 
-            btnProfil.BackColor = Color.DarkGray;
+            btnProfil.BackColor = Color.Transparent;
             btnProfil.FlatAppearance.BorderSize = 0;
             btnProfil.FlatStyle = FlatStyle.Flat;
             btnProfil.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnProfil.ForeColor = SystemColors.ActiveCaptionText;
-            btnProfil.Location = new Point(40, 622);
+            btnProfil.Location = new Point(40, 758);
             btnProfil.Name = "btnProfil";
-            btnProfil.Size = new Size(302, 67);
+            btnProfil.Size = new Size(290, 67);
             btnProfil.TabIndex = 11;
-            btnProfil.Text = "Profil";
             btnProfil.UseVisualStyleBackColor = false;
             btnProfil.Click += btnProfil_Click;
             // 
             // btnDeskripsiAlat
             // 
-            btnDeskripsiAlat.BackColor = Color.DarkGray;
+            btnDeskripsiAlat.BackColor = Color.Transparent;
             btnDeskripsiAlat.FlatAppearance.BorderSize = 0;
             btnDeskripsiAlat.FlatStyle = FlatStyle.Flat;
             btnDeskripsiAlat.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnDeskripsiAlat.ForeColor = SystemColors.ActiveCaptionText;
-            btnDeskripsiAlat.Location = new Point(40, 549);
+            btnDeskripsiAlat.Location = new Point(40, 651);
             btnDeskripsiAlat.Name = "btnDeskripsiAlat";
-            btnDeskripsiAlat.Size = new Size(302, 67);
+            btnDeskripsiAlat.Size = new Size(290, 67);
             btnDeskripsiAlat.TabIndex = 10;
-            btnDeskripsiAlat.Text = "Deskripsi Alat";
             btnDeskripsiAlat.UseVisualStyleBackColor = false;
             btnDeskripsiAlat.Click += btnDeskripsiAlat_Click;
             // 
             // btnKelolaCust
             // 
-            btnKelolaCust.BackColor = Color.DarkGray;
+            btnKelolaCust.BackColor = Color.Transparent;
             btnKelolaCust.FlatAppearance.BorderSize = 0;
             btnKelolaCust.FlatStyle = FlatStyle.Flat;
             btnKelolaCust.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnKelolaCust.ForeColor = SystemColors.ActiveCaptionText;
-            btnKelolaCust.Location = new Point(40, 403);
+            btnKelolaCust.Location = new Point(40, 443);
             btnKelolaCust.Name = "btnKelolaCust";
-            btnKelolaCust.Size = new Size(302, 67);
+            btnKelolaCust.Size = new Size(290, 67);
             btnKelolaCust.TabIndex = 9;
-            btnKelolaCust.Text = "Kelola Customer";
             btnKelolaCust.UseVisualStyleBackColor = false;
+            btnKelolaCust.Click += btnKelolaCust_Click;
             // 
             // btnLogout
             // 
-            btnLogout.BackColor = Color.DarkGray;
+            btnLogout.BackColor = Color.Transparent;
             btnLogout.FlatAppearance.BorderSize = 0;
             btnLogout.FlatStyle = FlatStyle.Flat;
             btnLogout.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnLogout.ForeColor = SystemColors.ActiveCaptionText;
-            btnLogout.Location = new Point(40, 695);
+            btnLogout.Location = new Point(40, 984);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(302, 67);
+            btnLogout.Size = new Size(290, 67);
             btnLogout.TabIndex = 8;
-            btnLogout.Text = "Logout";
             btnLogout.UseVisualStyleBackColor = false;
             // 
             // btnRiwayatPenyewaan
             // 
-            btnRiwayatPenyewaan.BackColor = Color.DarkGray;
+            btnRiwayatPenyewaan.BackColor = Color.Transparent;
             btnRiwayatPenyewaan.FlatAppearance.BorderSize = 0;
             btnRiwayatPenyewaan.FlatStyle = FlatStyle.Flat;
             btnRiwayatPenyewaan.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnRiwayatPenyewaan.ForeColor = SystemColors.ActiveCaptionText;
-            btnRiwayatPenyewaan.Location = new Point(40, 476);
+            btnRiwayatPenyewaan.Location = new Point(40, 548);
             btnRiwayatPenyewaan.Name = "btnRiwayatPenyewaan";
-            btnRiwayatPenyewaan.Size = new Size(302, 67);
+            btnRiwayatPenyewaan.Size = new Size(290, 67);
             btnRiwayatPenyewaan.TabIndex = 7;
-            btnRiwayatPenyewaan.Text = "Riwayat Penyewaan";
             btnRiwayatPenyewaan.UseVisualStyleBackColor = false;
-            // 
-            // btnKelolaAlat
-            // 
-            btnKelolaAlat.BackColor = Color.DarkGray;
-            btnKelolaAlat.FlatAppearance.BorderSize = 0;
-            btnKelolaAlat.FlatStyle = FlatStyle.Flat;
-            btnKelolaAlat.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnKelolaAlat.ForeColor = SystemColors.ActiveCaptionText;
-            btnKelolaAlat.Location = new Point(40, 330);
-            btnKelolaAlat.Name = "btnKelolaAlat";
-            btnKelolaAlat.Size = new Size(302, 67);
-            btnKelolaAlat.TabIndex = 6;
-            btnKelolaAlat.Text = "Kelola Alat";
-            btnKelolaAlat.UseVisualStyleBackColor = false;
+            btnRiwayatPenyewaan.Click += btnRiwayatPenyewaan_Click;
             // 
             // panel3
             // 
@@ -256,7 +237,7 @@
             dgvKelolaAlat.Location = new Point(417, 312);
             dgvKelolaAlat.Name = "dgvKelolaAlat";
             dgvKelolaAlat.RowHeadersWidth = 51;
-            dgvKelolaAlat.Size = new Size(1412, 708);
+            dgvKelolaAlat.Size = new Size(1439, 708);
             dgvKelolaAlat.TabIndex = 0;
             dgvKelolaAlat.CellContentClick += dgvKelolaAlat_CellContentClick;
             // 
@@ -264,7 +245,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1924, 1048);
+            ClientSize = new Size(1924, 1082);
             Controls.Add(panel1);
             Name = "V_kelolaAlatAdmin";
             Text = "V_kelolaAlatAdmin";

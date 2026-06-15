@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MechanicalFaRm.App.Controllers;
+using MechanicalFaRm.App.Session;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,11 @@ namespace MechanicalFaRm.App.Views
 {
     public partial class V_kelolaAkunAdmin : Form
     {
+        C_loginAuthController logout;
         public V_kelolaAkunAdmin()
         {
             InitializeComponent();
+            logout = new C_loginAuthController();
             this.WindowState = FormWindowState.Maximized;
         }
 
@@ -64,6 +68,41 @@ namespace MechanicalFaRm.App.Views
             V_kelolaAkunAdmin kelolaAkunAdmin = new V_kelolaAkunAdmin();
             kelolaAkunAdmin.Show();
             this.Hide();
+        }
+
+        private void btnKelolaAlat_Click(object sender, EventArgs e)
+        {
+            new V_kelolaAlatAdmin().Show();
+            this.Close();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnRiwayatPenyewaan_Click(object sender, EventArgs e)
+        {
+            new V_riwayatPenyewaanAdmin().Show();
+            this.Close();
+        }
+
+        private void btnDeskripsiAlat_Click_1(object sender, EventArgs e)
+        {
+            new V_deskripsiAlat().Show();
+            this.Close();
+        }
+
+        private void btnProfil_Click(object sender, EventArgs e)
+        {
+            int id = SE_userSession.id_user;
+            new V_profleAdmin(id).Show();
+            this.Close();
+        }
+
+        private void btnLogout_Click_1(object sender, EventArgs e)
+        {
+            logout.Logout(this);
         }
     }
 }

@@ -96,6 +96,7 @@
             tbPasswordR.Location = new Point(163, 442);
             tbPasswordR.Multiline = true;
             tbPasswordR.Name = "tbPasswordR";
+            tbPasswordR.PasswordChar = '*';
             tbPasswordR.Size = new Size(332, 45);
             tbPasswordR.TabIndex = 1;
             // 
@@ -154,7 +155,7 @@
             Controls.Add(panel1);
             DoubleBuffered = true;
             Name = "V_regis";
-            Text = "Form1";
+            Text = "V_regis";
             Load += A_regis_Load;
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);

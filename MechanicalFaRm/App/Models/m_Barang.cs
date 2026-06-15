@@ -8,5 +8,6 @@ namespace MechanicalFaRm.App.Models
         public string deskripsi { get; set; }
         public int hargaSewa { get; set; }
         public int stok { get; set; }
+        public byte[]? fotoBarang { get; set; }
     }
 }

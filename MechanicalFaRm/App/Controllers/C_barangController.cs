@@ -15,5 +15,11 @@ namespace MechanicalFaRm.App.Controllers
             return barangService.GetBarangById(id);
         }
 
+        public List<M_barang> GetBarangList()
+        {
+            // ngarah ke service
+            return barangService.GetListBarang();
+        }
+
     }
 }

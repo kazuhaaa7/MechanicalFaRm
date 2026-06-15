@@ -19,7 +19,8 @@ CREATE TABLE barang
      nama_barang VARCHAR(100)  NOT NULL , 
      deskripsi   text not null, 
      harga_sewa  INT not null, 
-     stok NUMERIC not null
+     stok NUMERIC not null,
+     foto_barang bytea
 
     ) 
 ;
@@ -31,7 +32,9 @@ CREATE TABLE detail_pesanan
      id_pesanan INT  NOT NULL , 
      id_barang INT NOT NULL , 
      jumlah INT  NOT NULL , 
-     subtotal NUMERIC NOT NULL
+     subtotal NUMERIC NOT NULL,
+     tanggal_sewa DATE NOT NULL,
+     tanggal_kembali DATE NOT NULL
     ) 
 ;
 
@@ -41,10 +44,8 @@ CREATE TABLE pesanan
     ( 
      id_pesanan             SERIAL PRIMARY KEY NOT NULL , 
      id_user             INT  NOT NULL , 
-     tanggal_pesan          DATE NOT NULL, 
-	 tanggal_kembali 		DATE NOT NULL,
-     status varchar(50) NOT NULL check(status in('progress pemesanan', 'sudah terpesan')) 
-	 default 'progress pemesanan'
+     status varchar(50) NOT NULL check(status in('Menunggu Verifikasi Admin', 'Sudah Terverifikasi Admin')) default 'Menunggu Verifikasi Admin',
+     ""totalBayar"" NUMERIC NOT NULL 
     ) 
 ;
 

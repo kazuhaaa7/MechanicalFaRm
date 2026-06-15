@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\imamh\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\MechanicalFaRm.csproj": {}
+    "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\MechanicalFaRm.csproj": {}
   },
   "projects": {
-    "C:\\Users\\imamh\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\MechanicalFaRm.csproj": {
+    "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\MechanicalFaRm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\imamh\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\MechanicalFaRm.csproj",
+        "projectUniqueName": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\MechanicalFaRm.csproj",
         "projectName": "MechanicalFaRm",
-        "projectPath": "C:\\Users\\imamh\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\MechanicalFaRm.csproj",
-        "packagesPath": "C:\\Users\\imamh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\imamh\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\obj\\",
+        "projectPath": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\MechanicalFaRm.csproj",
+        "packagesPath": "C:\\Users\\ADVAN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\imamh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADVAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

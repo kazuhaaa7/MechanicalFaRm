@@ -1,6 +1,7 @@
 ﻿using MechanicalFaRm.App.Controllers;
 using MechanicalFaRm.App.Models;
 using MechanicalFaRm.App.Service;
+using MechanicalFaRm.App.Session;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,7 +35,7 @@ namespace MechanicalFaRm.App.Views
             dt.Columns.Add("Nama Alat", typeof(string));
             dt.Columns.Add("Deskripsi", typeof(string));
             dt.Columns.Add("Stok", typeof(int));
-            dt.Columns.Add("Harga Sewa", typeof(int));
+            dt.Columns.Add("Harga Sewa *satuan juta", typeof(int));
 
             foreach (var item in listBarang)
             {
@@ -45,7 +46,7 @@ namespace MechanicalFaRm.App.Views
                 item.stok,
                 item.hargaSewa);
             }
-            
+
 
 
             dgvKelolaAlat.DataSource = dt;
@@ -87,14 +88,33 @@ namespace MechanicalFaRm.App.Views
 
         private void btnDeskripsiAlat_Click(object sender, EventArgs e)
         {
-            V_deskripsiAlat deskripsiAlatAdmin = new V_deskripsiAlat();
-            deskripsiAlatAdmin.Show();
+            new V_deskripsiAlat().Show();
             this.Hide();
         }
 
         private void btnProfil_Click(object sender, EventArgs e)
         {
+            int id = SE_userSession.id_user;
+            new V_profleAdmin(id).Show();
+            this.Close();
+        }
 
+        private void btnKelolaAlat_Click(object sender, EventArgs e)
+        {
+            new V_kelolaAlatAdmin().Show();
+            this.Close();
+        }
+
+        private void btnKelolaCust_Click(object sender, EventArgs e)
+        {
+            new V_kelolaAkunAdmin().Show();
+            this.Close();
+        }
+
+        private void btnRiwayatPenyewaan_Click(object sender, EventArgs e)
+        {
+            new V_riwayatPenyewaanAdmin().Show();
+            this.Close();
         }
     }
 }

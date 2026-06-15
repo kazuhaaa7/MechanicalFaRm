@@ -54,6 +54,11 @@ namespace MechanicalFaRm.App.Service
                 MessageBox.Show("Email TIdak Valid!","Invalid",MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
+            if (_userRepository.GetUserByEmail(email) != null) 
+            {
+                MessageBox.Show("Email sudah terpakai. Silahkan gunakan email lain!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
             if (_userRepository.GetByUsername(username) != null)
             {
                 MessageBox.Show("Username sudah terpakai. Silahkan gunakan email lain!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -63,6 +68,11 @@ namespace MechanicalFaRm.App.Service
             if (no_telp.Length<10 || no_telp.Length > 15 || !no_telp.All(char.IsDigit))
             {
                 MessageBox.Show("No telp Tidak Valid!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (_userRepository.GetByNotelp(no_telp)!= null)
+            {
+                MessageBox.Show("No telp sudah terpakai", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             _userRepository.Register(new M_user

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace MechanicalFaRm.App.Controllers
 {
-    internal class C_loginAuthController
+    public class C_loginAuthController
     {
         public S_UserService _userService = new S_UserService();
         public bool Login(string username, string password)
@@ -20,19 +20,20 @@ namespace MechanicalFaRm.App.Controllers
             if (result == null) return false;
             if (result.role == "admin")
             {
+                MessageBox.Show("Berhasil Login. role Admin");
                 int id = SE_userSession.id_user;
                 new V_profleAdmin(id).Show();
             }
             else if (result.role == "customer")
             {
+                MessageBox.Show("Berhasil Login. role Customer");
                 new V_dashboardCust().Show();
             }
-            MessageBox.Show("Berhasil Login.");
             return true;
         }
 
 
-        public void logout(Form currentForm)
+        public void Logout(Form currentForm)
         {
             SE_userSession.ClearSession();
             MessageBox.Show("Logout Berhasil", "Logout", MessageBoxButtons.OK, MessageBoxIcon.None);

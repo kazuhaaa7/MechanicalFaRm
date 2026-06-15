@@ -35,7 +35,7 @@ namespace MechanicalFaRm.App.Service
             else
             {
                 TimeSpan totalHariSewa = itemkeranjang.tglKembali - itemkeranjang.tglSewa;
-                int selsisih = totalHariSewa.Days;
+                int selsisih = totalHariSewa.Days;  
             }
             listKeranjang.Add(itemkeranjang);
             return "sukses";

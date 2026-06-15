@@ -65,6 +65,7 @@ namespace MechanicalFaRm.App.Authh
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            tbUsername.Focus();
             string usernameInput = tbUsername.Text.Trim();
             string passwordInput = tbPassword.Text.Trim();
             tbUsername.Text = "";//gunanya untuk otomatis menghilangkan value yg ada di textbox untuk mengurangi kemungkinan terjadinya shoulder surfing
@@ -87,7 +88,10 @@ namespace MechanicalFaRm.App.Authh
             {
                 MessageBox.Show("Username atau Password salah. Silahkan Coba Lagi!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            this.Hide();
+            else
+            {
+                this.Close();
+            }
 
 
 

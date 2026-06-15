@@ -1,12 +1,15 @@
-﻿using MechanicalFaRm.App.Session;
+﻿using MechanicalFaRm.App.Controllers;
+using MechanicalFaRm.App.Session;
 
 namespace MechanicalFaRm.App.Views
 {
     public partial class V_dashboardCust : Form
     {
+        C_loginAuthController logout;
         public V_dashboardCust()
         {
             InitializeComponent();
+            logout = new C_loginAuthController();
             this.WindowState = FormWindowState.Maximized;
         }
 
@@ -45,12 +48,6 @@ namespace MechanicalFaRm.App.Views
 
         }
 
-        private void btnDashboard_Click(object sender, EventArgs e)
-        {
-            V_dashboardCust dashboard = new V_dashboardCust();
-            dashboard.Show();
-            this.Hide();
-        }
 
         private void btnRiwayatPenyewaan_Click(object sender, EventArgs e)
         {
@@ -61,15 +58,15 @@ namespace MechanicalFaRm.App.Views
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            V_profileCust profile = new V_profileCust();
+            int id = SE_userSession.id_user;
+            V_profileCust profile = new V_profileCust(id);
             profile.Show();
             this.Hide();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Anda akan logout");
-            this.Close();
+            logout.Logout(this);
         }
 
         private void panel1_Paint_2(object sender, PaintEventArgs e)
@@ -139,7 +136,7 @@ namespace MechanicalFaRm.App.Views
 
         private void btnDeskripsiAlat_Click(object sender, EventArgs e)
         {
-            V_deskripsiAlat des =  new V_deskripsiAlat();
+            V_deskripsiAlatCust des =  new V_deskripsiAlatCust();
             des.Show();
             this.Hide();
         }

@@ -54,7 +54,6 @@ namespace MechanicalFaRm.App.Views
             datak.Columns.Add("Nama Alat", typeof(string));
             datak.Columns.Add("Stok", typeof(int));
             datak.Columns.Add("Jumlah Alat", typeof(int));
-            datak.Columns.Add("Stok", typeof(int));
             datak.Columns.Add("Harga Alat", typeof(int));
             datak.Columns.Add("Tanggal Sewa", typeof(DateTime));
             datak.Columns.Add("Tanggal Kembali", typeof(DateTime));
@@ -68,7 +67,6 @@ namespace MechanicalFaRm.App.Views
                 item.namaBarang,
                 item.stok,
                 item.jumlah,
-                item.stok,
                 item.hargaSewa,
                 item.tglSewa,
                 item.tglKembali,
@@ -134,7 +132,8 @@ namespace MechanicalFaRm.App.Views
 
         private void btnProfil_Click(object sender, EventArgs e)
         {
-            V_profileCust prof = new V_profileCust();
+            int id = SE_userSession.id_user;
+            V_profileCust prof = new V_profileCust(id);
             prof.Show();
             this.Close();
         }

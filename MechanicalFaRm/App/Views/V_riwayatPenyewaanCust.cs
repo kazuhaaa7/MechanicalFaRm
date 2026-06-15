@@ -1,4 +1,5 @@
-﻿using MechanicalFaRm.App.Models;
+﻿using MechanicalFaRm.App.Controllers;
+using MechanicalFaRm.App.Models;
 using MechanicalFaRm.App.Service;
 using MechanicalFaRm.App.Session;
 using System;
@@ -15,12 +16,14 @@ namespace MechanicalFaRm.App.Views
 {
     public partial class V_riwayatPenyewaanCust : Form
     {
+
         S_PesananService _PesananService;
-        int _idUserAktif;
+        C_loginAuthController logout;
         public V_riwayatPenyewaanCust()
         {
             InitializeComponent();
             _PesananService = new S_PesananService();
+            logout = new C_loginAuthController();
             this.WindowState = FormWindowState.Maximized;
         }
 
@@ -31,7 +34,7 @@ namespace MechanicalFaRm.App.Views
 
         public void TampilkanDaftarPesanan()
         {
-            _idUserAktif = SE_userSession.id_user;
+            int _idUserAktif = SE_userSession.id_user;
             List<M_DetailPesanan> detail = _PesananService.GetAllPesanan(_idUserAktif);
             var listBarang = detail;
 
@@ -76,6 +79,41 @@ namespace MechanicalFaRm.App.Views
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnDshbrd_Click(object sender, EventArgs e)
+        {
+            new V_dashboardCust().Show();
+            this.Close();
+        }
+
+        private void btnKeranjang_Click(object sender, EventArgs e)
+        {
+            new V_keranjangCust().Show();
+            this.Close();
+        }
+
+        private void btnDeskripsiAlat_Click(object sender, EventArgs e)
+        {
+            new V_deskripsiAlatCust().Show();
+            this.Close();
+        }
+
+        private void btnProfil_Click(object sender, EventArgs e)
+        {
+            int id = SE_userSession.id_user;
+            new V_profileCust(id).Show();
+            this.Close();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            logout.Logout(this);
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }

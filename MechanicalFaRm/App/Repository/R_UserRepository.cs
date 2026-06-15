@@ -58,6 +58,31 @@ namespace MechanicalFaRm.App.Repository
             };
         }
 
+        public M_user? GetByNotelp(string notelp)
+        {
+            var daftarUser = new M_user();
+            using var conn = dbconnect.GetConn();
+            conn.Open();
+
+            string rawsql = "SELECT id_user, username, email,no_telp, role  FROM public.user WHERE no_telp=@n";
+            using var cmd = new NpgsqlCommand(rawsql, conn);
+            cmd.Parameters.AddWithValue("@n", notelp);
+
+            using var reader = cmd.ExecuteReader();
+
+
+            if (!reader.Read()) return null;
+
+            return new M_user
+            {
+                _id_user = reader.GetInt32(0),
+                username = reader.GetString(1),
+                email = reader.GetString(2),
+                no_telepon = reader.GetString(3),
+                role = reader.GetString(4)
+            };
+        }
+
         public M_user? GetUserByEmail(string email)
         {
             using var conn = dbconnect.GetConn();

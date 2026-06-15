@@ -31,6 +31,7 @@ namespace MechanicalFaRm.App.Views
 
             _userController.UpdateUser(databaru);
             MessageBox.Show("Berhasil mengedit data", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
             
         }
     }

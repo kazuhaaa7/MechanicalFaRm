@@ -63,6 +63,7 @@ namespace MechanicalFaRm.App.Views
             int.TryParse(lblHargaAlat.Text, out hargaBarang);
             var stok = 0;
             int.TryParse(lblStokAlat.Text, out stok);
+
             DataKeranjangBaru = new M_Keranjang
             {
                 id_barang = idBarang,
@@ -74,14 +75,18 @@ namespace MechanicalFaRm.App.Views
                 stok = stok,
                 Penyewa = namaUser
             };
+            if(DataKeranjangBaru.stok< qty)
+            {
+                MessageBox.Show("Invalid!! "+"Stok yang ingin dipesan tidak tersedia. Mohon dipertimbangkan lagi","Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             S_PesananService service = new S_PesananService();
             string status = service.AddToKeranjang(DataKeranjangBaru);
             if (status == "sukses")
             {
                 MessageBox.Show("Berhasil menambahkan data");
             }
-            V_keranjangCust keranjang = new V_keranjangCust();
-            keranjang.Show();
+            new V_keranjangCust().Show();
             this.Close();
         }
         private void btnKeranjang_Click(object sender, EventArgs e)
@@ -109,6 +114,11 @@ namespace MechanicalFaRm.App.Views
                 stok = stok,
                 Penyewa = namaUser
             };
+            if (DataKeranjangBaru.stok < qty)
+            {
+                MessageBox.Show("Invalid!! " + "Stok yang ingin dipesan tidak tersedia. Mohon dipertimbangkan lagi", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             S_PesananService service = new S_PesananService();
             string status = service.AddToKeranjang(DataKeranjangBaru);
             if (status == "sukses")

@@ -3,6 +3,7 @@ using MechanicalFaRm.App.Models;
 using Npgsql;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,25 +16,34 @@ namespace MechanicalFaRm.App.Repository
         public List<M_barang> GetListBarang() //public: supaya bisa diakses lewat class interface(IBarangRepo)  
         { 
             var daftarBarang = new List<M_barang>();
-            using var conn = dbconnect.GetConn();
-            conn.Open();
-
-            string rawsql = "SELECT * FROM barang WHERE stok >1 ORDER BY id_barang ASC";
-            using var cmd = new NpgsqlCommand(rawsql, conn);
-            using var reader = cmd.ExecuteReader();
-
-            while (reader.Read())
+            try
             {
-                daftarBarang.Add(new M_barang
-                {
-                    id_barang = reader.GetInt32(0),
-                    namaBarang = reader.GetString(1),
-                    deskripsi = reader.GetString(2),
-                    hargaSewa = reader.GetInt32(3),
-                    stok = reader.GetInt32(4)
-                });
-            }
+                using var conn = dbconnect.GetConn();
+                conn.Open();
 
+                string rawsql = "SELECT * FROM barang ORDER BY id_barang ASC";
+                using var cmd = new NpgsqlCommand(rawsql, conn);
+                using var reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    daftarBarang.Add(new M_barang
+                    {
+                        id_barang = reader.GetInt32(0),
+                        namaBarang = reader.GetString(1),
+                        deskripsi = reader.GetString(2),
+                        hargaSewa = reader.GetInt32(3),
+                        stok = reader.GetInt32(4),
+                        fotoBarang = reader["foto_barang"] == DBNull.Value ? null : (byte[])reader["foto_barang"]
+                    });
+                }
+
+            }
+            catch (Exception ex) 
+            {
+                Console.WriteLine($"Error GetListBarang: {ex.Message}");
+            }
+            
             return daftarBarang;
         }
 
