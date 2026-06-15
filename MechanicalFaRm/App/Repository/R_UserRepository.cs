@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace MechanicalFaRm.App.Repository
 {
-    internal class R_UserRepository
+    internal class R_UserRepository : R_IUserRepository
     {
         public M_user? GetById(int id)
         {
@@ -151,13 +151,13 @@ namespace MechanicalFaRm.App.Repository
 
             cmd.ExecuteNonQuery();
         }
-        public List<M_user> GetAllAdmin()
+        public List<M_user> GetAllCust()
         {
             var daftarAdmin = new List<M_user>();
             using var conn = dbconnect.GetConn();
             conn.Open();
 
-            string rawsql = @"SELECT * FROM public.user WHERE role='admin'";
+            string rawsql = @"SELECT * FROM public.user WHERE role='customer'";
             using var cmd = new NpgsqlCommand(rawsql, conn);
             using var reader = cmd.ExecuteReader();
             

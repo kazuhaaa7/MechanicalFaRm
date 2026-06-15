@@ -47,7 +47,7 @@ namespace MechanicalFaRm.App.Views
             Panel card = new Panel
             {
                 Width = 260,
-                Height = 380,
+                Height = 410,
                 BorderStyle = BorderStyle.FixedSingle,
                 Margin = new Padding(10),
                 BackColor = Color.White
@@ -110,9 +110,9 @@ namespace MechanicalFaRm.App.Views
                 Top = lblHarga.Bottom + 8,
                 Left = 10,
                 Width = card.Width - 20,
-                Height = 50,
-                AutoSize = false,
-                MaximumSize = new Size(card.Width - 20, 50),
+                Height = 90,
+                AutoSize = true,
+                MaximumSize = new Size(card.Width - 20, 0),
                 Font = new Font("Arial", 9),
                 ForeColor = Color.DimGray
             };

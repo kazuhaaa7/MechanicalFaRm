@@ -38,14 +38,18 @@
             btnLogout = new Button();
             flowLayoutPanel1 = new FlowLayoutPanel();
             panel2 = new Panel();
+            panel4 = new Panel();
+            btnTambahAlat = new Button();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
+            panel4.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.Controls.Add(panel4);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(flowLayoutPanel1);
             panel1.Location = new Point(0, 0);
@@ -141,9 +145,9 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.Controls.Add(panel2);
-            flowLayoutPanel1.Location = new Point(434, 174);
+            flowLayoutPanel1.Location = new Point(436, 236);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1425, 843);
+            flowLayoutPanel1.Size = new Size(1425, 782);
             flowLayoutPanel1.TabIndex = 0;
             // 
             // panel2
@@ -152,6 +156,23 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(343, 346);
             panel2.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(btnTambahAlat);
+            panel4.Location = new Point(453, 173);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(771, 57);
+            panel4.TabIndex = 2;
+            // 
+            // btnTambahAlat
+            // 
+            btnTambahAlat.Location = new Point(15, 3);
+            btnTambahAlat.Name = "btnTambahAlat";
+            btnTambahAlat.Size = new Size(147, 51);
+            btnTambahAlat.TabIndex = 0;
+            btnTambahAlat.Text = "Tambah";
+            btnTambahAlat.UseVisualStyleBackColor = true;
             // 
             // V_deskripsiAlat
             // 
@@ -164,6 +185,7 @@
             panel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
             flowLayoutPanel1.ResumeLayout(false);
+            panel4.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -178,5 +200,7 @@
         private Button btnKelolaAlat;
         private Button btnProfil;
         private Button btnLogout;
+        private Panel panel4;
+        private Button btnTambahAlat;
     }
 }

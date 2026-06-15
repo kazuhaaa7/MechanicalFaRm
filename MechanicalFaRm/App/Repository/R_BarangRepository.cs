@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace MechanicalFaRm.App.Repository
 {
-    internal class R_BarangRepository : R_IBarangRepository
+    internal class R_BarangRepository 
     {
 
         public List<M_barang> GetListBarang() //public: supaya bisa diakses lewat class interface(IBarangRepo)  
@@ -52,7 +52,7 @@ namespace MechanicalFaRm.App.Repository
             var daftarBarang = new List<M_barang>();
             using var conn = dbconnect.GetConn();
             conn.Open();
-            string rawsql = $"SELECT * FROM barang WHERE stok >1 ORDER BY id_user ASC LIMIT @limit";
+            string rawsql = $"SELECT * FROM barang WHERE stok >1 ORDER BY id_barang ASC LIMIT @limit";
 
             using var cmd = new NpgsqlCommand(rawsql, conn);
             cmd.Parameters.AddWithValue("limit", limit);
@@ -103,7 +103,7 @@ namespace MechanicalFaRm.App.Repository
             conn.Open();
             string rawsql = @"SELECT * FROM 
             barang WHERE stok >0 AND stok < 5
-            ORDER BY id_users ASC LIMIT 1";
+            ORDER BY id_barang ASC LIMIT 1";
 
             using var cmd = new NpgsqlCommand(rawsql, conn);
             using var reader = cmd.ExecuteReader();
@@ -121,40 +121,60 @@ namespace MechanicalFaRm.App.Repository
             }
             return null;
         }
-        public void InsertBarang(M_barang barang)
+        public bool InsertBarang(M_barang barang)
         {
-            using var conn = dbconnect.GetConn();
-            conn.Open();
+            try
+            {
+                using var conn = dbconnect.GetConn();
+                conn.Open();
 
-            string rawsql = 
-                @"INSERT INTO 
-                barang (nama_barang, deskripsi, harga_sewa, stok)
-                VALUES (@nama_barang, @deskripsi, @harga_sewa, @stok)";
+                string rawsql =
+                    @"INSERT INTO 
+                public.barang (nama_barang, deskripsi, harga_sewa, stok, foto_barang)
+                VALUES (@nama_barang, @deskripsi, @harga_sewa, @stok, @foto)";
 
-            using var cmd = new NpgsqlCommand(rawsql, conn);
-            cmd.Parameters.AddWithValue("nama_barang", barang.namaBarang);
-            cmd.Parameters.AddWithValue("deskripsi", barang.deskripsi);
-            cmd.Parameters.AddWithValue("harga_sewa", barang.hargaSewa);
-            cmd.Parameters.AddWithValue("stok", barang.stok);
+                using var cmd = new NpgsqlCommand(rawsql, conn);
+                cmd.Parameters.AddWithValue("@nama_barang", barang.namaBarang ?? "");
+                cmd.Parameters.AddWithValue("@deskripsi", barang.deskripsi ?? "");
+                cmd.Parameters.AddWithValue("@harga_sewa", barang.hargaSewa);
+                cmd.Parameters.AddWithValue("@stok", barang.stok);
+                cmd.Parameters.AddWithValue("@foto", barang.fotoBarang ?? (Object)DBNull.Value);
 
-            cmd.ExecuteNonQuery();
+                return cmd.ExecuteNonQuery() > 0;
+            }
+            catch(Exception err)
+            {
+                System.Windows.Forms.MessageBox.Show("Pesan Error Database: " + err.Message, "Database Bug Detected");
+                return false;
+            }
+           
         }
-        public void UpdateBarang(M_barang barang)
+        public bool UpdateBarang(M_barang barang)
         {
-            using var conn = dbconnect.GetConn();
-            conn.Open();
-
-            string rawsql = 
-                @"UPDATE barang SET
+            try
+            {
+                using var conn = dbconnect.GetConn();
+                conn.Open();
+                System.Windows.Forms.MessageBox.Show("ID yang akan di-update adalah: " + barang.id_barang, "Cek ID");
+                string rawsql =
+                    @"UPDATE barang SET
                 nama_barang = @nama_barang, deskripsi = 
-                @deskripsi, harga_sewa = @harga_sewa, stok = @stok WHERE id = @id";
-            using var cmd = new NpgsqlCommand(rawsql, conn);
-            cmd.Parameters.AddWithValue("nama_barang", barang.namaBarang);
-            cmd.Parameters.AddWithValue("deskripsi", barang.deskripsi);
-            cmd.Parameters.AddWithValue("harga_sewa", barang.hargaSewa);
-            cmd.Parameters.AddWithValue("stok", barang.stok);
+                @deskripsi, harga_sewa = @harga_sewa, stok = @stok, foto_barang = @foto WHERE id_barang = @id";
+                using var cmd = new NpgsqlCommand(rawsql, conn);
+                cmd.Parameters.AddWithValue("@id", barang.id_barang);
+                cmd.Parameters.AddWithValue("@nama_barang", barang.namaBarang);
+                cmd.Parameters.AddWithValue("@deskripsi", barang.deskripsi);
+                cmd.Parameters.AddWithValue("@harga_sewa", barang.hargaSewa);
+                cmd.Parameters.AddWithValue("@stok", barang.stok);
+                cmd.Parameters.AddWithValue("@foto", barang.fotoBarang);
 
-            cmd.ExecuteNonQuery();
+                return cmd.ExecuteNonQuery() > 0;
+            }
+            catch (Exception err)
+            {
+                System.Windows.Forms.MessageBox.Show("Pesan Error Database: " + err.Message, "Database Bug Detected");
+                return false;
+            }
 
         }
         public void UpdateStokBarang(int barangId, int qtyNew)
@@ -169,16 +189,24 @@ namespace MechanicalFaRm.App.Repository
 
             cmd.ExecuteNonQuery();
         }
-        public void DeleteBarang(int barangId)
+        public bool DeleteBarang(int barangId)
         {
-            using var conn = dbconnect.GetConn();
-            conn.Open();
+            try
+            {
+                using var conn = dbconnect.GetConn();
+                conn.Open();
 
-            string rawswql = "DELETE FROM barang WHERE id = @id";
-            using var cmd = new NpgsqlCommand(rawswql, conn);
-            cmd.Parameters.AddWithValue("id", barangId);
+                string rawswql = "DELETE FROM barang WHERE id = @id";
+                using var cmd = new NpgsqlCommand(rawswql, conn);
+                cmd.Parameters.AddWithValue("@id", barangId);
 
-            cmd.ExecuteNonQuery();
+                return cmd.ExecuteNonQuery() > 0;
+            }catch (Exception err)
+            {
+                Console.WriteLine("error delete date" + err.Message);
+                return false;
+            }
+
         }
     }
 }

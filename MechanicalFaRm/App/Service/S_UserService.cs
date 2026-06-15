@@ -11,15 +11,20 @@ namespace MechanicalFaRm.App.Service
     {
         private R_UserRepository _userRepository = new R_UserRepository();
 
-        public M_user? GetUserById(int id)
+        public M_user? GetById(int id)
         {
             return _userRepository.GetById(id);
         }
 
-        //public M_user GetByUsername(string username)
-        //{
+        public M_user GetByUsername(string username)
+        {
+            return _userRepository.GetByUsername(username);
+        }
 
-        //}
+        public M_user GetByEmail(string email)
+        {
+            return _userRepository.GetUserByEmail(email);
+        }
 
         public M_user? Login(string username, string password)
         {
@@ -84,7 +89,7 @@ namespace MechanicalFaRm.App.Service
             });
             return true;
         }
-        public bool UpdateProfile (M_user user) 
+        public bool UpdateUser(M_user user) 
         {
             int id=  SE_userSession.id_user;
             M_user datalama = _userRepository.GetById(id);
@@ -132,6 +137,11 @@ namespace MechanicalFaRm.App.Service
             return true;
         }
         public void Delete(M_user user) { }
-        //public List<M_user> GetAllUser() { }
+        public List<M_user> GetAllCust() 
+        {
+        return _userRepository.GetAllCust();
+        }
+
+
     }
 }

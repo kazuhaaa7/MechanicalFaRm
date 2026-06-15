@@ -48,12 +48,12 @@ namespace MechanicalFaRm.App.Controllers
         private S_UserService userService = new S_UserService();
         public M_user? TampilkanDataBasedId(int userId)
         {
-            return userService.GetUserById(userId);
+            return userService.GetById(userId);
         }
 
         public bool UpdateUser(M_user user)
         {
-            userService.UpdateProfile(user);
+            userService.UpdateUser(user);
             return true;
         }
     }

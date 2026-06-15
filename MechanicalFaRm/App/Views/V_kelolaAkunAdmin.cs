@@ -1,4 +1,5 @@
 ﻿using MechanicalFaRm.App.Controllers;
+using MechanicalFaRm.App.Service;
 using MechanicalFaRm.App.Session;
 using System;
 using System.Collections.Generic;
@@ -15,10 +16,12 @@ namespace MechanicalFaRm.App.Views
     public partial class V_kelolaAkunAdmin : Form
     {
         C_loginAuthController logout;
+        private S_UserService _userService;
         public V_kelolaAkunAdmin()
         {
             InitializeComponent();
             logout = new C_loginAuthController();
+            _userService = new S_UserService();
             this.WindowState = FormWindowState.Maximized;
         }
 
@@ -63,12 +66,6 @@ namespace MechanicalFaRm.App.Views
 
         }
 
-        private void btnKelolaCust_Click(object sender, EventArgs e)
-        {
-            V_kelolaAkunAdmin kelolaAkunAdmin = new V_kelolaAkunAdmin();
-            kelolaAkunAdmin.Show();
-            this.Hide();
-        }
 
         private void btnKelolaAlat_Click(object sender, EventArgs e)
         {
@@ -103,6 +100,65 @@ namespace MechanicalFaRm.App.Views
         private void btnLogout_Click_1(object sender, EventArgs e)
         {
             logout.Logout(this);
+        }
+
+        private void panel1_Paint_2(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void V_kelolaAkunAdmin_Load(object sender, EventArgs e)
+        {
+            RefrestDataCus();
+
+
+        }
+        private void RefrestDataCus()
+        {
+            var listCust = _userService.GetAllCust();
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("User", typeof(int));
+            dt.Columns.Add("Username", typeof(string));
+            dt.Columns.Add("Password", typeof(string));
+            dt.Columns.Add("No Telp", typeof(string));
+            dt.Columns.Add("Email", typeof(string));
+            dt.Columns.Add("Role", typeof(string));
+
+            foreach (var items in listCust)
+            {
+                dt.Rows.Add(
+                    items._id_user,
+                    items.username,
+                    items.password,
+                    items.no_telepon,
+                    items.email,
+                    items.role
+                    );
+
+
+                dgvKelolaAkun.DataSource = dt;
+
+
+                dgvKelolaAkun.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
+                dgvKelolaAkun.ReadOnly = true;
+                dgvKelolaAkun.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                dgvKelolaAkun.AllowUserToAddRows = false;
+
+                dgvKelolaAkun.EnableHeadersVisualStyles = false; // Wajib false agar style custom bisa diterapkan
+                dgvKelolaAkun.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(242, 169, 0);
+                dgvKelolaAkun.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+                dgvKelolaAkun.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Bold);
+                dgvKelolaAkun.ColumnHeadersHeight = 40;
+
+                dgvKelolaAkun.DefaultCellStyle.Font = new Font("Segoe UI", 10);
+                dgvKelolaAkun.RowHeadersVisible = false;
+            }
+        }
+
+        private void dgvKelolaAkun_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

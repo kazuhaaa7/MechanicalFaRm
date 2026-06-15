@@ -53,7 +53,7 @@ namespace MechanicalFaRm.App.Views
 
 
             dgvKelolaAlat.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
-            dgvKelolaAlat.ReadOnly = false;
+            dgvKelolaAlat.ReadOnly = true;
             dgvKelolaAlat.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvKelolaAlat.AllowUserToAddRows = false;
 

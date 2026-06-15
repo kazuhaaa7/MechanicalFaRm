@@ -29,29 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_kelolaAkunAdmin));
-            panel1 = new Panel();
+            dgvKelolaAkun = new DataGridView();
             panel2 = new Panel();
             btnProfil = new Button();
             btnDeskripsiAlat = new Button();
             btnLogout = new Button();
             btnRiwayatPenyewaan = new Button();
             btnKelolaAlat = new Button();
-            dgvKelolaAlat = new DataGridView();
-            panel1.SuspendLayout();
+            panel1 = new Panel();
+            ((System.ComponentModel.ISupportInitialize)dgvKelolaAkun).BeginInit();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvKelolaAlat).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // panel1
+            // dgvKelolaAkun
             // 
-            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
-            panel1.Controls.Add(panel2);
-            panel1.Controls.Add(dgvKelolaAlat);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1924, 1082);
-            panel1.TabIndex = 0;
+            dgvKelolaAkun.BackgroundColor = SystemColors.Control;
+            dgvKelolaAkun.BorderStyle = BorderStyle.Fixed3D;
+            dgvKelolaAkun.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvKelolaAkun.Location = new Point(432, 205);
+            dgvKelolaAkun.Name = "dgvKelolaAkun";
+            dgvKelolaAkun.RowHeadersWidth = 51;
+            dgvKelolaAkun.Size = new Size(1430, 817);
+            dgvKelolaAkun.TabIndex = 2;
+            dgvKelolaAkun.CellContentClick += dgvKelolaAkun_CellContentClick;
             // 
             // panel2
             // 
@@ -138,16 +139,17 @@
             btnKelolaAlat.UseVisualStyleBackColor = false;
             btnKelolaAlat.Click += btnKelolaAlat_Click;
             // 
-            // dgvKelolaAlat
+            // panel1
             // 
-            dgvKelolaAlat.BackgroundColor = SystemColors.Control;
-            dgvKelolaAlat.BorderStyle = BorderStyle.Fixed3D;
-            dgvKelolaAlat.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvKelolaAlat.Location = new Point(432, 205);
-            dgvKelolaAlat.Name = "dgvKelolaAlat";
-            dgvKelolaAlat.RowHeadersWidth = 51;
-            dgvKelolaAlat.Size = new Size(1430, 817);
-            dgvKelolaAlat.TabIndex = 2;
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.Controls.Add(panel2);
+            panel1.Controls.Add(dgvKelolaAkun);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1924, 1082);
+            panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint_2;
             // 
             // V_kelolaAkunAdmin
             // 
@@ -157,21 +159,22 @@
             Controls.Add(panel1);
             Name = "V_kelolaAkunAdmin";
             Text = "V_kelolaAkun";
-            panel1.ResumeLayout(false);
+            Load += V_kelolaAkunAdmin_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvKelolaAkun).EndInit();
             panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvKelolaAlat).EndInit();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
-        private DataGridView dgvKelolaAlat;
+        private DataGridView dgvKelolaAkun;
         private Panel panel2;
         private Button btnProfil;
         private Button btnDeskripsiAlat;
         private Button btnLogout;
         private Button btnRiwayatPenyewaan;
         private Button btnKelolaAlat;
+        private Panel panel1;
     }
 }
