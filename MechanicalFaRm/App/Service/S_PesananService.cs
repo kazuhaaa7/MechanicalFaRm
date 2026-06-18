@@ -1,5 +1,7 @@
-﻿using MechanicalFaRm.App.Models;
+﻿using MechanicalFaRm.App.DbHelper;
+using MechanicalFaRm.App.Models;
 using MechanicalFaRm.App.Repository;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.Security.Policy;
@@ -21,24 +23,7 @@ namespace MechanicalFaRm.App.Service
 
         public string  AddToKeranjang(M_Keranjang itemkeranjang)
         {
-            // Validasi tanggal sewa dan kembali
-            if (itemkeranjang.tglKembali < itemkeranjang.tglSewa)
-            {
-                MessageBox.Show("Tanggal kembali tidak boleh lebih awal dari tanggal sewa!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return "gagal";
-            }
-            else if ((itemkeranjang.tglKembali - itemkeranjang.tglSewa).Days < 2)
-            {
-                MessageBox.Show("Minimal penyewaan 3 hari!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return "gagal";
-            }
-            else
-            {
-                TimeSpan totalHariSewa = itemkeranjang.tglKembali - itemkeranjang.tglSewa;
-                int selsisih = totalHariSewa.Days;  
-            }
-            listKeranjang.Add(itemkeranjang);
-            return "sukses";
+            return _repopesan.AddToKeranjang(itemkeranjang);
         }
 
         public decimal HitungTotalKeseluruhan()
@@ -79,6 +64,11 @@ namespace MechanicalFaRm.App.Service
         {
             return _repopesan.GetAllPesananByUser(id);
             
+        }
+
+        public string GetNamaPenyewaLama(int idUser)
+        {
+            return _repopesan.GetNamaPenyewaLama(idUser);
         }
     }
 }

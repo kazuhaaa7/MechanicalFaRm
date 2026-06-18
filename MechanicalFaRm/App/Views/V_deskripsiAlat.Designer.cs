@@ -35,7 +35,6 @@
             panel3 = new Panel();
             btnKelolaCust = new Button();
             btnRiwayatPenyewaan = new Button();
-            btnKelolaAlat = new Button();
             btnProfil = new Button();
             btnLogout = new Button();
             flowLayoutPanel1 = new FlowLayoutPanel();
@@ -81,7 +80,6 @@
             panel3.BackColor = Color.Transparent;
             panel3.Controls.Add(btnKelolaCust);
             panel3.Controls.Add(btnRiwayatPenyewaan);
-            panel3.Controls.Add(btnKelolaAlat);
             panel3.Controls.Add(btnProfil);
             panel3.Controls.Add(btnLogout);
             panel3.Dock = DockStyle.Left;
@@ -97,7 +95,7 @@
             btnKelolaCust.FlatStyle = FlatStyle.Flat;
             btnKelolaCust.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnKelolaCust.ForeColor = SystemColors.ActiveCaptionText;
-            btnKelolaCust.Location = new Point(50, 435);
+            btnKelolaCust.Location = new Point(31, 340);
             btnKelolaCust.Name = "btnKelolaCust";
             btnKelolaCust.Size = new Size(288, 67);
             btnKelolaCust.TabIndex = 26;
@@ -111,26 +109,12 @@
             btnRiwayatPenyewaan.FlatStyle = FlatStyle.Flat;
             btnRiwayatPenyewaan.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnRiwayatPenyewaan.ForeColor = SystemColors.ActiveCaptionText;
-            btnRiwayatPenyewaan.Location = new Point(50, 544);
+            btnRiwayatPenyewaan.Location = new Point(50, 474);
             btnRiwayatPenyewaan.Name = "btnRiwayatPenyewaan";
             btnRiwayatPenyewaan.Size = new Size(288, 67);
             btnRiwayatPenyewaan.TabIndex = 25;
             btnRiwayatPenyewaan.UseVisualStyleBackColor = false;
             btnRiwayatPenyewaan.Click += btnRiwayatPenyewaan_Click;
-            // 
-            // btnKelolaAlat
-            // 
-            btnKelolaAlat.BackColor = Color.Transparent;
-            btnKelolaAlat.FlatAppearance.BorderSize = 0;
-            btnKelolaAlat.FlatStyle = FlatStyle.Flat;
-            btnKelolaAlat.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnKelolaAlat.ForeColor = SystemColors.ActiveCaptionText;
-            btnKelolaAlat.Location = new Point(50, 332);
-            btnKelolaAlat.Name = "btnKelolaAlat";
-            btnKelolaAlat.Size = new Size(288, 67);
-            btnKelolaAlat.TabIndex = 24;
-            btnKelolaAlat.UseVisualStyleBackColor = false;
-            btnKelolaAlat.Click += btnKelolaAlat_Click;
             // 
             // btnProfil
             // 
@@ -139,7 +123,7 @@
             btnProfil.FlatStyle = FlatStyle.Flat;
             btnProfil.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnProfil.ForeColor = SystemColors.ActiveCaptionText;
-            btnProfil.Location = new Point(50, 754);
+            btnProfil.Location = new Point(50, 737);
             btnProfil.Name = "btnProfil";
             btnProfil.Size = new Size(288, 67);
             btnProfil.TabIndex = 23;
@@ -199,7 +183,6 @@
         private Panel panel3;
         private Button btnKelolaCust;
         private Button btnRiwayatPenyewaan;
-        private Button btnKelolaAlat;
         private Button btnProfil;
         private Button btnLogout;
         private Panel panel4;

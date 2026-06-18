@@ -16,13 +16,13 @@ namespace MechanicalFaRm.App.Views
     public partial class V_keranjangCust : Form
     {
         private S_PesananService _servicePesanan;
-        private PesananController _pesananControll;
+        private C_PesananController _pesananControll;
         public V_keranjangCust()
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
             _servicePesanan = new S_PesananService();
-            _pesananControll = new PesananController();
+            _pesananControll = new C_PesananController();
             RefreshData();
         }
 
@@ -138,25 +138,25 @@ namespace MechanicalFaRm.App.Views
             this.Close();
         }
 
-        private void btnSubmit_Click(object sender, EventArgs e)
-        {
-            DialogResult konfirmasi = MessageBox.Show("Apakah Anda yakin ingin memproses pesanan ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (konfirmasi == DialogResult.Yes)
+            private void btnSubmit_Click(object sender, EventArgs e)
             {
-                int idUserYangLogin = SE_userSession.id_user;
-                string hasil = _pesananControll.ProsesCo(idUserYangLogin);
+                DialogResult konfirmasi = MessageBox.Show("Apakah Anda yakin ingin memproses pesanan ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                if (hasil == "Sukses")
+                if (konfirmasi == DialogResult.Yes)
                 {
-                    MessageBox.Show("Pesanan berhasil dibuat! Silakan lakukan pembayaran.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    RefreshData(); // Panggil ini agar tabel GridView langsung bersih/kosong
-                }
-                else
-                {
-                    MessageBox.Show(hasil, "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    int idUserYangLogin = SE_userSession.id_user;
+                    string hasil = _pesananControll.ProsesCo(idUserYangLogin);
+
+                    if (hasil == "Sukses")
+                    {
+                        MessageBox.Show("Pesanan berhasil dibuat! Silakan lakukan pembayaran.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        RefreshData(); // Panggil ini agar tabel GridView langsung bersih/kosong
+                    }
+                    else
+                    {
+                        MessageBox.Show(hasil, "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
             }
-        }
         }
     }

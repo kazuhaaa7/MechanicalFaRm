@@ -11,15 +11,6 @@ namespace MechanicalFaRm.App.Repository
 {
     internal class R_TransaksiRepository 
     {
-//        Menerima data bersih dari Service yang sudah tervalidasi.
-
-//Melakukan interaksi murni dengan Database.
-
-//Contoh: Membuka koneksi SQL, menjalankan perintah INSERT INTO Tabel_Keranjang..., dan menutup koneksi.
-
-//Mengembalikan status sukses atau gagal ke Service.
-
-
         public void BuatPesananBaru(M_Pesanan pesanan)
         {
             using var conn = dbconnect.GetConn();
@@ -47,26 +38,38 @@ namespace MechanicalFaRm.App.Repository
 
             try
             {
+                string namaPenyewa = keranjang.Count > 0 ? (keranjang[0].Penyewa?.namaPenyewa ?? "") : "";
+                // 1. Ambil nama penyewa dari item pertama di keranjang secara aman
+                if (!string.IsNullOrWhiteSpace(namaPenyewa))
+                {
+                    // ⚠️ GANTI 'users' dan 'nama_kolom_di_db' sesuai nama asli di DBeaver-mu!
+                    string queryUser = @"UPDATE public.user SET nama = @nama_penyewa WHERE id_user = @id_user;";
 
-                string queryInduk = @"
-                                        INSERT INTO pesanan (id_user, status, ""totalBayar"") 
-                                            VALUES (@id_user, @status, @total) 
-                                            RETURNING id_pesanan;";
+                    using (NpgsqlCommand cmdUser = new NpgsqlCommand(queryUser, conn, transaksiDB))
+                    {
+                        cmdUser.Parameters.AddWithValue("@id_user", idUser);
+                        cmdUser.Parameters.AddWithValue("@nama_penyewa", namaPenyewa);
+                        cmdUser.ExecuteNonQuery(); // Eksekusi update nama user
+                    }
+                }
+
+                string queryInduk = @"INSERT INTO pesanan (id_user, status, ""totalBayar"") 
+                             VALUES (@id_user, @status, @total) 
+                             RETURNING id_pesanan;";
 
                 int idPesananBaru = 0;
 
                 using (NpgsqlCommand cmdInduk = new NpgsqlCommand(queryInduk, conn, transaksiDB))
                 {
-                    cmdInduk.Parameters.AddWithValue("@id_user",idUser);
+                    cmdInduk.Parameters.AddWithValue("@id_user", idUser);
                     cmdInduk.Parameters.AddWithValue("@status", "Menunggu Verifikasi Admin");
                     cmdInduk.Parameters.AddWithValue("@total", totalBayar);
+
                     idPesananBaru = Convert.ToInt32(cmdInduk.ExecuteScalar());
                 }
 
-
-                string queryAnak = @"
-            INSERT INTO detail_pesanan (id_pesanan, id_barang, jumlah, subtotal, tanggal_sewa, tanggal_kembali) 
-            VALUES (@id_pesanan, @id_barang, @jumlah, @subtotal, @tgl_sewa, @tgl_kembali)";
+                string queryAnak = @"INSERT INTO detail_pesanan (id_pesanan, id_barang, jumlah, subtotal, tanggal_sewa, tanggal_kembali) 
+                             VALUES (@id_pesanan, @id_barang, @jumlah, @subtotal, @tgl_sewa, @tgl_kembali)";
 
                 foreach (var item in keranjang)
                 {
@@ -76,9 +79,8 @@ namespace MechanicalFaRm.App.Repository
                         cmdAnak.Parameters.AddWithValue("@id_barang", Convert.ToInt32(item.id_barang));
                         cmdAnak.Parameters.AddWithValue("@jumlah", item.jumlah);
 
-
                         int durasiHari = (item.tglKembali - item.tglSewa).Days;
-                        if (durasiHari == 0) durasiHari = 3; 
+                        if (durasiHari == 0) durasiHari = 3;
                         decimal subtotalItem = item.hargaSewa * item.jumlah * durasiHari;
 
                         cmdAnak.Parameters.AddWithValue("@subtotal", subtotalItem);
@@ -93,7 +95,7 @@ namespace MechanicalFaRm.App.Repository
                     {
                         cmdStok.Parameters.AddWithValue("@jumlah", item.jumlah);
                         cmdStok.Parameters.AddWithValue("@id_barang", Convert.ToInt32(item.id_barang));
-                        cmdStok.ExecuteNonQuery(); // Tembak ke database untuk mengurangi stok
+                        cmdStok.ExecuteNonQuery();
                     }
                 }
 

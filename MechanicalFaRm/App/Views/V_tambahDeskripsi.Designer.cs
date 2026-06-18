@@ -37,6 +37,10 @@
             tbHarga = new TextBox();
             tbNamaBarang = new TextBox();
             btnPicture = new PictureBox();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnPicture).BeginInit();
             SuspendLayout();
@@ -44,6 +48,10 @@
             // panel1
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label1);
             panel1.Controls.Add(btnBatal);
             panel1.Controls.Add(btnSimpan);
             panel1.Controls.Add(rtbDeskripsi);
@@ -121,6 +129,51 @@
             btnPicture.TabStop = false;
             btnPicture.Click += btnPicture_Click;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.Red;
+            label4.Location = new Point(800, 436);
+            label4.Name = "label4";
+            label4.Size = new Size(76, 17);
+            label4.TabIndex = 19;
+            label4.Text = "*satuan juta";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(760, 403);
+            label3.Name = "label3";
+            label3.Size = new Size(129, 31);
+            label3.TabIndex = 18;
+            label3.Text = "Harga Alat";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(760, 321);
+            label2.Name = "label2";
+            label2.Size = new Size(155, 31);
+            label2.TabIndex = 17;
+            label2.Text = "Stok Tersedia";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(760, 243);
+            label1.Name = "label1";
+            label1.Size = new Size(159, 31);
+            label1.TabIndex = 16;
+            label1.Text = "Nama Barang";
+            // 
             // V_tambahDeskripsi
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -145,5 +198,9 @@
         private Button btnBatal;
         private Button btnSimpan;
         private RichTextBox rtbDeskripsi;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private Label label1;
     }
 }

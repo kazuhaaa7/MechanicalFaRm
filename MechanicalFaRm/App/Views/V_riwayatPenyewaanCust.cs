@@ -41,7 +41,8 @@ namespace MechanicalFaRm.App.Views
             DataTable dt = new DataTable();
             dt.Columns.Add("Penyewaan", typeof(int));
             dt.Columns.Add("Nama Alat", typeof(string));
-            dt.Columns.Add("Stok", typeof(int));
+            dt.Columns.Add("Banyak Unit", typeof(int));
+            dt.Columns.Add("Harga Sewa *satuan juta", typeof(int));
             dt.Columns.Add("Status", typeof(string));
             dt.Columns.Add("Total", typeof(int));
             dt.Columns.Add("Tanggal Sewa", typeof(DateTime));
@@ -52,7 +53,8 @@ namespace MechanicalFaRm.App.Views
                 dt.Rows.Add(
                 item.id_pesanan,
                 item.namaBarang,
-                item.stok,
+                item.jumlah,
+                item.hargaSewa,
                 item.status,
                 item.total,
                 item.tglSewa,
