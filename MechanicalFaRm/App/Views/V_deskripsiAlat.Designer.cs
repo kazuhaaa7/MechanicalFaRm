@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_deskripsiAlat));
             panel1 = new Panel();
+            panel4 = new Panel();
+            btnTambahAlat = new Button();
             panel3 = new Panel();
             btnKelolaCust = new Button();
             btnRiwayatPenyewaan = new Button();
@@ -38,12 +40,10 @@
             btnLogout = new Button();
             flowLayoutPanel1 = new FlowLayoutPanel();
             panel2 = new Panel();
-            panel4 = new Panel();
-            btnTambahAlat = new Button();
             panel1.SuspendLayout();
+            panel4.SuspendLayout();
             panel3.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
-            panel4.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -57,6 +57,24 @@
             panel1.Size = new Size(1888, 1069);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(btnTambahAlat);
+            panel4.Location = new Point(453, 173);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(771, 57);
+            panel4.TabIndex = 2;
+            // 
+            // btnTambahAlat
+            // 
+            btnTambahAlat.Location = new Point(15, 3);
+            btnTambahAlat.Name = "btnTambahAlat";
+            btnTambahAlat.Size = new Size(147, 51);
+            btnTambahAlat.TabIndex = 0;
+            btnTambahAlat.Text = "Tambah";
+            btnTambahAlat.UseVisualStyleBackColor = true;
+            btnTambahAlat.Click += btnTambahAlat_Click;
             // 
             // panel3
             // 
@@ -156,23 +174,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(343, 346);
             panel2.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            panel4.Controls.Add(btnTambahAlat);
-            panel4.Location = new Point(453, 173);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(771, 57);
-            panel4.TabIndex = 2;
-            // 
-            // btnTambahAlat
-            // 
-            btnTambahAlat.Location = new Point(15, 3);
-            btnTambahAlat.Name = "btnTambahAlat";
-            btnTambahAlat.Size = new Size(147, 51);
-            btnTambahAlat.TabIndex = 0;
-            btnTambahAlat.Text = "Tambah";
-            btnTambahAlat.UseVisualStyleBackColor = true;
+            panel2.Paint += panel2_Paint;
             // 
             // V_deskripsiAlat
             // 
@@ -183,9 +185,9 @@
             Name = "V_deskripsiAlat";
             Text = "V_deskripsiAlat";
             panel1.ResumeLayout(false);
+            panel4.ResumeLayout(false);
             panel3.ResumeLayout(false);
             flowLayoutPanel1.ResumeLayout(false);
-            panel4.ResumeLayout(false);
             ResumeLayout(false);
         }
 

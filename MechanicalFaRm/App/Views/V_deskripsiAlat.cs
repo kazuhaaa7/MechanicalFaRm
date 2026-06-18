@@ -187,5 +187,25 @@ namespace MechanicalFaRm.App.Views
             new V_kelolaAlatAdmin().Show();
             this.Close();
         }
+
+        private void btnTambahAlat_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Apakah Anda ingin menambahkan produk baru?", "Konfirmasi",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                var tambahForm = new V_tambahDeskripsi(this);
+                tambahForm.Show();
+                this.Hide();
+            }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -51,11 +51,6 @@ namespace MechanicalFaRm.App.Views
             this.Hide();
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Anda akan logout");
-            this.Close();
-        }
 
         private void txtName_Paint(object sender, PaintEventArgs e)
         {
@@ -118,7 +113,7 @@ namespace MechanicalFaRm.App.Views
             this.Close();
         }
 
-        private void btnLogout_Click_1(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
             logout.Logout(this);
         }

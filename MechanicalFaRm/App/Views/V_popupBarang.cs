@@ -17,10 +17,11 @@ namespace MechanicalFaRm.App.Views
     public partial class V_popupBarang : Form
     {
         public M_Keranjang? DataKeranjangBaru { get; private set; }
+        private V_dashboardCust parentForm;
         //Form V_dashboardCust
         public int idBarang;
         private C_barangController barangController;
-        public V_popupBarang(int idbarang)
+        public V_popupBarang(V_dashboardCust parernt ,int idbarang)
         {
             InitializeComponent();
             //this.V_dashboardCust = induk;
@@ -52,6 +53,12 @@ namespace MechanicalFaRm.App.Views
         private void btnLanjut_Click(object sender, EventArgs e)
 
         {
+            if (string.IsNullOrWhiteSpace(tbNamaPenyewa.Text))
+            {
+                MessageBox.Show("Invalid!! Nama penyewa harus diisi. Mohon diisi kembali.",
+                                "Input Tidak Valid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             int qty = int.TryParse(tbQty.Text, out qty) ? qty : 0;
             DateTime tglSewa = dtpSewa.Value.Date;
             DateTime tglKembali = dtpKembali.Value.Date;
@@ -75,9 +82,9 @@ namespace MechanicalFaRm.App.Views
                 stok = stok,
                 Penyewa = namaUser
             };
-            if(DataKeranjangBaru.stok< qty)
+            if (DataKeranjangBaru.stok < qty)
             {
-                MessageBox.Show("Invalid!! "+"Stok yang ingin dipesan tidak tersedia. Mohon dipertimbangkan lagi","Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid!! " + "Stok yang ingin dipesan tidak tersedia. Mohon dipertimbangkan lagi", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             S_PesananService service = new S_PesananService();
@@ -85,12 +92,18 @@ namespace MechanicalFaRm.App.Views
             if (status == "sukses")
             {
                 MessageBox.Show("Berhasil menambahkan data");
+                parentForm.Show();
+                this.Close();
             }
-            new V_keranjangCust().Show();
-            this.Close();
         }
         private void btnKeranjang_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(tbNamaPenyewa.Text))
+            {
+                MessageBox.Show("Invalid!! Nama penyewa harus diisi. Mohon diisi kembali.",
+                                "Input Tidak Valid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             int qty = int.TryParse(tbQty.Text, out qty) ? qty : 0;
 
             DateTime tglSewa = dtpSewa.Value.Date;
@@ -124,8 +137,9 @@ namespace MechanicalFaRm.App.Views
             if (status == "sukses")
             {
                 MessageBox.Show("Berhasil menambahkan data");
+                parentForm.Show();
+                this.Close();
             }
-            this.Close();
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -169,6 +183,11 @@ namespace MechanicalFaRm.App.Views
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbNamaPenyewa_TextChanged(object sender, EventArgs e)
         {
 
         }

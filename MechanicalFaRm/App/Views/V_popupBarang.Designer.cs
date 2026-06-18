@@ -92,6 +92,7 @@
             tbNamaPenyewa.Name = "tbNamaPenyewa";
             tbNamaPenyewa.Size = new Size(215, 32);
             tbNamaPenyewa.TabIndex = 22;
+            tbNamaPenyewa.TextChanged += tbNamaPenyewa_TextChanged;
             // 
             // panel2
             // 

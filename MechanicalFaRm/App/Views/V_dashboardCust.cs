@@ -1,4 +1,5 @@
 ﻿using MechanicalFaRm.App.Controllers;
+using MechanicalFaRm.App.Models;
 using MechanicalFaRm.App.Session;
 
 namespace MechanicalFaRm.App.Views
@@ -6,16 +7,163 @@ namespace MechanicalFaRm.App.Views
     public partial class V_dashboardCust : Form
     {
         C_loginAuthController logout;
+        private C_barangController ctrlBarang;
         public V_dashboardCust()
         {
             InitializeComponent();
             logout = new C_loginAuthController();
+            ctrlBarang = new C_barangController();
             this.WindowState = FormWindowState.Maximized;
+
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.WrapContents = true;
+            flowLayoutPanel1.FlowDirection = FlowDirection.LeftToRight;
+        }
+        private Panel CreateCard(M_barang barang)
+        {
+            // KOREKSI UKURAN CARD: Dipertinggi menjadi 440 agar muat 2 tombol dengan lega
+            Panel card = new Panel
+            {
+                Width = 260,
+                Height = 440,
+                BorderStyle = BorderStyle.FixedSingle,
+                Margin = new Padding(10),
+                BackColor = Color.White
+            };
+
+            // 1. PICTURE BOX (Foto Alat)
+            PictureBox pic = new PictureBox
+            {
+                Width = card.Width - 20,
+                Height = 140,
+                Top = 10,
+                Left = 10,
+                SizeMode = PictureBoxSizeMode.Zoom,
+                BorderStyle = BorderStyle.FixedSingle
+            };
+
+            if (barang.fotoBarang != null)
+            {
+                using (var ms = new MemoryStream(barang.fotoBarang))
+                {
+                    pic.Image = Image.FromStream(ms);
+                }
+            }
+
+            // 2. LABEL NAMA ALAT
+            Label lblNama = new Label
+            {
+                Text = barang.namaBarang,
+                Top = pic.Bottom + 10,
+                Left = 10,
+                Width = card.Width - 20,
+                Height = 25,
+                Font = new Font("Arial", 11, FontStyle.Bold),
+                AutoEllipsis = true
+            };
+
+            // 3. LABEL STOK
+            Label lblStok = new Label
+            {
+                Text = "Stok: " + barang.stok,
+                Top = lblNama.Bottom + 5,
+                Left = 10,
+                Width = card.Width - 20,
+                Height = 20,
+                ForeColor = barang.stok < 1 ? Color.Red : Color.Black,
+                Font = new Font("Arial", 9.5f)
+            };
+
+            // 4. LABEL HARGA
+            Label lblHarga = new Label
+            {
+                Text = "Rp." + barang.hargaSewa + " Juta",
+                Top = lblStok.Bottom + 5,
+                Left = 10,
+                Width = card.Width - 20,
+                Height = 20,
+                ForeColor = Color.Black,
+                Font = new Font("Arial", 10, FontStyle.Bold)
+            };
+
+            // 5. LABEL DESKRIPSI (Diberi batas Height kaku agar tidak menabrak tombol bawah)
+            Label lblDeskripsi = new Label
+            {
+                Text = barang.deskripsi,
+                Top = lblHarga.Bottom + 8,
+                Left = 10,
+                Width = card.Width - 20,
+                Height = 110, // Mengunci ruang deskripsi setinggi 110px
+                AutoSize = false, // Wajib false agar ukurannya konsisten
+                AutoEllipsis = true, // Otomatis memberi titik-titik (...) jika teks terlalu panjang
+                Font = new Font("Arial", 9),
+                ForeColor = Color.DimGray
+            };
+
+            // ================= TOMBOL DESKRIPSI (KIRI) =================
+            Button btnDeskripsi = new Button
+            {
+                Text = "Deskripsi",
+                Width = 110,
+                Height = 35,
+                Top = card.Height - 50, // Melekat aman di bagian bawah kartu
+                Left = 15,
+                BackColor = Color.LightGray,
+                ForeColor = Color.Black,
+                Font = new Font("Arial", 9.5f, FontStyle.Bold),
+                FlatStyle = FlatStyle.Flat,
+                FlatAppearance = { BorderSize = 0 }
+            };
+            btnDeskripsi.Click += (s, e) =>
+            {
+                var desForm = new V_deskripsiAlatCust(this, barang);
+                desForm.Show();
+                this.Hide();
+            };
+
+            // ================= TOMBOL SEWA (KANAN) =================
+            Button btnSewa = new Button
+            {
+                Text = "Sewa",
+                Width = 110,
+                Height = 35,
+                Top = card.Height - 50,
+                Left = 135, // Bergeser ke kanan, sejajar dengan tombol deskripsi
+                BackColor = Color.Moccasin,
+                ForeColor = Color.Black,
+                Font = new Font("Arial", 10, FontStyle.Bold),
+                FlatStyle = FlatStyle.Flat,
+                FlatAppearance = { BorderSize = 0 }
+            };
+            btnSewa.Click += (s, e) =>
+            {
+                var sewaForm = new V_popupBarang(this, barang.id_barang);
+                sewaForm.Show();
+            };
+
+            // Masukkan semua komponen ke dalam Card
+            card.Controls.Add(pic);
+            card.Controls.Add(lblNama);
+            card.Controls.Add(lblStok);
+            card.Controls.Add(lblHarga);
+            card.Controls.Add(lblDeskripsi);
+            card.Controls.Add(btnDeskripsi);
+            card.Controls.Add(btnSewa);
+
+            return card;
         }
 
         private void V_dashboardUser_Load(object sender, EventArgs e)
         {
+            flowLayoutPanel1.Controls.Clear();
 
+            var listProduk = ctrlBarang.GetBarangList();
+
+            foreach (var p in listProduk)
+            {
+                var card = CreateCard(p);
+                flowLayoutPanel1.Controls.Add(card);
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -74,54 +222,6 @@ namespace MechanicalFaRm.App.Views
 
         }
 
-        private void btnSewaAlat1_Click(object sender, EventArgs e)
-        {
-            int idBarangSewa = 1;
-            V_popupBarang popup1 = new V_popupBarang(idBarangSewa);
-            popup1.idBarang = idBarangSewa;
-            popup1.ShowDialog();
-        }
-
-        private void btnSewaAlat2_Click(object sender, EventArgs e)
-        {
-            int idBarangSewa = 2;
-            V_popupBarang popup2 = new V_popupBarang(idBarangSewa);
-            popup2.idBarang = idBarangSewa;
-            popup2.ShowDialog();
-        }
-
-        private void btnSewaAlat3_Click(object sender, EventArgs e)
-        {
-            int idBarangSewa = 3;
-            V_popupBarang popup3 = new V_popupBarang(idBarangSewa);
-            popup3.idBarang = idBarangSewa;
-            popup3.ShowDialog();
-        }
-
-        private void btnSewaAlat4_Click(object sender, EventArgs e)
-        {
-            int idBarangSewa = 4;
-            V_popupBarang popup4 = new V_popupBarang(idBarangSewa);
-            popup4.idBarang = idBarangSewa;
-            popup4.ShowDialog();
-        }
-
-        private void btnSewaAlat5_Click(object sender, EventArgs e)
-        {
-            int idBarangSewa = 5;
-            V_popupBarang popup5 = new V_popupBarang(idBarangSewa);
-            popup5.idBarang = idBarangSewa;
-            popup5.ShowDialog();
-        }
-
-        private void btnSewaAlat6_Click(object sender, EventArgs e)
-        {
-            int idBarangSewa = 6;
-            V_popupBarang popup6 = new V_popupBarang(idBarangSewa);
-            popup6.idBarang = idBarangSewa;
-            popup6.ShowDialog();
-        }
-
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
@@ -136,7 +236,7 @@ namespace MechanicalFaRm.App.Views
 
         private void btnDeskripsiAlat_Click(object sender, EventArgs e)
         {
-            V_deskripsiAlatCust des =  new V_deskripsiAlatCust();
+            V_deskripsiAlatCust des =  new V_deskripsiAlatCust(this);
             des.Show();
             this.Hide();
         }

@@ -59,9 +59,9 @@
             // 
             // btnBatal
             // 
-            btnBatal.Location = new Point(1311, 576);
+            btnBatal.Location = new Point(667, 552);
             btnBatal.Name = "btnBatal";
-            btnBatal.Size = new Size(139, 42);
+            btnBatal.Size = new Size(155, 54);
             btnBatal.TabIndex = 6;
             btnBatal.Text = "Batal";
             btnBatal.UseVisualStyleBackColor = true;
@@ -69,9 +69,9 @@
             // 
             // btnSimpan
             // 
-            btnSimpan.Location = new Point(1123, 576);
+            btnSimpan.Location = new Point(481, 552);
             btnSimpan.Name = "btnSimpan";
-            btnSimpan.Size = new Size(124, 42);
+            btnSimpan.Size = new Size(155, 54);
             btnSimpan.TabIndex = 5;
             btnSimpan.Text = "Simpan";
             btnSimpan.UseVisualStyleBackColor = true;

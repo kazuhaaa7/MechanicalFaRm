@@ -41,6 +41,7 @@ namespace MechanicalFaRm.App.Views
             DataTable dt = new DataTable();
             dt.Columns.Add("Penyewaan", typeof(int));
             dt.Columns.Add("Nama Alat", typeof(string));
+            dt.Columns.Add("Stok", typeof(int));
             dt.Columns.Add("Status", typeof(string));
             dt.Columns.Add("Total", typeof(int));
             dt.Columns.Add("Tanggal Sewa", typeof(DateTime));
@@ -51,6 +52,7 @@ namespace MechanicalFaRm.App.Views
                 dt.Rows.Add(
                 item.id_pesanan,
                 item.namaBarang,
+                item.stok,
                 item.status,
                 item.total,
                 item.tglSewa,
@@ -97,8 +99,8 @@ namespace MechanicalFaRm.App.Views
 
         private void btnDeskripsiAlat_Click(object sender, EventArgs e)
         {
-            new V_deskripsiAlatCust().Show();
-            this.Close();
+            new V_deskripsiAlatCust(this).Show();
+            this.Hide();
         }
 
         private void btnProfil_Click(object sender, EventArgs e)

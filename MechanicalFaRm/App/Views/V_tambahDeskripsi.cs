@@ -13,7 +13,7 @@ namespace MechanicalFaRm.App.Views
 {
     public partial class V_tambahDeskripsi : Form
     {
-
+        private C_loginAuthController logout;
         private C_barangController ctrlBarang;
         private V_deskripsiAlat parentForm;
         private M_barang editBarang;
@@ -22,6 +22,7 @@ namespace MechanicalFaRm.App.Views
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
+            logout = new C_loginAuthController();
             parentForm = parent;
             ctrlBarang = new C_barangController();
             editBarang = barang;

@@ -121,7 +121,7 @@
   <data name="panel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAB4AAAAQ3CAYAAAAZhXOWAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsPAAALDwGS+QOlAAD/hklE
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsMAAALDAE/QCLIAAD/hklE
         QVR4Xuz9a5Ak2XXfCXZW9aMe3VXVXe93VXe9u6q6+wNF2ZAgOCvBRsOlrZkEgBQAmlGyoaQhbGexEgGK
         GInCamZHRgzI0QOQsBztojIi8llZmVlZz941A2C7ZEuUAaMRAH6AmYxCRkRGRL6rCp84ZmPma/9z/UR4
         XPeIcL/3uoeH5/nws+pO9/DH9evX//ecc8956ZfffcP7f3z6lCAIglAgPvrKG95PZ1/acWxOjnnVicPe
@@ -5733,6 +5733,9 @@
         8hANNxrRcKMRDZe9zxal4f5/Utul+BmDQEwAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="panel3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="panel3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA80AAAPoCAIAAABrtYsnAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAu
@@ -8673,6 +8676,9 @@
         Km0AAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="btnEditProfileA.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnEditProfileA.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAP8AAAAxCAYAAAAV6n8OAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -8705,6 +8711,9 @@
   </data>
   <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
