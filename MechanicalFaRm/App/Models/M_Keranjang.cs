@@ -5,21 +5,17 @@ namespace MechanicalFaRm.App.Models
     public class M_Keranjang : M_DetailPesanan
     {
         public int id_barang { get; set; }
-        public int idKeranjang { get; set; } 
+        public int id_keranjang { get; set; } 
         public decimal jumlah;
         public M_user? Penyewa { get; set; }
-        public int Durasi
-        {
+        public int Durasi { get; set; }
+
+        public decimal subTotalKeranjang {
             get
             {
-                TimeSpan selisih = tglKembali.Date - tglSewa.Date;
-
-                int totalHari = selisih.Days;
-
-
-                return totalHari <= 0 ? 1 : totalHari;
+                return (decimal)hargaSewa * jumlah * Durasi;
             }
-        }
+                }
 
     }
 }

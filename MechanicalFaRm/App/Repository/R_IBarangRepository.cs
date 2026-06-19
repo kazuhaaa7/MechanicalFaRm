@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,8 +12,8 @@ namespace MechanicalFaRm.App.Repository
     {
         List<M_barang> GetListBarang();
         List<M_barang> GetListBarang(int limit);
-        M_barang GetStok();
-        M_barang GetBarangById(int id);
+        M_barang? GetBarangById(int id);
+        M_barang? GetStok();
         void InsertBarang(M_barang barang);
         void UpdateBarang(M_barang barang);
         void UpdateStokBarang(int barangId, int qtyNew);

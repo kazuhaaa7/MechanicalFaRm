@@ -14,7 +14,7 @@ namespace MechanicalFaRm.App.DbHelper
             string pass = Environment.GetEnvironmentVariable("DB_PASS");
 
 
-            connString = $"Host=localhost; Username=postgres;Password=postgre7; Database=MechanicalFaRm;";
+            connString = $"Host=localhost; Username=postgres;Password=postgre7; Database=MF2;";
 
 
         }

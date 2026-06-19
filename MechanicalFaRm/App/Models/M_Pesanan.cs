@@ -3,7 +3,7 @@
     public class M_Pesanan:M_barang
     {
         public int id_pesanan { get; set; }
-        public int total {  get; set; }
+        public decimal total {  get; set; }
 
         public string status { get; set; }  
         public List<M_DetailPesanan> detailBarang { get; set; } = new List<M_DetailPesanan>();

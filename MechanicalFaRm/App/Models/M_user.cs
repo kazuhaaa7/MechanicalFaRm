@@ -7,7 +7,7 @@
         private string _no_telp;
         private string _email;
         public int _id_user;
-        public string namaPenyewa;
+        public string namaPenyewa { get; set; }
         public string role = "customer";
 
 

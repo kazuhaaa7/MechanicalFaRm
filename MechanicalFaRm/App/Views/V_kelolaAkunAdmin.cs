@@ -23,6 +23,8 @@ namespace MechanicalFaRm.App.Views
             logout = new C_loginAuthController();
             _userService = new S_UserService();
             this.WindowState = FormWindowState.Maximized;
+
+            RefrestDataCus();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -118,9 +120,9 @@ namespace MechanicalFaRm.App.Views
             var listCust = _userService.GetAllCust();
 
             DataTable dt = new DataTable();
-            dt.Columns.Add("User", typeof(int));
+            dt.Columns.Add("Id Customoer", typeof(int));
+            dt.Columns.Add("Nama Customer", typeof(string));
             dt.Columns.Add("Username", typeof(string));
-            dt.Columns.Add("Password", typeof(string));
             dt.Columns.Add("No Telp", typeof(string));
             dt.Columns.Add("Email", typeof(string));
             dt.Columns.Add("Role", typeof(string));
@@ -129,8 +131,8 @@ namespace MechanicalFaRm.App.Views
             {
                 dt.Rows.Add(
                     items._id_user,
+                    items.namaPenyewa,
                     items.username,
-                    items.password,
                     items.no_telepon,
                     items.email,
                     items.role

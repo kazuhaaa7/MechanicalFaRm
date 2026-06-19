@@ -1,5 +1,6 @@
 ﻿using MechanicalFaRm.App.Controllers;
 using MechanicalFaRm.App.Models;
+using MechanicalFaRm.App.Repository;
 using MechanicalFaRm.App.Service;
 using MechanicalFaRm.App.Session;
 using System;
@@ -17,10 +18,12 @@ namespace MechanicalFaRm.App.Views
     {
         private S_PesananService _servicePesanan;
         private C_PesananController _pesananControll;
+        private R_PesananRepository _reposan;
         public V_keranjangCust()
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
+            _reposan = new R_PesananRepository();
             _servicePesanan = new S_PesananService();
             _pesananControll = new C_PesananController();
             RefreshData();
@@ -49,27 +52,30 @@ namespace MechanicalFaRm.App.Views
         private void RefreshData()
         {
             var isiKeranjang = _servicePesanan.GetListKeranjang(SE_userSession.id_user);
+
             DataTable datak = new DataTable();
-            datak.Columns.Add("Nama Penyewa", typeof(string));
+            datak.Columns.Add("Nama Customer", typeof(string));
             datak.Columns.Add("Nama Alat", typeof(string));
             datak.Columns.Add("Jumlah Alat", typeof(int));
             datak.Columns.Add("Harga Alat", typeof(string));
             datak.Columns.Add("Durasi", typeof(string));
+            datak.Columns.Add("Sub Total", typeof(string));
 
             foreach (var item in isiKeranjang)
             {
                 datak.Rows.Add(
-                item.Penyewa.namaPenyewa,
-                item.namaBarang,
-                item.jumlah,
-                $"{item.hargaSewa} "+ "Juta",
-                $"{item.Durasi} Hari");
+                    item.Penyewa.namaPenyewa,
+                    item.namaBarang,
+                    item.jumlah,
+                    $"{item.hargaSewa} Juta",
+                    $"{item.Durasi} Hari",
+                    $"{item.subTotalKeranjang} Juta"
+                );
             }
-            dgvKeranjang.DataSource = null;
             dgvKeranjang.DataSource = datak;
 
             dgvKeranjang.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
-            dgvKeranjang.ReadOnly = false;
+            dgvKeranjang.ReadOnly = true;
             dgvKeranjang.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvKeranjang.AllowUserToAddRows = false;
 
@@ -132,7 +138,6 @@ namespace MechanicalFaRm.App.Views
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            // 1. Validasi konfirmasi dari user menggunakan Guard Clause (rata kiri)
             DialogResult konfirmasi = MessageBox.Show(
                 "Apakah Anda yakin ingin memproses pesanan ini?",
                 "Konfirmasi",
@@ -142,31 +147,25 @@ namespace MechanicalFaRm.App.Views
 
             if (konfirmasi != DialogResult.Yes) return;
 
-            // 2. Ambil ID session user yang sedang aktif
             int idUserYangLogin = SE_userSession.id_user;
             string hasil = _pesananControll.ProsesCo(idUserYangLogin);
 
-            // 3. Pengecekan status sukses (mengabaikan sensitivitas huruf kapital)
             if (string.Equals(hasil, "sukses", StringComparison.OrdinalIgnoreCase))
             {
                 MessageBox.Show("Pesanan berhasil dibuat! Silakan lakukan pembayaran.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // 4. Ambil data invoice pesanan terbaru untuk dikirim ke Form Pembayaran
                 int idPesananTerbaru = _servicePesanan.GetIdPesananTerbaru(idUserYangLogin);
                 M_Pesanan datapesanan = _servicePesanan.GetPesananById(idPesananTerbaru);
 
-                // 5. Buka Form Pembayaran dengan aman di dalam blok 'using' (Indentasi rapi)
                 using (V_pembayaran formBayar = new V_pembayaran(datapesanan))
                 {
                     formBayar.ShowDialog();
                 }
 
-                // 6. Refresh GridView/Tabel keranjang setelah pembayaran ditutup
-                RefreshData();
+                RefreshData(); 
             }
             else
             {
-                // Menampilkan pesan gagal yang dikirim oleh controller
                 MessageBox.Show(hasil, "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }

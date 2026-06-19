@@ -10,6 +10,7 @@ using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -98,7 +99,9 @@ namespace MechanicalFaRm.App.Views
                 tglKembali = dtpKembali.Value.Date,
                 hargaSewa = hargaBarang,
                 stok = stok,
-                Penyewa = new M_user() { namaPenyewa = tbNamaPenyewa.Text }
+                Penyewa = new M_user() {
+                    _id_user = SE_userSession.id_user,
+                    namaPenyewa = tbNamaPenyewa.Text }
             };
 
             string status = pesananService.AddToKeranjang(dataKeranjangBaru);
@@ -131,7 +134,6 @@ namespace MechanicalFaRm.App.Views
         }
         private void btnKeranjang_Click(object sender, EventArgs e)
         {
-            // 1. Validasi Input UI
             if (string.IsNullOrWhiteSpace(tbNamaPenyewa.Text))
             {
                 MessageBox.Show("Invalid!! Nama penyewa harus diisi. Mohon diisi kembali.",
@@ -152,12 +154,12 @@ namespace MechanicalFaRm.App.Views
                 return;
             }
 
-            // 2. Box Konfirmasi Khusus Tambah Keranjang
-            DialogResult konfirmasi = MessageBox.Show("Masukkan ke keranjang?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (konfirmasi != DialogResult.Yes) return;
 
-            // 3. Mapping Objek Model
             int.TryParse(lblHargaAlat.Text, out int hargaBarang);
+            TimeSpan durasiSpan = dtpKembali.Value.Date - dtpSewa.Value.Date;
+            int jumlahHari = durasiSpan.Days;
+
+            var totalBayar = (decimal)hargaBarang * qty * jumlahHari;
             M_Keranjang dataKeranjangBaru = new M_Keranjang
             {
                 id_barang = idBarang,
@@ -167,7 +169,10 @@ namespace MechanicalFaRm.App.Views
                 tglKembali = dtpKembali.Value.Date,
                 hargaSewa = hargaBarang,
                 stok = stok,
-                Penyewa = new M_user() { namaPenyewa = tbNamaPenyewa.Text }
+                total = totalBayar,
+                Penyewa = new M_user() {
+                    _id_user = SE_userSession.id_user,
+                    namaPenyewa = tbNamaPenyewa.Text }
             };
 
             // 4. Proses Tambah Keranjang

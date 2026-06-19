@@ -8,11 +8,6 @@ namespace MechanicalFaRm.App.Controllers
 {
     internal class C_userController
     {
-        //private M_userContext ucontext = new M_userContext();
-        //private M_userContext GetAllUser()
-        //{
-        //    return ucontext;
-        //}
 
         private readonly string connString;
 

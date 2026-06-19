@@ -1,4 +1,5 @@
 ﻿using MechanicalFaRm.App.Models;
+using MechanicalFaRm.App.Repository;
 using MechanicalFaRm.App.Service;
 using MechanicalFaRm.App.Session;
 using System;
@@ -14,6 +15,7 @@ namespace MechanicalFaRm.App.Views
     public partial class UC_Pembayaran : UserControl
     {
         S_PesananService _servicePesanan = new S_PesananService();
+        S_KeranjangService _serviceker = new S_KeranjangService();
         private Action _callbackRefreshHalaman;
         private int _idPesanan;
 
@@ -58,7 +60,6 @@ namespace MechanicalFaRm.App.Views
                 lblItem.Margin = new Padding(5, 2, 5, 2);
                 flpBarangSewa.Controls.Add(lblItem);
             }
-            // =========================================================================
         }
 
         private void btnBayar_Click(object sender, EventArgs e)
@@ -82,7 +83,6 @@ namespace MechanicalFaRm.App.Views
             
             if (konfirmasi == DialogResult.Yes)
             {
-                // Eksekusi pembaruan status ke PostgreSQL lewat service
                 bool isSukses = _servicePesanan.UpdateStatusPesanan(_idPesanan, "Sudah Terverifikasi Admin", inputJalan, id);
 
                 if (isSukses)
@@ -90,7 +90,9 @@ namespace MechanicalFaRm.App.Views
                     MessageBox.Show("Pembayaran sukses dikonfirmasi! Data otomatis berpindah ke Riwayat.",
                                     "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                    _serviceker.ClearKeranjang(id);
                     _callbackRefreshHalaman?.Invoke();
+
                 }
                 else
                 {

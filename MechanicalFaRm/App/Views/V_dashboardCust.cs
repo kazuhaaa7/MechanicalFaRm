@@ -50,7 +50,6 @@ namespace MechanicalFaRm.App.Views
                 }
             }
 
-            // 2. LABEL NAMA ALAT
             Label lblNama = new Label
             {
                 Text = barang.namaBarang,
@@ -62,7 +61,6 @@ namespace MechanicalFaRm.App.Views
                 AutoEllipsis = true
             };
 
-            // 3. LABEL STOK
             Label lblStok = new Label
             {
                 Text = "Stok: " + barang.stok,
@@ -74,7 +72,6 @@ namespace MechanicalFaRm.App.Views
                 Font = new Font("Arial", 9.5f)
             };
 
-            // 4. LABEL HARGA
             Label lblHarga = new Label
             {
                 Text = "Rp." + barang.hargaSewa + " Juta",
@@ -86,27 +83,25 @@ namespace MechanicalFaRm.App.Views
                 Font = new Font("Arial", 10, FontStyle.Bold)
             };
 
-            // 5. LABEL DESKRIPSI (Diberi batas Height kaku agar tidak menabrak tombol bawah)
             Label lblDeskripsi = new Label
             {
                 Text = barang.deskripsi,
                 Top = lblHarga.Bottom + 8,
                 Left = 10,
                 Width = card.Width - 20,
-                Height = 110, // Mengunci ruang deskripsi setinggi 110px
-                AutoSize = false, // Wajib false agar ukurannya konsisten
-                AutoEllipsis = true, // Otomatis memberi titik-titik (...) jika teks terlalu panjang
+                Height = 110, 
+                AutoSize = false, 
+                AutoEllipsis = true, 
                 Font = new Font("Arial", 9),
                 ForeColor = Color.DimGray
             };
 
-            // ================= TOMBOL DESKRIPSI (KIRI) =================
             Button btnDeskripsi = new Button
             {
                 Text = "Deskripsi",
                 Width = 110,
                 Height = 35,
-                Top = card.Height - 50, // Melekat aman di bagian bawah kartu
+                Top = card.Height - 50, 
                 Left = 15,
                 BackColor = Color.LightGray,
                 ForeColor = Color.Black,
@@ -121,7 +116,6 @@ namespace MechanicalFaRm.App.Views
                 this.Hide();
             };
 
-            // ================= TOMBOL SEWA (KANAN) =================
             Button btnSewa = new Button
             {
                 Text = "Sewa",

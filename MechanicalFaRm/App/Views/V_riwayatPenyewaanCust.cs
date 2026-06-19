@@ -43,8 +43,8 @@ namespace MechanicalFaRm.App.Views
             dt.Columns.Add("Banyak Unit", typeof(int));
             dt.Columns.Add("Harga Sewa", typeof(string));
             dt.Columns.Add("Status", typeof(string));
-            dt.Columns.Add("Total", typeof(string));
             dt.Columns.Add("Durasi", typeof(string));
+            dt.Columns.Add("Total", typeof(string));
 
             foreach (var item in listBarang)
             {
@@ -53,8 +53,8 @@ namespace MechanicalFaRm.App.Views
                 item.jumlah,
                 $"{item.hargaSewa} Juta",
                 item.status,
-                $"{item.total} Juta",
-                $"{item.Durasi} Hari");
+                $"{item.Durasi} Hari",
+                $"{item.total} Juta");
             }
 
 
@@ -63,7 +63,7 @@ namespace MechanicalFaRm.App.Views
 
 
             dataGridView1.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
-            dataGridView1.ReadOnly = false;
+            dataGridView1.ReadOnly = true;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.AllowUserToAddRows = false;
 

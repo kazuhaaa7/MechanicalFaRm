@@ -33,7 +33,6 @@ namespace MechanicalFaRm.App.Views
             keranjang = new List<(M_barang, int)>();
 
             LoadDeskripsi();
-            //UpdateRingkasan();
         }
 
 
@@ -85,7 +84,7 @@ namespace MechanicalFaRm.App.Views
             Label lblNama = new Label
             {
                 Text = produk.namaBarang,
-                Top = pic.Bottom + 10,
+                Top = pic.Bottom + 15,
                 Left = 10,
                 Width = card.Width - 20,
                 Font = new Font("Arial", 10, FontStyle.Bold),
@@ -107,7 +106,7 @@ namespace MechanicalFaRm.App.Views
                 Top = lblStok.Bottom + 5,
                 Left = 10,
                 Width = card.Width - 20,
-                ForeColor = Color.DarkGreen,
+                ForeColor = Color.Black,
                 Font = new Font("Arial", 10, FontStyle.Bold)
             };
 
@@ -120,8 +119,8 @@ namespace MechanicalFaRm.App.Views
                 Height = 50,
                 AutoSize = false,
                 MaximumSize = new Size(card.Width - 20, 50),
-                Font = new Font("Arial", 9),
-                ForeColor = Color.DimGray
+                Font = new Font("Arial", 10),
+                ForeColor = Color.Black
             };
 
             card.Controls.Add(lblDeskripsi);
@@ -130,33 +129,97 @@ namespace MechanicalFaRm.App.Views
             card.Controls.Add(lblStok);
             card.Controls.Add(lblHarga);
 
-            Button btnPesan = new Button
+            Button btnDeskripsi = new Button
             {
-                Text = "Pesan",
+                Text = "Deskripsi",
                 Width = 120,
                 Height = 35,
                 Top = card.Height - 60,
                 Left = (card.Width - 120) / 2,
-                BackColor = Color.MediumSeaGreen,
-                ForeColor = Color.White,
-                FlatStyle = FlatStyle.Flat
+                BackColor = Color.LightGray,
+                ForeColor = Color.Black,
+                Font = new Font("Arial", 9.5F, FontStyle.Bold),
+                FlatStyle = FlatStyle.Flat,
+                FlatAppearance = { BorderSize = 0 }
             };
 
-            //btnPesan.Click += (s, e) =>
-            //{
-            //    if (produk.s <= 0)
-            //    {
-            //        MessageBox.Show("Maaf, stok produk habis!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //        return;
-            //    }
+            btnDeskripsi.Click += (s, e) =>
+            {
 
-            //    TambahKeKeranjang(produk);
-            //    UpdateRingkasan();
-            //};
+                TampilkanDetail(produk);
+            };
 
-            //card.Controls.Add(btnPesan);
+            card.Controls.Add(btnDeskripsi);
+
 
             return card;
+        }
+
+
+        private void TampilkanDetail(M_barang produk)
+        {
+            panelRingkasan.Controls.Clear();
+
+            Label lblJudul = new Label
+            {
+                Text = "DETAIL ALAT",
+                Top = 10,
+                Left = 10,
+                Width = panelRingkasan.Width - 20,
+                Font = new Font("Arial", 14, FontStyle.Bold),
+                ForeColor = Color.Black
+            };
+
+            Label lblNama = new Label
+            {
+                Text = $"Nama: {produk.namaBarang}",
+                Top = lblJudul.Bottom + 15,
+                Left = 10,
+                Width = panelRingkasan.Width - 20,
+                Font = new Font("Arial", 11, FontStyle.Regular)
+            };
+
+            Label lblStok = new Label
+            {
+                Text = $"Stok Tersedia: {produk.stok}",
+                Top = lblNama.Bottom + 5,
+                Left = 10,
+                Width = panelRingkasan.Width - 20,
+                Font = new Font("Arial", 11, FontStyle.Regular)
+            };
+
+            Label lblHarga = new Label
+            {
+                Text = $"Harga: Rp {produk.hargaSewa} Juta",
+                Top = lblStok.Bottom + 5,
+                Left = 10,
+                Width = panelRingkasan.Width - 20,
+                Font = new Font("Arial", 12, FontStyle.Bold),
+                ForeColor = Color.Black
+            };
+
+            Label lblLabelDeskripsi = new Label
+            {
+                Text = "Deskripsi:",
+                Top = lblHarga.Bottom + 15,
+                Left = 10,
+                Font = new Font("Arial", 11, FontStyle.Underline)
+            };
+
+            Label lblIsiDeskripsi = new Label
+            {
+                Text = produk.deskripsi,
+                Top = lblLabelDeskripsi.Bottom + 5,
+                Left = 10,
+                Width = panelRingkasan.Width - 25,
+                Height = 150, 
+                Font = new Font("Arial", 10, FontStyle.Italic),
+                ForeColor = Color.DimGray,
+            };
+
+            panelRingkasan.Controls.AddRange(new Control[] {
+        lblJudul, lblNama, lblStok, lblHarga, lblLabelDeskripsi, lblIsiDeskripsi
+    });
         }
     }
 }

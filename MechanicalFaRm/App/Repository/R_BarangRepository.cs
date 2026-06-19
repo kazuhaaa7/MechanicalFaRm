@@ -10,10 +10,10 @@ using System.Threading.Tasks;
 
 namespace MechanicalFaRm.App.Repository
 {
-    internal class R_BarangRepository 
+    internal class R_BarangRepository  
     {
 
-        public List<M_barang> GetListBarang() //public: supaya bisa diakses lewat class interface(IBarangRepo)  
+        public List<M_barang> GetListBarang()   
         { 
             var daftarBarang = new List<M_barang>();
             try
@@ -21,7 +21,8 @@ namespace MechanicalFaRm.App.Repository
                 using var conn = dbconnect.GetConn();
                 conn.Open();
 
-                string rawsql = "SELECT * FROM barang ORDER BY id_barang ASC";
+                string rawsql = @"SELECT id_barang, nama_barang, deskripsi, harga_sewa, stok, foto_barang 
+                          FROM barang ORDER BY id_barang ASC";
                 using var cmd = new NpgsqlCommand(rawsql, conn);
                 using var reader = cmd.ExecuteReader();
 
@@ -29,12 +30,12 @@ namespace MechanicalFaRm.App.Repository
                 {
                     daftarBarang.Add(new M_barang
                     {
-                        id_barang = reader.GetInt32(0),
-                        namaBarang = reader.GetString(1),
-                        deskripsi = reader.GetString(2),
-                        hargaSewa = reader.GetInt32(3),
-                        stok = reader.GetInt32(4),
-                        fotoBarang = reader["foto_barang"] == DBNull.Value ? null : (byte[])reader["foto_barang"]
+                        id_barang = reader.GetInt32(reader.GetOrdinal("id_barang")),
+                        namaBarang = reader.GetString(reader.GetOrdinal("nama_barang")),
+                        deskripsi = reader.IsDBNull(reader.GetOrdinal("deskripsi")) ? "" : reader.GetString(reader.GetOrdinal("deskripsi")),
+                        hargaSewa = reader.GetInt32(reader.GetOrdinal("harga_sewa")),
+                        stok = reader.GetInt32(reader.GetOrdinal("stok")),
+                        fotoBarang = reader.IsDBNull(reader.GetOrdinal("foto_barang")) ? null : (byte[])reader["foto_barang"]
                     });
                 }
 
@@ -78,7 +79,7 @@ namespace MechanicalFaRm.App.Repository
             using var conn = dbconnect.GetConn();
             conn.Open();
 
-            string rawsql = "SELECT * FROM barang WHERE id_barang = @id";
+            string rawsql = "SELECT id_barang, nama_barang, deskripsi, harga_sewa, stok FROM barang WHERE id_barang = @id";
             using var cmd = new NpgsqlCommand(rawsql, conn);
             cmd.Parameters.AddWithValue("id", id);
 
@@ -208,5 +209,10 @@ namespace MechanicalFaRm.App.Repository
             }
 
         }
+
+
+
+
+
     }
 }

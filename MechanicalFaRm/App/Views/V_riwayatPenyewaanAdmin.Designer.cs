@@ -36,17 +36,17 @@
             btnDeskripsiAlat = new Button();
             btnProfil = new Button();
             btnLogout = new Button();
-            dgvKelolaAlat = new DataGridView();
+            dgvKelolaSewa = new DataGridView();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvKelolaAlat).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvKelolaSewa).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.Controls.Add(panel2);
-            panel1.Controls.Add(dgvKelolaAlat);
+            panel1.Controls.Add(dgvKelolaSewa);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -138,16 +138,16 @@
             btnLogout.UseVisualStyleBackColor = false;
             btnLogout.Click += btnLogout_Click;
             // 
-            // dgvKelolaAlat
+            // dgvKelolaSewa
             // 
-            dgvKelolaAlat.BackgroundColor = SystemColors.Control;
-            dgvKelolaAlat.BorderStyle = BorderStyle.Fixed3D;
-            dgvKelolaAlat.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvKelolaAlat.Location = new Point(436, 207);
-            dgvKelolaAlat.Name = "dgvKelolaAlat";
-            dgvKelolaAlat.RowHeadersWidth = 51;
-            dgvKelolaAlat.Size = new Size(1430, 817);
-            dgvKelolaAlat.TabIndex = 3;
+            dgvKelolaSewa.BackgroundColor = SystemColors.Control;
+            dgvKelolaSewa.BorderStyle = BorderStyle.None;
+            dgvKelolaSewa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvKelolaSewa.Location = new Point(436, 207);
+            dgvKelolaSewa.Name = "dgvKelolaSewa";
+            dgvKelolaSewa.RowHeadersWidth = 51;
+            dgvKelolaSewa.Size = new Size(1430, 817);
+            dgvKelolaSewa.TabIndex = 3;
             // 
             // V_riwayatPenyewaanAdmin
             // 
@@ -157,9 +157,10 @@
             Controls.Add(panel1);
             Name = "V_riwayatPenyewaanAdmin";
             Text = "V_riwayatPenyewaanAdmin";
+            Load += V_riwayatPenyewaanAdmin_Load;
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvKelolaAlat).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvKelolaSewa).EndInit();
             ResumeLayout(false);
         }
 
@@ -173,5 +174,6 @@
         private Button btnDeskripsiAlat;
         private Button btnProfil;
         private Button btnLogout;
+        private DataGridView dgvKelolaSewa;
     }
 }

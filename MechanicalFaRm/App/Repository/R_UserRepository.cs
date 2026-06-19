@@ -110,7 +110,7 @@ namespace MechanicalFaRm.App.Repository
         {
             using var conn = dbconnect.GetConn();  
             conn.Open();
-            string rawsql = @"INSERT INTO public.user (username, password, no_telp, email) 
+            string rawsql = @"INSERT INTO ""user"" (username, password, no_telp, email) 
             VALUES(@u, @p, @n, @e)";
             using var cmd = new NpgsqlCommand(rawsql, conn);
             cmd.Parameters.AddWithValue("@u", user.username);
@@ -157,22 +157,22 @@ namespace MechanicalFaRm.App.Repository
             using var conn = dbconnect.GetConn();
             conn.Open();
 
-            string rawsql = @"SELECT * FROM public.user WHERE role='customer'";
+            string rawsql = @"SELECT * FROM ""user"" WHERE role='customer'";
             using var cmd = new NpgsqlCommand(rawsql, conn);
             using var reader = cmd.ExecuteReader();
             
-            if (!reader.Read()) return null;
 
             while (reader.Read())
             {
                 daftarAdmin.Add(new M_user
                 {
                     _id_user = reader.GetInt32(0),
-                    username = reader.GetString(1),
-                    password = reader.GetString(2),
-                    no_telepon = reader.GetString(3),
-                    email = reader.GetString(4),
-                    role = reader.GetString(5)
+                    namaPenyewa = reader.GetString(1),
+                    username = reader.GetString(2),
+                    password = reader.GetString(3),
+                    no_telepon = reader.GetString(4),
+                    email = reader.GetString(5),
+                    role = reader.GetString(6)
                 });
             }
             return daftarAdmin;

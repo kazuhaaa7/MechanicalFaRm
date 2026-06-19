@@ -74,7 +74,7 @@
             // 
             lblTotalHarga.AutoSize = true;
             lblTotalHarga.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotalHarga.Location = new Point(29, 807);
+            lblTotalHarga.Location = new Point(29, 504);
             lblTotalHarga.Name = "lblTotalHarga";
             lblTotalHarga.Size = new Size(104, 41);
             lblTotalHarga.TabIndex = 3;
@@ -84,15 +84,15 @@
             // cbMetodeBayar
             // 
             cbMetodeBayar.FormattingEnabled = true;
-            cbMetodeBayar.Location = new Point(328, 821);
+            cbMetodeBayar.Location = new Point(448, 514);
             cbMetodeBayar.Name = "cbMetodeBayar";
-            cbMetodeBayar.Size = new Size(182, 28);
+            cbMetodeBayar.Size = new Size(207, 28);
             cbMetodeBayar.TabIndex = 4;
             cbMetodeBayar.Click += cbMetodeBayar_Click;
             // 
             // btnBayar
             // 
-            btnBayar.Location = new Point(675, 807);
+            btnBayar.Location = new Point(684, 508);
             btnBayar.Name = "btnBayar";
             btnBayar.Size = new Size(127, 38);
             btnBayar.TabIndex = 5;
@@ -102,18 +102,19 @@
             // 
             // flpBarangSewa
             // 
+            flpBarangSewa.FlowDirection = FlowDirection.TopDown;
             flpBarangSewa.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             flpBarangSewa.ForeColor = Color.Black;
             flpBarangSewa.Location = new Point(29, 125);
             flpBarangSewa.Name = "flpBarangSewa";
-            flpBarangSewa.Size = new Size(782, 424);
+            flpBarangSewa.Size = new Size(782, 280);
             flpBarangSewa.TabIndex = 6;
             // 
             // lbl
             // 
             lbl.AutoSize = true;
             lbl.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl.Location = new Point(29, 575);
+            lbl.Location = new Point(33, 423);
             lbl.Name = "lbl";
             lbl.Size = new Size(69, 31);
             lbl.TabIndex = 7;
@@ -121,9 +122,10 @@
             // 
             // tbNamaJalan
             // 
-            tbNamaJalan.Location = new Point(120, 578);
+            tbNamaJalan.Location = new Point(108, 423);
+            tbNamaJalan.Multiline = true;
             tbNamaJalan.Name = "tbNamaJalan";
-            tbNamaJalan.Size = new Size(288, 27);
+            tbNamaJalan.Size = new Size(502, 46);
             tbNamaJalan.TabIndex = 8;
             // 
             // UC_Pembayaran
@@ -141,7 +143,7 @@
             Controls.Add(btnBayar);
             Controls.Add(cbMetodeBayar);
             Name = "UC_Pembayaran";
-            Size = new Size(855, 885);
+            Size = new Size(855, 608);
             ResumeLayout(false);
             PerformLayout();
         }

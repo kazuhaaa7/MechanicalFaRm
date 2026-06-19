@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_deskripsiAlatCust));
             panel1 = new Panel();
-            panelRingkasan = new Panel();
             flp1 = new FlowLayoutPanel();
+            panelRingkasan = new Panel();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -46,19 +46,19 @@
             panel1.Size = new Size(1924, 1082);
             panel1.TabIndex = 0;
             // 
+            // flp1
+            // 
+            flp1.Location = new Point(973, 164);
+            flp1.Name = "flp1";
+            flp1.Size = new Size(883, 862);
+            flp1.TabIndex = 2;
+            // 
             // panelRingkasan
             // 
             panelRingkasan.Location = new Point(439, 164);
             panelRingkasan.Name = "panelRingkasan";
             panelRingkasan.Size = new Size(504, 862);
             panelRingkasan.TabIndex = 0;
-            // 
-            // flp1
-            // 
-            flp1.Location = new Point(973, 164);
-            flp1.Name = "flp1";
-            flp1.Size = new Size(883, 851);
-            flp1.TabIndex = 2;
             // 
             // V_deskripsiAlatCust
             // 
