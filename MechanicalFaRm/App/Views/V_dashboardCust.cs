@@ -161,6 +161,10 @@ namespace MechanicalFaRm.App.Views
 
             foreach (var p in listProduk)
             {
+                if (p.stok < 1)
+                {
+                    continue;
+                }
                 var card = CreateCard(p);
                 flowLayoutPanel1.Controls.Add(card);
             }
@@ -236,9 +240,9 @@ namespace MechanicalFaRm.App.Views
 
         private void btnDeskripsiAlat_Click(object sender, EventArgs e)
         {
-            V_deskripsiAlatCust des =  new V_deskripsiAlatCust(this);
-            des.Show();
-            this.Hide();
+            //    V_deskripsiAlatCust des =  new V_deskripsiAlatCust(this);
+            //    des.Show();
+            //    this.Hide();
         }
     }
 }

@@ -8,14 +8,18 @@ namespace MechanicalFaRm.App.Models
         public int idKeranjang { get; set; } 
         public decimal jumlah;
         public M_user? Penyewa { get; set; }
+        public int Durasi
+        {
+            get
+            {
+                TimeSpan selisih = tglKembali.Date - tglSewa.Date;
 
-        //public M_Keranjang(int idkeranjang, int idusers,
-        //                   int idbarang, decimal jumlah)
-        //{
-        //    this.idKeranjang = idkeranjang;
-        //    this.idUsers = idusers;
-        //    this.idBarang = idbarang;
-        //    this.jumlah = jumlah;
-        //}
+                int totalHari = selisih.Days;
+
+
+                return totalHari <= 0 ? 1 : totalHari;
+            }
+        }
+
     }
 }

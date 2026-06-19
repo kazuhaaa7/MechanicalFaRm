@@ -65,9 +65,7 @@ namespace MechanicalFaRm.App.Views
         {
 
         }
-
-
-        private void EksekusiSimpan(bool isInstantCheckout)
+        private void btnLanjut_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(tbNamaPenyewa.Text))
             {
@@ -76,81 +74,112 @@ namespace MechanicalFaRm.App.Views
                 return;
             }
 
-            int qty = int.TryParse(tbQty.Text, out qty) ? qty : 0;
-            if (qty <= 0)
+            if (!int.TryParse(tbQty.Text, out int qty) || qty <= 0)
             {
                 MessageBox.Show("Jumlah yang disewa minimal harus 1 unit!", "Input Tidak Valid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            var stok = 0;
-            int.TryParse(lblStokAlat.Text, out stok);
+            int.TryParse(lblStokAlat.Text, out int stok);
+            if (stok < qty)
+            {
+                MessageBox.Show("Invalid!! Stok yang ingin dipesan tidak tersedia. Mohon dipertimbangkan lagi", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            DialogResult konfirmasi = MessageBox.Show("Apakah Anda yakin ingin langsung memproses pesanan ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (konfirmasi != DialogResult.Yes) return;
+            int.TryParse(lblHargaAlat.Text, out int hargaBarang);
+            M_Keranjang dataKeranjangBaru = new M_Keranjang
+            {
+                id_barang = idBarang,
+                namaBarang = lblNamaAlat.Text,
+                jumlah = qty,
+                tglSewa = dtpSewa.Value.Date,
+                tglKembali = dtpKembali.Value.Date,
+                hargaSewa = hargaBarang,
+                stok = stok,
+                Penyewa = new M_user() { namaPenyewa = tbNamaPenyewa.Text }
+            };
+
+            string status = pesananService.AddToKeranjang(dataKeranjangBaru);
+            if (!string.Equals(status, "sukses", StringComparison.OrdinalIgnoreCase)) return;
+            C_PesananController pesananControll = new C_PesananController();
+            int idUserYangLogin = SE_userSession.id_user;
+            string hasilCheckout = pesananControll.ProsesInstantCo(dataKeranjangBaru, idUserYangLogin);
+
+            if (string.Equals(hasilCheckout, "sukses", StringComparison.OrdinalIgnoreCase))
+            {
+                MessageBox.Show("Pesanan langsung berhasil dibuat! Menuju ke halaman pembayaran.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                int idPesananTerbaru = pesananService.GetIdPesananTerbaru(idUserYangLogin);
+                M_Pesanan datapesanan = pesananService.GetPesananById(idPesananTerbaru);
+
+                // Best Practice: Memakai 'using' agar Form Pembayaran ter-dispose dengan aman dari RAM
+                using (V_pembayaran formBayar = new V_pembayaran(datapesanan))
+                {
+                    this.Hide();
+                    formBayar.ShowDialog();
+                }
+
+                if (parentForm != null) parentForm.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show(hasilCheckout, "Peringatan Sistem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        private void btnKeranjang_Click(object sender, EventArgs e)
+        {
+            // 1. Validasi Input UI
+            if (string.IsNullOrWhiteSpace(tbNamaPenyewa.Text))
+            {
+                MessageBox.Show("Invalid!! Nama penyewa harus diisi. Mohon diisi kembali.",
+                                "Input Tidak Valid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!int.TryParse(tbQty.Text, out int qty) || qty <= 0)
+            {
+                MessageBox.Show("Jumlah yang disewa minimal harus 1 unit!", "Input Tidak Valid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int.TryParse(lblStokAlat.Text, out int stok);
             if (stok < qty)
             {
                 MessageBox.Show("Invalid!! Stok yang ingin dipesan tidak tersedia. Mohon dipertimbangkan lagi", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Box Konfirmasi
-            string pesanKotak = isInstantCheckout ? "Apakah Anda yakin ingin langsung memproses pesanan ini?" : "Masukkan ke keranjang?";
-            DialogResult konfirmasi = MessageBox.Show(pesanKotak, "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            // 2. Box Konfirmasi Khusus Tambah Keranjang
+            DialogResult konfirmasi = MessageBox.Show("Masukkan ke keranjang?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (konfirmasi != DialogResult.Yes) return;
 
-            if (konfirmasi == DialogResult.Yes)
+            // 3. Mapping Objek Model
+            int.TryParse(lblHargaAlat.Text, out int hargaBarang);
+            M_Keranjang dataKeranjangBaru = new M_Keranjang
             {
-                M_user namaUser = new M_user() { namaPenyewa = tbNamaPenyewa.Text };
-                var hargaBarang = 0;
-                int.TryParse(lblHargaAlat.Text, out hargaBarang);
+                id_barang = idBarang,
+                namaBarang = lblNamaAlat.Text,
+                jumlah = qty,
+                tglSewa = dtpSewa.Value.Date,
+                tglKembali = dtpKembali.Value.Date,
+                hargaSewa = hargaBarang,
+                stok = stok,
+                Penyewa = new M_user() { namaPenyewa = tbNamaPenyewa.Text }
+            };
 
-                DataKeranjangBaru = new M_Keranjang
-                {
-                    id_barang = idBarang,
-                    namaBarang = lblNamaAlat.Text,
-                    jumlah = qty,
-                    tglSewa = dtpSewa.Value.Date,
-                    tglKembali = dtpKembali.Value.Date,
-                    hargaSewa = hargaBarang,
-                    stok = stok,
-                    Penyewa = namaUser
-                };
+            // 4. Proses Tambah Keranjang
+            string status = pesananService.AddToKeranjang(dataKeranjangBaru);
 
-                string status = pesananService.AddToKeranjang(DataKeranjangBaru);
+            if (string.Equals(status, "sukses", StringComparison.OrdinalIgnoreCase))
+            {
+                MessageBox.Show("Berhasil menambahkan data ke keranjang", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                if (status.ToLower() == "sukses")
-                {
-                    if (isInstantCheckout)
-                    {
-                        C_PesananController pesananControll = new C_PesananController();
-                        int idUserYangLogin = SE_userSession.id_user;
-
-                        string hasilCheckout = pesananControll.ProsesInstantCo(DataKeranjangBaru, idUserYangLogin);
-
-                        if (hasilCheckout == "Sukses")
-                        {
-                            MessageBox.Show("Pesanan berhasil dibuat secara langsung! Silakan lakukan pembayaran.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            if (parentForm != null) parentForm.Show();
-                            this.Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show(hasilCheckout, "Peringatan Sistem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Berhasil menambahkan data ke keranjang", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        if (parentForm != null) parentForm.Show();
-                        this.Close();
-                    }
-                }
+                if (parentForm != null) parentForm.Show();
+                this.Close();
             }
-        }
-        private void btnLanjut_Click(object sender, EventArgs e)
-        {
-            EksekusiSimpan(isInstantCheckout: true);
-        }
-        private void btnKeranjang_Click(object sender, EventArgs e)
-        {
-            EksekusiSimpan(isInstantCheckout: false);
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)

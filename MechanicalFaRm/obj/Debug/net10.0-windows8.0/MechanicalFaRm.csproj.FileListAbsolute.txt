@@ -7,6 +7,7 @@ C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\bin\Debug\net10.0-wind
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\bin\Debug\net10.0-windows8.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\bin\Debug\net10.0-windows8.0\Npgsql.dll
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net10.0-windows8.0\MechanicalFaRm.csproj.AssemblyReference.cache
+C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net10.0-windows8.0\MechanicalFaRm.App.Views.UC_Pembayaran.resources
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net10.0-windows8.0\MechanicalFaRm.App.Views.V_dashboardCust.resources
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net10.0-windows8.0\MechanicalFaRm.App.Views.V_deskripsiAlat.resources
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net10.0-windows8.0\MechanicalFaRm.App.Views.V_deskripsiAlatCust.resources
@@ -17,6 +18,7 @@ C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net10.0-wind
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net10.0-windows8.0\MechanicalFaRm.App.Views.V_keranjangCust.resources
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net10.0-windows8.0\MechanicalFaRm.App.Authh.V_login.resources
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net10.0-windows8.0\MechanicalFaRm.App.Views.v_mainForm.resources
+C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net10.0-windows8.0\MechanicalFaRm.App.Views.V_pembayaran.resources
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net10.0-windows8.0\MechanicalFaRm.App.Views.V_popupBarang.resources
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net10.0-windows8.0\MechanicalFaRm.App.Views.V_profileCust.resources
 C:\Users\ADVAN\source\repos\MechanicalFaRm\MechanicalFaRm\obj\Debug\net10.0-windows8.0\MechanicalFaRm.App.Views.V_profleAdmin.resources

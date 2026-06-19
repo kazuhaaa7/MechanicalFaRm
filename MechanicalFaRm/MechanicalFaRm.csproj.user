@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="App\Views\UC_Pembayaran.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="App\Views\V_dashboardCust.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -26,6 +29,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="App\Views\V_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="App\Views\V_pembayaran.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="App\Views\V_popupBarang.cs">

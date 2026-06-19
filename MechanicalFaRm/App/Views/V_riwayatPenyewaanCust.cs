@@ -39,26 +39,22 @@ namespace MechanicalFaRm.App.Views
             var listBarang = detail;
 
             DataTable dt = new DataTable();
-            dt.Columns.Add("Penyewaan", typeof(int));
             dt.Columns.Add("Nama Alat", typeof(string));
             dt.Columns.Add("Banyak Unit", typeof(int));
-            dt.Columns.Add("Harga Sewa *satuan juta", typeof(int));
+            dt.Columns.Add("Harga Sewa", typeof(string));
             dt.Columns.Add("Status", typeof(string));
-            dt.Columns.Add("Total", typeof(int));
-            dt.Columns.Add("Tanggal Sewa", typeof(DateTime));
-            dt.Columns.Add("Tanggal Kembali", typeof(DateTime));
+            dt.Columns.Add("Total", typeof(string));
+            dt.Columns.Add("Durasi", typeof(string));
 
             foreach (var item in listBarang)
             {
                 dt.Rows.Add(
-                item.id_pesanan,
                 item.namaBarang,
                 item.jumlah,
-                item.hargaSewa,
+                $"{item.hargaSewa} Juta",
                 item.status,
-                item.total,
-                item.tglSewa,
-                item.tglKembali);
+                $"{item.total} Juta",
+                $"{item.Durasi} Hari");
             }
 
 
@@ -101,8 +97,8 @@ namespace MechanicalFaRm.App.Views
 
         private void btnDeskripsiAlat_Click(object sender, EventArgs e)
         {
-            new V_deskripsiAlatCust(this).Show();
-            this.Hide();
+            //new V_deskripsiAlatCust(this).Show();
+            //this.Hide();
         }
 
         private void btnProfil_Click(object sender, EventArgs e)

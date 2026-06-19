@@ -151,11 +151,12 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(421, 203);
+            dataGridView1.Location = new Point(447, 203);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1447, 834);
+            dataGridView1.Size = new Size(1400, 806);
             dataGridView1.TabIndex = 1;
             // 
             // V_riwayatPenyewaanCust

@@ -48,30 +48,22 @@ namespace MechanicalFaRm.App.Views
 
         private void RefreshData()
         {
-            var isiKeranjang = _servicePesanan.GetListKeranjang();
+            var isiKeranjang = _servicePesanan.GetListKeranjang(SE_userSession.id_user);
             DataTable datak = new DataTable();
-            datak.Columns.Add("id barang", typeof(int));
-            datak.Columns.Add("Nama Alat", typeof(string));
-            datak.Columns.Add("Stok", typeof(int));
-            datak.Columns.Add("Jumlah Alat", typeof(int));
-            datak.Columns.Add("Harga Alat", typeof(int));
-            datak.Columns.Add("Tanggal Sewa", typeof(DateTime));
-            datak.Columns.Add("Tanggal Kembali", typeof(DateTime));
-            datak.Columns.Add("Harga", typeof(int));
             datak.Columns.Add("Nama Penyewa", typeof(string));
+            datak.Columns.Add("Nama Alat", typeof(string));
+            datak.Columns.Add("Jumlah Alat", typeof(int));
+            datak.Columns.Add("Harga Alat", typeof(string));
+            datak.Columns.Add("Durasi", typeof(string));
 
             foreach (var item in isiKeranjang)
             {
                 datak.Rows.Add(
-                item.id_barang,
+                item.Penyewa.namaPenyewa,
                 item.namaBarang,
-                item.stok,
                 item.jumlah,
-                item.hargaSewa,
-                item.tglSewa,
-                item.tglKembali,
-                item.hargaSewa,
-                item.Penyewa.namaPenyewa);
+                $"{item.hargaSewa} "+ "Juta",
+                $"{item.Durasi} Hari");
             }
             dgvKeranjang.DataSource = null;
             dgvKeranjang.DataSource = datak;
@@ -138,25 +130,45 @@ namespace MechanicalFaRm.App.Views
             this.Close();
         }
 
-            private void btnSubmit_Click(object sender, EventArgs e)
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            // 1. Validasi konfirmasi dari user menggunakan Guard Clause (rata kiri)
+            DialogResult konfirmasi = MessageBox.Show(
+                "Apakah Anda yakin ingin memproses pesanan ini?",
+                "Konfirmasi",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (konfirmasi != DialogResult.Yes) return;
+
+            // 2. Ambil ID session user yang sedang aktif
+            int idUserYangLogin = SE_userSession.id_user;
+            string hasil = _pesananControll.ProsesCo(idUserYangLogin);
+
+            // 3. Pengecekan status sukses (mengabaikan sensitivitas huruf kapital)
+            if (string.Equals(hasil, "sukses", StringComparison.OrdinalIgnoreCase))
             {
-                DialogResult konfirmasi = MessageBox.Show("Apakah Anda yakin ingin memproses pesanan ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                MessageBox.Show("Pesanan berhasil dibuat! Silakan lakukan pembayaran.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                if (konfirmasi == DialogResult.Yes)
+                // 4. Ambil data invoice pesanan terbaru untuk dikirim ke Form Pembayaran
+                int idPesananTerbaru = _servicePesanan.GetIdPesananTerbaru(idUserYangLogin);
+                M_Pesanan datapesanan = _servicePesanan.GetPesananById(idPesananTerbaru);
+
+                // 5. Buka Form Pembayaran dengan aman di dalam blok 'using' (Indentasi rapi)
+                using (V_pembayaran formBayar = new V_pembayaran(datapesanan))
                 {
-                    int idUserYangLogin = SE_userSession.id_user;
-                    string hasil = _pesananControll.ProsesCo(idUserYangLogin);
-
-                    if (hasil == "Sukses")
-                    {
-                        MessageBox.Show("Pesanan berhasil dibuat! Silakan lakukan pembayaran.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        RefreshData(); // Panggil ini agar tabel GridView langsung bersih/kosong
-                    }
-                    else
-                    {
-                        MessageBox.Show(hasil, "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
+                    formBayar.ShowDialog();
                 }
+
+                // 6. Refresh GridView/Tabel keranjang setelah pembayaran ditutup
+                RefreshData();
+            }
+            else
+            {
+                // Menampilkan pesan gagal yang dikirim oleh controller
+                MessageBox.Show(hasil, "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+    }
     }

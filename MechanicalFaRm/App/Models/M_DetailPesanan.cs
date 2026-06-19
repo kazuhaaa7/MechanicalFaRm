@@ -9,11 +9,19 @@
         public decimal subtotal { get; set; }
         public DateTime tglSewa { get; set; }
         public DateTime tglKembali { get; set; }
+        public int Durasi
+        {
+            get
+            {
+                TimeSpan selisih = tglKembali.Date - tglSewa.Date;
 
-        //public M_DetailPesanan(int jumlah, decimal subtotal)
-        //{
-        //    this.jumlah = jumlah;
-        //    this.subtotal = subtotal;
-        //}
+                int totalHari = selisih.Days;
+
+
+                return totalHari <= 0 ? 1 : totalHari;
+            }
+        }
+
+
     }
 }

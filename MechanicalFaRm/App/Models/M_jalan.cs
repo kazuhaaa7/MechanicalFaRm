@@ -4,7 +4,8 @@ using System.Text;
 
 namespace MechanicalFaRm.App.Models
 {
-    internal class M_jalan
+    public class M_jalan
     {
+        public string Jalan { get; set; }
     }
 }

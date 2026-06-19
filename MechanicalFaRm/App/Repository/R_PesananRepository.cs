@@ -54,6 +54,10 @@ namespace MechanicalFaRm.App.Repository
 
         }
 
+        public List<M_Keranjang> GetListKeranjang(int id)
+        {
+            return listKeranjang;
+        }
         public string GetNamaPenyewaLama(int idUser)
         {
             using var conn = dbconnect.GetConn(); // Sesuaikan dengan helper database milikmu
@@ -71,7 +75,6 @@ namespace MechanicalFaRm.App.Repository
 
         public string AddToKeranjang(M_Keranjang itemkeranjang)
         {
-            // Validasi tanggal sewa dan kembali
 
 
             if (itemkeranjang.tglKembali < itemkeranjang.tglSewa)
@@ -92,5 +95,57 @@ namespace MechanicalFaRm.App.Repository
             listKeranjang.Add(itemkeranjang);
             return "sukses";
         }
+
+        //public M_Struk GetStrukData(int idPesanan)
+        //{
+        //    M_Struk struk = new M_Struk();
+        //    using var conn = dbconnect.GetConn(); // Sesuaikan dengan helper DB-mu
+        //    conn.Open();
+
+        //    // 1. QUERY INDUK: Ambil data pesanan dan nama dari tabel users
+        //    // ⚠️ GANTI 'users' dan 'nama_kolom_di_db' sesuai nama asli di DB-mu!
+        //    string sqlInduk = @"SELECT p.id_pesanan, u.nama_kolom_di_db, p.status, p.""totalBayar"" 
+        //                        FROM pesanan p
+        //                        JOIN users u ON p.id_user = u.id_user
+        //                        WHERE p.id_pesanan = @id_pesanan";
+
+        //    using (var cmd = new NpgsqlCommand(sqlInduk, conn))
+        //    {
+        //        cmd.Parameters.AddWithValue("@id_pesanan", idPesanan);
+        //        using var reader = cmd.ExecuteReader();
+        //        if (reader.Read())
+        //        {
+        //            struk.id_pesanan = reader.GetInt32(0);
+        //            struk.namaPenyewa = reader.GetString(1);
+        //            struk.status = reader.GetString(2);
+        //            struk.totalBayar = reader.GetDecimal(3);
+        //        }
+        //    }
+
+        //    // 2. QUERY ANAK: Ambil rincian barang yang disewa di dalam pesanan tersebut
+        //    string sqlAnak = @"SELECT b.nama_barang, dp.jumlah, dp.subtotal, dp.tanggal_sewa, dp.tanggal_kembali 
+        //                       FROM detail_pesanan dp
+        //                       JOIN barang b ON dp.id_barang = b.id_barang
+        //                       WHERE dp.id_pesanan = @id_pesanan";
+
+        //    using (var cmdAnak = new NpgsqlCommand(sqlAnak, conn))
+        //    {
+        //        cmdAnak.Parameters.AddWithValue("@id_pesanan", idPesanan);
+        //        using var readerAnak = cmdAnak.ExecuteReader();
+        //        while (readerAnak.Read())
+        //        {
+        //            struk.detailBarang.Add(new M_DetailStrukBarang
+        //            {
+        //                namaBarang = readerAnak.GetString(0),
+        //                jumlah = readerAnak.GetInt32(1),
+        //                subtotal = readerAnak.GetDecimal(2),
+        //                tglSewa = readerAnak.GetDateTime(3),
+        //                tglKembali = readerAnak.GetDateTime(4)
+        //            });
+        //        }
+        //    }
+
+        //    return struk;
+        //}
     }
 }

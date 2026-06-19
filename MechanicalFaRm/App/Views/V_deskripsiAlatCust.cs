@@ -1,6 +1,7 @@
 ﻿using MechanicalFaRm.App.Controllers;
 using MechanicalFaRm.App.Models;
 using MechanicalFaRm.App.Session;
+using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,100 +14,149 @@ namespace MechanicalFaRm.App.Views
 {
     public partial class V_deskripsiAlatCust : Form
     {
-        private C_loginAuthController logout;
-        private C_barangController ctrlBarang;
-        private V_dashboardCust parentForm;
-        private M_barang showBarang;
-        private byte[]? fotoByte = null;
-        private V_riwayatPenyewaanCust v_riwayatPenyewaanCust;
-        private V_profileCust v_profileCust;
-
-        public V_deskripsiAlatCust(V_dashboardCust parent, M_barang? barang = null)
+        C_barangController c_barang;
+        private int? userId;
+        private List<(M_barang produk, int jumlah)> keranjang;
+        private V_dashboardCust parent;
+        public V_deskripsiAlatCust(V_dashboardCust parentform, M_barang barang)
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
-            parentForm = parent;
-            ctrlBarang = new C_barangController();
-            showBarang = barang;
-            logout = new C_loginAuthController();
+            parent = parentform;
 
-            btnPicture.Text = "";
-            btnPicture.SizeMode = PictureBoxSizeMode.Zoom;
-            btnPicture.BorderStyle = BorderStyle.FixedSingle;
+            flp1.AutoScroll = true;
+            flp1.FlowDirection = FlowDirection.LeftToRight;
+            flp1.WrapContents = true;
 
-            if (showBarang != null)
+            c_barang = new C_barangController();
+            userId = SE_userSession.id_user; ;
+            keranjang = new List<(M_barang, int)>();
+
+            LoadDeskripsi();
+            //UpdateRingkasan();
+        }
+
+
+        public void LoadDeskripsi()
+        {
+            flp1.Controls.Clear();
+
+            var listProduk = c_barang.GetBarangList();
+
+            foreach (var p in listProduk)
             {
-                tbNamaBarang.Text = showBarang.namaBarang;
-                tbStok.Text = showBarang.stok.ToString();
+                if (p.stok <= 0)
+                    continue;
+
+                var card = CreateCard(p);
+                flp1.Controls.Add(card);
             }
-            else
-            {
-                tbStok.Text = "0";
-            }
-            tbStok.ReadOnly = true;
+        }
 
-            if (showBarang != null)
+        private Panel CreateCard(M_barang produk)
+        {
+            Panel card = new Panel
             {
-                tbHarga.Text = showBarang.hargaSewa.ToString();
-                rtbDeskripsi.Text = showBarang.deskripsi;
-                tbHarga.ReadOnly = true;
-                rtbDeskripsi.ReadOnly = true;
+                Width = 260,
+                Height = 380,
+                BorderStyle = BorderStyle.FixedSingle,
+                Margin = new Padding(10),
+                BackColor = Color.White
+            };
 
-                try
+            PictureBox pic = new PictureBox
+            {
+                Width = card.Width - 20,
+                Height = 140,
+                Top = 10,
+                Left = 10,
+                SizeMode = PictureBoxSizeMode.Zoom,
+                BorderStyle = BorderStyle.FixedSingle
+            };
+
+            if (produk.fotoBarang != null)
+            {
+                using (var ms = new MemoryStream(produk.fotoBarang))
                 {
-                    using var ms = new MemoryStream(showBarang.fotoBarang);
-                    btnPicture.Image = new Bitmap(ms);
-                    fotoByte = showBarang.fotoBarang;
-                }
-                catch
-                {
-                    btnPicture.Image = null;
-                    fotoByte = null;
+                    pic.Image = Image.FromStream(ms);
                 }
             }
-        }
 
-        public V_deskripsiAlatCust( V_riwayatPenyewaanCust v_riwayatPenyewaanCust)
-        {
-            this.v_riwayatPenyewaanCust = v_riwayatPenyewaanCust;
-        }
+            Label lblNama = new Label
+            {
+                Text = produk.namaBarang,
+                Top = pic.Bottom + 10,
+                Left = 10,
+                Width = card.Width - 20,
+                Font = new Font("Arial", 10, FontStyle.Bold),
+                AutoEllipsis = true
+            };
 
-        public V_deskripsiAlatCust(V_profileCust v_profileCust)
-        {
-            this.v_profileCust = v_profileCust;
-        }
+            Label lblStok = new Label
+            {
+                Text = "Stok: " + produk.stok,
+                Top = lblNama.Bottom + 5,
+                Left = 10,
+                Width = card.Width - 20,
+                ForeColor = produk.stok == 0 ? Color.Red : Color.Black
+            };
 
-        private void btnDasboard_Click(object sender, EventArgs e)
-        {
-            parentForm.Show();
-            this.Close();
-        }
+            Label lblHarga = new Label
+            {
+                Text = "Harga: Rp." + produk.hargaSewa,
+                Top = lblStok.Bottom + 5,
+                Left = 10,
+                Width = card.Width - 20,
+                ForeColor = Color.DarkGreen,
+                Font = new Font("Arial", 10, FontStyle.Bold)
+            };
 
-        private void btnProfile_Click(object sender, EventArgs e)
-        {
-            int id = SE_userSession.id_user;
-            V_profileCust profile = new V_profileCust(id);
-            profile.Show();
-            this.Hide();
-        }
+            Label lblDeskripsi = new Label
+            {
+                Text = produk.deskripsi,
+                Top = lblHarga.Bottom + 5,
+                Left = 10,
+                Width = card.Width - 20,
+                Height = 50,
+                AutoSize = false,
+                MaximumSize = new Size(card.Width - 20, 50),
+                Font = new Font("Arial", 9),
+                ForeColor = Color.DimGray
+            };
 
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            logout.Logout(this);
-        }
- 
+            card.Controls.Add(lblDeskripsi);
+            card.Controls.Add(pic);
+            card.Controls.Add(lblNama);
+            card.Controls.Add(lblStok);
+            card.Controls.Add(lblHarga);
 
-        private void btnRiwayatPenyewaan_Click(object sender, EventArgs e)
-        {
-            V_riwayatPenyewaanCust riwayatPembelian = new V_riwayatPenyewaanCust();
-            riwayatPembelian.Show();
-            this.Hide();
-        }
+            Button btnPesan = new Button
+            {
+                Text = "Pesan",
+                Width = 120,
+                Height = 35,
+                Top = card.Height - 60,
+                Left = (card.Width - 120) / 2,
+                BackColor = Color.MediumSeaGreen,
+                ForeColor = Color.White,
+                FlatStyle = FlatStyle.Flat
+            };
 
-        private void btnKeranjang_Click(object sender, EventArgs e)
-        {
-            new V_keranjangCust().Show();
-            this.Close();
+            //btnPesan.Click += (s, e) =>
+            //{
+            //    if (produk.s <= 0)
+            //    {
+            //        MessageBox.Show("Maaf, stok produk habis!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //        return;
+            //    }
+
+            //    TambahKeKeranjang(produk);
+            //    UpdateRingkasan();
+            //};
+
+            //card.Controls.Add(btnPesan);
+
+            return card;
         }
     }
 }
