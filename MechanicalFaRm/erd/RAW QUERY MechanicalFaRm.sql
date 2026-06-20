@@ -1,107 +1,63 @@
-insert into barang()
-select * from public.barang
-CREATE TABLE public.user
-    ( 
-     id_user serial PRIMARY KEY NOT NULL , 
-     username VARCHAR(100)  NOT NULL , 
-     password VARCHAR(255)  NOT NULL , 
-     no_telp  varchar(15) not null UNIQUE,
-	 email varchar(100) not null,
-	 role varchar(10) not null check(role  
-	 in ('customer', 'admin')) default 'customer',
-     nama varchar(255)
-    );
+-- 1. Tabel User (Sudah ada, tapi ini struktur minimal yang diperlukan)
+CREATE TABLE IF NOT EXISTS "user" (
+    id_user SERIAL PRIMARY KEY,
+	username VARCHAR(100) UNIQUE NOT NULL,
+    nama VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+	no_telp VARCHAR(15) UNIQUE NOT NULL,
+	role VARCHAR(20) NOT NULL DEFAULT 'customer'
+);
 
 
-CREATE TABLE barang 
-    ( 
-     id_barang   serial PRIMARY KEY NOT NULL , 
-     nama_barang VARCHAR(100)  NOT NULL , 
-     deskripsi   text not null, 
-     harga_sewa  INT not null, 
-     stok NUMERIC not null,
-     foto_barang bytea
+-- 2. Tabel Barang (Katalog alat)
+CREATE TABLE IF NOT EXISTS barang (
+    id_barang SERIAL PRIMARY KEY,
+    nama_barang VARCHAR(100) NOT NULL,
+    harga_sewa INT NOT NULL,
+    stok INT NOT NULL,
+	foto_barang BYTEA NOT NULL, 
+	deskripsi TEXT NOT NULL
+);
 
-    ) 
-;
+-- 3. Tabel Keranjang (Data sementara untuk tiap user)
+CREATE TABLE IF NOT EXISTS keranjang (
+    id_keranjang SERIAL PRIMARY KEY,
+    id_user INT REFERENCES "user"(id_user) ON DELETE CASCADE,
+    id_barang INT REFERENCES barang(id_barang) ON DELETE CASCADE,
+    jumlah INT NOT NULL,
+    tgl_sewa DATE NOT NULL,
+    tgl_kembali DATE NOT NULL
+);
 
+-- 4. Tabel Pesanan (Header transaksi)
+CREATE TABLE IF NOT EXISTS pesanan (
+    id_pesanan SERIAL PRIMARY KEY,
+    id_user INT REFERENCES "user"(id_user),
+    status VARCHAR(50) DEFAULT 'Menunggu Verifikasi',
+    total_bayar INT NOT NULL,
+    dibuat TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	alamat_jalan VARCHAR(255) NOT NULL
+);
 
-CREATE TABLE detail_pesanan 
-    ( 
-     id_detail_pesanan SERIAL PRIMARY KEY NOT NULL , 
-     id_pesanan INT  NOT NULL , 
-     id_barang INT NOT NULL , 
-     jumlah INT  NOT NULL , 
-     subtotal NUMERIC NOT NULL,
-     tanggal_sewa DATE NOT NULL,
-     tanggal_kembali DATE NOT NULL
-    ) 
-;
+-- 5. Tabel Detail Pesanan (Isi barang yang disewa)
+CREATE TABLE IF NOT EXISTS detail_pesanan (
+    id_detail SERIAL PRIMARY KEY,
+    id_pesanan INT REFERENCES pesanan(id_pesanan) ON DELETE CASCADE,
+    id_barang INT REFERENCES barang(id_barang),
+    jumlah INT NOT NULL,
+    tanggal_sewa DATE NOT NULL,
+    tanggal_kembali DATE NOT NULL,
+	sub_total INTEGER NOT NULL
+);
 
+-- Relasi untuk Keranjang
+ALTER TABLE keranjang ADD CONSTRAINT fk_keranjang_user FOREIGN KEY (id_user) REFERENCES "user"(id_user) ON DELETE CASCADE;
+ALTER TABLE keranjang ADD CONSTRAINT fk_keranjang_barang FOREIGN KEY (id_barang) REFERENCES barang(id_barang) ON DELETE CASCADE;
 
+-- Relasi untuk Pesanan
+ALTER TABLE pesanan ADD CONSTRAINT fk_pesanan_user FOREIGN KEY (id_user) REFERENCES "user"(id_user);
 
-CREATE TABLE pesanan 
-    ( 
-     id_pesanan             SERIAL PRIMARY KEY NOT NULL , 
-     id_user             INT  NOT NULL , 
-     status varchar(50) NOT NULL check(status in('Menunggu Verifikasi Admin', 'Sudah Terverifikasi Admin')) default 'Menunggu Verifikasi Admin',
-     ""totalBayar"" NUMERIC NOT NULL 
-    ) 
-;
-
-
-ALTER TABLE pesanan 
-    ADD CONSTRAINT id_users_FK FOREIGN KEY 
-    (id_user) 
-    REFERENCES public.user
-    (id_user)
-		ON DELETE CASCADE
-	ON UPDATE CASCADE;
-
-ALTER TABLE detail_pesanan
-    ADD CONSTRAINT id_pesanan_FK FOREIGN KEY 
-    (id_pesanan) 
-    REFERENCES pesanan 
-    (id_pesanan)
-		ON DELETE CASCADE
-	ON UPDATE CASCADE;
-ALTER TABLE detail_pesanan
-    ADD CONSTRAINT id_barang_FK FOREIGN KEY 
-    (id_barang) 
-    REFERENCES barang 
-    (id_barang)
-		ON DELETE CASCADE
-	ON UPDATE CASCADE;
-
-CREATE TABLE alamat (
-	id_alamat SERIAL PRIMARY KEY NOT NULL,
-	id_user INT NOT NULL,
-	id_jalan INT NOT NULL,
-
-	CONSTRAINT id_user_fk
-	FOREIGN KEY (id_user)
-	REFERENCES public.user (id_user),
-	
-	CONSTRAINT id_jalan_fk
-	FOREIGN KEY (id_jalan)
-	REFERENCES jalan (id_jalan)
-	ON DELETE CASCADE
-	ON UPDATE CASCADE
-	)
-
-CREATE TABLE jalan (
-	id_jalan SERIAL PRIMARY KEY NOT NULL,
-	id_kecamatan INT NOT NULL,
-	nama_jalan VARCHAR(255) NOT NULL,
-	
-	CONSTRAINT id_kecamatan_fk
-	FOREIGN KEY (id_kecamatan)
-	REFERENCES kecamatan (id_kecamatan)
-		ON DELETE CASCADE
-	ON UPDATE CASCADE
-)
-
-CREATE TABLE kecamatan (
-	id_kecamatan SERIAL PRIMARY KEY NOT NULL,
-	nama_kacamatan VARCHAR(255) NOT NULL
-)
+-- Relasi untuk Detail Pesanan
+ALTER TABLE detail_pesanan ADD CONSTRAINT fk_detail_pesanan FOREIGN KEY (id_pesanan) REFERENCES pesanan(id_pesanan) ON DELETE CASCADE;
+ALTER TABLE detail_pesanan ADD CONSTRAINT fk_detail_barang FOREIGN KEY (id_barang) REFERENCES barang(id_barang);
