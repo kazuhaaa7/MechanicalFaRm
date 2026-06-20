@@ -39,6 +39,7 @@ CREATE TABLE IF NOT EXISTS pesanan (
     dibuat TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	alamat_jalan VARCHAR(255) NOT NULL
 );
+ALTER TABLE pesanan ADD COLUMN metode_pembayaran VARCHAR(50);
 
 -- 5. Tabel Detail Pesanan (Isi barang yang disewa)
 CREATE TABLE IF NOT EXISTS detail_pesanan (

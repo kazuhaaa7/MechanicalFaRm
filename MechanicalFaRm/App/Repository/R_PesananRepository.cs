@@ -6,7 +6,9 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
+using System.Net.NetworkInformation;
 using System.Text;
+using System.Web;
 
 namespace MechanicalFaRm.App.Repository
 {
@@ -23,13 +25,15 @@ namespace MechanicalFaRm.App.Repository
             conn.Open();
 
             string sql = @"SELECT 
-                    u.nama, 
+                    p.id_pesanan,
+                    dp.tanggal_sewa,
                     b.nama_barang,
                     dp.jumlah, 
-                    b.harga_sewa, 
                     (dp.tanggal_kembali - dp.tanggal_sewa)::INT AS durasi,
                     p.total_bayar, 
-                    p.status
+                    p.status,
+                    p.alamat_jalan,
+                    p.metode_pembayaran
                    FROM pesanan p
                    JOIN detail_pesanan dp ON p.id_pesanan = dp.id_pesanan 
                    JOIN barang b ON b.id_barang = dp.id_barang
@@ -43,21 +47,23 @@ namespace MechanicalFaRm.App.Repository
             using var reader = cmd.ExecuteReader();
 
 
-            // Menggunakan while langsung tanpa if (!reader.Read()) agar tidak membuang data baris pertama
             while (reader.Read())
             {
                 var detail = new M_DetailPesanan
                 {
-                    PenyewaDP= new M_user
-                    {
-                        namaPenyewa = reader.GetString(0)
-                    },
-                    namaBarang = reader.GetString(1),     
-                    jumlah = reader.GetInt32(2),         
-                    hargaSewa = reader.GetInt32(3),
+    
+                     id_pesanan = reader.GetInt32(0),
+                     tglSewa = reader.GetDateTime(1),
+                    namaBarang = reader.GetString(2),     
+                    jumlah = reader.GetInt32(3),         
                     Durasi = Convert.ToInt32(reader.GetValue(4)),
                     total = reader.GetInt32(5),          
-                    status = reader.GetString(6)      
+                    status = reader.GetString(6) ,
+                    tujuan = new M_jalan
+                    {
+                        Jalan = reader.IsDBNull(7) ? "Belum Input Tujuan": reader.GetString(7)
+                    },
+                    metode_pembayaran = reader.IsDBNull(8) ? "Kosong" : reader.GetString(8)
                 };
                 listpesanan.Add(detail);
             }
@@ -78,11 +84,9 @@ namespace MechanicalFaRm.App.Repository
             {
                 conn.Open();
                 string sql = @"SELECT k.id_keranjang, k.id_barang, k.jumlah, k.tgl_sewa, k.tgl_kembali, 
-                      b.nama_barang, b.harga_sewa, u.nama 
+                      b.nama_barang, b.harga_sewa
                FROM keranjang k
-               JOIN barang b ON k.id_barang = b.id_barang
-               JOIN ""user"" u ON k.id_user = u.id_user 
-               WHERE k.id_user = @id_user";
+               JOIN barang b ON k.id_barang = b.id_barang";
 
                 using (var cmd = new NpgsqlCommand(sql, conn))
                 {
@@ -105,11 +109,7 @@ namespace MechanicalFaRm.App.Repository
                                 tglKembali = tglKembali,
                                 namaBarang = reader.GetString(5),
                                 hargaSewa = (int)reader.GetInt64(6), // Sesuaikan dengan tipe data BIGINT Anda
-                                Durasi = durasi,
-                                Penyewa = new M_user
-                                {
-                                    namaPenyewa = reader.GetString(7)
-                                }
+                                Durasi = durasi
                             });
                         }
                     }
@@ -181,14 +181,17 @@ namespace MechanicalFaRm.App.Repository
             conn.Open();
 
             string sql = @"SELECT 
-                    u.id_user, 
+                    u.id_user,
+                    u.nama,
                     b.nama_barang,
                     dp.jumlah, 
                     b.harga_sewa, 
                     (dp.tanggal_kembali - dp.tanggal_sewa)::INT AS durasi,
                     p.total_bayar, 
                     p.status,
-                    p.alamat_jalan
+                    p.alamat_jalan,
+                    p.id_pesanan,
+                    p.metode_pembayaran
                    FROM pesanan p
                    JOIN detail_pesanan dp ON p.id_pesanan = dp.id_pesanan 
                    JOIN barang b ON b.id_barang = dp.id_barang
@@ -204,14 +207,20 @@ namespace MechanicalFaRm.App.Repository
             {
                 var detail = new M_DetailPesanan
                 {
-                    PenyewaDP = new M_user { _id_user = reader.IsDBNull(0) ? 0 : reader.GetInt32(0) },
-                    namaBarang = reader.IsDBNull(1) ? "" : reader.GetString(1),
-                    jumlah = Convert.ToInt32(reader.GetValue(2)),
-                    hargaSewa = Convert.ToInt32(reader.GetValue(3)),
-                    Durasi = Convert.ToInt32(reader.GetValue(4)),
-                    total = Convert.ToInt32(reader.GetValue(5)),
-                    status = reader.IsDBNull(6) ? "" : reader.GetString(6),
-                    tujuan = new M_jalan { Jalan = reader.IsDBNull(7) ? "" : reader.GetString(7) }
+                    id_user = reader.IsDBNull(0) ? 0 : reader.GetInt32(0),
+                    PenyewaDP = new M_user
+                    {
+                        namaPenyewa = reader.GetString(1)
+                    },
+                    namaBarang = reader.IsDBNull(2) ? "" : reader.GetString(2),
+                    jumlah = Convert.ToInt32(reader.GetValue(3)),
+                    hargaSewa = Convert.ToInt32(reader.GetValue(4)),
+                    Durasi = Convert.ToInt32(reader.GetValue(5)),
+                    total = Convert.ToInt32(reader.GetValue(6)),
+                    status = reader.IsDBNull(7) ? "" : reader.GetString(7),
+                    tujuan = new M_jalan { Jalan = reader.IsDBNull(8) ? "Customer tidak input tujuan" : reader.GetString(8) },
+                    id_pesanan = Convert.ToInt32(reader.GetValue(9)),
+                    metode_pembayaran = reader.IsDBNull(10)? "Kosong" : reader.GetString(10)
                 };
                 listpesanan.Add(detail);
             }
@@ -224,7 +233,51 @@ namespace MechanicalFaRm.App.Repository
             return listpesanan;
         }
 
+        public bool DeleteDataKeranjang(int idKeranjang)
+        {
+            try
+            {
+                using var conn = dbconnect.GetConn();
+                conn.Open();
 
+                string sql = "DELETE FROM keranjang WHERE id_keranjang = @id";
+
+                using var cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@id", idKeranjang);
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+
+                return rowsAffected > 0;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+        }
+
+        public bool UpdatePesanan(int idPesanan, string statusBaru)
+        {
+            try
+            {
+                using var conn = dbconnect.GetConn();
+                conn.Open();
+
+                // Update status berdasarkan ID Pesanan
+                string sql = "UPDATE pesanan SET status = @status WHERE id_pesanan = @id";
+
+                using var cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@status", statusBaru);
+                cmd.Parameters.AddWithValue("@id", idPesanan);
+
+                int rows = cmd.ExecuteNonQuery();
+                return rows > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
 
     }
 }

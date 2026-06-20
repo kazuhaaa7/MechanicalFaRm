@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_keranjangCust));
             panel1 = new Panel();
+            lblTotalTagihan = new Label();
             panel2 = new Panel();
             btnDshbrd = new Button();
             btnProfil = new Button();
@@ -47,6 +48,7 @@
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Controls.Add(lblTotalTagihan);
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(dgvKeranjang);
             panel1.Controls.Add(btnSubmit);
@@ -55,6 +57,17 @@
             panel1.Size = new Size(1919, 1088);
             panel1.TabIndex = 1;
             panel1.Paint += panel1_Paint;
+            // 
+            // lblTotalTagihan
+            // 
+            lblTotalTagihan.AutoSize = true;
+            lblTotalTagihan.BackColor = Color.Transparent;
+            lblTotalTagihan.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalTagihan.Location = new Point(441, 172);
+            lblTotalTagihan.Name = "lblTotalTagihan";
+            lblTotalTagihan.Size = new Size(84, 38);
+            lblTotalTagihan.TabIndex = 6;
+            lblTotalTagihan.Text = "Rp. 0";
             // 
             // panel2
             // 
@@ -179,6 +192,7 @@
             Text = "V_keranjangCust";
             Load += V_keranjangCust_Load;
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvKeranjang).EndInit();
             ResumeLayout(false);
@@ -195,5 +209,7 @@
         private Button btnDeskripsiAlat;
         private Button btnLogout;
         private Button btnRiwayatPenyewaan;
+        private Label lblTotalTagihan;
+        private Label label1;
     }
 }

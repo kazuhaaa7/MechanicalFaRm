@@ -8,10 +8,12 @@ namespace MechanicalFaRm.App.Service
 {
     internal class S_KeranjangService
     {
+
         R_TransaksiRepository _repotrans = new R_TransaksiRepository();
         public void ClearKeranjang(int id)
         {
              _repotrans.ClearKeranjang(id);
         }
+
     }
 }

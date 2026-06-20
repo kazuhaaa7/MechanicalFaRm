@@ -108,7 +108,7 @@ namespace MechanicalFaRm.App.Views
 
             List<M_Keranjang> listPopUp = new List<M_Keranjang> { dataKeranjangBaru };
 
-            using (V_pembayaran formBayar = new V_pembayaran(listPopUp))
+            using (V_pembayaran formBayar = new V_pembayaran(listPopUp, false))
             {
                 this.Hide();
                 formBayar.ShowDialog();

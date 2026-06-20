@@ -157,7 +157,7 @@ namespace MechanicalFaRm.App.Repository
             using var conn = dbconnect.GetConn();
             conn.Open();
 
-            string rawsql = @"SELECT * FROM ""user"" WHERE role='customer'";
+            string rawsql = @"SELECT id_user, nama, username, password, no_telp, email, role FROM ""user"" WHERE role='customer'";
             using var cmd = new NpgsqlCommand(rawsql, conn);
             using var reader = cmd.ExecuteReader();
             

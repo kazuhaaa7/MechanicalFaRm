@@ -16,11 +16,13 @@ namespace MechanicalFaRm.App.Views
         private Action _callbackRefreshHalaman;
         private List<M_Keranjang> _listPesananFinal;
 
-        public UC_Pembayaran(List<M_Keranjang> listPesanan, Action callbackRefresh)
+        bool _isDariKeranjang;
+
+        public UC_Pembayaran(List<M_Keranjang> listPesanan, Action callbackRefresh, bool isDariKeranjang)
         {
             InitializeComponent();
 
-
+            _isDariKeranjang = isDariKeranjang;
             _listPesananFinal = listPesanan;
             _callbackRefreshHalaman = callbackRefresh;
 
@@ -84,37 +86,39 @@ namespace MechanicalFaRm.App.Views
             }
 
             string metodeTerpilih = cbMetodeBayar.SelectedItem.ToString();
-            DialogResult konfirmasi = MessageBox.Show($"Apakah Anda yakin ingin menyelesaikan transaksi via {metodeTerpilih}?",
-                                                       "Konfirmasi Pembayaran",
-                                                       MessageBoxButtons.YesNo,
-                                                       MessageBoxIcon.Question);
+            //DialogResult konfirmasi = MessageBox.Show($"Apakah Anda yakin ingin menyelesaikan transaksi via {metodeTerpilih}?",
+            //                                           "Konfirmasi Pembayaran",
+            //                                           MessageBoxButtons.YesNo,
+            //                                           MessageBoxIcon.Question);
+
+
+            //if (konfirmasi == DialogResult.Yes) return;
 
             int idUser = SE_userSession.id_user;
+            string hasil = _pesananControll.ProsesCo(idUser, inputJalan, metodeTerpilih, _listPesananFinal);
 
-            if (konfirmasi == DialogResult.Yes)
+            if (hasil.Equals("Sukses", StringComparison.OrdinalIgnoreCase))
             {
-                string hasil = _pesananControll.ProsesCo(idUser, inputJalan, _listPesananFinal);
-
-                if (hasil.Equals("Sukses", StringComparison.OrdinalIgnoreCase))
+                MessageBox.Show("Pembayaran sukses dikonfirmasi! Data otomatis berpindah ke Riwayat.",
+                                "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (_isDariKeranjang)
                 {
-                    MessageBox.Show("Pembayaran sukses dikonfirmasi! Data otomatis berpindah ke Riwayat.",
-                                    "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _serviceker.ClearKeranjang(idUser);
 
-                    _serviceker.ClearKeranjang(idUser);
-                    _callbackRefreshHalaman?.Invoke();
+                }
+                _callbackRefreshHalaman?.Invoke();
 
-                    var formInduk = this.FindForm();
-                    if (formInduk != null && formInduk.Name == "V_pembayaran")
-                    {
-                        formInduk.Close();
-                    }
+                var formInduk = this.FindForm();
+                if (formInduk != null && formInduk.Name == "V_pembayaran")
+                {
+                    formInduk.Close();
+                }
                 }
                 else
                 {
                     MessageBox.Show(hasil, "Error Database", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
 
         private void cbMetodeBayar_Click(object sender, EventArgs e) { }
         private void label1_Click(object sender, EventArgs e) { }

@@ -39,24 +39,28 @@ namespace MechanicalFaRm.App.Views
             var listBarang = detail;
 
             DataTable dt = new DataTable();
-            dt.Columns.Add("Nama Alat", typeof(string));
-            dt.Columns.Add("Banyak Unit", typeof(int));
-            dt.Columns.Add("Harga Sewa", typeof(string));
-            dt.Columns.Add("Status", typeof(string));
-            dt.Columns.Add("Durasi", typeof(string));
-            dt.Columns.Add("Total", typeof(string));
-            dt.Columns.Add("Tujuan", typeof(string));
+            dt.Columns.Add("No Pesanan");
+            dt.Columns.Add("Tanggal Sewa");
+            dt.Columns.Add("Durasi");
+            dt.Columns.Add("Nama Alat");
+            dt.Columns.Add("Jumlah");
+            dt.Columns.Add("Total");
+            dt.Columns.Add("Status");
+            dt.Columns.Add("Tujuan");
+            dt.Columns.Add("Metode Pembayaran");
 
             foreach (var item in listBarang)
             {
                 dt.Rows.Add(
+                item.id_pesanan,
+                item.tglSewa.ToString("dd-MM-yyyy"),
+                $"{item.Durasi} Hari",
                 item.namaBarang,
                 item.jumlah,
-                $"{item.hargaSewa} Juta",
-                item.status,
-                $"{item.Durasi} Hari",
                 $"{item.total} Juta",
-                item.tujuan?.Jalan??"Belum Input Tujuan"
+                item.status,
+                item.tujuan?.Jalan??"Belum Input Tujuan",
+                item.metode_pembayaran
                 );
             }
 

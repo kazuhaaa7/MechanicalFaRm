@@ -44,6 +44,7 @@
             // panel1
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(dgvKelolaSewa);
             panel1.Dock = DockStyle.Fill;

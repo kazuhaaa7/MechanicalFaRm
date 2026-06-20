@@ -12,29 +12,11 @@ namespace MechanicalFaRm.App.Repository
 {
     internal class R_TransaksiRepository 
     {
-        //public void BuatPesananBaru(M_Pesanan pesanan)
-        //{
-        //    using var conn = dbconnect.GetConn();
-        //    conn.Open();
-
-        //    string sql = @"INSERT INTO pesanan (id_pesanan, tanggal_pesan, tanggal_kembali,status)
-        //                VALUES (@id, @tglP, @tglK, @status)";
-
-        //    using var cmd = new NpgsqlCommand(sql, conn);
-        //    cmd.Parameters.AddWithValue("@id", pesanan.id_pesanan);
-        //    //cmd.Parameters.AddWithValue("@tglP", pesanan.tglSewa);
-        //    //cmd.Parameters.AddWithValue("@tglK", pesanan.tglKembali);
-        //    //cmd.Parameters.AddWithValue("@status", pesanan.statusPesanan);
-
-        //    cmd.ExecuteNonQuery();
-
-        //}
-
-        public bool PesananBaru(List<M_Keranjang> keranjang, int idUser, string alamat)
+        public bool PesananBaru(int idUser, string alamat, string metodePembayaran, List<M_Keranjang> keranjang)
         {
             using var conn = dbconnect.GetConn();
             conn.Open();
-            using var transaksiDB = conn.BeginTransaction();
+            using var transaksiDB = conn.BeginTransaction();    
 
             try
             {
@@ -61,8 +43,8 @@ namespace MechanicalFaRm.App.Repository
                     totalKeseluruhan += (decimal)item.hargaSewa * item.jumlah * durasi;
                 }
 
-                string queryInduk = @"INSERT INTO pesanan (id_user, status, total_bayar, alamat_jalan) 
-                              VALUES (@id_user, @status, @total, @alamat) 
+                string queryInduk = @"INSERT INTO pesanan (id_user, status, total_bayar, alamat_jalan, metode_pembayaran) 
+                              VALUES (@id_user, @status, @total, @alamat, @mp) 
                               RETURNING id_pesanan;";
 
                 int idPesananBaru = 0;
@@ -72,6 +54,7 @@ namespace MechanicalFaRm.App.Repository
                     cmdInduk.Parameters.AddWithValue("@status", "Menunggu Verifikasi Admin");
                     cmdInduk.Parameters.AddWithValue("@total", totalKeseluruhan);   
                     cmdInduk.Parameters.AddWithValue("@alamat", string.IsNullOrWhiteSpace(alamat) ? (object)DBNull.Value : alamat);
+                    cmdInduk.Parameters.AddWithValue("@mp", metodePembayaran);
                     idPesananBaru = Convert.ToInt32(cmdInduk.ExecuteScalar());
                 }
 

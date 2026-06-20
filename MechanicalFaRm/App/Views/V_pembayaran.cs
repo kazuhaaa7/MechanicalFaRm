@@ -13,7 +13,7 @@ namespace MechanicalFaRm.App.Views
     {
         private List<M_Keranjang> _listPesananHantaran;
 
-        public V_pembayaran(List<M_Keranjang> listPesanan)
+        public V_pembayaran(List<M_Keranjang> listPesanan, bool isDariKeranjang)
         {
             InitializeComponent();
             _listPesananHantaran = listPesanan;
@@ -26,7 +26,7 @@ namespace MechanicalFaRm.App.Views
 
             try
             {
-                UC_Pembayaran ucBayar = new UC_Pembayaran(listPesanan, () => { this.Close(); });
+                UC_Pembayaran ucBayar = new UC_Pembayaran(listPesanan, () => { this.Close(); }, isDariKeranjang);
                 //ucBayar.Dock = DockStyle.Fill;
                 //this.Width = ucBayar.Width + 20;
                 //this.Height = ucBayar.Height + 40;

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_tambahDeskripsi));
             Button btnKelolaCust;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_tambahDeskripsi));
             Button btnRiwayatPenyewaan;
             Button btnProfil;
             Button btnLogout;
@@ -52,6 +52,58 @@
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnPicture).BeginInit();
             SuspendLayout();
+            // 
+            // btnKelolaCust
+            // 
+            btnKelolaCust.BackColor = Color.Transparent;
+            btnKelolaCust.BackgroundImage = (Image)resources.GetObject("btnKelolaCust.BackgroundImage");
+            btnKelolaCust.BackgroundImageLayout = ImageLayout.Stretch;
+            btnKelolaCust.FlatAppearance.BorderSize = 0;
+            btnKelolaCust.FlatStyle = FlatStyle.Flat;
+            btnKelolaCust.Location = new Point(35, 335);
+            btnKelolaCust.Name = "btnKelolaCust";
+            btnKelolaCust.Size = new Size(306, 76);
+            btnKelolaCust.TabIndex = 20;
+            btnKelolaCust.UseVisualStyleBackColor = false;
+            // 
+            // btnRiwayatPenyewaan
+            // 
+            btnRiwayatPenyewaan.BackColor = Color.Transparent;
+            btnRiwayatPenyewaan.BackgroundImage = (Image)resources.GetObject("btnRiwayatPenyewaan.BackgroundImage");
+            btnRiwayatPenyewaan.BackgroundImageLayout = ImageLayout.Stretch;
+            btnRiwayatPenyewaan.FlatAppearance.BorderSize = 0;
+            btnRiwayatPenyewaan.FlatStyle = FlatStyle.Flat;
+            btnRiwayatPenyewaan.Location = new Point(35, 448);
+            btnRiwayatPenyewaan.Name = "btnRiwayatPenyewaan";
+            btnRiwayatPenyewaan.Size = new Size(306, 76);
+            btnRiwayatPenyewaan.TabIndex = 21;
+            btnRiwayatPenyewaan.UseVisualStyleBackColor = false;
+            // 
+            // btnProfil
+            // 
+            btnProfil.BackColor = Color.Transparent;
+            btnProfil.BackgroundImage = (Image)resources.GetObject("btnProfil.BackgroundImage");
+            btnProfil.BackgroundImageLayout = ImageLayout.Stretch;
+            btnProfil.FlatAppearance.BorderSize = 0;
+            btnProfil.FlatStyle = FlatStyle.Flat;
+            btnProfil.Location = new Point(35, 669);
+            btnProfil.Name = "btnProfil";
+            btnProfil.Size = new Size(306, 76);
+            btnProfil.TabIndex = 22;
+            btnProfil.UseVisualStyleBackColor = false;
+            // 
+            // btnLogout
+            // 
+            btnLogout.BackColor = Color.Transparent;
+            btnLogout.BackgroundImage = (Image)resources.GetObject("btnLogout.BackgroundImage");
+            btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
+            btnLogout.FlatAppearance.BorderSize = 0;
+            btnLogout.FlatStyle = FlatStyle.Flat;
+            btnLogout.Location = new Point(35, 983);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(306, 76);
+            btnLogout.TabIndex = 23;
+            btnLogout.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -125,27 +177,36 @@
             // 
             // btnBatal
             // 
+            btnBatal.BackColor = Color.IndianRed;
+            btnBatal.FlatAppearance.BorderSize = 0;
+            btnBatal.FlatStyle = FlatStyle.Flat;
+            btnBatal.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBatal.Location = new Point(667, 552);
             btnBatal.Name = "btnBatal";
             btnBatal.Size = new Size(155, 54);
             btnBatal.TabIndex = 6;
             btnBatal.Text = "Batal";
-            btnBatal.UseVisualStyleBackColor = true;
+            btnBatal.UseVisualStyleBackColor = false;
             btnBatal.Click += btnBatal_Click;
             // 
             // btnSimpan
             // 
+            btnSimpan.BackColor = Color.MediumSeaGreen;
+            btnSimpan.FlatAppearance.BorderSize = 0;
+            btnSimpan.FlatStyle = FlatStyle.Flat;
+            btnSimpan.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSimpan.Location = new Point(481, 552);
             btnSimpan.Name = "btnSimpan";
             btnSimpan.Size = new Size(155, 54);
             btnSimpan.TabIndex = 5;
             btnSimpan.Text = "Simpan";
-            btnSimpan.UseVisualStyleBackColor = true;
+            btnSimpan.UseVisualStyleBackColor = false;
             btnSimpan.Click += btnSimpan_Click;
             // 
             // rtbDeskripsi
             // 
-            rtbDeskripsi.BorderStyle = BorderStyle.FixedSingle;
+            rtbDeskripsi.BackColor = Color.Gainsboro;
+            rtbDeskripsi.BorderStyle = BorderStyle.None;
             rtbDeskripsi.Location = new Point(481, 660);
             rtbDeskripsi.Name = "rtbDeskripsi";
             rtbDeskripsi.Size = new Size(1355, 345);
@@ -154,7 +215,7 @@
             // 
             // tbStok
             // 
-            tbStok.BorderStyle = BorderStyle.None;
+            tbStok.BorderStyle = BorderStyle.FixedSingle;
             tbStok.Location = new Point(984, 321);
             tbStok.Multiline = true;
             tbStok.Name = "tbStok";
@@ -190,58 +251,6 @@
             btnPicture.TabIndex = 0;
             btnPicture.TabStop = false;
             btnPicture.Click += btnPicture_Click;
-            // 
-            // btnKelolaCust
-            // 
-            btnKelolaCust.BackColor = Color.Transparent;
-            btnKelolaCust.BackgroundImage = (Image)resources.GetObject("btnKelolaCust.BackgroundImage");
-            btnKelolaCust.BackgroundImageLayout = ImageLayout.Stretch;
-            btnKelolaCust.FlatAppearance.BorderSize = 0;
-            btnKelolaCust.FlatStyle = FlatStyle.Flat;
-            btnKelolaCust.Location = new Point(35, 335);
-            btnKelolaCust.Name = "btnKelolaCust";
-            btnKelolaCust.Size = new Size(306, 76);
-            btnKelolaCust.TabIndex = 20;
-            btnKelolaCust.UseVisualStyleBackColor = false;
-            // 
-            // btnRiwayatPenyewaan
-            // 
-            btnRiwayatPenyewaan.BackColor = Color.Transparent;
-            btnRiwayatPenyewaan.BackgroundImage = (Image)resources.GetObject("btnRiwayatPenyewaan.BackgroundImage");
-            btnRiwayatPenyewaan.BackgroundImageLayout = ImageLayout.Stretch;
-            btnRiwayatPenyewaan.FlatAppearance.BorderSize = 0;
-            btnRiwayatPenyewaan.FlatStyle = FlatStyle.Flat;
-            btnRiwayatPenyewaan.Location = new Point(35, 448);
-            btnRiwayatPenyewaan.Name = "btnRiwayatPenyewaan";
-            btnRiwayatPenyewaan.Size = new Size(306, 76);
-            btnRiwayatPenyewaan.TabIndex = 21;
-            btnRiwayatPenyewaan.UseVisualStyleBackColor = false;
-            // 
-            // btnProfil
-            // 
-            btnProfil.BackColor = Color.Transparent;
-            btnProfil.BackgroundImage = (Image)resources.GetObject("btnProfil.BackgroundImage");
-            btnProfil.BackgroundImageLayout = ImageLayout.Stretch;
-            btnProfil.FlatAppearance.BorderSize = 0;
-            btnProfil.FlatStyle = FlatStyle.Flat;
-            btnProfil.Location = new Point(35, 669);
-            btnProfil.Name = "btnProfil";
-            btnProfil.Size = new Size(306, 76);
-            btnProfil.TabIndex = 22;
-            btnProfil.UseVisualStyleBackColor = false;
-            // 
-            // btnLogout
-            // 
-            btnLogout.BackColor = Color.Transparent;
-            btnLogout.BackgroundImage = (Image)resources.GetObject("btnLogout.BackgroundImage");
-            btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
-            btnLogout.FlatAppearance.BorderSize = 0;
-            btnLogout.FlatStyle = FlatStyle.Flat;
-            btnLogout.Location = new Point(35, 983);
-            btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(306, 76);
-            btnLogout.TabIndex = 23;
-            btnLogout.UseVisualStyleBackColor = false;
             // 
             // V_tambahDeskripsi
             // 

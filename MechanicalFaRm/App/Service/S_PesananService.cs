@@ -29,19 +29,12 @@ namespace MechanicalFaRm.App.Service
             return _repopesan.AddToKeranjang(itemkeranjang);
         }
 
-        public string SubmitCheckout(int idUser, string alamat, List<M_Keranjang> keranjang)
+        public string SubmitCheckout(int idUser, string alamat, string metodePembayaran, List<M_Keranjang> keranjang)
         {
-            var keranjangDB = _repopesan.GetListKeranjang(idUser);
 
-            if (keranjangDB.Count == 0)
-            {
-                return "Gagal: Keranjang belanja Anda masih kosong!";
-            }
+            if (keranjang == null || keranjang.Count == 0)return "Gagal: Data barang tidak valid!";
 
-            if (keranjang == null || keranjang.Count == 0)
-                return "Gagal: Data barang tidak valid!";
-
-            bool isSukses = _transaksiRepo.PesananBaru(keranjang, idUser, alamat);
+            bool isSukses = _transaksiRepo.PesananBaru( idUser, alamat, metodePembayaran, keranjang);
 
             return isSukses ? "Sukses" : "Gagal: Terjadi kesalahan saat menyimpan ke database.";
         }
@@ -137,46 +130,9 @@ namespace MechanicalFaRm.App.Service
             return listData;
         }
 
-        public bool UpdatePesanan(int idPesanan, string statusBaru, string namaJalanBaru, int idUserLogin)
+        public bool UpdatePesanan(int idPesanan, string statusBaru)
         {
-            bool isSukses = false;
-
-            using (var conn = dbconnect.GetConn())
-            {
-                conn.Open();
-
-                // Kita tidak butuh BeginTransaction jika hanya meng-update 1 tabel
-                try
-                {
-                    // Cukup 1 query ini saja: update status DAN alamat sekaligus
-                    string sql = @"UPDATE pesanan 
-                           SET status = @status, 
-                               alamat_jalan = @alamat 
-                           WHERE id_pesanan = @id_pesanan AND id_user = @id_user;";
-
-                    using (var cmd = new NpgsqlCommand(sql, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@status", statusBaru);
-                        cmd.Parameters.AddWithValue("@alamat", namaJalanBaru);
-                        cmd.Parameters.AddWithValue("@id_pesanan", idPesanan);
-                        cmd.Parameters.AddWithValue("@id_user", idUserLogin);
-
-                        int barisTerpengaruh = cmd.ExecuteNonQuery();
-
-                        if (barisTerpengaruh > 0)
-                        {
-                            isSukses = true;
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Gagal mengupdate pesanan: " + ex.Message, "Error Database");
-                    isSukses = false;
-                }
-            }
-
-            return isSukses;
+            return _repopesan.UpdatePesanan(idPesanan, statusBaru);
         }
 
         public M_Pesanan GetPesananById(int idPesanan)
@@ -248,6 +204,12 @@ namespace MechanicalFaRm.App.Service
         public List<M_DetailPesanan> GetAllPesanan()
         {
             return _repopesan.GetAllPesanan();
+        }
+
+        public bool DeleteItemKeranjang(int idKeranjang)
+        {
+            // Memanggil metode Delete yang baru saja dibuat di Repository
+            return _repopesan.DeleteDataKeranjang(idKeranjang);
         }
     }
 }

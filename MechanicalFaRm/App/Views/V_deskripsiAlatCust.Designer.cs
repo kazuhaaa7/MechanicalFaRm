@@ -43,6 +43,7 @@
             // panel1
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(btnLogout);
             panel1.Controls.Add(btnProfil);
             panel1.Controls.Add(btnKeranjang);

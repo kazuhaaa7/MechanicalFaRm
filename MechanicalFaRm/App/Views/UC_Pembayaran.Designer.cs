@@ -43,7 +43,7 @@
             // 
             lblIdPesanan.AutoSize = true;
             lblIdPesanan.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblIdPesanan.Location = new Point(29, 80);
+            lblIdPesanan.Location = new Point(23, 13);
             lblIdPesanan.Name = "lblIdPesanan";
             lblIdPesanan.Size = new Size(79, 31);
             lblIdPesanan.TabIndex = 0;
@@ -54,7 +54,7 @@
             // 
             lblTanggal.AutoSize = true;
             lblTanggal.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTanggal.Location = new Point(892, 80);
+            lblTanggal.Location = new Point(707, 13);
             lblTanggal.Name = "lblTanggal";
             lblTanggal.Size = new Size(77, 31);
             lblTanggal.TabIndex = 1;
@@ -64,7 +64,7 @@
             // 
             lblNamaPenyewa.AutoSize = true;
             lblNamaPenyewa.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNamaPenyewa.Location = new Point(498, 80);
+            lblNamaPenyewa.Location = new Point(23, 62);
             lblNamaPenyewa.Name = "lblNamaPenyewa";
             lblNamaPenyewa.Size = new Size(79, 31);
             lblNamaPenyewa.TabIndex = 2;

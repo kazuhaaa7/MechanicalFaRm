@@ -76,7 +76,7 @@
             btnProfil.FlatStyle = FlatStyle.Flat;
             btnProfil.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnProfil.ForeColor = SystemColors.ActiveCaptionText;
-            btnProfil.Location = new Point(38, 669);
+            btnProfil.Location = new Point(38, 671);
             btnProfil.Name = "btnProfil";
             btnProfil.Size = new Size(306, 76);
             btnProfil.TabIndex = 11;
@@ -134,6 +134,7 @@
             // panel1
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(dgvKelolaAkun);
             panel1.Dock = DockStyle.Fill;

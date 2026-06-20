@@ -47,6 +47,7 @@
             // panel1
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(dataGridView1);
             panel1.Dock = DockStyle.Fill;
@@ -121,7 +122,7 @@
             btnProfil.FlatStyle = FlatStyle.Flat;
             btnProfil.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnProfil.ForeColor = SystemColors.ActiveCaptionText;
-            btnProfil.Location = new Point(42, 750);
+            btnProfil.Location = new Point(39, 764);
             btnProfil.Name = "btnProfil";
             btnProfil.Size = new Size(306, 76);
             btnProfil.TabIndex = 28;
@@ -137,7 +138,7 @@
             btnDeskripsiAlat.FlatStyle = FlatStyle.Flat;
             btnDeskripsiAlat.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnDeskripsiAlat.ForeColor = SystemColors.ActiveCaptionText;
-            btnDeskripsiAlat.Location = new Point(29, 644);
+            btnDeskripsiAlat.Location = new Point(39, 653);
             btnDeskripsiAlat.Name = "btnDeskripsiAlat";
             btnDeskripsiAlat.Size = new Size(306, 76);
             btnDeskripsiAlat.TabIndex = 27;
@@ -153,7 +154,7 @@
             btnLogout.FlatStyle = FlatStyle.Flat;
             btnLogout.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnLogout.ForeColor = SystemColors.ActiveCaptionText;
-            btnLogout.Location = new Point(29, 984);
+            btnLogout.Location = new Point(39, 1007);
             btnLogout.Name = "btnLogout";
             btnLogout.Size = new Size(306, 76);
             btnLogout.TabIndex = 26;

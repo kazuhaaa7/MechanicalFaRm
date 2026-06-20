@@ -54,18 +54,29 @@ namespace MechanicalFaRm.App.Views
         {
             var isiKeranjang = _servicePesanan.GetListKeranjang(SE_userSession.id_user);
 
-            DataTable datak = new DataTable();
-            datak.Columns.Add("Nama Customer", typeof(string));
-            datak.Columns.Add("Nama Alat", typeof(string));
-            datak.Columns.Add("Jumlah Alat", typeof(int));
-            datak.Columns.Add("Harga Alat", typeof(string));
-            datak.Columns.Add("Durasi", typeof(string));
-            datak.Columns.Add("Sub Total", typeof(string));
+            dgvKeranjang.Columns.Clear();
 
+            DataTable datak = new DataTable();
+            datak.Columns.Add("Id Keranjang");
+            datak.Columns.Add("Nama Alat");
+            datak.Columns.Add("Jumlah Alat");
+            datak.Columns.Add("Harga Alat");
+            datak.Columns.Add("Durasi");
+            datak.Columns.Add("Sub Total");
+
+
+            decimal grandTotalKeseluruhan = 0;
             foreach (var item in isiKeranjang)
             {
+                int durasi = (item.tglKembali - item.tglSewa).Days;
+                if (durasi <= 0) durasi = 3;
+
+                decimal subTotal = (decimal)item.hargaSewa * item.jumlah * durasi;
+                grandTotalKeseluruhan += subTotal;
+
+
                 datak.Rows.Add(
-                    item.Penyewa.namaPenyewa,
+                    item.id_keranjang,
                     item.namaBarang,
                     item.jumlah,
                     $"{item.hargaSewa} Juta",
@@ -74,6 +85,28 @@ namespace MechanicalFaRm.App.Views
                 );
             }
             dgvKeranjang.DataSource = datak;
+            dgvKeranjang.Columns["Id Keranjang"].Visible = false;
+
+            if (!dgvKeranjang.Columns.Contains("btnHapus"))
+            {
+                DataGridViewButtonColumn btnHapus = new DataGridViewButtonColumn();
+                btnHapus.HeaderText = "Aksi";
+                btnHapus.Name = "btnHapus";
+                btnHapus.Text = "Hapus";
+                btnHapus.UseColumnTextForButtonValue = true;
+                btnHapus.FlatStyle = FlatStyle.Flat;
+                btnHapus.DefaultCellStyle.BackColor = Color.Red;
+                btnHapus.DefaultCellStyle.ForeColor = Color.White;
+
+                dgvKeranjang.Columns.Add(btnHapus);
+            }
+
+            // 3. TAMPILKAN GRAND TOTAL KE LABEL DI LAYAR
+            lblTotalTagihan.Text = $"Total Tagihan: Rp {grandTotalKeseluruhan:N0} Juta";
+
+            // Styling
+            dgvKeranjang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvKeranjang.RowHeadersVisible = false;
 
             dgvKeranjang.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
             dgvKeranjang.ReadOnly = true;
@@ -91,9 +124,34 @@ namespace MechanicalFaRm.App.Views
         }
 
 
+
         private void dgvKeranjang_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0 && dgvKeranjang.Columns[e.ColumnIndex].Name == "btnHapus")
+            {
+                int idKeranjangYangDipilih = Convert.ToInt32(dgvKeranjang.Rows[e.RowIndex].Cells["Id Keranjang"].Value);
+                string namaAlat = dgvKeranjang.Rows[e.RowIndex].Cells["Nama Alat"].Value.ToString();
 
+                DialogResult konfirmasi = MessageBox.Show($"Apakah Anda yakin ingin menghapus {namaAlat} dari keranjang?",
+                                                          "Konfirmasi Hapus",
+                                                          MessageBoxButtons.YesNo,
+                                                          MessageBoxIcon.Warning);
+
+                if (konfirmasi == DialogResult.Yes)
+                {
+                    bool berhasilHapus = _servicePesanan.DeleteItemKeranjang(idKeranjangYangDipilih);
+
+                    if (berhasilHapus)
+                    {
+                        MessageBox.Show("Barang berhasil dihapus.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        RefreshData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Gagal menghapus barang dari keranjang.", "Error Database", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
         private void btnLogout_Click(object sender, EventArgs e)
         {
@@ -139,43 +197,12 @@ namespace MechanicalFaRm.App.Views
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            //DialogResult konfirmasi = MessageBox.Show(
-            //    "Apakah Anda yakin ingin memproses pesanan ini?",
-            //    "Konfirmasi",
-            //    MessageBoxButtons.YesNo,
-            //    MessageBoxIcon.Question
-            //);
-
-            //if (konfirmasi != DialogResult.Yes) return;
-
-            //int idUserYangLogin = SE_userSession.id_user;
-            //string hasil = _pesananControll.ProsesCo(idUserYangLogin);
-
-            //if (string.Equals(hasil, "sukses", StringComparison.OrdinalIgnoreCase))
-            //{
-            //    MessageBox.Show("Pesanan berhasil dibuat! Silakan lakukan pembayaran.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            //    int idPesananTerbaru = _servicePesanan.GetIdPesananTerbaru(idUserYangLogin);
-            //    M_Pesanan datapesanan = _servicePesanan.GetPesananById(idPesananTerbaru);
-
-            //    using (V_pembayaran formBayar = new V_pembayaran(datapesanan))
-            //    {
-            //        formBayar.ShowDialog();
-            //    }
-
-            //    RefreshData();
-            //}
-            //else
-            //{
-            //    MessageBox.Show(hasil, "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
             DialogResult konfirmasi = MessageBox.Show("Lanjut ke pembayaran?", "Konfirmasi",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (konfirmasi != DialogResult.Yes) return;
 
             int idUserYangLogin = SE_userSession.id_user;
 
-            // 1. Ambil list barang dari keranjang belanja di database
             List<M_Keranjang> isiKeranjang = _servicePesanan.GetListKeranjang(idUserYangLogin);
 
             if (isiKeranjang == null || isiKeranjang.Count == 0)
@@ -184,13 +211,11 @@ namespace MechanicalFaRm.App.Views
                 return;
             }
 
-            // 2. HANTARKAN: Buka Form Pembayaran dan masukkan list keranjang ini ke dalam Constructor-nya
-            using (V_pembayaran formBayar = new V_pembayaran(isiKeranjang))
+            using (V_pembayaran formBayar = new V_pembayaran(isiKeranjang, true))
             {
                 formBayar.ShowDialog();
             }
 
-            // 3. Refresh halaman keranjang setelah kembali dari form pembayaran
             RefreshData();
         }
 
