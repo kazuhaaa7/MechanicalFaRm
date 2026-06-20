@@ -118,7 +118,7 @@ namespace MechanicalFaRm.App.Repository
             cmd.Parameters.AddWithValue("@n", user.no_telepon);
             cmd.Parameters.AddWithValue("@e", user.email);
 
-            cmd.ExecuteNonQuery();//execute non query karena tidak mengembalikan data
+            cmd.ExecuteNonQuery();
 
 
         }

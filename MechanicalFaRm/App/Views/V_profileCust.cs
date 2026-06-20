@@ -94,7 +94,8 @@ namespace MechanicalFaRm.App.Views
 
         private void btnDeskripsiAlat_Click_1(object sender, EventArgs e)
         {
-            //V_deskripsiAlatCust des = new V_deskripsiAlatCust(this);
+            //M_barang barang = new M_barang();
+            //V_deskripsiAlatCust des = new V_deskripsiAlatCust(, barang);
             //des.Show();
             //this.Close();
         }

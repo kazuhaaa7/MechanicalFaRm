@@ -29,7 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_tambahDeskripsi));
+            Button btnKelolaCust;
+            Button btnRiwayatPenyewaan;
+            Button btnProfil;
+            Button btnLogout;
             panel1 = new Panel();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
             btnBatal = new Button();
             btnSimpan = new Button();
             rtbDeskripsi = new RichTextBox();
@@ -37,10 +45,10 @@
             tbHarga = new TextBox();
             tbNamaBarang = new TextBox();
             btnPicture = new PictureBox();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
+            btnKelolaCust = new Button();
+            btnRiwayatPenyewaan = new Button();
+            btnProfil = new Button();
+            btnLogout = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnPicture).BeginInit();
             SuspendLayout();
@@ -48,6 +56,11 @@
             // panel1
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Controls.Add(btnLogout);
+            panel1.Controls.Add(btnProfil);
+            panel1.Controls.Add(btnRiwayatPenyewaan);
+            panel1.Controls.Add(btnKelolaCust);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
@@ -64,70 +77,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1924, 1082);
             panel1.TabIndex = 0;
-            // 
-            // btnBatal
-            // 
-            btnBatal.Location = new Point(667, 552);
-            btnBatal.Name = "btnBatal";
-            btnBatal.Size = new Size(155, 54);
-            btnBatal.TabIndex = 6;
-            btnBatal.Text = "Batal";
-            btnBatal.UseVisualStyleBackColor = true;
-            btnBatal.Click += btnBatal_Click;
-            // 
-            // btnSimpan
-            // 
-            btnSimpan.Location = new Point(481, 552);
-            btnSimpan.Name = "btnSimpan";
-            btnSimpan.Size = new Size(155, 54);
-            btnSimpan.TabIndex = 5;
-            btnSimpan.Text = "Simpan";
-            btnSimpan.UseVisualStyleBackColor = true;
-            btnSimpan.Click += btnSimpan_Click;
-            // 
-            // rtbDeskripsi
-            // 
-            rtbDeskripsi.Location = new Point(481, 660);
-            rtbDeskripsi.Name = "rtbDeskripsi";
-            rtbDeskripsi.Size = new Size(1355, 345);
-            rtbDeskripsi.TabIndex = 4;
-            rtbDeskripsi.Text = "";
-            // 
-            // tbStok
-            // 
-            tbStok.Location = new Point(984, 321);
-            tbStok.Multiline = true;
-            tbStok.Name = "tbStok";
-            tbStok.PlaceholderText = "Stok";
-            tbStok.Size = new Size(438, 44);
-            tbStok.TabIndex = 3;
-            // 
-            // tbHarga
-            // 
-            tbHarga.Location = new Point(984, 409);
-            tbHarga.Multiline = true;
-            tbHarga.Name = "tbHarga";
-            tbHarga.PlaceholderText = "Harga";
-            tbHarga.Size = new Size(438, 44);
-            tbHarga.TabIndex = 2;
-            // 
-            // tbNamaBarang
-            // 
-            tbNamaBarang.Location = new Point(984, 243);
-            tbNamaBarang.Multiline = true;
-            tbNamaBarang.Name = "tbNamaBarang";
-            tbNamaBarang.PlaceholderText = "Nama Barang";
-            tbNamaBarang.Size = new Size(438, 44);
-            tbNamaBarang.TabIndex = 1;
-            // 
-            // btnPicture
-            // 
-            btnPicture.Location = new Point(1481, 227);
-            btnPicture.Name = "btnPicture";
-            btnPicture.Size = new Size(330, 245);
-            btnPicture.TabIndex = 0;
-            btnPicture.TabStop = false;
-            btnPicture.Click += btnPicture_Click;
             // 
             // label4
             // 
@@ -174,6 +123,126 @@
             label1.TabIndex = 16;
             label1.Text = "Nama Barang";
             // 
+            // btnBatal
+            // 
+            btnBatal.Location = new Point(667, 552);
+            btnBatal.Name = "btnBatal";
+            btnBatal.Size = new Size(155, 54);
+            btnBatal.TabIndex = 6;
+            btnBatal.Text = "Batal";
+            btnBatal.UseVisualStyleBackColor = true;
+            btnBatal.Click += btnBatal_Click;
+            // 
+            // btnSimpan
+            // 
+            btnSimpan.Location = new Point(481, 552);
+            btnSimpan.Name = "btnSimpan";
+            btnSimpan.Size = new Size(155, 54);
+            btnSimpan.TabIndex = 5;
+            btnSimpan.Text = "Simpan";
+            btnSimpan.UseVisualStyleBackColor = true;
+            btnSimpan.Click += btnSimpan_Click;
+            // 
+            // rtbDeskripsi
+            // 
+            rtbDeskripsi.BorderStyle = BorderStyle.FixedSingle;
+            rtbDeskripsi.Location = new Point(481, 660);
+            rtbDeskripsi.Name = "rtbDeskripsi";
+            rtbDeskripsi.Size = new Size(1355, 345);
+            rtbDeskripsi.TabIndex = 4;
+            rtbDeskripsi.Text = "";
+            // 
+            // tbStok
+            // 
+            tbStok.BorderStyle = BorderStyle.None;
+            tbStok.Location = new Point(984, 321);
+            tbStok.Multiline = true;
+            tbStok.Name = "tbStok";
+            tbStok.PlaceholderText = "Stok";
+            tbStok.Size = new Size(438, 44);
+            tbStok.TabIndex = 3;
+            // 
+            // tbHarga
+            // 
+            tbHarga.BorderStyle = BorderStyle.FixedSingle;
+            tbHarga.Location = new Point(984, 409);
+            tbHarga.Multiline = true;
+            tbHarga.Name = "tbHarga";
+            tbHarga.PlaceholderText = "Harga";
+            tbHarga.Size = new Size(438, 44);
+            tbHarga.TabIndex = 2;
+            // 
+            // tbNamaBarang
+            // 
+            tbNamaBarang.BorderStyle = BorderStyle.FixedSingle;
+            tbNamaBarang.Location = new Point(984, 243);
+            tbNamaBarang.Multiline = true;
+            tbNamaBarang.Name = "tbNamaBarang";
+            tbNamaBarang.PlaceholderText = "Nama Barang";
+            tbNamaBarang.Size = new Size(438, 44);
+            tbNamaBarang.TabIndex = 1;
+            // 
+            // btnPicture
+            // 
+            btnPicture.Location = new Point(1481, 227);
+            btnPicture.Name = "btnPicture";
+            btnPicture.Size = new Size(330, 245);
+            btnPicture.TabIndex = 0;
+            btnPicture.TabStop = false;
+            btnPicture.Click += btnPicture_Click;
+            // 
+            // btnKelolaCust
+            // 
+            btnKelolaCust.BackColor = Color.Transparent;
+            btnKelolaCust.BackgroundImage = (Image)resources.GetObject("btnKelolaCust.BackgroundImage");
+            btnKelolaCust.BackgroundImageLayout = ImageLayout.Stretch;
+            btnKelolaCust.FlatAppearance.BorderSize = 0;
+            btnKelolaCust.FlatStyle = FlatStyle.Flat;
+            btnKelolaCust.Location = new Point(35, 335);
+            btnKelolaCust.Name = "btnKelolaCust";
+            btnKelolaCust.Size = new Size(306, 76);
+            btnKelolaCust.TabIndex = 20;
+            btnKelolaCust.UseVisualStyleBackColor = false;
+            // 
+            // btnRiwayatPenyewaan
+            // 
+            btnRiwayatPenyewaan.BackColor = Color.Transparent;
+            btnRiwayatPenyewaan.BackgroundImage = (Image)resources.GetObject("btnRiwayatPenyewaan.BackgroundImage");
+            btnRiwayatPenyewaan.BackgroundImageLayout = ImageLayout.Stretch;
+            btnRiwayatPenyewaan.FlatAppearance.BorderSize = 0;
+            btnRiwayatPenyewaan.FlatStyle = FlatStyle.Flat;
+            btnRiwayatPenyewaan.Location = new Point(35, 448);
+            btnRiwayatPenyewaan.Name = "btnRiwayatPenyewaan";
+            btnRiwayatPenyewaan.Size = new Size(306, 76);
+            btnRiwayatPenyewaan.TabIndex = 21;
+            btnRiwayatPenyewaan.UseVisualStyleBackColor = false;
+            // 
+            // btnProfil
+            // 
+            btnProfil.BackColor = Color.Transparent;
+            btnProfil.BackgroundImage = (Image)resources.GetObject("btnProfil.BackgroundImage");
+            btnProfil.BackgroundImageLayout = ImageLayout.Stretch;
+            btnProfil.FlatAppearance.BorderSize = 0;
+            btnProfil.FlatStyle = FlatStyle.Flat;
+            btnProfil.Location = new Point(35, 669);
+            btnProfil.Name = "btnProfil";
+            btnProfil.Size = new Size(306, 76);
+            btnProfil.TabIndex = 22;
+            btnProfil.UseVisualStyleBackColor = false;
+            // 
+            // btnLogout
+            // 
+            btnLogout.BackColor = Color.Transparent;
+            btnLogout.BackgroundImage = (Image)resources.GetObject("btnLogout.BackgroundImage");
+            btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
+            btnLogout.FlatAppearance.BorderSize = 0;
+            btnLogout.FlatStyle = FlatStyle.Flat;
+            btnLogout.Location = new Point(35, 983);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(306, 76);
+            btnLogout.TabIndex = 23;
+            btnLogout.UseVisualStyleBackColor = false;
+            // 
             // V_tambahDeskripsi
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -202,5 +271,6 @@
         private Label label3;
         private Label label2;
         private Label label1;
+        private Button btnKelolaCust;
     }
 }

@@ -77,13 +77,15 @@
             // btnKeranjang
             // 
             btnKeranjang.BackColor = Color.Transparent;
+            btnKeranjang.BackgroundImage = (Image)resources.GetObject("btnKeranjang.BackgroundImage");
+            btnKeranjang.BackgroundImageLayout = ImageLayout.Stretch;
             btnKeranjang.FlatAppearance.BorderSize = 0;
             btnKeranjang.FlatStyle = FlatStyle.Flat;
             btnKeranjang.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnKeranjang.ForeColor = SystemColors.ActiveCaptionText;
-            btnKeranjang.Location = new Point(42, 540);
+            btnKeranjang.Location = new Point(31, 538);
             btnKeranjang.Name = "btnKeranjang";
-            btnKeranjang.Size = new Size(286, 67);
+            btnKeranjang.Size = new Size(306, 76);
             btnKeranjang.TabIndex = 36;
             btnKeranjang.UseVisualStyleBackColor = false;
             btnKeranjang.Click += btnKeranjang_Click;
@@ -91,13 +93,15 @@
             // btnDshbrd
             // 
             btnDshbrd.BackColor = Color.Transparent;
+            btnDshbrd.BackgroundImage = (Image)resources.GetObject("btnDshbrd.BackgroundImage");
+            btnDshbrd.BackgroundImageLayout = ImageLayout.Stretch;
             btnDshbrd.FlatAppearance.BorderSize = 0;
             btnDshbrd.FlatStyle = FlatStyle.Flat;
             btnDshbrd.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnDshbrd.ForeColor = SystemColors.ActiveCaptionText;
-            btnDshbrd.Location = new Point(42, 326);
+            btnDshbrd.Location = new Point(31, 328);
             btnDshbrd.Name = "btnDshbrd";
-            btnDshbrd.Size = new Size(286, 67);
+            btnDshbrd.Size = new Size(306, 76);
             btnDshbrd.TabIndex = 35;
             btnDshbrd.UseVisualStyleBackColor = false;
             btnDshbrd.Click += btnDshbrd_Click;
@@ -105,13 +109,15 @@
             // btnDeskripsiAlat
             // 
             btnDeskripsiAlat.BackColor = Color.Transparent;
+            btnDeskripsiAlat.BackgroundImage = (Image)resources.GetObject("btnDeskripsiAlat.BackgroundImage");
+            btnDeskripsiAlat.BackgroundImageLayout = ImageLayout.Stretch;
             btnDeskripsiAlat.FlatAppearance.BorderSize = 0;
             btnDeskripsiAlat.FlatStyle = FlatStyle.Flat;
             btnDeskripsiAlat.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnDeskripsiAlat.ForeColor = SystemColors.ActiveCaptionText;
-            btnDeskripsiAlat.Location = new Point(42, 648);
+            btnDeskripsiAlat.Location = new Point(31, 642);
             btnDeskripsiAlat.Name = "btnDeskripsiAlat";
-            btnDeskripsiAlat.Size = new Size(286, 67);
+            btnDeskripsiAlat.Size = new Size(306, 76);
             btnDeskripsiAlat.TabIndex = 33;
             btnDeskripsiAlat.UseVisualStyleBackColor = false;
             btnDeskripsiAlat.Click += btnDeskripsiAlat_Click_1;
@@ -119,13 +125,15 @@
             // btnLogout
             // 
             btnLogout.BackColor = Color.Transparent;
+            btnLogout.BackgroundImage = (Image)resources.GetObject("btnLogout.BackgroundImage");
+            btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
             btnLogout.FlatAppearance.BorderSize = 0;
             btnLogout.FlatStyle = FlatStyle.Flat;
             btnLogout.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnLogout.ForeColor = SystemColors.ActiveCaptionText;
-            btnLogout.Location = new Point(42, 986);
+            btnLogout.Location = new Point(31, 979);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(286, 67);
+            btnLogout.Size = new Size(306, 76);
             btnLogout.TabIndex = 32;
             btnLogout.UseVisualStyleBackColor = false;
             btnLogout.Click += btnLogout_Click;
@@ -133,13 +141,15 @@
             // btnRiwayatPenyewaan
             // 
             btnRiwayatPenyewaan.BackColor = Color.Transparent;
+            btnRiwayatPenyewaan.BackgroundImage = (Image)resources.GetObject("btnRiwayatPenyewaan.BackgroundImage");
+            btnRiwayatPenyewaan.BackgroundImageLayout = ImageLayout.Stretch;
             btnRiwayatPenyewaan.FlatAppearance.BorderSize = 0;
             btnRiwayatPenyewaan.FlatStyle = FlatStyle.Flat;
             btnRiwayatPenyewaan.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnRiwayatPenyewaan.ForeColor = SystemColors.ActiveCaptionText;
-            btnRiwayatPenyewaan.Location = new Point(42, 435);
+            btnRiwayatPenyewaan.Location = new Point(31, 432);
             btnRiwayatPenyewaan.Name = "btnRiwayatPenyewaan";
-            btnRiwayatPenyewaan.Size = new Size(286, 67);
+            btnRiwayatPenyewaan.Size = new Size(306, 76);
             btnRiwayatPenyewaan.TabIndex = 31;
             btnRiwayatPenyewaan.UseVisualStyleBackColor = false;
             btnRiwayatPenyewaan.Click += btnRiwayatPenyewaan_Click;

@@ -87,17 +87,19 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(378, 1069);
             panel3.TabIndex = 1;
+            panel3.Paint += panel3_Paint;
             // 
             // btnKelolaCust
             // 
             btnKelolaCust.BackColor = Color.Transparent;
+            btnKelolaCust.BackgroundImage = (Image)resources.GetObject("btnKelolaCust.BackgroundImage");
             btnKelolaCust.FlatAppearance.BorderSize = 0;
             btnKelolaCust.FlatStyle = FlatStyle.Flat;
             btnKelolaCust.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnKelolaCust.ForeColor = SystemColors.ActiveCaptionText;
-            btnKelolaCust.Location = new Point(31, 340);
+            btnKelolaCust.Location = new Point(37, 334);
             btnKelolaCust.Name = "btnKelolaCust";
-            btnKelolaCust.Size = new Size(288, 67);
+            btnKelolaCust.Size = new Size(301, 78);
             btnKelolaCust.TabIndex = 26;
             btnKelolaCust.UseVisualStyleBackColor = false;
             btnKelolaCust.Click += btnKelolaCust_Click;
@@ -105,13 +107,14 @@
             // btnRiwayatPenyewaan
             // 
             btnRiwayatPenyewaan.BackColor = Color.Transparent;
+            btnRiwayatPenyewaan.BackgroundImage = (Image)resources.GetObject("btnRiwayatPenyewaan.BackgroundImage");
             btnRiwayatPenyewaan.FlatAppearance.BorderSize = 0;
             btnRiwayatPenyewaan.FlatStyle = FlatStyle.Flat;
             btnRiwayatPenyewaan.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnRiwayatPenyewaan.ForeColor = SystemColors.ActiveCaptionText;
-            btnRiwayatPenyewaan.Location = new Point(50, 474);
+            btnRiwayatPenyewaan.Location = new Point(37, 465);
             btnRiwayatPenyewaan.Name = "btnRiwayatPenyewaan";
-            btnRiwayatPenyewaan.Size = new Size(288, 67);
+            btnRiwayatPenyewaan.Size = new Size(301, 77);
             btnRiwayatPenyewaan.TabIndex = 25;
             btnRiwayatPenyewaan.UseVisualStyleBackColor = false;
             btnRiwayatPenyewaan.Click += btnRiwayatPenyewaan_Click;
@@ -119,13 +122,14 @@
             // btnProfil
             // 
             btnProfil.BackColor = Color.Transparent;
+            btnProfil.BackgroundImage = (Image)resources.GetObject("btnProfil.BackgroundImage");
             btnProfil.FlatAppearance.BorderSize = 0;
             btnProfil.FlatStyle = FlatStyle.Flat;
             btnProfil.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnProfil.ForeColor = SystemColors.ActiveCaptionText;
-            btnProfil.Location = new Point(50, 737);
+            btnProfil.Location = new Point(37, 726);
             btnProfil.Name = "btnProfil";
-            btnProfil.Size = new Size(288, 67);
+            btnProfil.Size = new Size(301, 78);
             btnProfil.TabIndex = 23;
             btnProfil.UseVisualStyleBackColor = false;
             btnProfil.Click += btnProfil_Click;
@@ -133,13 +137,14 @@
             // btnLogout
             // 
             btnLogout.BackColor = Color.Transparent;
+            btnLogout.BackgroundImage = (Image)resources.GetObject("btnLogout.BackgroundImage");
             btnLogout.FlatAppearance.BorderSize = 0;
             btnLogout.FlatStyle = FlatStyle.Flat;
             btnLogout.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnLogout.ForeColor = SystemColors.ActiveCaptionText;
-            btnLogout.Location = new Point(50, 987);
+            btnLogout.Location = new Point(37, 979);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(288, 63);
+            btnLogout.Size = new Size(301, 78);
             btnLogout.TabIndex = 22;
             btnLogout.UseVisualStyleBackColor = false;
             btnLogout.Click += btnLogout_Click;

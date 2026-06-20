@@ -72,7 +72,7 @@
             // 
             tbEmailR.BackColor = Color.White;
             tbEmailR.BorderStyle = BorderStyle.None;
-            tbEmailR.Location = new Point(163, 555);
+            tbEmailR.Location = new Point(163, 563);
             tbEmailR.Multiline = true;
             tbEmailR.Name = "tbEmailR";
             tbEmailR.Size = new Size(332, 39);
@@ -93,7 +93,7 @@
             // 
             tbPasswordR.BackColor = Color.White;
             tbPasswordR.BorderStyle = BorderStyle.None;
-            tbPasswordR.Location = new Point(163, 442);
+            tbPasswordR.Location = new Point(163, 440);
             tbPasswordR.Multiline = true;
             tbPasswordR.Name = "tbPasswordR";
             tbPasswordR.PasswordChar = '*';
@@ -124,24 +124,26 @@
             // btnLogin
             // 
             btnLogin.BackColor = Color.Transparent;
+            btnLogin.BackgroundImage = (Image)resources.GetObject("btnLogin.BackgroundImage");
             btnLogin.BackgroundImageLayout = ImageLayout.Stretch;
             btnLogin.FlatAppearance.BorderSize = 0;
             btnLogin.FlatStyle = FlatStyle.Flat;
-            btnLogin.Location = new Point(28, 16);
+            btnLogin.Location = new Point(3, 5);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(157, 41);
+            btnLogin.Size = new Size(208, 64);
             btnLogin.TabIndex = 5;
             btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
             // 
             // btnRegist
             // 
+            btnRegist.BackgroundImage = (Image)resources.GetObject("btnRegist.BackgroundImage");
             btnRegist.BackgroundImageLayout = ImageLayout.Stretch;
             btnRegist.FlatAppearance.BorderSize = 0;
             btnRegist.FlatStyle = FlatStyle.Flat;
-            btnRegist.Location = new Point(268, 16);
+            btnRegist.Location = new Point(233, 3);
             btnRegist.Name = "btnRegist";
-            btnRegist.Size = new Size(146, 42);
+            btnRegist.Size = new Size(218, 66);
             btnRegist.TabIndex = 6;
             btnRegist.UseVisualStyleBackColor = true;
             btnRegist.Click += btnRegist_Click;

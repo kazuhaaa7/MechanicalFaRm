@@ -43,7 +43,6 @@ namespace MechanicalFaRm.App.Views
             btnKelolaCust = new Button();
             btnLogout = new Button();
             btnRiwayatPenyewaan = new Button();
-            btnKelolaAlat = new Button();
             contextMenuStrip1 = new ContextMenuStrip(components);
             panel1.SuspendLayout();
             panel4.SuspendLayout();
@@ -71,7 +70,7 @@ namespace MechanicalFaRm.App.Views
             panel4.Controls.Add(lblNoTelp);
             panel4.Controls.Add(lblEmail);
             panel4.Controls.Add(lblUsername);
-            panel4.Location = new Point(938, 0);
+            panel4.Location = new Point(938, 3);
             panel4.Name = "panel4";
             panel4.Size = new Size(986, 1051);
             panel4.TabIndex = 25;
@@ -139,7 +138,6 @@ namespace MechanicalFaRm.App.Views
             panel2.Controls.Add(btnKelolaCust);
             panel2.Controls.Add(btnLogout);
             panel2.Controls.Add(btnRiwayatPenyewaan);
-            panel2.Controls.Add(btnKelolaAlat);
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(938, 1051);
@@ -148,13 +146,15 @@ namespace MechanicalFaRm.App.Views
             // btnDeskripsiAlat
             // 
             btnDeskripsiAlat.BackColor = Color.Transparent;
+            btnDeskripsiAlat.BackgroundImage = (Image)resources.GetObject("btnDeskripsiAlat.BackgroundImage");
+            btnDeskripsiAlat.BackgroundImageLayout = ImageLayout.Stretch;
             btnDeskripsiAlat.FlatAppearance.BorderSize = 0;
             btnDeskripsiAlat.FlatStyle = FlatStyle.Flat;
             btnDeskripsiAlat.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnDeskripsiAlat.ForeColor = SystemColors.ActiveCaptionText;
-            btnDeskripsiAlat.Location = new Point(56, 636);
+            btnDeskripsiAlat.Location = new Point(32, 543);
             btnDeskripsiAlat.Name = "btnDeskripsiAlat";
-            btnDeskripsiAlat.Size = new Size(291, 67);
+            btnDeskripsiAlat.Size = new Size(306, 76);
             btnDeskripsiAlat.TabIndex = 21;
             btnDeskripsiAlat.UseVisualStyleBackColor = false;
             btnDeskripsiAlat.Click += btnDeskripsiAlat_Click;
@@ -162,13 +162,15 @@ namespace MechanicalFaRm.App.Views
             // btnKelolaCust
             // 
             btnKelolaCust.BackColor = Color.Transparent;
+            btnKelolaCust.BackgroundImage = (Image)resources.GetObject("btnKelolaCust.BackgroundImage");
+            btnKelolaCust.BackgroundImageLayout = ImageLayout.Stretch;
             btnKelolaCust.FlatAppearance.BorderSize = 0;
             btnKelolaCust.FlatStyle = FlatStyle.Flat;
             btnKelolaCust.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnKelolaCust.ForeColor = SystemColors.ActiveCaptionText;
-            btnKelolaCust.Location = new Point(45, 425);
+            btnKelolaCust.Location = new Point(32, 327);
             btnKelolaCust.Name = "btnKelolaCust";
-            btnKelolaCust.Size = new Size(291, 67);
+            btnKelolaCust.Size = new Size(306, 76);
             btnKelolaCust.TabIndex = 20;
             btnKelolaCust.UseVisualStyleBackColor = false;
             btnKelolaCust.Click += btnKelolaCust_Click_1;
@@ -190,29 +192,17 @@ namespace MechanicalFaRm.App.Views
             // btnRiwayatPenyewaan
             // 
             btnRiwayatPenyewaan.BackColor = Color.Transparent;
+            btnRiwayatPenyewaan.BackgroundImage = (Image)resources.GetObject("btnRiwayatPenyewaan.BackgroundImage");
+            btnRiwayatPenyewaan.BackgroundImageLayout = ImageLayout.Stretch;
             btnRiwayatPenyewaan.FlatAppearance.BorderSize = 0;
             btnRiwayatPenyewaan.FlatStyle = FlatStyle.Flat;
             btnRiwayatPenyewaan.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnRiwayatPenyewaan.ForeColor = SystemColors.ActiveCaptionText;
-            btnRiwayatPenyewaan.Location = new Point(47, 531);
+            btnRiwayatPenyewaan.Location = new Point(32, 433);
             btnRiwayatPenyewaan.Name = "btnRiwayatPenyewaan";
-            btnRiwayatPenyewaan.Size = new Size(291, 67);
+            btnRiwayatPenyewaan.Size = new Size(306, 76);
             btnRiwayatPenyewaan.TabIndex = 18;
             btnRiwayatPenyewaan.UseVisualStyleBackColor = false;
-            // 
-            // btnKelolaAlat
-            // 
-            btnKelolaAlat.BackColor = Color.Transparent;
-            btnKelolaAlat.FlatAppearance.BorderSize = 0;
-            btnKelolaAlat.FlatStyle = FlatStyle.Flat;
-            btnKelolaAlat.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnKelolaAlat.ForeColor = SystemColors.ActiveCaptionText;
-            btnKelolaAlat.Location = new Point(45, 315);
-            btnKelolaAlat.Name = "btnKelolaAlat";
-            btnKelolaAlat.Size = new Size(302, 72);
-            btnKelolaAlat.TabIndex = 17;
-            btnKelolaAlat.UseVisualStyleBackColor = false;
-            btnKelolaAlat.Click += btnKelolaAlat_Click;
             // 
             // contextMenuStrip1
             // 
@@ -248,7 +238,6 @@ namespace MechanicalFaRm.App.Views
         private Panel panel8;
         private Button btnEditProfileA;
         private Panel panel9;
-        private Button btnKelolaAlat;
         private Button button4;
         private Button btnLogout;
         private Button btnRiwayatPenyewaan;

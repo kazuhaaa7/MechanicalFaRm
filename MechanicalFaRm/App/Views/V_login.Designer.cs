@@ -63,11 +63,12 @@
             // btnLogin
             // 
             btnLogin.BackColor = Color.White;
+            btnLogin.BackgroundImage = (Image)resources.GetObject("btnLogin.BackgroundImage");
             btnLogin.BackgroundImageLayout = ImageLayout.Center;
             btnLogin.FlatAppearance.BorderSize = 0;
             btnLogin.FlatStyle = FlatStyle.Flat;
             btnLogin.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogin.Location = new Point(319, 801);
+            btnLogin.Location = new Point(327, 800);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(211, 51);
             btnLogin.TabIndex = 0;
@@ -80,11 +81,11 @@
             tbPassword.BackColor = Color.White;
             tbPassword.BorderStyle = BorderStyle.None;
             tbPassword.ForeColor = Color.Black;
-            tbPassword.Location = new Point(265, 583);
+            tbPassword.Location = new Point(285, 578);
             tbPassword.Multiline = true;
             tbPassword.Name = "tbPassword";
             tbPassword.PasswordChar = '*';
-            tbPassword.Size = new Size(326, 36);
+            tbPassword.Size = new Size(326, 41);
             tbPassword.TabIndex = 1;
             tbPassword.TextChanged += tbPassword_TextChanged;
             // 
@@ -92,10 +93,10 @@
             // 
             tbUsername.BackColor = Color.White;
             tbUsername.BorderStyle = BorderStyle.None;
-            tbUsername.Location = new Point(265, 473);
+            tbUsername.Location = new Point(274, 466);
             tbUsername.Multiline = true;
             tbUsername.Name = "tbUsername";
-            tbUsername.Size = new Size(346, 33);
+            tbUsername.Size = new Size(337, 40);
             tbUsername.TabIndex = 0;
             tbUsername.TextChanged += tbUsername_TextChanged;
             // 

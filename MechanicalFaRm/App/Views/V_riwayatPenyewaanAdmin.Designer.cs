@@ -32,7 +32,6 @@
             panel1 = new Panel();
             panel2 = new Panel();
             btnKelolaCust = new Button();
-            btnKelolaAlat = new Button();
             btnDeskripsiAlat = new Button();
             btnProfil = new Button();
             btnLogout = new Button();
@@ -58,7 +57,6 @@
             // 
             panel2.BackColor = Color.Transparent;
             panel2.Controls.Add(btnKelolaCust);
-            panel2.Controls.Add(btnKelolaAlat);
             panel2.Controls.Add(btnDeskripsiAlat);
             panel2.Controls.Add(btnProfil);
             panel2.Controls.Add(btnLogout);
@@ -71,41 +69,31 @@
             // btnKelolaCust
             // 
             btnKelolaCust.BackColor = Color.Transparent;
+            btnKelolaCust.BackgroundImage = (Image)resources.GetObject("btnKelolaCust.BackgroundImage");
+            btnKelolaCust.BackgroundImageLayout = ImageLayout.Stretch;
             btnKelolaCust.FlatAppearance.BorderSize = 0;
             btnKelolaCust.FlatStyle = FlatStyle.Flat;
             btnKelolaCust.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnKelolaCust.ForeColor = SystemColors.ActiveCaptionText;
-            btnKelolaCust.Location = new Point(42, 430);
+            btnKelolaCust.Location = new Point(22, 342);
             btnKelolaCust.Name = "btnKelolaCust";
-            btnKelolaCust.Size = new Size(288, 67);
+            btnKelolaCust.Size = new Size(306, 76);
             btnKelolaCust.TabIndex = 31;
             btnKelolaCust.UseVisualStyleBackColor = false;
             btnKelolaCust.Click += btnKelolaCust_Click;
             // 
-            // btnKelolaAlat
-            // 
-            btnKelolaAlat.BackColor = Color.Transparent;
-            btnKelolaAlat.FlatAppearance.BorderSize = 0;
-            btnKelolaAlat.FlatStyle = FlatStyle.Flat;
-            btnKelolaAlat.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnKelolaAlat.ForeColor = SystemColors.ActiveCaptionText;
-            btnKelolaAlat.Location = new Point(42, 331);
-            btnKelolaAlat.Name = "btnKelolaAlat";
-            btnKelolaAlat.Size = new Size(288, 67);
-            btnKelolaAlat.TabIndex = 30;
-            btnKelolaAlat.UseVisualStyleBackColor = false;
-            btnKelolaAlat.Click += btnKelolaAlat_Click;
-            // 
             // btnDeskripsiAlat
             // 
             btnDeskripsiAlat.BackColor = Color.Transparent;
+            btnDeskripsiAlat.BackgroundImage = (Image)resources.GetObject("btnDeskripsiAlat.BackgroundImage");
+            btnDeskripsiAlat.BackgroundImageLayout = ImageLayout.Stretch;
             btnDeskripsiAlat.FlatAppearance.BorderSize = 0;
             btnDeskripsiAlat.FlatStyle = FlatStyle.Flat;
             btnDeskripsiAlat.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnDeskripsiAlat.ForeColor = SystemColors.ActiveCaptionText;
-            btnDeskripsiAlat.Location = new Point(42, 644);
+            btnDeskripsiAlat.Location = new Point(22, 560);
             btnDeskripsiAlat.Name = "btnDeskripsiAlat";
-            btnDeskripsiAlat.Size = new Size(288, 67);
+            btnDeskripsiAlat.Size = new Size(306, 76);
             btnDeskripsiAlat.TabIndex = 29;
             btnDeskripsiAlat.UseVisualStyleBackColor = false;
             btnDeskripsiAlat.Click += btnDeskripsiAlat_Click;
@@ -113,13 +101,15 @@
             // btnProfil
             // 
             btnProfil.BackColor = Color.Transparent;
+            btnProfil.BackgroundImage = (Image)resources.GetObject("btnProfil.BackgroundImage");
+            btnProfil.BackgroundImageLayout = ImageLayout.Stretch;
             btnProfil.FlatAppearance.BorderSize = 0;
             btnProfil.FlatStyle = FlatStyle.Flat;
             btnProfil.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnProfil.ForeColor = SystemColors.ActiveCaptionText;
-            btnProfil.Location = new Point(42, 749);
+            btnProfil.Location = new Point(22, 666);
             btnProfil.Name = "btnProfil";
-            btnProfil.Size = new Size(288, 67);
+            btnProfil.Size = new Size(306, 76);
             btnProfil.TabIndex = 28;
             btnProfil.UseVisualStyleBackColor = false;
             btnProfil.Click += btnProfil_Click;
@@ -127,20 +117,22 @@
             // btnLogout
             // 
             btnLogout.BackColor = Color.Transparent;
+            btnLogout.BackgroundImage = (Image)resources.GetObject("btnLogout.BackgroundImage");
+            btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
             btnLogout.FlatAppearance.BorderSize = 0;
             btnLogout.FlatStyle = FlatStyle.Flat;
             btnLogout.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnLogout.ForeColor = SystemColors.ActiveCaptionText;
-            btnLogout.Location = new Point(42, 982);
+            btnLogout.Location = new Point(22, 984);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(288, 63);
+            btnLogout.Size = new Size(306, 76);
             btnLogout.TabIndex = 27;
             btnLogout.UseVisualStyleBackColor = false;
             btnLogout.Click += btnLogout_Click;
             // 
             // dgvKelolaSewa
             // 
-            dgvKelolaSewa.BackgroundColor = SystemColors.Control;
+            dgvKelolaSewa.BackgroundColor = Color.White;
             dgvKelolaSewa.BorderStyle = BorderStyle.None;
             dgvKelolaSewa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvKelolaSewa.Location = new Point(436, 207);
@@ -170,7 +162,6 @@
         private DataGridView dgvKelolaAlat;
         private Panel panel2;
         private Button btnKelolaCust;
-        private Button btnKelolaAlat;
         private Button btnDeskripsiAlat;
         private Button btnProfil;
         private Button btnLogout;

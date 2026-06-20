@@ -89,9 +89,9 @@ namespace MechanicalFaRm.App.Views
                 Top = lblHarga.Bottom + 8,
                 Left = 10,
                 Width = card.Width - 20,
-                Height = 110, 
-                AutoSize = false, 
-                AutoEllipsis = true, 
+                Height = 110,
+                AutoSize = false,
+                AutoEllipsis = true,
                 Font = new Font("Arial", 9),
                 ForeColor = Color.DimGray
             };
@@ -101,7 +101,7 @@ namespace MechanicalFaRm.App.Views
                 Text = "Deskripsi",
                 Width = 110,
                 Height = 35,
-                Top = card.Height - 50, 
+                Top = card.Height - 50,
                 Left = 15,
                 BackColor = Color.LightGray,
                 ForeColor = Color.Black,
@@ -234,9 +234,15 @@ namespace MechanicalFaRm.App.Views
 
         private void btnDeskripsiAlat_Click(object sender, EventArgs e)
         {
-            //    V_deskripsiAlatCust des =  new V_deskripsiAlatCust(this);
-            //    des.Show();
-            //    this.Hide();
+                M_barang barang = new M_barang();
+                V_deskripsiAlatCust des =  new V_deskripsiAlatCust(this, barang);
+                des.Show();
+                this.Hide();
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

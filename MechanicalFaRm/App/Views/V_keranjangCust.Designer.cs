@@ -68,17 +68,19 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(392, 1088);
             panel2.TabIndex = 4;
+            panel2.Paint += panel2_Paint;
             // 
             // btnDshbrd
             // 
             btnDshbrd.BackColor = Color.Transparent;
+            btnDshbrd.BackgroundImageLayout = ImageLayout.Stretch;
             btnDshbrd.FlatAppearance.BorderSize = 0;
             btnDshbrd.FlatStyle = FlatStyle.Flat;
             btnDshbrd.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnDshbrd.ForeColor = SystemColors.ActiveCaptionText;
             btnDshbrd.Location = new Point(45, 340);
             btnDshbrd.Name = "btnDshbrd";
-            btnDshbrd.Size = new Size(288, 67);
+            btnDshbrd.Size = new Size(306, 76);
             btnDshbrd.TabIndex = 18;
             btnDshbrd.UseVisualStyleBackColor = false;
             btnDshbrd.Click += btnDshbrd_Click;
@@ -128,13 +130,14 @@
             // btnRiwayatPenyewaan
             // 
             btnRiwayatPenyewaan.BackColor = Color.Transparent;
+            btnRiwayatPenyewaan.BackgroundImageLayout = ImageLayout.Stretch;
             btnRiwayatPenyewaan.FlatAppearance.BorderSize = 0;
             btnRiwayatPenyewaan.FlatStyle = FlatStyle.Flat;
             btnRiwayatPenyewaan.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnRiwayatPenyewaan.ForeColor = SystemColors.ActiveCaptionText;
             btnRiwayatPenyewaan.Location = new Point(45, 444);
             btnRiwayatPenyewaan.Name = "btnRiwayatPenyewaan";
-            btnRiwayatPenyewaan.Size = new Size(288, 67);
+            btnRiwayatPenyewaan.Size = new Size(306, 76);
             btnRiwayatPenyewaan.TabIndex = 13;
             btnRiwayatPenyewaan.UseVisualStyleBackColor = false;
             btnRiwayatPenyewaan.Click += btnRiwayatPenyewaan_Click;
@@ -142,7 +145,7 @@
             // dgvKeranjang
             // 
             dgvKeranjang.BackgroundColor = SystemColors.Control;
-            dgvKeranjang.BorderStyle = BorderStyle.Fixed3D;
+            dgvKeranjang.BorderStyle = BorderStyle.None;
             dgvKeranjang.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvKeranjang.Location = new Point(428, 216);
             dgvKeranjang.Name = "dgvKeranjang";

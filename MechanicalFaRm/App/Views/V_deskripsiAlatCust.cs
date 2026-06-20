@@ -18,6 +18,7 @@ namespace MechanicalFaRm.App.Views
         private int? userId;
         private List<(M_barang produk, int jumlah)> keranjang;
         private V_dashboardCust parent;
+        private C_loginAuthController logout;
         public V_deskripsiAlatCust(V_dashboardCust parentform, M_barang barang)
         {
             InitializeComponent();
@@ -29,7 +30,8 @@ namespace MechanicalFaRm.App.Views
             flp1.WrapContents = true;
 
             c_barang = new C_barangController();
-            userId = SE_userSession.id_user; ;
+            userId = SE_userSession.id_user;
+            logout = new C_loginAuthController();
             keranjang = new List<(M_barang, int)>();
 
             LoadDeskripsi();
@@ -212,7 +214,7 @@ namespace MechanicalFaRm.App.Views
                 Top = lblLabelDeskripsi.Bottom + 5,
                 Left = 10,
                 Width = panelRingkasan.Width - 25,
-                Height = 150, 
+                Height = 150,
                 Font = new Font("Arial", 10, FontStyle.Italic),
                 ForeColor = Color.DimGray,
             };
@@ -220,6 +222,36 @@ namespace MechanicalFaRm.App.Views
             panelRingkasan.Controls.AddRange(new Control[] {
         lblJudul, lblNama, lblStok, lblHarga, lblLabelDeskripsi, lblIsiDeskripsi
     });
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            new V_dashboardCust().Show();
+            this.Hide();
+        }
+
+        private void btnRiwayatPenyewaan_Click(object sender, EventArgs e)
+        {
+            new V_riwayatPenyewaanCust().Show();
+            this.Hide();
+        }
+
+        private void btnKeranjang_Click(object sender, EventArgs e)
+        {
+            new V_keranjangCust().Show();
+            this.Hide();
+        }
+
+        private void btnProfil_Click(object sender, EventArgs e)
+        {
+            int id = SE_userSession.id_user;
+            new V_profileCust(id).Show();
+            this.Hide();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            logout.Logout(this);
         }
     }
 }

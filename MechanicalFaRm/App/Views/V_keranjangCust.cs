@@ -19,6 +19,7 @@ namespace MechanicalFaRm.App.Views
         private S_PesananService _servicePesanan;
         private C_PesananController _pesananControll;
         private R_PesananRepository _reposan;
+        private C_loginAuthController logout;
         public V_keranjangCust()
         {
             InitializeComponent();
@@ -96,8 +97,7 @@ namespace MechanicalFaRm.App.Views
         }
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("akan logout");
-            this.Close();
+            logout.Logout(this);
         }
 
         private void btnDshbrd_Click(object sender, EventArgs e)
@@ -123,9 +123,10 @@ namespace MechanicalFaRm.App.Views
 
         private void btnDeskripsiAlat_Click(object sender, EventArgs e)
         {
-            V_deskripsiAlat des = new V_deskripsiAlat();
-            des.Show();
-            this.Close();
+            //M_barang barang = new  M_barang();
+            //V_deskripsiAlatCust des = new V_deskripsiAlatCust(paren,barang);
+            //des.Show();
+            //this.Close();
         }
 
         private void btnProfil_Click(object sender, EventArgs e)
@@ -162,12 +163,17 @@ namespace MechanicalFaRm.App.Views
                     formBayar.ShowDialog();
                 }
 
-                RefreshData(); 
+                RefreshData();
             }
             else
             {
                 MessageBox.Show(hasil, "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
-    }
+}

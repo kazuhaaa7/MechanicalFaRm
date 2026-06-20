@@ -99,9 +99,9 @@
             panel2.BackColor = Color.Transparent;
             panel2.Controls.Add(btnLanjut);
             panel2.Controls.Add(btnKeranjang);
-            panel2.Location = new Point(392, 381);
+            panel2.Location = new Point(260, 371);
             panel2.Name = "panel2";
-            panel2.Size = new Size(396, 66);
+            panel2.Size = new Size(528, 76);
             panel2.TabIndex = 21;
             // 
             // btnLanjut
@@ -115,7 +115,7 @@
             btnLanjut.ForeColor = SystemColors.ButtonHighlight;
             btnLanjut.Location = new Point(216, 12);
             btnLanjut.Name = "btnLanjut";
-            btnLanjut.Size = new Size(168, 42);
+            btnLanjut.Size = new Size(173, 55);
             btnLanjut.TabIndex = 10;
             btnLanjut.Text = "Lanjut";
             btnLanjut.UseVisualStyleBackColor = false;
@@ -130,7 +130,7 @@
             btnKeranjang.ForeColor = SystemColors.ButtonHighlight;
             btnKeranjang.Location = new Point(3, 12);
             btnKeranjang.Name = "btnKeranjang";
-            btnKeranjang.Size = new Size(168, 42);
+            btnKeranjang.Size = new Size(181, 55);
             btnKeranjang.TabIndex = 11;
             btnKeranjang.Text = "Keranjang";
             btnKeranjang.UseVisualStyleBackColor = true;
