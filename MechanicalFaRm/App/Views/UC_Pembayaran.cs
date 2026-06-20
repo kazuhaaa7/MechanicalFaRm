@@ -1,117 +1,131 @@
-﻿using MechanicalFaRm.App.Models;
-using MechanicalFaRm.App.Repository;
+﻿using MechanicalFaRm.App.Controllers;
+using MechanicalFaRm.App.Models;
 using MechanicalFaRm.App.Service;
 using MechanicalFaRm.App.Session;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace MechanicalFaRm.App.Views
 {
     public partial class UC_Pembayaran : UserControl
     {
-        S_PesananService _servicePesanan = new S_PesananService();
-        S_KeranjangService _serviceker = new S_KeranjangService();
+        private S_KeranjangService _serviceker = new S_KeranjangService();
+        private C_PesananController _pesananControll = new C_PesananController();
         private Action _callbackRefreshHalaman;
-        private int _idPesanan;
+        private List<M_Keranjang> _listPesananFinal;
 
-        public UC_Pembayaran(M_Pesanan dataPesanan, Action callbackRefresh)
+        public UC_Pembayaran(List<M_Keranjang> listPesanan, Action callbackRefresh)
         {
             InitializeComponent();
 
-            _servicePesanan = new S_PesananService();
-            _idPesanan = dataPesanan.id_pesanan;
+
+            _listPesananFinal = listPesanan;
             _callbackRefreshHalaman = callbackRefresh;
 
             cbMetodeBayar.Items.Clear();
             cbMetodeBayar.Items.Add("Transfer Bank BCA");
             cbMetodeBayar.Items.Add("Scan QRIS (E-Wallet)");
-            cbMetodeBayar.SelectedIndex = 0; 
-            cbMetodeBayar.DropDownStyle = ComboBoxStyle.DropDownList; 
+            cbMetodeBayar.SelectedIndex = 0;
+            cbMetodeBayar.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            lblIdPesanan.Text = $"ID Pemesanan: #{dataPesanan.id_pesanan}";
+
+
+            // Setup Data Label Atas
+            lblIdPesanan.Text = "ID Pemesanan: (Menunggu Konfirmasi)";
             lblTanggal.Text = $"Tanggal: {DateTime.Now:dd MMMM yyyy}";
-            lblNamaPenyewa.Text = $"Penyewa: {dataPesanan.Penyewa.namaPenyewa}";
-            lblTotalHarga.Text = string.Format("Total: Rp{0:N0}", dataPesanan.total);
-            if (dataPesanan.jalan != null)
-            {
-                tbNamaJalan.Text = dataPesanan.jalan.Jalan;
-            }
-            else
-            {
-                tbNamaJalan.Text = "Alamat tidak ditemukan";
-            }
-            flpBarangSewa.Controls.Clear();
 
-            foreach (var item in dataPesanan.detailBarang)
+            string nama = listPesanan.Count > 0 && listPesanan[0].Penyewa != null
+                          ? listPesanan[0].Penyewa.namaPenyewa
+                          : "Penyewa";
+            lblNamaPenyewa.Text = $"Penyewa: {nama}";
+
+            // Kosongkan alamat jalan bawaan
+            tbNamaJalan.Text = "";
+
+            // Render Daftar Barang ke dalam Kotak Besar (FlowLayoutPanel)
+            decimal totalKeseluruhan = 0;
+            //flpBarangSewa.Controls.Clear();
+
+            foreach (var item in listPesanan)
             {
+                int durasi = (item.tglKembali - item.tglSewa).Days;
+                if (durasi <= 0) durasi = 3;
+
+                decimal subTotal = (decimal)item.hargaSewa * item.jumlah * durasi;
+                totalKeseluruhan += subTotal;
+
                 Label lblItem = new Label();
-
                 lblItem.Text = $"• {item.namaBarang}  x{item.jumlah} Unit";
-
                 lblItem.Font = new Font("Segoe UI", 10f, FontStyle.Regular);
-                lblItem.ForeColor = Color.FromArgb(0, 0, 0);
+                lblItem.ForeColor = Color.Black;
                 lblItem.AutoSize = true;
+                lblItem.Margin = new Padding(5, 5, 5, 5); // Memberi jarak antar item
 
-                lblItem.Margin = new Padding(5, 2, 5, 2);
                 flpBarangSewa.Controls.Add(lblItem);
             }
+
+            // Setup Total Harga Bawah
+            lblTotalHarga.Text = string.Format("Total: Rp{0:N0} Juta", totalKeseluruhan);
+
         }
 
         private void btnBayar_Click(object sender, EventArgs e)
         {
             string inputJalan = tbNamaJalan.Text.Trim();
-            if(string.IsNullOrWhiteSpace(inputJalan))
+
+            // Validasi Alamat
+            if (string.IsNullOrWhiteSpace(inputJalan))
             {
                 MessageBox.Show("Nama jalan wajib diisi!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                tbNamaJalan.Focus(); 
+                tbNamaJalan.Focus();
                 return;
             }
-            string metodeTerpilih = cbMetodeBayar.SelectedItem.ToString();
 
-            DialogResult konfirmasi = MessageBox.Show($"Apakah Anda yakin ingin membayar transaksi #{_idPesanan} via {metodeTerpilih}?",
+            string metodeTerpilih = cbMetodeBayar.SelectedItem.ToString();
+            DialogResult konfirmasi = MessageBox.Show($"Apakah Anda yakin ingin menyelesaikan transaksi via {metodeTerpilih}?",
                                                        "Konfirmasi Pembayaran",
                                                        MessageBoxButtons.YesNo,
                                                        MessageBoxIcon.Question);
 
+            int idUser = SE_userSession.id_user;
 
-            int id = SE_userSession.id_user;
-            
             if (konfirmasi == DialogResult.Yes)
             {
-                bool isSukses = _servicePesanan.UpdateStatusPesanan(_idPesanan, "Sudah Terverifikasi Admin", inputJalan, id);
+                string hasil = _pesananControll.ProsesCo(idUser, inputJalan, _listPesananFinal);
 
-                if (isSukses)
+                if (hasil.Equals("Sukses", StringComparison.OrdinalIgnoreCase))
                 {
                     MessageBox.Show("Pembayaran sukses dikonfirmasi! Data otomatis berpindah ke Riwayat.",
                                     "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    _serviceker.ClearKeranjang(id);
+                    _serviceker.ClearKeranjang(idUser);
                     _callbackRefreshHalaman?.Invoke();
 
+                    var formInduk = this.FindForm();
+                    if (formInduk != null && formInduk.Name == "V_pembayaran")
+                    {
+                        formInduk.Close();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Gagal terhubung ke server database untuk memperbarui status.", "Error Database", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(hasil, "Error Database", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
 
-        private void cbMetodeBayar_Click(object sender, EventArgs e)
+        private void cbMetodeBayar_Click(object sender, EventArgs e) { }
+        private void label1_Click(object sender, EventArgs e) { }
+        private void lblTotalHarga_Click(object sender, EventArgs e) { }
+
+        private void flpBarangSewa_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTotalHarga_Click(object sender, EventArgs e)
+        private void UC_Pembayaran_Load(object sender, EventArgs e)
         {
 
         }

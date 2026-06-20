@@ -30,7 +30,7 @@ namespace MechanicalFaRm.App.Repository
 
         //}
 
-        public bool PesananBaru(List<M_Keranjang> keranjang, int idUser)
+        public bool PesananBaru(List<M_Keranjang> keranjang, int idUser, string alamat)
         {
             using var conn = dbconnect.GetConn();
             conn.Open();
@@ -41,13 +41,17 @@ namespace MechanicalFaRm.App.Repository
                 string namaPenyewa = keranjang.Count > 0 ? (keranjang[0].Penyewa?.namaPenyewa ?? "") : "";
                 if (!string.IsNullOrWhiteSpace(namaPenyewa))
                 {
-                    string queryUser = @"UPDATE public.user SET nama = @nama_penyewa WHERE id_user = @id_user;";
+                    string queryUser = @"UPDATE ""user"" SET nama = @nama_penyewa WHERE id_user = @id_user;";
                     using (NpgsqlCommand cmdUser = new NpgsqlCommand(queryUser, conn, transaksiDB))
                     {
                         cmdUser.Parameters.AddWithValue("@id_user", idUser);
                         cmdUser.Parameters.AddWithValue("@nama_penyewa", namaPenyewa);
                         cmdUser.ExecuteNonQuery();
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Nama kosong");
                 }
                 decimal totalKeseluruhan = 0;
                 foreach (var item in keranjang)
@@ -57,8 +61,8 @@ namespace MechanicalFaRm.App.Repository
                     totalKeseluruhan += (decimal)item.hargaSewa * item.jumlah * durasi;
                 }
 
-                string queryInduk = @"INSERT INTO pesanan (id_user, status, total_bayar) 
-                              VALUES (@id_user, @status, @total) 
+                string queryInduk = @"INSERT INTO pesanan (id_user, status, total_bayar, alamat_jalan) 
+                              VALUES (@id_user, @status, @total, @alamat) 
                               RETURNING id_pesanan;";
 
                 int idPesananBaru = 0;
@@ -66,7 +70,8 @@ namespace MechanicalFaRm.App.Repository
                 {
                     cmdInduk.Parameters.AddWithValue("@id_user", idUser);
                     cmdInduk.Parameters.AddWithValue("@status", "Menunggu Verifikasi Admin");
-                    cmdInduk.Parameters.AddWithValue("@total", totalKeseluruhan); // Kirim angka yang sudah benar
+                    cmdInduk.Parameters.AddWithValue("@total", totalKeseluruhan);   
+                    cmdInduk.Parameters.AddWithValue("@alamat", string.IsNullOrWhiteSpace(alamat) ? (object)DBNull.Value : alamat);
                     idPesananBaru = Convert.ToInt32(cmdInduk.ExecuteScalar());
                 }
 

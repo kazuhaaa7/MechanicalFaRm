@@ -54,7 +54,7 @@
             // 
             lblTanggal.AutoSize = true;
             lblTanggal.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTanggal.Location = new Point(555, 80);
+            lblTanggal.Location = new Point(892, 80);
             lblTanggal.Name = "lblTanggal";
             lblTanggal.Size = new Size(77, 31);
             lblTanggal.TabIndex = 1;
@@ -64,7 +64,7 @@
             // 
             lblNamaPenyewa.AutoSize = true;
             lblNamaPenyewa.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNamaPenyewa.Location = new Point(249, 80);
+            lblNamaPenyewa.Location = new Point(498, 80);
             lblNamaPenyewa.Name = "lblNamaPenyewa";
             lblNamaPenyewa.Size = new Size(79, 31);
             lblNamaPenyewa.TabIndex = 2;
@@ -102,13 +102,15 @@
             // 
             // flpBarangSewa
             // 
+            flpBarangSewa.BackColor = Color.Transparent;
             flpBarangSewa.FlowDirection = FlowDirection.TopDown;
             flpBarangSewa.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             flpBarangSewa.ForeColor = Color.Black;
             flpBarangSewa.Location = new Point(29, 125);
             flpBarangSewa.Name = "flpBarangSewa";
-            flpBarangSewa.Size = new Size(782, 280);
+            flpBarangSewa.Size = new Size(948, 270);
             flpBarangSewa.TabIndex = 6;
+            flpBarangSewa.Paint += flpBarangSewa_Paint;
             // 
             // lbl
             // 
@@ -122,7 +124,8 @@
             // 
             // tbNamaJalan
             // 
-            tbNamaJalan.Location = new Point(108, 423);
+            tbNamaJalan.BorderStyle = BorderStyle.FixedSingle;
+            tbNamaJalan.Location = new Point(120, 423);
             tbNamaJalan.Multiline = true;
             tbNamaJalan.Name = "tbNamaJalan";
             tbNamaJalan.Size = new Size(502, 46);
@@ -143,7 +146,8 @@
             Controls.Add(btnBayar);
             Controls.Add(cbMetodeBayar);
             Name = "UC_Pembayaran";
-            Size = new Size(855, 608);
+            Size = new Size(1013, 869);
+            Load += UC_Pembayaran_Load;
             ResumeLayout(false);
             PerformLayout();
         }

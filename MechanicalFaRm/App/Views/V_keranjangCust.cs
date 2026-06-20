@@ -139,36 +139,59 @@ namespace MechanicalFaRm.App.Views
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            DialogResult konfirmasi = MessageBox.Show(
-                "Apakah Anda yakin ingin memproses pesanan ini?",
-                "Konfirmasi",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question
-            );
+            //DialogResult konfirmasi = MessageBox.Show(
+            //    "Apakah Anda yakin ingin memproses pesanan ini?",
+            //    "Konfirmasi",
+            //    MessageBoxButtons.YesNo,
+            //    MessageBoxIcon.Question
+            //);
+
+            //if (konfirmasi != DialogResult.Yes) return;
+
+            //int idUserYangLogin = SE_userSession.id_user;
+            //string hasil = _pesananControll.ProsesCo(idUserYangLogin);
+
+            //if (string.Equals(hasil, "sukses", StringComparison.OrdinalIgnoreCase))
+            //{
+            //    MessageBox.Show("Pesanan berhasil dibuat! Silakan lakukan pembayaran.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            //    int idPesananTerbaru = _servicePesanan.GetIdPesananTerbaru(idUserYangLogin);
+            //    M_Pesanan datapesanan = _servicePesanan.GetPesananById(idPesananTerbaru);
+
+            //    using (V_pembayaran formBayar = new V_pembayaran(datapesanan))
+            //    {
+            //        formBayar.ShowDialog();
+            //    }
+
+            //    RefreshData();
+            //}
+            //else
+            //{
+            //    MessageBox.Show(hasil, "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //}
+            DialogResult konfirmasi = MessageBox.Show("Lanjut ke pembayaran?", "Konfirmasi",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (konfirmasi != DialogResult.Yes) return;
 
             int idUserYangLogin = SE_userSession.id_user;
-            string hasil = _pesananControll.ProsesCo(idUserYangLogin);
 
-            if (string.Equals(hasil, "sukses", StringComparison.OrdinalIgnoreCase))
+            // 1. Ambil list barang dari keranjang belanja di database
+            List<M_Keranjang> isiKeranjang = _servicePesanan.GetListKeranjang(idUserYangLogin);
+
+            if (isiKeranjang == null || isiKeranjang.Count == 0)
             {
-                MessageBox.Show("Pesanan berhasil dibuat! Silakan lakukan pembayaran.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                int idPesananTerbaru = _servicePesanan.GetIdPesananTerbaru(idUserYangLogin);
-                M_Pesanan datapesanan = _servicePesanan.GetPesananById(idPesananTerbaru);
-
-                using (V_pembayaran formBayar = new V_pembayaran(datapesanan))
-                {
-                    formBayar.ShowDialog();
-                }
-
-                RefreshData();
+                MessageBox.Show("Keranjang Anda kosong!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            else
+
+            // 2. HANTARKAN: Buka Form Pembayaran dan masukkan list keranjang ini ke dalam Constructor-nya
+            using (V_pembayaran formBayar = new V_pembayaran(isiKeranjang))
             {
-                MessageBox.Show(hasil, "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                formBayar.ShowDialog();
             }
+
+            // 3. Refresh halaman keranjang setelah kembali dari form pembayaran
+            RefreshData();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

@@ -29,7 +29,7 @@ namespace MechanicalFaRm.App.Service
             return _repopesan.AddToKeranjang(itemkeranjang);
         }
 
-        public string SubmitCheckout(int idUser)
+        public string SubmitCheckout(int idUser, string alamat, List<M_Keranjang> keranjang)
         {
             var keranjangDB = _repopesan.GetListKeranjang(idUser);
 
@@ -38,10 +38,12 @@ namespace MechanicalFaRm.App.Service
                 return "Gagal: Keranjang belanja Anda masih kosong!";
             }
 
+            if (keranjang == null || keranjang.Count == 0)
+                return "Gagal: Data barang tidak valid!";
 
-            bool isSukses = _transaksiRepo.PesananBaru(keranjangDB,idUser);
+            bool isSukses = _transaksiRepo.PesananBaru(keranjang, idUser, alamat);
 
-            return isSukses ? "Sukses" : "Gagal: Terjadi kesalahan saat menyimpan.";
+            return isSukses ? "Sukses" : "Gagal: Terjadi kesalahan saat menyimpan ke database.";
         }
 
         public List<M_DetailPesanan> GetAllPesanan(int id)
@@ -135,7 +137,7 @@ namespace MechanicalFaRm.App.Service
             return listData;
         }
 
-        public bool UpdateStatusPesanan(int idPesanan, string statusBaru, string namaJalanBaru, int idUserLogin)
+        public bool UpdatePesanan(int idPesanan, string statusBaru, string namaJalanBaru, int idUserLogin)
         {
             bool isSukses = false;
 
@@ -161,7 +163,6 @@ namespace MechanicalFaRm.App.Service
 
                         int barisTerpengaruh = cmd.ExecuteNonQuery();
 
-                        // Jika barisTerpengaruh > 0, artinya update berhasil
                         if (barisTerpengaruh > 0)
                         {
                             isSukses = true;
@@ -205,7 +206,6 @@ namespace MechanicalFaRm.App.Service
                                 Penyewa = new M_user { namaPenyewa = reader.IsDBNull(1) ? "" : reader.GetString(1) },
                                 total = reader.IsDBNull(2) ? 0 : reader.GetDecimal(2),
                                 status = reader.IsDBNull(3) ? "" : reader.GetString(3),
-                                jalan = new M_jalan(),
                                 detailBarang = new List<M_DetailPesanan>()
                             };
                         }

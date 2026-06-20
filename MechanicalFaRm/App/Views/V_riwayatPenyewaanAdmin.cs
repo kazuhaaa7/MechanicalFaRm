@@ -76,7 +76,9 @@ namespace MechanicalFaRm.App.Views
             datak.Columns.Add("Harga Alat", typeof(string));
             datak.Columns.Add("Durasi", typeof(string));
             datak.Columns.Add("Total", typeof(string));
+            datak.Columns.Add("Tujuan", typeof(string));
             datak.Columns.Add("Status", typeof(string));
+            
 
             foreach (var item in isiKeranjang)
             {
@@ -87,6 +89,7 @@ namespace MechanicalFaRm.App.Views
                     $"{item.hargaSewa} Juta",
                     $"{item.Durasi} Hari",
                     $"{item.total} Juta",
+                    item.jalan,
                     item.status
                 );
             }

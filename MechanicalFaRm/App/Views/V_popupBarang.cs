@@ -66,6 +66,7 @@ namespace MechanicalFaRm.App.Views
         {
 
         }
+
         private void btnLanjut_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(tbNamaPenyewa.Text))
@@ -92,7 +93,7 @@ namespace MechanicalFaRm.App.Views
             int.TryParse(lblHargaAlat.Text, out int hargaBarang);
             M_Keranjang dataKeranjangBaru = new M_Keranjang
             {
-                id_barang = idBarang,
+                id_barang = this.idBarang,
                 namaBarang = lblNamaAlat.Text,
                 jumlah = qty,
                 tglSewa = dtpSewa.Value.Date,
@@ -104,32 +105,13 @@ namespace MechanicalFaRm.App.Views
                     namaPenyewa = tbNamaPenyewa.Text }
             };
 
-            string status = pesananService.AddToKeranjang(dataKeranjangBaru);
-            if (!string.Equals(status, "sukses", StringComparison.OrdinalIgnoreCase)) return;
-            C_PesananController pesananControll = new C_PesananController();
-            int idUserYangLogin = SE_userSession.id_user;
-            string hasilCheckout = pesananControll.ProsesInstantCo(dataKeranjangBaru, idUserYangLogin);
 
-            if (string.Equals(hasilCheckout, "sukses", StringComparison.OrdinalIgnoreCase))
+            List<M_Keranjang> listPopUp = new List<M_Keranjang> { dataKeranjangBaru };
+
+            using (V_pembayaran formBayar = new V_pembayaran(listPopUp))
             {
-                MessageBox.Show("Pesanan langsung berhasil dibuat! Menuju ke halaman pembayaran.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                int idPesananTerbaru = pesananService.GetIdPesananTerbaru(idUserYangLogin);
-                M_Pesanan datapesanan = pesananService.GetPesananById(idPesananTerbaru);
-
-                // Best Practice: Memakai 'using' agar Form Pembayaran ter-dispose dengan aman dari RAM
-                using (V_pembayaran formBayar = new V_pembayaran(datapesanan))
-                {
-                    this.Hide();
-                    formBayar.ShowDialog();
-                }
-
-                if (parentForm != null) parentForm.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show(hasilCheckout, "Peringatan Sistem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.Hide();
+                formBayar.ShowDialog();
             }
         }
         private void btnKeranjang_Click(object sender, EventArgs e)

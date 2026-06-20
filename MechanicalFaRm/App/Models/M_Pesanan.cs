@@ -10,6 +10,6 @@
 
         public M_user? Penyewa { get; set; } =  new M_user();
 
-        public M_jalan? jalan { get; set; } = new M_jalan();
+        public string jalan { get; set; } 
     }
 }

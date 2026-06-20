@@ -45,6 +45,7 @@ namespace MechanicalFaRm.App.Views
             dt.Columns.Add("Status", typeof(string));
             dt.Columns.Add("Durasi", typeof(string));
             dt.Columns.Add("Total", typeof(string));
+            dt.Columns.Add("Tujuan", typeof(string));
 
             foreach (var item in listBarang)
             {
@@ -54,7 +55,9 @@ namespace MechanicalFaRm.App.Views
                 $"{item.hargaSewa} Juta",
                 item.status,
                 $"{item.Durasi} Hari",
-                $"{item.total} Juta");
+                $"{item.total} Juta",
+                item.tujuan?.Jalan??"Belum Input Tujuan"
+                );
             }
 
 

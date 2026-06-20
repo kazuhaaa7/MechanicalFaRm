@@ -81,7 +81,7 @@ namespace MechanicalFaRm.App.Repository
                       b.nama_barang, b.harga_sewa, u.nama 
                FROM keranjang k
                JOIN barang b ON k.id_barang = b.id_barang
-               JOIN public.user u ON k.id_user = u.id_user 
+               JOIN ""user"" u ON k.id_user = u.id_user 
                WHERE k.id_user = @id_user";
 
                 using (var cmd = new NpgsqlCommand(sql, conn))
@@ -187,7 +187,8 @@ namespace MechanicalFaRm.App.Repository
                     b.harga_sewa, 
                     (dp.tanggal_kembali - dp.tanggal_sewa)::INT AS durasi,
                     p.total_bayar, 
-                    p.status
+                    p.status,
+                    p.alamat_jalan
                    FROM pesanan p
                    JOIN detail_pesanan dp ON p.id_pesanan = dp.id_pesanan 
                    JOIN barang b ON b.id_barang = dp.id_barang
@@ -209,7 +210,8 @@ namespace MechanicalFaRm.App.Repository
                     hargaSewa = Convert.ToInt32(reader.GetValue(3)),
                     Durasi = Convert.ToInt32(reader.GetValue(4)),
                     total = Convert.ToInt32(reader.GetValue(5)),
-                    status = reader.IsDBNull(6) ? "" : reader.GetString(6)
+                    status = reader.IsDBNull(6) ? "" : reader.GetString(6),
+                    tujuan = new M_jalan { Jalan = reader.IsDBNull(7) ? "" : reader.GetString(7) }
                 };
                 listpesanan.Add(detail);
             }

@@ -11,13 +11,13 @@ namespace MechanicalFaRm.App.Controllers
     {
         private S_PesananService _service = new S_PesananService();
         private R_TransaksiRepository _transaksirepo = new R_TransaksiRepository();
-        public string ProsesCo(int idUser)
+        public string ProsesCo(int idUser, string alamat, List<M_Keranjang> keranjangs)
         {
-            return _service.SubmitCheckout(idUser);
+            return _service.SubmitCheckout(idUser, alamat, keranjangs);
         }
 
 
-        public string ProsesInstantCo(M_Keranjang item, int idUser)
+        public string ProsesInstantCo(M_Keranjang item, int idUser, string alamat)
         {
             if (item == null) return "Gagal: Data barang tidak valid!";
 
@@ -28,7 +28,7 @@ namespace MechanicalFaRm.App.Controllers
 
             var totalBayar = (decimal)item.hargaSewa * item.jumlah * durasiHari;
 
-            bool isSukses = _transaksirepo.PesananBaru(listInstan,idUser);
+            bool isSukses = _transaksirepo.PesananBaru(listInstan,idUser, alamat);
 
             if (isSukses)
             {

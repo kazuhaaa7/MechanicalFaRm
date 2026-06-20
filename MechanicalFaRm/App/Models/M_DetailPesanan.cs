@@ -13,6 +13,8 @@
         public M_user? PenyewaDP { get; set; }
         public int Durasi { get; set; }
 
+        public M_jalan tujuan { get; set; }
+
 
     }
 }
