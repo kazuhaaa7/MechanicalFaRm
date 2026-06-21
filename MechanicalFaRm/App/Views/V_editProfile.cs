@@ -13,10 +13,12 @@ namespace MechanicalFaRm.App.Views
     public partial class V_editProfile : Form
     {
         private C_userController _userController;
-        public V_editProfile()
+        private Action _callbackRefreshProfil;
+        public V_editProfile(Action callbackRefreshProfil)
         {
             InitializeComponent();
             _userController = new C_userController();
+            _callbackRefreshProfil = callbackRefreshProfil;
         }
 
         private void btnSimpan_Click(object sender, EventArgs e)
@@ -31,6 +33,7 @@ namespace MechanicalFaRm.App.Views
 
             _userController.UpdateUser(databaru);
             MessageBox.Show("Berhasil mengedit data", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            _callbackRefreshProfil?.Invoke();
             this.Close();
             
         }

@@ -53,9 +53,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="0915E13E-2D99-C6B5-98E9-A19A1678F169" referredColumn="4BBD93BB-26FF-DBCC-4769-26CB6068C05F"/>
-</associations>
 </Column>
 <Column name="admin_id_admin" id="F24C6F17-D8CB-58DF-9AF8-52E0A5BEF409">
 <createdBy>ADVAN</createdBy>
@@ -68,8 +65,20 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="user_id_user1" id="E8024CD7-EAE8-4420-2CD1-F61E0D3321EA">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-21 06:33:32 UTC</createdTime>
+<generatorID>5039B3BD-21B1-4111-047D-009D3F47961F</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="56D0FF6E-E40E-F04C-DC15-20CC3E5989D0" referredColumn="C4799F4D-4715-30E4-CB26-50D3B702243F"/>
+<colAssociation fkAssociation="8EC2ABD6-7E62-BA92-D2A8-267D2318FAB3" referredColumn="0A09ECDD-1713-E073-F543-D8DA2881257B"/>
 </associations>
 </Column>
 </columns>
@@ -86,26 +95,15 @@
 <colUsage columnID="7FB00B66-CEF4-0949-DBB1-D3C4D067A0F9"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="6B9D37BA-382F-712F-FDF1-18B6E332610B" name="pesanan_customer_FK">
+<ind_PK_UK id="B2A3E586-1E66-491A-BB91-4AE8AD454EC8" name="pesanan_user_FK">
 <createdBy>ADVAN</createdBy>
-<createdTime>2026-05-29 23:26:09 UTC</createdTime>
-<generatorID>9416E3F9-D3AB-58B2-FF03-E4CEED9987AD</generatorID>
+<createdTime>2026-06-21 06:33:32 UTC</createdTime>
+<generatorID>32434312-A65C-5797-D662-B614DBD5D0E4</generatorID>
 <ownerDesignName>ERD_TA_PBO</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="F54F7A73-677B-454F-EE05-0FBFBB453356"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="C00BC00C-2E4D-C842-71BE-FD8F60AE588D" name="pesanan_admin_FK">
-<createdBy>ADVAN</createdBy>
-<createdTime>2026-06-10 04:55:52 UTC</createdTime>
-<generatorID>0D8E858A-85CC-782B-5590-C062D0B7F345</generatorID>
-<ownerDesignName>ERD_TA_PBO</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="F24C6F17-D8CB-58DF-9AF8-52E0A5BEF409"/>
+<colUsage columnID="E8024CD7-EAE8-4420-2CD1-F61E0D3321EA"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

@@ -34,6 +34,7 @@
             Button btnProfil;
             Button btnLogout;
             panel1 = new Panel();
+            panel5 = new Panel();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
@@ -60,11 +61,12 @@
             btnKelolaCust.BackgroundImageLayout = ImageLayout.Stretch;
             btnKelolaCust.FlatAppearance.BorderSize = 0;
             btnKelolaCust.FlatStyle = FlatStyle.Flat;
-            btnKelolaCust.Location = new Point(35, 335);
+            btnKelolaCust.Location = new Point(37, 349);
             btnKelolaCust.Name = "btnKelolaCust";
-            btnKelolaCust.Size = new Size(306, 76);
+            btnKelolaCust.Size = new Size(301, 84);
             btnKelolaCust.TabIndex = 20;
             btnKelolaCust.UseVisualStyleBackColor = false;
+            btnKelolaCust.Click += btnKelolaCust_Click;
             // 
             // btnRiwayatPenyewaan
             // 
@@ -73,11 +75,12 @@
             btnRiwayatPenyewaan.BackgroundImageLayout = ImageLayout.Stretch;
             btnRiwayatPenyewaan.FlatAppearance.BorderSize = 0;
             btnRiwayatPenyewaan.FlatStyle = FlatStyle.Flat;
-            btnRiwayatPenyewaan.Location = new Point(35, 448);
+            btnRiwayatPenyewaan.Location = new Point(35, 439);
             btnRiwayatPenyewaan.Name = "btnRiwayatPenyewaan";
-            btnRiwayatPenyewaan.Size = new Size(306, 76);
+            btnRiwayatPenyewaan.Size = new Size(301, 84);
             btnRiwayatPenyewaan.TabIndex = 21;
             btnRiwayatPenyewaan.UseVisualStyleBackColor = false;
+            btnRiwayatPenyewaan.Click += btnRiwayatPenyewaan_Click;
             // 
             // btnProfil
             // 
@@ -86,11 +89,12 @@
             btnProfil.BackgroundImageLayout = ImageLayout.Stretch;
             btnProfil.FlatAppearance.BorderSize = 0;
             btnProfil.FlatStyle = FlatStyle.Flat;
-            btnProfil.Location = new Point(35, 669);
+            btnProfil.Location = new Point(37, 619);
             btnProfil.Name = "btnProfil";
-            btnProfil.Size = new Size(306, 76);
+            btnProfil.Size = new Size(301, 84);
             btnProfil.TabIndex = 22;
             btnProfil.UseVisualStyleBackColor = false;
+            btnProfil.Click += btnProfil_Click;
             // 
             // btnLogout
             // 
@@ -99,16 +103,18 @@
             btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
             btnLogout.FlatAppearance.BorderSize = 0;
             btnLogout.FlatStyle = FlatStyle.Flat;
-            btnLogout.Location = new Point(35, 983);
+            btnLogout.Location = new Point(37, 934);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(306, 76);
+            btnLogout.Size = new Size(301, 84);
             btnLogout.TabIndex = 23;
             btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.Click += btnLogout_Click;
             // 
             // panel1
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Controls.Add(panel5);
             panel1.Controls.Add(btnLogout);
             panel1.Controls.Add(btnProfil);
             panel1.Controls.Add(btnRiwayatPenyewaan);
@@ -129,6 +135,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1924, 1082);
             panel1.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            panel5.BackgroundImage = (Image)resources.GetObject("panel5.BackgroundImage");
+            panel5.BackgroundImageLayout = ImageLayout.Stretch;
+            panel5.Location = new Point(37, 529);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(301, 84);
+            panel5.TabIndex = 29;
+            panel5.Paint += panel5_Paint;
             // 
             // label4
             // 
@@ -281,5 +297,6 @@
         private Label label2;
         private Label label1;
         private Button btnKelolaCust;
+        private Panel panel5;
     }
 }

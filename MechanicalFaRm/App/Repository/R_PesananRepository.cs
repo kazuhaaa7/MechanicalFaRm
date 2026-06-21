@@ -86,7 +86,8 @@ namespace MechanicalFaRm.App.Repository
                 string sql = @"SELECT k.id_keranjang, k.id_barang, k.jumlah, k.tgl_sewa, k.tgl_kembali, 
                       b.nama_barang, b.harga_sewa
                FROM keranjang k
-               JOIN barang b ON k.id_barang = b.id_barang";
+               JOIN barang b ON k.id_barang = b.id_barang"
+                ;
 
                 using (var cmd = new NpgsqlCommand(sql, conn))
                 {

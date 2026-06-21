@@ -55,7 +55,7 @@
 <ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="tipe_pengguna" id="033ABFEB-C967-8E89-AF17-9980D55190BC">
+<Column name="role" id="033ABFEB-C967-8E89-AF17-9980D55190BC">
 <createdBy>ADVAN</createdBy>
 <createdTime>2026-05-29 23:26:09 UTC</createdTime>
 <generatorID>714879E5-AF79-938C-50D2-57305617BE01</generatorID>
@@ -65,6 +65,41 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>10 CHAR</dataTypeSize>
 <ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_user2" id="0A09ECDD-1713-E073-F543-D8DA2881257B">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-21 06:33:32 UTC</createdTime>
+<generatorID>B4873307-29F3-CD13-5B1E-74804973CDDA</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="B751821D-C3C5-7E24-39A0-3F4693D48FE0">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-21 06:33:32 UTC</createdTime>
+<generatorID>47265FE3-04E1-628A-B194-1347A9B1742C</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>225 CHAR</dataTypeSize>
+<ownDataTypeParameters>225 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nama" id="74734C67-CB3C-CF50-4E9F-09C303BCECC0">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-21 06:33:32 UTC</createdTime>
+<generatorID>8E01EF28-1693-4B39-5CE8-D579B0A93211</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2225 CHAR</dataTypeSize>
+<ownDataTypeParameters>2225 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
@@ -78,7 +113,7 @@
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="14D1A06D-23D6-1622-ECB5-9A2FCE6BC443"/>
+<colUsage columnID="0A09ECDD-1713-E073-F543-D8DA2881257B"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="A0B101FA-350A-5870-4627-C67933E5E392" name="user_no_telp_UN">

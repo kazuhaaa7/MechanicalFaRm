@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_deskripsiAlatCust));
             panel1 = new Panel();
+            panel5 = new Panel();
             btnLogout = new Button();
             btnProfil = new Button();
             btnKeranjang = new Button();
@@ -44,6 +45,7 @@
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Controls.Add(panel5);
             panel1.Controls.Add(btnLogout);
             panel1.Controls.Add(btnProfil);
             panel1.Controls.Add(btnKeranjang);
@@ -51,10 +53,19 @@
             panel1.Controls.Add(btnDashboard);
             panel1.Controls.Add(flp1);
             panel1.Controls.Add(panelRingkasan);
-            panel1.Location = new Point(0, 0);
+            panel1.Location = new Point(0, -1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1924, 1077);
+            panel1.Size = new Size(1871, 1129);
             panel1.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            panel5.BackgroundImage = (Image)resources.GetObject("panel5.BackgroundImage");
+            panel5.BackgroundImageLayout = ImageLayout.Stretch;
+            panel5.Location = new Point(37, 619);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(301, 84);
+            panel5.TabIndex = 28;
             // 
             // btnLogout
             // 
@@ -63,9 +74,9 @@
             btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
             btnLogout.FlatAppearance.BorderSize = 0;
             btnLogout.FlatStyle = FlatStyle.Flat;
-            btnLogout.Location = new Point(42, 984);
+            btnLogout.Location = new Point(37, 934);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(301, 77);
+            btnLogout.Size = new Size(301, 84);
             btnLogout.TabIndex = 7;
             btnLogout.UseVisualStyleBackColor = false;
             btnLogout.Click += btnLogout_Click;
@@ -77,9 +88,9 @@
             btnProfil.BackgroundImageLayout = ImageLayout.Stretch;
             btnProfil.FlatAppearance.BorderSize = 0;
             btnProfil.FlatStyle = FlatStyle.Flat;
-            btnProfil.Location = new Point(42, 755);
+            btnProfil.Location = new Point(37, 709);
             btnProfil.Name = "btnProfil";
-            btnProfil.Size = new Size(301, 77);
+            btnProfil.Size = new Size(301, 84);
             btnProfil.TabIndex = 6;
             btnProfil.UseVisualStyleBackColor = false;
             btnProfil.Click += btnProfil_Click;
@@ -91,9 +102,9 @@
             btnKeranjang.BackgroundImageLayout = ImageLayout.Stretch;
             btnKeranjang.FlatAppearance.BorderSize = 0;
             btnKeranjang.FlatStyle = FlatStyle.Flat;
-            btnKeranjang.Location = new Point(42, 545);
+            btnKeranjang.Location = new Point(36, 529);
             btnKeranjang.Name = "btnKeranjang";
-            btnKeranjang.Size = new Size(301, 77);
+            btnKeranjang.Size = new Size(301, 84);
             btnKeranjang.TabIndex = 5;
             btnKeranjang.UseVisualStyleBackColor = false;
             btnKeranjang.Click += btnKeranjang_Click;
@@ -105,9 +116,9 @@
             btnRiwayatPenyewaan.BackgroundImageLayout = ImageLayout.Stretch;
             btnRiwayatPenyewaan.FlatAppearance.BorderSize = 0;
             btnRiwayatPenyewaan.FlatStyle = FlatStyle.Flat;
-            btnRiwayatPenyewaan.Location = new Point(42, 438);
+            btnRiwayatPenyewaan.Location = new Point(36, 439);
             btnRiwayatPenyewaan.Name = "btnRiwayatPenyewaan";
-            btnRiwayatPenyewaan.Size = new Size(301, 77);
+            btnRiwayatPenyewaan.Size = new Size(301, 84);
             btnRiwayatPenyewaan.TabIndex = 4;
             btnRiwayatPenyewaan.UseVisualStyleBackColor = false;
             btnRiwayatPenyewaan.Click += btnRiwayatPenyewaan_Click;
@@ -119,32 +130,32 @@
             btnDashboard.BackgroundImageLayout = ImageLayout.Stretch;
             btnDashboard.FlatAppearance.BorderSize = 0;
             btnDashboard.FlatStyle = FlatStyle.Flat;
-            btnDashboard.Location = new Point(42, 330);
+            btnDashboard.Location = new Point(36, 349);
             btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(301, 77);
+            btnDashboard.Size = new Size(301, 84);
             btnDashboard.TabIndex = 3;
             btnDashboard.UseVisualStyleBackColor = false;
             btnDashboard.Click += btnDashboard_Click;
             // 
             // flp1
             // 
-            flp1.Location = new Point(973, 164);
+            flp1.Location = new Point(973, 187);
             flp1.Name = "flp1";
-            flp1.Size = new Size(883, 862);
+            flp1.Size = new Size(829, 824);
             flp1.TabIndex = 2;
             // 
             // panelRingkasan
             // 
-            panelRingkasan.Location = new Point(439, 164);
+            panelRingkasan.Location = new Point(429, 187);
             panelRingkasan.Name = "panelRingkasan";
-            panelRingkasan.Size = new Size(504, 862);
+            panelRingkasan.Size = new Size(514, 824);
             panelRingkasan.TabIndex = 0;
             // 
             // V_deskripsiAlatCust
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1924, 1074);
+            ClientSize = new Size(1870, 1022);
             Controls.Add(panel1);
             Name = "V_deskripsiAlatCust";
             Text = "V_deskripsiAlatCust";
@@ -166,5 +177,6 @@
         private Button btnProfil;
         private Button btnKeranjang;
         private Button btnRiwayatPenyewaan;
+        private Panel panel5;
     }
 }

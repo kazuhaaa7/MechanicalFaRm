@@ -210,5 +210,16 @@ namespace MechanicalFaRm.App.Views
         {
 
         }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnKelolaCustomer_Click(object sender, EventArgs e)
+        {
+            new V_kelolaAkunAdmin().ShowDialog();
+            this.Close();
+        }
     }
 }

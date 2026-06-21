@@ -59,7 +59,7 @@ namespace MechanicalFaRm.App.Views
                 item.jumlah,
                 $"{item.total} Juta",
                 item.status,
-                item.tujuan?.Jalan??"Belum Input Tujuan",
+                item.tujuan?.Jalan ?? "Belum Input Tujuan",
                 item.metode_pembayaran
                 );
             }
@@ -104,8 +104,10 @@ namespace MechanicalFaRm.App.Views
 
         private void btnDeskripsiAlat_Click(object sender, EventArgs e)
         {
-            //new V_deskripsiAlatCust(this).Show();
-            //this.Hide();
+            M_barang barang = new M_barang();
+            V_deskripsiAlatCust des = new V_deskripsiAlatCust(null, barang);
+            des.Show();
+            this.Close();
         }
 
         private void btnProfil_Click(object sender, EventArgs e)
@@ -123,6 +125,17 @@ namespace MechanicalFaRm.App.Views
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnRiwayatPenyewaan_Click(object sender, EventArgs e)
+        {
+            new V_riwayatPenyewaanAdmin().Show();
+            this.Hide();
         }
     }
 }

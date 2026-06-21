@@ -8,7 +8,7 @@ namespace MechanicalFaRm.App.Controllers
 {
     public abstract class CRUDBarang
     {
-    public abstract bool InsertBarang(M_barang p);
+    public abstract bool InsertBarang(M_barang p); //abstract
     public abstract bool UpdateBarang(M_barang p);
     public abstract bool HapusBarang(int id); 
     }
@@ -28,7 +28,7 @@ namespace MechanicalFaRm.App.Controllers
             // ngarah ke service
             return barangService.GetListBarang();
         }
-
+            
 
         public override bool InsertBarang(M_barang p)
         {

@@ -31,9 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_riwayatPenyewaanAdmin));
             panel1 = new Panel();
             panel2 = new Panel();
-            btnKelolaCust = new Button();
-            btnDeskripsiAlat = new Button();
+            panel5 = new Panel();
+            btnKelolaCustomer = new Button();
             btnProfil = new Button();
+            btnDeskripsiAlat = new Button();
             btnLogout = new Button();
             dgvKelolaSewa = new DataGridView();
             panel1.SuspendLayout();
@@ -57,9 +58,10 @@
             // panel2
             // 
             panel2.BackColor = Color.Transparent;
-            panel2.Controls.Add(btnKelolaCust);
-            panel2.Controls.Add(btnDeskripsiAlat);
+            panel2.Controls.Add(panel5);
+            panel2.Controls.Add(btnKelolaCustomer);
             panel2.Controls.Add(btnProfil);
+            panel2.Controls.Add(btnDeskripsiAlat);
             panel2.Controls.Add(btnLogout);
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
@@ -67,37 +69,31 @@
             panel2.Size = new Size(379, 1082);
             panel2.TabIndex = 4;
             // 
-            // btnKelolaCust
+            // panel5
             // 
-            btnKelolaCust.BackColor = Color.Transparent;
-            btnKelolaCust.BackgroundImage = (Image)resources.GetObject("btnKelolaCust.BackgroundImage");
-            btnKelolaCust.BackgroundImageLayout = ImageLayout.Stretch;
-            btnKelolaCust.FlatAppearance.BorderSize = 0;
-            btnKelolaCust.FlatStyle = FlatStyle.Flat;
-            btnKelolaCust.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnKelolaCust.ForeColor = SystemColors.ActiveCaptionText;
-            btnKelolaCust.Location = new Point(22, 342);
-            btnKelolaCust.Name = "btnKelolaCust";
-            btnKelolaCust.Size = new Size(306, 76);
-            btnKelolaCust.TabIndex = 31;
-            btnKelolaCust.UseVisualStyleBackColor = false;
-            btnKelolaCust.Click += btnKelolaCust_Click;
+            panel5.BackgroundImage = (Image)resources.GetObject("panel5.BackgroundImage");
+            panel5.BackgroundImageLayout = ImageLayout.Stretch;
+            panel5.Location = new Point(39, 454);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(301, 84);
+            panel5.TabIndex = 44;
+            panel5.Paint += panel5_Paint;
             // 
-            // btnDeskripsiAlat
+            // btnKelolaCustomer
             // 
-            btnDeskripsiAlat.BackColor = Color.Transparent;
-            btnDeskripsiAlat.BackgroundImage = (Image)resources.GetObject("btnDeskripsiAlat.BackgroundImage");
-            btnDeskripsiAlat.BackgroundImageLayout = ImageLayout.Stretch;
-            btnDeskripsiAlat.FlatAppearance.BorderSize = 0;
-            btnDeskripsiAlat.FlatStyle = FlatStyle.Flat;
-            btnDeskripsiAlat.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnDeskripsiAlat.ForeColor = SystemColors.ActiveCaptionText;
-            btnDeskripsiAlat.Location = new Point(22, 560);
-            btnDeskripsiAlat.Name = "btnDeskripsiAlat";
-            btnDeskripsiAlat.Size = new Size(306, 76);
-            btnDeskripsiAlat.TabIndex = 29;
-            btnDeskripsiAlat.UseVisualStyleBackColor = false;
-            btnDeskripsiAlat.Click += btnDeskripsiAlat_Click;
+            btnKelolaCustomer.BackColor = Color.Transparent;
+            btnKelolaCustomer.BackgroundImage = (Image)resources.GetObject("btnKelolaCustomer.BackgroundImage");
+            btnKelolaCustomer.BackgroundImageLayout = ImageLayout.Stretch;
+            btnKelolaCustomer.FlatAppearance.BorderSize = 0;
+            btnKelolaCustomer.FlatStyle = FlatStyle.Flat;
+            btnKelolaCustomer.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnKelolaCustomer.ForeColor = SystemColors.ActiveCaptionText;
+            btnKelolaCustomer.Location = new Point(39, 364);
+            btnKelolaCustomer.Name = "btnKelolaCustomer";
+            btnKelolaCustomer.Size = new Size(301, 84);
+            btnKelolaCustomer.TabIndex = 43;
+            btnKelolaCustomer.UseVisualStyleBackColor = false;
+            btnKelolaCustomer.Click += btnKelolaCustomer_Click;
             // 
             // btnProfil
             // 
@@ -108,12 +104,26 @@
             btnProfil.FlatStyle = FlatStyle.Flat;
             btnProfil.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnProfil.ForeColor = SystemColors.ActiveCaptionText;
-            btnProfil.Location = new Point(22, 666);
+            btnProfil.Location = new Point(39, 634);
             btnProfil.Name = "btnProfil";
-            btnProfil.Size = new Size(306, 76);
-            btnProfil.TabIndex = 28;
+            btnProfil.Size = new Size(301, 84);
+            btnProfil.TabIndex = 42;
             btnProfil.UseVisualStyleBackColor = false;
-            btnProfil.Click += btnProfil_Click;
+            // 
+            // btnDeskripsiAlat
+            // 
+            btnDeskripsiAlat.BackColor = Color.Transparent;
+            btnDeskripsiAlat.BackgroundImage = (Image)resources.GetObject("btnDeskripsiAlat.BackgroundImage");
+            btnDeskripsiAlat.BackgroundImageLayout = ImageLayout.Stretch;
+            btnDeskripsiAlat.FlatAppearance.BorderSize = 0;
+            btnDeskripsiAlat.FlatStyle = FlatStyle.Flat;
+            btnDeskripsiAlat.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnDeskripsiAlat.ForeColor = SystemColors.ActiveCaptionText;
+            btnDeskripsiAlat.Location = new Point(39, 544);
+            btnDeskripsiAlat.Name = "btnDeskripsiAlat";
+            btnDeskripsiAlat.Size = new Size(301, 84);
+            btnDeskripsiAlat.TabIndex = 41;
+            btnDeskripsiAlat.UseVisualStyleBackColor = false;
             // 
             // btnLogout
             // 
@@ -124,9 +134,9 @@
             btnLogout.FlatStyle = FlatStyle.Flat;
             btnLogout.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnLogout.ForeColor = SystemColors.ActiveCaptionText;
-            btnLogout.Location = new Point(22, 984);
+            btnLogout.Location = new Point(37, 934);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(306, 76);
+            btnLogout.Size = new Size(301, 84);
             btnLogout.TabIndex = 27;
             btnLogout.UseVisualStyleBackColor = false;
             btnLogout.Click += btnLogout_Click;
@@ -163,9 +173,13 @@
         private DataGridView dgvKelolaAlat;
         private Panel panel2;
         private Button btnKelolaCust;
-        private Button btnDeskripsiAlat;
-        private Button btnProfil;
         private Button btnLogout;
         private DataGridView dgvKelolaSewa;
+        private Panel panel5;
+        private Panel panel3;
+        private Button btnRiwayatPenyewaan;
+        private Button btnProfil;
+        private Button btnDeskripsiAlat;
+        private Button btnKelolaCustomer;
     }
 }

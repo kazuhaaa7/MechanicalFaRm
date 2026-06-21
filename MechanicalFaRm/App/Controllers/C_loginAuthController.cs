@@ -10,10 +10,17 @@ using System.Threading.Tasks;
 
 namespace MechanicalFaRm.App.Controllers
 {
-    public class C_loginAuthController
+    public class polimor
+    {
+        public virtual bool Login(string username, string password) // polimorphsim
+        {
+            return true;
+        }
+    }
+    public class C_loginAuthController:polimor //inheritance
     {
         public S_UserService _userService = new S_UserService();
-        public bool Login(string username, string password)
+        public override bool Login(string username, string password)
         {
 
             var result = _userService.Login(username, password);
@@ -22,7 +29,7 @@ namespace MechanicalFaRm.App.Controllers
             {
                 MessageBox.Show("Berhasil Login. role Admin");
                 int id = SE_userSession.id_user;
-                new V_profleAdmin(id).Show();
+                new V_kelolaAkunAdmin().Show();
             }
             else if (result.role == "customer")
             {

@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="784D0154-FFC9-FE76-C517-AA53E6B83FFC" name="user">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="411DCE70-0FBE-F5A3-A1B1-A754A913D924" name="keranjang">
 <createdBy>ADVAN</createdBy>
-<createdTime>2026-05-29 22:40:32 UTC</createdTime>
+<createdTime>2026-06-21 06:26:00 UTC</createdTime>
 <ownerDesignName>ERD_TA_PBO</ownerDesignName>
 <engineerTo>
 <item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id_user" id="B4873307-29F3-CD13-5B1E-74804973CDDA">
+<Attribute name="id_kernajang" id="3FA34A2E-988D-2CE2-9F46-E627476FEDB1">
 <createdBy>ADVAN</createdBy>
-<createdTime>2026-06-21 06:24:23 UTC</createdTime>
+<createdTime>2026-06-21 06:26:18 UTC</createdTime>
 <ownerDesignName>ERD_TA_PBO</ownerDesignName>
 <engineerTo>
 <item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
@@ -27,89 +27,99 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="username" id="3A59EDEF-F42C-24BA-7E13-43FA4859BCAD">
+<Attribute name="id_user" id="F6396971-8A7F-6CE2-E1D1-ED129E8B4341">
 <createdBy>ADVAN</createdBy>
-<createdTime>2026-05-29 22:41:26 UTC</createdTime>
+<createdTime>2026-06-21 06:26:00 UTC</createdTime>
 <ownerDesignName>ERD_TA_PBO</ownerDesignName>
 <engineerTo>
 <item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>20 CHAR</dataTypeSize>
-<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="passsword" id="DDEF8CC9-62CB-03C9-6442-35EBA8A30E3C">
+<Attribute name="id_barang" id="8A3900F5-6651-ECFE-7D81-6C12D136ECC5">
 <createdBy>ADVAN</createdBy>
-<createdTime>2026-05-29 22:42:08 UTC</createdTime>
+<createdTime>2026-06-21 06:27:04 UTC</createdTime>
 <ownerDesignName>ERD_TA_PBO</ownerDesignName>
 <engineerTo>
 <item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>20 CHAR</dataTypeSize>
-<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="no_telp" id="F2F35317-CA27-AA91-08C4-0E5A0CF9CF8D">
+<Attribute name="jumlah" id="D5ECC5ED-9F46-126F-E7F1-FD20476F58FE">
 <createdBy>ADVAN</createdBy>
-<createdTime>2026-05-29 22:43:00 UTC</createdTime>
+<createdTime>2026-06-21 06:27:37 UTC</createdTime>
 <ownerDesignName>ERD_TA_PBO</ownerDesignName>
 <engineerTo>
 <item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>20 CHAR</dataTypeSize>
-<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="role" id="714879E5-AF79-938C-50D2-57305617BE01">
+<Attribute name="tgl_sewa" id="079E0840-BD45-7027-C3E8-B00A12A8F884">
 <createdBy>ADVAN</createdBy>
-<createdTime>2026-05-29 22:43:43 UTC</createdTime>
+<createdTime>2026-06-21 06:27:46 UTC</createdTime>
 <ownerDesignName>ERD_TA_PBO</ownerDesignName>
 <engineerTo>
 <item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>10 CHAR</dataTypeSize>
-<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="email" id="47265FE3-04E1-628A-B194-1347A9B1742C">
+<Attribute name="tgl_kembali" id="D3FC8FE2-DD12-C49A-7954-CBBDC5826A2E">
 <createdBy>ADVAN</createdBy>
-<createdTime>2026-06-21 06:11:47 UTC</createdTime>
+<createdTime>2026-06-21 06:28:18 UTC</createdTime>
 <ownerDesignName>ERD_TA_PBO</ownerDesignName>
 <engineerTo>
 <item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>225 CHAR</dataTypeSize>
-<ownDataTypeParameters>225 CHAR,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nama" id="8E01EF28-1693-4B39-5CE8-D579B0A93211">
+<Attribute name="id_user1" id="EE039D12-BBAC-27FD-8002-7DE3ABCDF2F7">
 <createdBy>ADVAN</createdBy>
-<createdTime>2026-06-21 06:24:41 UTC</createdTime>
+<createdTime>2026-06-21 06:29:15 UTC</createdTime>
+<generatorID>543ED004-A52D-6D45-9F9F-3B39276DC5AE</generatorID>
 <ownerDesignName>ERD_TA_PBO</ownerDesignName>
 <engineerTo>
 <item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
 </engineerTo>
+<referedAttribute>B4873307-29F3-CD13-5B1E-74804973CDDA</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>2225 CHAR</dataTypeSize>
-<ownDataTypeParameters>2225 CHAR,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_barang1" id="49367E55-B922-C674-1500-B9E560A0CCDD">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-21 06:33:10 UTC</createdTime>
+<generatorID>AABE7178-D44F-31BC-9141-FD670C1E5394</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<engineerTo>
+<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
+</engineerTo>
+<referedAttribute>AB264033-558A-91F9-3B42-9D5472109867</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="177CADAA-36AE-4140-F045-0C4ABE629A6B" name="user PK">
+<identifier id="2CFB2AF6-79B9-F65F-4F3E-9CA2DF43835A" name="user PK">
 <createdBy>ADVAN</createdBy>
-<createdTime>2026-05-29 22:41:25 UTC</createdTime>
+<createdTime>2026-06-21 06:26:00 UTC</createdTime>
 <ownerDesignName>ERD_TA_PBO</ownerDesignName>
 <shouldEngineer>false</shouldEngineer>
 <engineerTo>
@@ -117,20 +127,7 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>B4873307-29F3-CD13-5B1E-74804973CDDA</attributeRef>
-</usedAttributes>
-</identifier>
-<identifier id="5F949CEF-BD4E-0577-CCAF-A15A27ED48C6" name="no_telp_U">
-<createdBy>ADVAN</createdBy>
-<createdTime>2026-05-29 22:43:18 UTC</createdTime>
-<ownerDesignName>ERD_TA_PBO</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
-<engineerTo>
-<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="false"/>
-</engineerTo>
-<newElementsIDs>F2F35317-CA27-AA91-08C4-0E5A0CF9CF8D</newElementsIDs>
-<usedAttributes>
-<attributeRef>F2F35317-CA27-AA91-08C4-0E5A0CF9CF8D</attributeRef>
+<attributeRef>3FA34A2E-988D-2CE2-9F46-E627476FEDB1</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

@@ -33,7 +33,7 @@ namespace MechanicalFaRm.App.Repository
                 }
                 else
                 {
-                    MessageBox.Show("Nama kosong");
+                    //MessageBox.Show("Nama kosong");
                 }
                 decimal totalKeseluruhan = 0;
                 foreach (var item in keranjang)

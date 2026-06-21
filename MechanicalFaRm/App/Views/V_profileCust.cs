@@ -14,11 +14,13 @@ namespace MechanicalFaRm.App.Views
     public partial class V_profileCust : Form
     {
         private int idCurrent;
+        private C_loginAuthController logout;
         public V_profileCust(int id)
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
             this.idCurrent = id;
+            logout = new C_loginAuthController();
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
@@ -39,7 +41,7 @@ namespace MechanicalFaRm.App.Views
 
             if (user != null)
             {
-                lblUsername.Text = user.username;
+                label1.Text = user.username;
                 lblEmail.Text = user.email;
                 lblNoTelp.Text = user.no_telepon;
             }
@@ -47,11 +49,6 @@ namespace MechanicalFaRm.App.Views
             {
                 MessageBox.Show("Data pengguna tidak ditemukan.");
             }
-
-        }
-
-        private void btnDeskripsiAlat_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -67,8 +64,25 @@ namespace MechanicalFaRm.App.Views
 
         private void btnEditProfileA_Click(object sender, EventArgs e)
         {
-            V_editProfile editProfile = new V_editProfile();
-            editProfile.Show();
+            using (V_editProfile formEdit = new V_editProfile(RefreshDataProfil))
+            {
+                formEdit.ShowDialog();
+            }
+        }
+
+        private void RefreshDataProfil()
+        {
+            idCurrent = SE_userSession.id_user;
+
+            C_userController userController = new C_userController();
+            M_user user = userController.TampilkanDataBasedId(idCurrent);
+
+            if (user != null)
+            {
+                label1.Text = user.username;
+                lblEmail.Text = user.email;
+                lblNoTelp.Text = user.no_telepon;
+            }
         }
 
         private void btnDshbrd_Click(object sender, EventArgs e)
@@ -94,10 +108,10 @@ namespace MechanicalFaRm.App.Views
 
         private void btnDeskripsiAlat_Click_1(object sender, EventArgs e)
         {
-            //M_barang barang = new M_barang();
-            //V_deskripsiAlatCust des = new V_deskripsiAlatCust(, barang);
-            //des.Show();
-            //this.Close();
+            M_barang barang = new M_barang();
+            V_deskripsiAlatCust des = new V_deskripsiAlatCust(null, barang);
+            des.Show();
+            this.Close();
         }
 
         private void btnProfil_Click(object sender, EventArgs e)
@@ -110,8 +124,37 @@ namespace MechanicalFaRm.App.Views
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("akan logout");
-            this.Close();
+            logout.Logout(this);
+        }
+
+        private void lblEmail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNoTelp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblEmail_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

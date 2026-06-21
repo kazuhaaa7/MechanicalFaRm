@@ -66,8 +66,25 @@ namespace MechanicalFaRm.App.Views
 
         private void btnEditProfileA_Click(object sender, EventArgs e)
         {
-            V_editProfile editProfile = new V_editProfile();
-            editProfile.Show();
+            using (V_editProfile formEdit = new V_editProfile(RefreshDataProfil))
+            {
+                formEdit.ShowDialog();
+            }
+        }
+
+        private void RefreshDataProfil()
+        {
+            currentUserId = SE_userSession.id_user;
+
+            C_userController userController = new C_userController();
+            M_user user = userController.TampilkanDataBasedId(currentUserId);
+
+            if (user != null)
+            {
+                lblUsername.Text = user.username;
+                lblEmail.Text = user.email;
+                lblNoTelp.Text = user.no_telepon;
+            }
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
@@ -122,6 +139,11 @@ namespace MechanicalFaRm.App.Views
         {
             new V_kelolaAkunAdmin().Show();
             this.Hide();
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

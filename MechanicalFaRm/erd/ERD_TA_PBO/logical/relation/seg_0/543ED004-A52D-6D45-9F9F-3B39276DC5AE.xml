@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_10" directorySegmentName="seg_0" id="543ED004-A52D-6D45-9F9F-3B39276DC5AE">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-21 06:28:41 UTC</createdTime>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<engineerTo>
+<item key="23ACC11E-BDED-134D-87A6-DC3D572FCCA2" value="true"/>
+</engineerTo>
+<sourcePk>177CADAA-36AE-4140-F045-0C4ABE629A6B</sourcePk>
+<targetPk>2CFB2AF6-79B9-F65F-4F3E-9CA2DF43835A</targetPk>
+<identifying>false</identifying>
+<nameOnSource>memesan sementara</nameOnSource>
+<nameOnTarget>menampung pemesanan sementara</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>784D0154-FFC9-FE76-C517-AA53E6B83FFC</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>411DCE70-0FBE-F5A3-A1B1-A754A913D924</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

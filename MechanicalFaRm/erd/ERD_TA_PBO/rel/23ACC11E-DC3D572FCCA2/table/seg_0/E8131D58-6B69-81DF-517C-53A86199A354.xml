@@ -1,0 +1,144 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E8131D58-6B69-81DF-517C-53A86199A354" name="keranjang">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-21 06:33:32 UTC</createdTime>
+<generatorID>411DCE70-0FBE-F5A3-A1B1-A754A913D924</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_kernajang" id="32AD4399-B8B4-5672-021F-AA1AB9C7579B">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-21 06:33:32 UTC</createdTime>
+<generatorID>3FA34A2E-988D-2CE2-9F46-E627476FEDB1</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_user" id="56E5BEB9-0840-E2C8-4787-E67945DE8E04">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-21 06:33:32 UTC</createdTime>
+<generatorID>F6396971-8A7F-6CE2-E1D1-ED129E8B4341</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_barang" id="C29E1552-B444-71E2-2B81-EDC40A39FEBC">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-21 06:33:32 UTC</createdTime>
+<generatorID>8A3900F5-6651-ECFE-7D81-6C12D136ECC5</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="jumlah" id="184A4163-4FCF-7306-6EF0-82AFC31797F8">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-21 06:33:32 UTC</createdTime>
+<generatorID>D5ECC5ED-9F46-126F-E7F1-FD20476F58FE</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tgl_sewa" id="9A7BFFCE-C687-5948-EB23-9D5C836AE478">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-21 06:33:32 UTC</createdTime>
+<generatorID>079E0840-BD45-7027-C3E8-B00A12A8F884</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tgl_kembali" id="E441A56E-0C04-4D57-0A35-5E363CDC6875">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-21 06:33:32 UTC</createdTime>
+<generatorID>D3FC8FE2-DD12-C49A-7954-CBBDC5826A2E</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="user_id_user1" id="61CD3AC9-6C37-A8BC-DAD4-75946C37467A">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-21 06:33:32 UTC</createdTime>
+<generatorID>EE039D12-BBAC-27FD-8002-7DE3ABCDF2F7</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6FB63E84-700D-71FB-4EC4-B4AB2F1D4B64" referredColumn="0A09ECDD-1713-E073-F543-D8DA2881257B"/>
+</associations>
+</Column>
+<Column name="barang_id_barang" id="065C2647-6212-85A0-A1A3-870F1C560112">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-21 06:33:32 UTC</createdTime>
+<generatorID>49367E55-B922-C674-1500-B9E560A0CCDD</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="58E29D9F-764B-8B5F-3A23-54C410C4766A" referredColumn="2753457D-F842-1AF0-BCBB-9F6D781886A9"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B58C2E85-4C70-A1A1-D968-2B941A4D4F57" name="keranjang_PK">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-21 06:33:32 UTC</createdTime>
+<generatorID>2CFB2AF6-79B9-F65F-4F3E-9CA2DF43835A</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="32AD4399-B8B4-5672-021F-AA1AB9C7579B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C76E0A15-F04F-04F6-4152-65A236E25FE3" name="keranjang_user_FK">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-21 06:33:32 UTC</createdTime>
+<generatorID>543ED004-A52D-6D45-9F9F-3B39276DC5AE</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="61CD3AC9-6C37-A8BC-DAD4-75946C37467A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4EE9380B-A807-0125-A5E6-97E42B3925D4" name="keranjang_barang_FK">
+<createdBy>ADVAN</createdBy>
+<createdTime>2026-06-21 06:33:32 UTC</createdTime>
+<generatorID>AABE7178-D44F-31BC-9141-FD670C1E5394</generatorID>
+<ownerDesignName>ERD_TA_PBO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="065C2647-6212-85A0-A1A3-870F1C560112"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

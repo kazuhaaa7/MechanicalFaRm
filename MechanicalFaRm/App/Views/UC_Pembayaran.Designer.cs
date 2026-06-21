@@ -54,7 +54,7 @@
             // 
             lblTanggal.AutoSize = true;
             lblTanggal.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTanggal.Location = new Point(707, 13);
+            lblTanggal.Location = new Point(668, 13);
             lblTanggal.Name = "lblTanggal";
             lblTanggal.Size = new Size(77, 31);
             lblTanggal.TabIndex = 1;
@@ -84,7 +84,7 @@
             // cbMetodeBayar
             // 
             cbMetodeBayar.FormattingEnabled = true;
-            cbMetodeBayar.Location = new Point(448, 514);
+            cbMetodeBayar.Location = new Point(577, 510);
             cbMetodeBayar.Name = "cbMetodeBayar";
             cbMetodeBayar.Size = new Size(207, 28);
             cbMetodeBayar.TabIndex = 4;
@@ -92,7 +92,7 @@
             // 
             // btnBayar
             // 
-            btnBayar.Location = new Point(684, 508);
+            btnBayar.Location = new Point(838, 504);
             btnBayar.Name = "btnBayar";
             btnBayar.Size = new Size(127, 38);
             btnBayar.TabIndex = 5;
@@ -146,7 +146,7 @@
             Controls.Add(btnBayar);
             Controls.Add(cbMetodeBayar);
             Name = "UC_Pembayaran";
-            Size = new Size(1013, 869);
+            Size = new Size(1013, 597);
             Load += UC_Pembayaran_Load;
             ResumeLayout(false);
             PerformLayout();

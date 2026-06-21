@@ -34,10 +34,8 @@ namespace MechanicalFaRm.App.Views
 
                 ucBayar.Location = new Point(0, 0);
 
-                // 6. KUNCI UTAMA: Sesuaikan ukuran form mengikuti ukuran asli UC_Pembayaran
                 this.ClientSize = new Size(ucBayar.Width, ucBayar.Height);
 
-                // 7. Tempelkan UC ke dalam Form
                 this.Controls.Add(ucBayar);
             }
             catch (Exception ex)

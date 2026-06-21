@@ -24,7 +24,7 @@ namespace MechanicalFaRm.App.Views
 
             _isDariKeranjang = isDariKeranjang;
             _listPesananFinal = listPesanan;
-            _callbackRefreshHalaman = callbackRefresh;
+            _callbackRefreshHalaman = callbackRefresh;  
 
             cbMetodeBayar.Items.Clear();
             cbMetodeBayar.Items.Add("Transfer Bank BCA");
@@ -43,12 +43,9 @@ namespace MechanicalFaRm.App.Views
                           : "Penyewa";
             lblNamaPenyewa.Text = $"Penyewa: {nama}";
 
-            // Kosongkan alamat jalan bawaan
             tbNamaJalan.Text = "";
 
-            // Render Daftar Barang ke dalam Kotak Besar (FlowLayoutPanel)
             decimal totalKeseluruhan = 0;
-            //flpBarangSewa.Controls.Clear();
 
             foreach (var item in listPesanan)
             {

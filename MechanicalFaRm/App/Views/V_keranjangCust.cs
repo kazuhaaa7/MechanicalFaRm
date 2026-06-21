@@ -24,6 +24,7 @@ namespace MechanicalFaRm.App.Views
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
+            logout = new C_loginAuthController();
             _reposan = new R_PesananRepository();
             _servicePesanan = new S_PesananService();
             _pesananControll = new C_PesananController();
@@ -101,10 +102,8 @@ namespace MechanicalFaRm.App.Views
                 dgvKeranjang.Columns.Add(btnHapus);
             }
 
-            // 3. TAMPILKAN GRAND TOTAL KE LABEL DI LAYAR
             lblTotalTagihan.Text = $"Total Tagihan: Rp {grandTotalKeseluruhan:N0} Juta";
 
-            // Styling
             dgvKeranjang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvKeranjang.RowHeadersVisible = false;
 
@@ -168,7 +167,7 @@ namespace MechanicalFaRm.App.Views
         private void btnRiwayatPenyewaan_Click(object sender, EventArgs e)
         {
             V_riwayatPenyewaanCust riwyatsewa = new V_riwayatPenyewaanCust();
-            riwyatsewa.Show();
+            riwyatsewa.Show();  
             this.Close();
         }
 
@@ -181,10 +180,10 @@ namespace MechanicalFaRm.App.Views
 
         private void btnDeskripsiAlat_Click(object sender, EventArgs e)
         {
-            //M_barang barang = new  M_barang();
-            //V_deskripsiAlatCust des = new V_deskripsiAlatCust(paren,barang);
-            //des.Show();
-            //this.Close();
+            M_barang barang = new M_barang();
+            V_deskripsiAlatCust des = new V_deskripsiAlatCust(null, barang);
+            des.Show();
+            this.Close();
         }
 
         private void btnProfil_Click(object sender, EventArgs e)
@@ -197,7 +196,7 @@ namespace MechanicalFaRm.App.Views
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            DialogResult konfirmasi = MessageBox.Show("Lanjut ke pembayaran?", "Konfirmasi",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult konfirmasi = MessageBox.Show("Lanjut ke pembayaran?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (konfirmasi != DialogResult.Yes) return;
 
@@ -220,6 +219,11 @@ namespace MechanicalFaRm.App.Views
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
         {
 
         }

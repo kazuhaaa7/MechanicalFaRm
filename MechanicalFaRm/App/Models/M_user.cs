@@ -13,7 +13,7 @@
 
 
 
-        public string username
+        public string username //encapsulasi
         {
             get { return _username; }
             set { _username = value; }
@@ -37,13 +37,5 @@
             set { _email = value; }
         }
 
-
-        //public M_user(string user, string pw, string telp, string email)
-        //{
-        //    this.username = user;
-        //    this.password = pw;
-        //    this.email = email;
-        //    this.no_telp = telp;
-        //}
     }
 }

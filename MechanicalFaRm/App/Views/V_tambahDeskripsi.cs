@@ -1,5 +1,6 @@
 ﻿using MechanicalFaRm.App.Controllers;
 using MechanicalFaRm.App.Models;
+using MechanicalFaRm.App.Session;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -139,6 +140,36 @@ namespace MechanicalFaRm.App.Views
         {
             parentForm.Show();
             this.Close();
+        }
+
+        private void btnKelolaCust_Click(object sender, EventArgs e)
+        {
+            new V_kelolaAkunAdmin().Show();
+            this.Hide();
+        }
+
+        private void btnRiwayatPenyewaan_Click(object sender, EventArgs e)
+        {
+            new V_riwayatPenyewaanAdmin().Show();
+            this.Hide();
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnProfil_Click(object sender, EventArgs e)
+        {
+            int id = SE_userSession.id_user;
+            new V_profleAdmin(id).Show();
+            this.Hide();
+
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            logout.Logout(this);
         }
     }
 }
