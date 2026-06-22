@@ -30,35 +30,24 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_login));
             panel1 = new Panel();
-            panel2 = new Panel();
             btnLogin = new Button();
             tbPassword = new TextBox();
             tbUsername = new TextBox();
             panel1.SuspendLayout();
-            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Transparent;
+            panel1.BackColor = Color.White;
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
-            panel1.BackgroundImageLayout = ImageLayout.Center;
-            panel1.Controls.Add(panel2);
-            panel1.Location = new Point(-8, -7);
+            panel1.Controls.Add(btnLogin);
+            panel1.Controls.Add(tbPassword);
+            panel1.Controls.Add(tbUsername);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1935, 1056);
+            panel1.Size = new Size(1870, 1022);
             panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(btnLogin);
-            panel2.Controls.Add(tbPassword);
-            panel2.Controls.Add(tbUsername);
-            panel2.Dock = DockStyle.Left;
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(852, 1056);
-            panel2.TabIndex = 0;
             // 
             // btnLogin
             // 
@@ -68,9 +57,9 @@
             btnLogin.FlatAppearance.BorderSize = 0;
             btnLogin.FlatStyle = FlatStyle.Flat;
             btnLogin.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogin.Location = new Point(303, 791);
+            btnLogin.Location = new Point(239, 783);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(244, 67);
+            btnLogin.Size = new Size(358, 80);
             btnLogin.TabIndex = 0;
             btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
@@ -80,7 +69,7 @@
             tbPassword.BackColor = Color.White;
             tbPassword.BorderStyle = BorderStyle.None;
             tbPassword.ForeColor = Color.Black;
-            tbPassword.Location = new Point(285, 578);
+            tbPassword.Location = new Point(271, 578);
             tbPassword.Multiline = true;
             tbPassword.Name = "tbPassword";
             tbPassword.PasswordChar = '*';
@@ -92,7 +81,7 @@
             // 
             tbUsername.BackColor = Color.White;
             tbUsername.BorderStyle = BorderStyle.None;
-            tbUsername.Location = new Point(274, 466);
+            tbUsername.Location = new Point(271, 467);
             tbUsername.Multiline = true;
             tbUsername.Name = "tbUsername";
             tbUsername.Size = new Size(337, 40);
@@ -105,15 +94,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             BackgroundImageLayout = ImageLayout.Center;
-            ClientSize = new Size(1924, 1049);
+            ClientSize = new Size(1870, 1022);
             Controls.Add(panel1);
             DoubleBuffered = true;
             Name = "V_login";
             Text = "Form Login";
             Load += A_login_Load;
             panel1.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            panel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -123,7 +111,6 @@
         private Label label2;
         private Label label3;
         private Panel panel1;
-        private Panel panel2;
         private TextBox tbUsername;
         private TextBox tbPassword;
         private Button btnLogin;

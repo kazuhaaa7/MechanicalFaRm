@@ -211,7 +211,7 @@ namespace MechanicalFaRm.App.Repository
                     id_user = reader.IsDBNull(0) ? 0 : reader.GetInt32(0),
                     PenyewaDP = new M_user
                     {
-                        namaPenyewa = reader.GetString(1)
+                        namaPenyewa = reader.IsDBNull(1)? "Null" : reader.GetString(1)
                     },
                     namaBarang = reader.IsDBNull(2) ? "" : reader.GetString(2),
                     jumlah = Convert.ToInt32(reader.GetValue(3)),

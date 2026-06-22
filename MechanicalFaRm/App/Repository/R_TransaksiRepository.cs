@@ -31,10 +31,10 @@ namespace MechanicalFaRm.App.Repository
                         cmdUser.ExecuteNonQuery();
                     }
                 }
-                else
-                {
-                    //MessageBox.Show("Nama kosong");
-                }
+                //else
+                //{
+                //    MessageBox.Show("Nama kosong");
+                //}
                 decimal totalKeseluruhan = 0;
                 foreach (var item in keranjang)
                 {

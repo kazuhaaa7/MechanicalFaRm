@@ -109,6 +109,7 @@
             btnProfil.Size = new Size(301, 84);
             btnProfil.TabIndex = 42;
             btnProfil.UseVisualStyleBackColor = false;
+            btnProfil.Click += btnProfil_Click;
             // 
             // btnDeskripsiAlat
             // 
@@ -124,6 +125,7 @@
             btnDeskripsiAlat.Size = new Size(301, 84);
             btnDeskripsiAlat.TabIndex = 41;
             btnDeskripsiAlat.UseVisualStyleBackColor = false;
+            btnDeskripsiAlat.Click += btnDeskripsiAlat_Click;
             // 
             // btnLogout
             // 

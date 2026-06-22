@@ -56,7 +56,7 @@
             panel1.Controls.Add(btnSubmit);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1888, 1069);
+            panel1.Size = new Size(1919, 1095);
             panel1.TabIndex = 1;
             panel1.Paint += panel1_Paint;
             // 
@@ -83,7 +83,7 @@
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(392, 1069);
+            panel2.Size = new Size(392, 1095);
             panel2.TabIndex = 4;
             panel2.Paint += panel2_Paint;
             // 

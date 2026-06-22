@@ -56,11 +56,16 @@ namespace MechanicalFaRm.App.Views
                 totalKeseluruhan += subTotal;
 
                 Label lblItem = new Label();
-                lblItem.Text = $"• {item.namaBarang}  x{item.jumlah} Unit";
+
+                string tglMulai = item.tglSewa.ToString("dd MMM yyyy");
+                string tglSelesai = item.tglKembali.ToString("dd MMM yyyy");
+
+                lblItem.Text = $"• {item.namaBarang}  x{item.jumlah} Unit\n   (Durasi: {durasi} Hari | {tglMulai} - {tglSelesai})";
+
                 lblItem.Font = new Font("Segoe UI", 10f, FontStyle.Regular);
                 lblItem.ForeColor = Color.Black;
                 lblItem.AutoSize = true;
-                lblItem.Margin = new Padding(5, 5, 5, 5); // Memberi jarak antar item
+                lblItem.Margin = new Padding(5, 5, 5, 10); 
 
                 flpBarangSewa.Controls.Add(lblItem);
             }
@@ -96,7 +101,7 @@ namespace MechanicalFaRm.App.Views
 
             if (hasil.Equals("Sukses", StringComparison.OrdinalIgnoreCase))
             {
-                MessageBox.Show("Pembayaran sukses dikonfirmasi! Data otomatis berpindah ke Riwayat.",
+                MessageBox.Show("Pembayaran sukses!",
                                 "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (_isDariKeranjang)
                 {

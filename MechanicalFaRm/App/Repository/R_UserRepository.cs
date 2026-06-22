@@ -167,7 +167,7 @@ namespace MechanicalFaRm.App.Repository
                 daftarAdmin.Add(new M_user
                 {
                     _id_user = reader.GetInt32(0),
-                    namaPenyewa = reader.GetString(1),
+                    namaPenyewa = reader.IsDBNull(1)? "Null": reader.GetString(1),
                     username = reader.GetString(2),
                     password = reader.GetString(3),
                     no_telepon = reader.GetString(4),

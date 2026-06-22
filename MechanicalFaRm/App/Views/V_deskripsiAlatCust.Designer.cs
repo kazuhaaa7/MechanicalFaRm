@@ -53,9 +53,10 @@
             panel1.Controls.Add(btnDashboard);
             panel1.Controls.Add(flp1);
             panel1.Controls.Add(panelRingkasan);
-            panel1.Location = new Point(0, -1);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1871, 1129);
+            panel1.Size = new Size(1919, 1095);
             panel1.TabIndex = 0;
             // 
             // panel5
@@ -141,21 +142,21 @@
             // 
             flp1.Location = new Point(973, 187);
             flp1.Name = "flp1";
-            flp1.Size = new Size(829, 824);
+            flp1.Size = new Size(887, 848);
             flp1.TabIndex = 2;
             // 
             // panelRingkasan
             // 
             panelRingkasan.Location = new Point(429, 187);
             panelRingkasan.Name = "panelRingkasan";
-            panelRingkasan.Size = new Size(514, 824);
+            panelRingkasan.Size = new Size(514, 848);
             panelRingkasan.TabIndex = 0;
             // 
             // V_deskripsiAlatCust
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1870, 1022);
+            ClientSize = new Size(1919, 1095);
             Controls.Add(panel1);
             Name = "V_deskripsiAlatCust";
             Text = "V_deskripsiAlatCust";

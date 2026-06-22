@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_profileCust));
             panel1 = new Panel();
+            label1 = new Label();
             lblNoTelp = new Label();
             lblEmail = new Label();
             lblUsername = new Label();
@@ -41,7 +42,6 @@
             btnDeskripsiAlat = new Button();
             btnLogout = new Button();
             btnRiwayatPenyewaan = new Button();
-            label1 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -49,7 +49,6 @@
             // 
             panel1.BackColor = Color.Transparent;
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
-            panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(label1);
             panel1.Controls.Add(lblNoTelp);
             panel1.Controls.Add(lblEmail);
@@ -65,8 +64,21 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1870, 1022);
+            panel1.Size = new Size(1919, 1095);
             panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.None;
+            label1.FlatStyle = FlatStyle.Flat;
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ActiveCaptionText;
+            label1.Location = new Point(947, 364);
+            label1.Name = "label1";
+            label1.Size = new Size(471, 36);
+            label1.TabIndex = 47;
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            label1.Click += label1_Click_1;
             // 
             // lblNoTelp
             // 
@@ -74,7 +86,7 @@
             lblNoTelp.FlatStyle = FlatStyle.Flat;
             lblNoTelp.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblNoTelp.ForeColor = SystemColors.ActiveCaptionText;
-            lblNoTelp.Location = new Point(923, 588);
+            lblNoTelp.Location = new Point(947, 624);
             lblNoTelp.Name = "lblNoTelp";
             lblNoTelp.Size = new Size(471, 38);
             lblNoTelp.TabIndex = 46;
@@ -86,7 +98,7 @@
             lblEmail.FlatStyle = FlatStyle.Flat;
             lblEmail.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblEmail.ForeColor = SystemColors.ActiveCaptionText;
-            lblEmail.Location = new Point(923, 463);
+            lblEmail.Location = new Point(947, 499);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(471, 36);
             lblEmail.TabIndex = 45;
@@ -111,7 +123,7 @@
             btnEditProfileA.BackgroundImageLayout = ImageLayout.Stretch;
             btnEditProfileA.FlatAppearance.BorderSize = 0;
             btnEditProfileA.FlatStyle = FlatStyle.Flat;
-            btnEditProfileA.Location = new Point(507, 632);
+            btnEditProfileA.Location = new Point(520, 668);
             btnEditProfileA.Name = "btnEditProfileA";
             btnEditProfileA.Size = new Size(271, 59);
             btnEditProfileA.TabIndex = 35;
@@ -122,9 +134,9 @@
             // 
             panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
             panel3.BackgroundImageLayout = ImageLayout.Stretch;
-            panel3.Location = new Point(476, 282);
+            panel3.Location = new Point(482, 302);
             panel3.Name = "panel3";
-            panel3.Size = new Size(338, 344);
+            panel3.Size = new Size(348, 360);
             panel3.TabIndex = 34;
             // 
             // panel5
@@ -217,24 +229,11 @@
             btnRiwayatPenyewaan.UseVisualStyleBackColor = false;
             btnRiwayatPenyewaan.Click += btnRiwayatPenyewaan_Click;
             // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.None;
-            label1.FlatStyle = FlatStyle.Flat;
-            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(923, 340);
-            label1.Name = "label1";
-            label1.Size = new Size(471, 36);
-            label1.TabIndex = 47;
-            label1.TextAlign = ContentAlignment.MiddleCenter;
-            label1.Click += label1_Click_1;
-            // 
             // V_profileCust
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1870, 1022);
+            ClientSize = new Size(1919, 1095);
             Controls.Add(panel1);
             Name = "V_profileCust";
             Text = "V_profileCust";

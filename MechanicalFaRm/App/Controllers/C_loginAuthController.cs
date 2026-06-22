@@ -29,7 +29,7 @@ namespace MechanicalFaRm.App.Controllers
             {
                 MessageBox.Show("Berhasil Login. role Admin");
                 int id = SE_userSession.id_user;
-                new V_kelolaAkunAdmin().Show();
+                new V_profleAdmin(id).Show();
             }
             else if (result.role == "customer")
             {

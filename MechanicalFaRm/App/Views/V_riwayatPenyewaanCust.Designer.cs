@@ -32,13 +32,13 @@
             panel1 = new Panel();
             panel2 = new Panel();
             panel3 = new Panel();
-            btnLogout = new Button();
-            dataGridView1 = new DataGridView();
             panel5 = new Panel();
             btnDshbrd = new Button();
             btnProfil = new Button();
             btnDeskripsiAlat = new Button();
             btnKeranjang = new Button();
+            btnLogout = new Button();
+            dataGridView1 = new DataGridView();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -82,33 +82,6 @@
             panel3.Size = new Size(376, 1095);
             panel3.TabIndex = 0;
             panel3.Paint += panel3_Paint;
-            // 
-            // btnLogout
-            // 
-            btnLogout.BackColor = Color.Transparent;
-            btnLogout.BackgroundImage = (Image)resources.GetObject("btnLogout.BackgroundImage");
-            btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
-            btnLogout.FlatAppearance.BorderSize = 0;
-            btnLogout.FlatStyle = FlatStyle.Flat;
-            btnLogout.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnLogout.ForeColor = SystemColors.ActiveCaptionText;
-            btnLogout.Location = new Point(37, 934);
-            btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(301, 84);
-            btnLogout.TabIndex = 26;
-            btnLogout.UseVisualStyleBackColor = false;
-            btnLogout.Click += btnLogout_Click;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(447, 203);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1400, 806);
-            dataGridView1.TabIndex = 1;
             // 
             // panel5
             // 
@@ -181,7 +154,34 @@
             btnKeranjang.Size = new Size(301, 84);
             btnKeranjang.TabIndex = 30;
             btnKeranjang.UseVisualStyleBackColor = false;
-            btnKeranjang.Click += this.btnKeranjang_Click;
+            btnKeranjang.Click += btnKeranjang_Click;
+            // 
+            // btnLogout
+            // 
+            btnLogout.BackColor = Color.Transparent;
+            btnLogout.BackgroundImage = (Image)resources.GetObject("btnLogout.BackgroundImage");
+            btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
+            btnLogout.FlatAppearance.BorderSize = 0;
+            btnLogout.FlatStyle = FlatStyle.Flat;
+            btnLogout.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnLogout.ForeColor = SystemColors.ActiveCaptionText;
+            btnLogout.Location = new Point(37, 934);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(301, 84);
+            btnLogout.TabIndex = 26;
+            btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.Click += btnLogout_Click;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(447, 203);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(1400, 806);
+            dataGridView1.TabIndex = 1;
             // 
             // V_riwayatPenyewaanCust
             // 

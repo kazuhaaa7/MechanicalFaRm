@@ -157,7 +157,6 @@ namespace MechanicalFaRm.App.Views
                     namaPenyewa = tbNamaPenyewa.Text }
             };
 
-            // 4. Proses Tambah Keranjang
             string status = pesananService.AddToKeranjang(dataKeranjangBaru);
 
             if (string.Equals(status, "sukses", StringComparison.OrdinalIgnoreCase))

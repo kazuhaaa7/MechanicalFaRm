@@ -173,7 +173,7 @@
             flowLayoutPanel1.Controls.Add(panel2);
             flowLayoutPanel1.Location = new Point(436, 236);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1425, 782);
+            flowLayoutPanel1.Size = new Size(1425, 732);
             flowLayoutPanel1.TabIndex = 0;
             // 
             // panel2

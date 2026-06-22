@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MechanicalFaRm")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ebd4080d18c448ecce95ca420781df5f1b9a963e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+48175cd4550612a431483b116b59b20daaa19bec")]
 [assembly: System.Reflection.AssemblyProductAttribute("MechanicalFaRm")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MechanicalFaRm")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

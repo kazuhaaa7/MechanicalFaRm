@@ -16,7 +16,6 @@ namespace MechanicalFaRm.App.Authh
 
         public void OpenFormLogin()
         {
-            MessageBox.Show("berpindah ke Form login", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             new V_login().Show();
             this.Hide();
         }
@@ -44,6 +43,11 @@ namespace MechanicalFaRm.App.Authh
                 MessageBox.Show("Akun berhasil dibuat! Silahkan Login");
                 OpenFormLogin();
             }
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) ||
+                string.IsNullOrEmpty(notelp) || string.IsNullOrEmpty(email))
+            {
+                MessageBox.Show("Semua kolom harus terisi!");
+            }
         }
 
         private void A_regis_Load(object sender, EventArgs e)
@@ -67,6 +71,21 @@ namespace MechanicalFaRm.App.Authh
         }
 
         private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tbEmailR_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbUsernameR_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbPasswordR_TextChanged(object sender, EventArgs e)
         {
 
         }
