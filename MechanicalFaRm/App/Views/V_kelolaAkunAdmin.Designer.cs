@@ -47,10 +47,10 @@
             dgvKelolaAkun.BackgroundColor = Color.White;
             dgvKelolaAkun.BorderStyle = BorderStyle.None;
             dgvKelolaAkun.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvKelolaAkun.Location = new Point(424, 174);
+            dgvKelolaAkun.Location = new Point(415, 174);
             dgvKelolaAkun.Name = "dgvKelolaAkun";
             dgvKelolaAkun.RowHeadersWidth = 51;
-            dgvKelolaAkun.Size = new Size(1430, 817);
+            dgvKelolaAkun.Size = new Size(1411, 806);
             dgvKelolaAkun.TabIndex = 2;
             dgvKelolaAkun.CellContentClick += dgvKelolaAkun_CellContentClick;
             // 

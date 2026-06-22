@@ -27,9 +27,9 @@ CREATE TABLE IF NOT EXISTS keranjang (
     id_barang INT REFERENCES barang(id_barang) ON DELETE CASCADE,
     jumlah INT NOT NULL,
     tgl_sewa DATE NOT NULL,
-    tgl_kembali DATE NOT NULL
+    tgl_kembali DATE NOT NULL,
+    nama_penyewa VARCHAR(225) NOT NULL
 );
-ALTER TABLE keranjang ADD COLUMN nama_penyewa VARCHAR(225);
 
 -- 4. Tabel Pesanan (Header transaksi)
 CREATE TABLE IF NOT EXISTS pesanan (
@@ -38,9 +38,9 @@ CREATE TABLE IF NOT EXISTS pesanan (
     status VARCHAR(50) DEFAULT 'Menunggu Verifikasi',
     total_bayar INT NOT NULL,
     dibuat TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-	alamat_jalan VARCHAR(255) NOT NULL
+	alamat_jalan VARCHAR(255) NOT NULL,
+    metode_pembayaran VARCHAR(50) NOT NULL
 );
-ALTER TABLE pesanan ADD COLUMN metode_pembayaran VARCHAR(50);
 
 -- 5. Tabel Detail Pesanan (Isi barang yang disewa)
 CREATE TABLE IF NOT EXISTS detail_pesanan (

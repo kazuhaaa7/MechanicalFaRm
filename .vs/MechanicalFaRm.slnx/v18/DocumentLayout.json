@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\mechanicalfarm\\app\\views\\v_profleadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\views\\v_profleadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\mechanicalfarm\\app\\views\\v_profilecust.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\views\\v_profilecust.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|c:\\users\\advan\\source\\repos\\mechanicalfarm\\mechanicalfarm\\app\\views\\v_profilecust.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\views\\v_profilecust.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\mechanicalfarm\\app\\views\\v_profleadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\views\\v_profleadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|c:\\users\\advan\\source\\repos\\mechanicalfarm\\mechanicalfarm\\app\\repository\\r_pesananrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -328,7 +328,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -391,7 +391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "V_profileCust.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_profileCust.cs",
               "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Views\\V_profileCust.cs",
@@ -403,7 +403,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "V_profileCust.cs",
               "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_profileCust.cs",
               "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Views\\V_profileCust.cs",
@@ -416,7 +416,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "V_profleAdmin.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_profleAdmin.cs",
               "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Views\\V_profleAdmin.cs",

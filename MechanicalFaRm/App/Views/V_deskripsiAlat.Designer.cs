@@ -64,18 +64,18 @@
             // panel4
             // 
             panel4.Controls.Add(btnTambahAlat);
-            panel4.Location = new Point(453, 173);
+            panel4.Location = new Point(453, 137);
             panel4.Name = "panel4";
-            panel4.Size = new Size(771, 57);
+            panel4.Size = new Size(771, 93);
             panel4.TabIndex = 2;
             // 
             // btnTambahAlat
             // 
-            btnTambahAlat.Location = new Point(15, 3);
+            btnTambahAlat.Image = (Image)resources.GetObject("btnTambahAlat.Image");
+            btnTambahAlat.Location = new Point(16, 21);
             btnTambahAlat.Name = "btnTambahAlat";
-            btnTambahAlat.Size = new Size(147, 51);
+            btnTambahAlat.Size = new Size(277, 69);
             btnTambahAlat.TabIndex = 0;
-            btnTambahAlat.Text = "Tambah";
             btnTambahAlat.UseVisualStyleBackColor = true;
             btnTambahAlat.Click += btnTambahAlat_Click;
             // 

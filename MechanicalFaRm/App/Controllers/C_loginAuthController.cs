@@ -16,6 +16,7 @@ namespace MechanicalFaRm.App.Controllers
         {
             return true;
         }
+
     }
     public class C_loginAuthController:polimor //inheritance
     {
@@ -36,6 +37,11 @@ namespace MechanicalFaRm.App.Controllers
                 MessageBox.Show("Berhasil Login. role Customer");
                 new V_dashboardCust().Show();
             }
+            return true;
+        }
+
+        public override bool Login(string name, string pw)
+        {
             return true;
         }
 

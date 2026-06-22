@@ -96,11 +96,11 @@
             btnSimpan.FlatStyle = FlatStyle.Flat;
             btnSimpan.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSimpan.ForeColor = SystemColors.ButtonHighlight;
-            btnSimpan.Location = new Point(125, 12);
+            btnSimpan.Image = (Image)resources.GetObject("btnSimpan.Image");
+            btnSimpan.Location = new Point(101, 0);
             btnSimpan.Name = "btnSimpan";
-            btnSimpan.Size = new Size(168, 42);
+            btnSimpan.Size = new Size(234, 61);
             btnSimpan.TabIndex = 11;
-            btnSimpan.Text = "Simpan";
             btnSimpan.UseVisualStyleBackColor = true;
             btnSimpan.Click += btnSimpan_Click;
             // 
