@@ -40,12 +40,6 @@ namespace MechanicalFaRm.App.Controllers
             return true;
         }
 
-        public override bool Login(string name, string pw)
-        {
-            return true;
-        }
-
-
         public void Logout(Form currentForm)
         {
             SE_userSession.ClearSession();
