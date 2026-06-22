@@ -128,7 +128,6 @@ namespace MechanicalFaRm.App.Views
                 MessageBox.Show("Jumlah yang disewa minimal harus 1 unit!", "Input Tidak Valid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
             int.TryParse(lblStokAlat.Text, out int stok);
             if (stok < qty)
             {

@@ -34,7 +34,6 @@ namespace MechanicalFaRm.App.Views
 
 
 
-            // Setup Data Label Atas
             lblIdPesanan.Text = "ID Pemesanan: (Menunggu Konfirmasi)";
             lblTanggal.Text = $"Tanggal: {DateTime.Now:dd MMMM yyyy}";
 
@@ -70,7 +69,6 @@ namespace MechanicalFaRm.App.Views
                 flpBarangSewa.Controls.Add(lblItem);
             }
 
-            // Setup Total Harga Bawah
             lblTotalHarga.Text = string.Format("Total: Rp{0:N0} Juta", totalKeseluruhan);
 
         }

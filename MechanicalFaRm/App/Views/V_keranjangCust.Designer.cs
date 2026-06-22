@@ -54,6 +54,7 @@
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(dgvKeranjang);
             panel1.Controls.Add(btnSubmit);
+            panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1919, 1095);
@@ -207,7 +208,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(1870, 1022);
+            ClientSize = new Size(1919, 1095);
             Controls.Add(panel1);
             Name = "V_keranjangCust";
             Text = "V_keranjangCust";

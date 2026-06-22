@@ -117,13 +117,8 @@ namespace MechanicalFaRm.App.Views
                 cmbStatus.DataPropertyName = "Status";
 
                 cmbStatus.Items.Clear();
-                // Masukkan daftar pilihan statusnya
                 cmbStatus.Items.AddRange("Menunggu Verifikasi Admin", "Sudah Terverifikasi Admin");
-
-                // Percantik tampilan agar menyatu dengan tabel
                 cmbStatus.FlatStyle = FlatStyle.Flat;
-
-                // Tambahkan ke tabel Admin
                 dgvKelolaSewa.Columns.Add(cmbStatus);
             }
 
@@ -157,14 +152,11 @@ namespace MechanicalFaRm.App.Views
 
         private void dgvKelolaSewa_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            // Cek apakah yang diubah adalah kolom ComboBox Status kita
             if (e.RowIndex >= 0 && dgvKelolaSewa.Columns[e.ColumnIndex].Name == "cmbStatus")
             {
-                // Tangkap ID Pesanan dan Status Baru yang dipilih Admin
                 int idPesanan = Convert.ToInt32(dgvKelolaSewa.Rows[e.RowIndex].Cells["Id Pesanan"].Value);
                 string statusBaru = dgvKelolaSewa.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
 
-                // Eksekusi ke database
                 bool sukses = _servicesan.UpdatePesanan(idPesanan, statusBaru);
 
                 if (sukses)
@@ -190,14 +182,14 @@ namespace MechanicalFaRm.App.Views
                 int idPesanan = Convert.ToInt32(dgvKelolaSewa.Rows[e.RowIndex].Cells["Id Pesanan"].Value);
                 string statusBaru = dgvKelolaSewa.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
 
-                MessageBox.Show($"Mencoba update DB...\nID Pesanan: {idPesanan}\nStatus Baru: {statusBaru}");
+                //MessageBox.Show($"Mencoba update DB...\nID Pesanan: {idPesanan}\nStatus Baru: {statusBaru}");
 
                 bool sukses = _servicesan.UpdatePesanan(idPesanan, statusBaru);
 
                 if (sukses)
                 {
-                    MessageBox.Show("Status penyewaan berhasil diperbarui di Database!", "Sukses");
-                    RefreshData(); // Panggil fungsi refresh Anda agar tabel memuat ulang data terbaru
+                    MessageBox.Show("Status penyewaan berhasil diperbarui!", "Sukses");
+                    RefreshData(); 
                 }
                 else
                 {

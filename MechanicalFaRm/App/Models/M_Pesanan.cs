@@ -10,6 +10,11 @@
 
         public M_user? Penyewa { get; set; } =  new M_user();
 
-        public string jalan { get; set; } 
+        public string jalan { get; set; }
+        //public string username 
+        //{
+        //    get { return _username; }
+        //    set { _username = value; }
+        //}
     }
 }

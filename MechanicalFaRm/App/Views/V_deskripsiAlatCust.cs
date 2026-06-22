@@ -46,8 +46,6 @@ namespace MechanicalFaRm.App.Views
 
             foreach (var p in listProduk)
             {
-                if (p.stok <= 0)
-                    continue;
 
                 var card = CreateCard(p);
                 flp1.Controls.Add(card);

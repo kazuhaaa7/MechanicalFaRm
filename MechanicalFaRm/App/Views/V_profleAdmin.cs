@@ -145,5 +145,10 @@ namespace MechanicalFaRm.App.Views
         {
 
         }
+
+        private void lblUsername_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

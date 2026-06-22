@@ -83,7 +83,7 @@ namespace MechanicalFaRm.App.Repository
             using (var conn = dbconnect.GetConn())
             {
                 conn.Open();
-                string sql = @"SELECT k.id_keranjang, k.id_barang, k.jumlah, k.tgl_sewa, k.tgl_kembali, 
+                string sql = @"SELECT k.id_keranjang, k.id_barang, k.jumlah, k.tgl_sewa, k.tgl_kembali, k.nama_penyewa, 
                       b.nama_barang, b.harga_sewa
                FROM keranjang k
                JOIN barang b ON k.id_barang = b.id_barang"
@@ -99,7 +99,6 @@ namespace MechanicalFaRm.App.Repository
                             DateTime tglSewa = reader.GetDateTime(3);
                             DateTime tglKembali = reader.GetDateTime(4);
                             int durasi = (tglKembali - tglSewa).Days;
-                            if (durasi == 0) durasi = 3; // Minimal sewa 3 hari sesuai aturan Anda
 
                             list.Add(new M_Keranjang
                             {
@@ -108,8 +107,12 @@ namespace MechanicalFaRm.App.Repository
                                 jumlah = reader.GetInt32(2),
                                 tglSewa = tglSewa,
                                 tglKembali = tglKembali,
-                                namaBarang = reader.GetString(5),
-                                hargaSewa = (int)reader.GetInt64(6), // Sesuaikan dengan tipe data BIGINT Anda
+                                Penyewa = new M_user()
+                                {
+                                    namaPenyewa = reader.IsDBNull(5)? "Null": reader.GetString(5)
+                                },
+                                namaBarang = reader.GetString(6),
+                                hargaSewa = (int)reader.GetInt64(7), 
                                 Durasi = durasi
                             });
                         }
@@ -120,10 +123,9 @@ namespace MechanicalFaRm.App.Repository
         }
         public string GetNamaPenyewaLama(int idUser)
         {
-            using var conn = dbconnect.GetConn(); // Sesuaikan dengan helper database milikmu
+            using var conn = dbconnect.GetConn(); 
             conn.Open();
 
-            // Cari nama penyewa dari transaksi terakhir milik user ini
             string rawsql = "SELECT nama FROM public.user WHERE id_user = @id_user LIMIT 1";
 
             using var cmd = new NpgsqlCommand(rawsql, conn);
@@ -135,25 +137,13 @@ namespace MechanicalFaRm.App.Repository
 
         public string AddToKeranjang(M_Keranjang itemkeranjang)
         {
-            // 1. Validasi Tanggal (Tetap dipertahankan)
-            if (itemkeranjang.tglKembali < itemkeranjang.tglSewa)
-            {
-                MessageBox.Show("Tanggal kembali tidak boleh lebih awal dari tanggal sewa!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return "gagal";
-            }
-            else if ((itemkeranjang.tglKembali - itemkeranjang.tglSewa).Days < 2)
-            {
-                MessageBox.Show("Minimal penyewaan 3 hari!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return "gagal";
-            }
-
             try
             {
                 using (var conn = dbconnect.GetConn())
                 {
                     conn.Open();
-                    string sql = @"INSERT INTO keranjang (id_user, id_barang, jumlah, tgl_sewa, tgl_kembali) 
-                           VALUES (@id_user, @id_barang, @jumlah, @tgl_sewa, @tgl_kembali)";
+                    string sql = @"INSERT INTO keranjang (id_user, id_barang, jumlah, tgl_sewa, tgl_kembali, nama_penyewa) 
+                           VALUES (@id_user, @id_barang, @jumlah, @tgl_sewa, @tgl_kembali, @nama)";
 
                     using (var cmd = new NpgsqlCommand(sql, conn))
                     {
@@ -162,6 +152,7 @@ namespace MechanicalFaRm.App.Repository
                         cmd.Parameters.AddWithValue("@jumlah", itemkeranjang.jumlah);
                         cmd.Parameters.AddWithValue("@tgl_sewa", itemkeranjang.tglSewa);
                         cmd.Parameters.AddWithValue("@tgl_kembali", itemkeranjang.tglKembali);
+                        cmd.Parameters.AddWithValue("@nama", itemkeranjang.Penyewa.namaPenyewa);
 
                         cmd.ExecuteNonQuery();
                     }
@@ -219,7 +210,7 @@ namespace MechanicalFaRm.App.Repository
                     Durasi = Convert.ToInt32(reader.GetValue(5)),
                     total = Convert.ToInt32(reader.GetValue(6)),
                     status = reader.IsDBNull(7) ? "" : reader.GetString(7),
-                    tujuan = new M_jalan { Jalan = reader.IsDBNull(8) ? "Customer tidak input tujuan" : reader.GetString(8) },
+                    tujuan = new M_jalan { Jalan = reader.IsDBNull(8) ? "Customer belum input tujuan" : reader.GetString(8) },
                     id_pesanan = Convert.ToInt32(reader.GetValue(9)),
                     metode_pembayaran = reader.IsDBNull(10)? "Kosong" : reader.GetString(10)
                 };

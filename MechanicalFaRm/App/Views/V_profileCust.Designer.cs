@@ -73,11 +73,11 @@
             label1.FlatStyle = FlatStyle.Flat;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(947, 364);
+            label1.Location = new Point(947, 349);
             label1.Name = "label1";
-            label1.Size = new Size(471, 36);
+            label1.Size = new Size(484, 48);
             label1.TabIndex = 47;
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            label1.TextAlign = ContentAlignment.TopCenter;
             label1.Click += label1_Click_1;
             // 
             // lblNoTelp
@@ -88,9 +88,9 @@
             lblNoTelp.ForeColor = SystemColors.ActiveCaptionText;
             lblNoTelp.Location = new Point(947, 624);
             lblNoTelp.Name = "lblNoTelp";
-            lblNoTelp.Size = new Size(471, 38);
+            lblNoTelp.Size = new Size(484, 38);
             lblNoTelp.TabIndex = 46;
-            lblNoTelp.TextAlign = ContentAlignment.MiddleCenter;
+            lblNoTelp.TextAlign = ContentAlignment.TopCenter;
             // 
             // lblEmail
             // 
@@ -98,11 +98,11 @@
             lblEmail.FlatStyle = FlatStyle.Flat;
             lblEmail.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblEmail.ForeColor = SystemColors.ActiveCaptionText;
-            lblEmail.Location = new Point(947, 499);
+            lblEmail.Location = new Point(947, 487);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(471, 36);
+            lblEmail.Size = new Size(484, 52);
             lblEmail.TabIndex = 45;
-            lblEmail.TextAlign = ContentAlignment.MiddleCenter;
+            lblEmail.TextAlign = ContentAlignment.TopCenter;
             lblEmail.Click += lblEmail_Click_1;
             // 
             // lblUsername

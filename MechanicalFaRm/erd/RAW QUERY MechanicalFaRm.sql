@@ -29,6 +29,7 @@ CREATE TABLE IF NOT EXISTS keranjang (
     tgl_sewa DATE NOT NULL,
     tgl_kembali DATE NOT NULL
 );
+ALTER TABLE keranjang ADD COLUMN nama_penyewa VARCHAR(225);
 
 -- 4. Tabel Pesanan (Header transaksi)
 CREATE TABLE IF NOT EXISTS pesanan (

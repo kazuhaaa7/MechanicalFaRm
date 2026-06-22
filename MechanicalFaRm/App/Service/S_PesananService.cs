@@ -26,6 +26,27 @@ namespace MechanicalFaRm.App.Service
 
         public string  AddToKeranjang(M_Keranjang itemkeranjang)
         {
+            if (itemkeranjang.tglKembali < itemkeranjang.tglSewa)
+            {
+                MessageBox.Show("Tanggal kembali tidak boleh lebih awal dari tanggal sewa!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return "gagal";
+            }
+            else if ((itemkeranjang.tglKembali - itemkeranjang.tglSewa).Days < 2)
+            {
+                MessageBox.Show("Minimal penyewaan 3 hari!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return "gagal";
+            }
+            // 1. Validasi Tanggal (Tetap dipertahankan)
+            if (itemkeranjang.tglKembali < itemkeranjang.tglSewa)
+            {
+                MessageBox.Show("Tanggal kembali tidak boleh lebih awal dari tanggal sewa!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return "gagal";
+            }
+            else if ((itemkeranjang.tglKembali - itemkeranjang.tglSewa).Days < 2)
+            {
+                MessageBox.Show("Minimal penyewaan 3 hari!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return "gagal";
+            }
             return _repopesan.AddToKeranjang(itemkeranjang);
         }
 

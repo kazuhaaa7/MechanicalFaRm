@@ -2,7 +2,7 @@
 {
     public class M_user
     {
-        private string _username;
+        public string _username;
         private string _password;
         private string _no_telp;
         private string _email;
