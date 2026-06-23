@@ -52,11 +52,11 @@ Ikuti langkah-langkah di bawah ini untuk menjalankan aplikasi di komputer kamu.
 
 > ### 1️⃣ Klon Repositori 
 > Buka terminal atau command prompt, lalu jalankan perintah berikut:
-> #### *Melakukan git clone
+> #### * Melakukan git clone
 > ```bash 
 > git clone [link repo]
 > ```
-> #### *Masuk ke file directory - cd (nama-repo)
+> #### * Masuk ke file directory - cd (nama-repo)
 
 > ### 2️⃣ Memuat Proyek 
 > * **Memuat file solusi:** klik dua kali pada file solusi proyek:
