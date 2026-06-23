@@ -1,7 +1,7 @@
 #  🚜 Judul Proyek: MechanicalFaRm
 
-##### MechanicalFaRm merupakan suatu plaftform yang menyediakan penyewaan alat berat yang bisa dijangkau dengan skala kabupaten.
-##### Sistem ini merupakan sistem oneline berbasis website dengan menghadirkan beberapa fitur untuk customer seperti regis, login, dasboard penyewaan alat, daftar keranjang, serta histori penyewaaan
+MechanicalFaRm merupakan suatu plaftform yang menyediakan penyewaan alat berat yang bisa dijangkau dengan skala kabupaten.
+Sistem ini merupakan sistem oneline berbasis website dengan menghadirkan beberapa fitur untuk customer seperti regis, login, dasboard penyewaan alat, daftar keranjang, serta histori penyewaaan
 
 --- 
 Proyek ini menghadirkan sistem multi-role yang memisahkan hak akses antara pihak manajemen (Admin) dan pengguna akhir (Customer).
