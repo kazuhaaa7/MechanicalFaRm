@@ -62,9 +62,11 @@ Ikuti langkah-langkah di bawah ini untuk menjalankan aplikasi di komputer kamu.
 > dbconnect.cs
 > ```
 > Sesuaikan nilai di dalam file tersebut dengan kredensial PostgreSQL milikmu:
-#### | Config Key | Description |
-#### | :--- | :--- |
-#### | 🖥️ **Host/Server** | Your database host |
-#### | 📁 **Database** | Database name |
-#### | 👤 **Username** | PostgreSQL user |
-#### | 🔒 **Password** | User password |
+
+
+| Config Key | Description |
+| :--- | :--- |
+| 🖥️ **Host/Server** | Your database host |
+| 📁 **Database** | Database name |
+| 👤 **Username** | PostgreSQL user |
+| 🔒 **Password** | User password |
