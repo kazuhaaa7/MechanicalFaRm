@@ -18,7 +18,6 @@ Proyek ini menghadirkan sistem multi-role yang memisahkan hak akses antara pihak
 * 📊 **Ringkasan Penyewaan:** Melihat daftar penyewaan, dan validasi status pembayaran customer.
 * 🙋 **Daftar Customer yang pernah Loggin:** Menampilkan daftar customer yang pernah loggin.
 * 📦 **Manajemen Alat Berat (CRUD):** Menambah, dan mengubahdata stok barang, nama, harga serta deskripsi.
-
 ---
 
 ## ⚙️ Prasyarat Sistem
@@ -27,9 +26,24 @@ Sebelum menjalankan proyek ini, pastikan perangkat kamu sudah terinstal:
 * [ ] **Runtime:** .NET SDK - sesuaikan dengan kebutuhan (disarankan versi 10)
 * [ ] **Database:** PostgreSQL 
 * [ ] **IDE:** Visual Studio 
-
 ---
-  
+
+## 🐘 Mulai Penggunaan Database
+> ### 1️⃣ Memasang dan Memulai PostgreSQL
+> *Pastikan PostgreSQL sudah terpasang dan berjalan di komputer Anda.
+
+>### 2️⃣ Siapkan Database
+>  * Mebuat manual database, atau
+>  * Impor struktur database yang disediakan dalam proyek ini.
+> Masuk ke Folder:
+> ```text
+>  MechanicalFaRm/erd
+> ```
+> buka file dan salin raw sql:
+> ```text
+>  RAWQUERYMechanicalFaRm.sql
+> ```
+---
 ## 🏃‍♂️Cara Penggunaan
 
 Ikuti langkah-langkah di bawah ini untuk menjalankan aplikasi di komputer kamu.
@@ -38,14 +52,13 @@ Ikuti langkah-langkah di bawah ini untuk menjalankan aplikasi di komputer kamu.
 
 > ### 1️⃣ Klon Repositori 
 > Buka terminal atau command prompt, lalu jalankan perintah berikut:
-> #### -> Melakukan git clone
+> #### *Melakukan git clone
 > ```bash 
 > git clone [link repo]
 > ```
-> #### -> Masuk ke file directory - cd (nama-repo)
+> #### *Masuk ke file directory - cd (nama-repo)
 
 > ### 2️⃣ Memuat Proyek 
-
 > * **Memuat file solusi:** klik dua kali pada file solusi proyek:
 > ```text
 >  MechanicalFaRm.sln
@@ -53,6 +66,7 @@ Ikuti langkah-langkah di bawah ini untuk menjalankan aplikasi di komputer kamu.
 ---
 
 > ### 🔧 Konfigurasi Database
+
 > Pergi ke:
 > ``` text
 > MechanicalFaRm\App\DbHelper
@@ -62,6 +76,7 @@ Ikuti langkah-langkah di bawah ini untuk menjalankan aplikasi di komputer kamu.
 > dbconnect.cs
 > ```
 > Sesuaikan nilai di dalam file tersebut dengan kredensial PostgreSQL milikmu:
+> Perbarui nilai konfigurasi berikut sesuai dengan pengaturan PostgreSQL:
 
 
 | Config Key | Description |
@@ -72,8 +87,9 @@ Ikuti langkah-langkah di bawah ini untuk menjalankan aplikasi di komputer kamu.
 | 🔒 **Password** | password pengguna |
 ---
 
-> ###▶️ Jalankan Aplikasi
+> ### ▶️ Jalankan Aplikasi
 > #### 1️⃣ Mulai aplikasi atau debugging file solusi
 > Tekan F5 atau klik tombol **Start▶️** pada visual studio
+
 > #### 2️⃣ Kamu sudah siap! 🎉
 >  aplikasi akan menjalankan program dengan kesesuain database yang sudah dikonfigurasi
