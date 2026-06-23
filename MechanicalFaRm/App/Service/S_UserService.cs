@@ -7,7 +7,7 @@ using System.Text;
 
 namespace MechanicalFaRm.App.Service
 {
-    public class S_UserService
+    public class S_UserService : S_IUserService
     {
         private R_UserRepository _userRepository = new R_UserRepository();
 
@@ -26,6 +26,7 @@ namespace MechanicalFaRm.App.Service
             return _userRepository.GetUserByEmail(email);
         }
 
+        //logic
         public M_user? Login(string username, string password)
         {
             var user = _userRepository.GetByUsername(username);
@@ -39,6 +40,7 @@ namespace MechanicalFaRm.App.Service
             return user;
         }
 
+        //logic
         public bool Register(string username, string password, string no_telp, string email)
         {
             //---VALUDASI USERNAME
@@ -89,6 +91,8 @@ namespace MechanicalFaRm.App.Service
             });
             return true;
         }
+        
+        //logic
         public bool UpdateUser(M_user user) 
         {
             int id=  SE_userSession.id_user;
@@ -136,7 +140,6 @@ namespace MechanicalFaRm.App.Service
             _userRepository.UpdateUser(datalama);
             return true;
         }
-        public void Delete(M_user user) { }
         public List<M_user> GetAllCust() 
         {
         return _userRepository.GetAllCust();

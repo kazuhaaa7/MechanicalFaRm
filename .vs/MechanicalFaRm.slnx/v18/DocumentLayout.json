@@ -19,7 +19,7 @@
       "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\views\\v_profilecust.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|c:\\users\\advan\\source\\repos\\mechanicalfarm\\mechanicalfarm\\app\\views\\v_tambahdeskripsi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\mechanicalfarm\\app\\views\\v_tambahdeskripsi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\views\\v_tambahdeskripsi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -83,7 +83,7 @@
       "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\views\\uc_pembayaran.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|c:\\users\\advan\\source\\repos\\mechanicalfarm\\mechanicalfarm\\app\\views\\v_profleadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\mechanicalfarm\\app\\views\\v_profleadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5D8CA649-03BD-5520-238C-E7867025FA38}|MechanicalFaRm\\MechanicalFaRm.csproj|solutionrelative:mechanicalfarm\\app\\views\\v_profleadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -359,8 +359,7 @@
               "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_tambahDeskripsi.cs [Design]",
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_tambahDeskripsi.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-22T23:22:21.876Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-06-22T23:22:21.876Z"
             },
             {
               "$type": "Document",
@@ -371,8 +370,7 @@
               "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_profileCust.cs [Design]",
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_profileCust.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T02:25:11.383Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-06-14T02:25:11.383Z"
             },
             {
               "$type": "Document",
@@ -383,8 +381,7 @@
               "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_riwayatPenyewaanCust.cs [Design]",
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_riwayatPenyewaanCust.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-21T02:08:49.726Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-06-21T02:08:49.726Z"
             },
             {
               "$type": "Document",
@@ -396,8 +393,7 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_profileCust.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T06:22:05.273Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-15T06:22:05.273Z"
             },
             {
               "$type": "Document",
@@ -407,7 +403,7 @@
               "RelativeDocumentMoniker": "MechanicalFaRm\\App\\Controllers\\C_loginAuthController.cs",
               "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Controllers\\C_loginAuthController.cs",
               "RelativeToolTip": "MechanicalFaRm\\App\\Controllers\\C_loginAuthController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-15T17:09:26.789Z",
               "EditorCaption": ""
@@ -421,8 +417,7 @@
               "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_riwayatPenyewaanAdmin.cs [Design]",
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_riwayatPenyewaanAdmin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-21T01:58:17.798Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-06-21T01:58:17.798Z"
             },
             {
               "$type": "Document",
@@ -433,8 +428,7 @@
               "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_popupBarang.cs [Design]",
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_popupBarang.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-18T06:57:48.944Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-06-18T06:57:48.944Z"
             },
             {
               "$type": "Document",
@@ -445,8 +439,7 @@
               "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_pembayaran.cs [Design]",
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_pembayaran.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-18T15:24:01.398Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-06-18T15:24:01.398Z"
             },
             {
               "$type": "Document",
@@ -457,8 +450,7 @@
               "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_keranjangCust.cs [Design]",
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_keranjangCust.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-20T18:07:49.833Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-06-20T18:07:49.833Z"
             },
             {
               "$type": "Document",
@@ -469,8 +461,7 @@
               "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_deskripsiAlatCust.cs [Design]",
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_deskripsiAlatCust.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-19T02:19:12.595Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-06-19T02:19:12.595Z"
             },
             {
               "$type": "Document",
@@ -481,8 +472,7 @@
               "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_deskripsiAlat.cs [Design]",
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_deskripsiAlat.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T19:20:57.387Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-06-15T19:20:57.387Z"
             },
             {
               "$type": "Document",
@@ -493,8 +483,7 @@
               "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_mainForm.cs [Design]",
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_mainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-09T19:01:10.739Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-06-09T19:01:10.739Z"
             },
             {
               "$type": "Document",
@@ -506,8 +495,7 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Service\\S_PesananService.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAYAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-19T19:17:10.996Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-19T19:17:10.996Z"
             },
             {
               "$type": "Document",
@@ -519,8 +507,7 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_profileCust.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T06:05:54.765Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-15T06:05:54.765Z"
             },
             {
               "$type": "Document",
@@ -531,8 +518,7 @@
               "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_login.cs [Design]",
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_login.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-21T22:43:35.884Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-06-21T22:43:35.884Z"
             },
             {
               "$type": "Document",
@@ -543,8 +529,7 @@
               "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_kelolaAkunAdmin.cs [Design]",
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_kelolaAkunAdmin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T02:23:06.22Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-06-14T02:23:06.22Z"
             },
             {
               "$type": "Document",
@@ -555,8 +540,7 @@
               "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_kelolaAlatAdmin.cs [Design]",
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_kelolaAlatAdmin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T02:23:45.687Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-06-14T02:23:45.687Z"
             },
             {
               "$type": "Document",
@@ -567,8 +551,7 @@
               "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_editProfile.cs [Design]",
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_editProfile.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T15:35:01.936Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-06-13T15:35:01.936Z"
             },
             {
               "$type": "Document",
@@ -579,8 +562,7 @@
               "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_dashboardCust.cs [Design]",
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_dashboardCust.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T14:19:46.228Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-06-15T14:19:46.228Z"
             },
             {
               "$type": "Document",
@@ -591,8 +573,7 @@
               "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\UC_Pembayaran.cs [Design]",
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\UC_Pembayaran.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-18T17:11:05.563Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-06-18T17:11:05.563Z"
             },
             {
               "$type": "Document",
@@ -603,8 +584,7 @@
               "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_profleAdmin.cs [Design]",
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_profleAdmin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-18T07:25:20.742Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-06-18T07:25:20.742Z"
             },
             {
               "$type": "Document",
@@ -640,8 +620,7 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\UC_Pembayaran.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAAwCkAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-21T22:59:33.935Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-21T22:59:33.935Z"
             },
             {
               "$type": "Document",
@@ -677,8 +656,7 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_dashboardCust.cs",
               "ViewState": "AgIAAI8AAAAAAAAAAAAcwJ0AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T05:53:20.372Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-13T05:53:20.372Z"
             },
             {
               "$type": "Document",
@@ -690,8 +668,7 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_deskripsiAlatCust.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAcwC8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-19T02:23:02.179Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-19T02:23:02.179Z"
             },
             {
               "$type": "Document",
@@ -703,8 +680,7 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_popupBarang.cs",
               "ViewState": "AgIAAIAAAAAAAAAAAAAswJ4AAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T02:04:18.67Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-13T02:04:18.67Z"
             },
             {
               "$type": "Document",
@@ -776,8 +752,7 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_riwayatPenyewaanCust.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAhwBAAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T18:37:10.785Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-15T18:37:10.785Z"
             },
             {
               "$type": "Document",
@@ -825,8 +800,7 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_riwayatPenyewaanCust.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAANYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-21T05:22:20.133Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-21T05:22:20.133Z"
             },
             {
               "$type": "Document",
@@ -862,8 +836,7 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_riwayatPenyewaanAdmin.cs",
               "ViewState": "AgIAAGwAAAAAAAAAAAApwHcAAABjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-19T19:31:50.821Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-19T19:31:50.821Z"
             },
             {
               "$type": "Document",
@@ -935,8 +908,7 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_pembayaran.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAAwBgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-18T15:18:57.787Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-18T15:18:57.787Z"
             },
             {
               "$type": "Document",
@@ -948,8 +920,7 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_deskripsiAlat.cs",
               "ViewState": "AgIAAGIAAAAAAAAAAAAIwHoAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T06:33:51.405Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-15T06:33:51.405Z"
             },
             {
               "$type": "Document",
@@ -973,8 +944,7 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_login.cs",
               "ViewState": "AgIAAEsAAAAAAAAAAAAAAFEAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T17:08:48.869Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-15T17:08:48.869Z"
             },
             {
               "$type": "Document",
@@ -1046,8 +1016,7 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_deskripsiAlat.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T19:20:38.287Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-15T19:20:38.287Z"
             },
             {
               "$type": "Document",
@@ -1059,8 +1028,7 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_tambahDeskripsi.cs",
               "ViewState": "AgIAAJQAAAAAAAAAAAAwwKMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T07:13:52.427Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-15T07:13:52.427Z"
             },
             {
               "$type": "Document",
@@ -1095,8 +1063,7 @@
               "ToolTip": "C:\\Users\\ADVAN\\source\\repos\\MechanicalFaRm\\MechanicalFaRm\\App\\Views\\V_kelolaAlatAdmin.resx",
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_kelolaAlatAdmin.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2026-06-20T03:27:55.214Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-20T03:27:55.214Z"
             },
             {
               "$type": "Document",
@@ -1144,8 +1111,7 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_deskripsiAlatCust.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-19T07:19:40.659Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-19T07:19:40.659Z"
             },
             {
               "$type": "Document",
@@ -1157,8 +1123,7 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\UC_Pembayaran.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-18T22:50:24.408Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-18T22:50:24.408Z"
             },
             {
               "$type": "Document",
@@ -1170,8 +1135,7 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_pembayaran.Designer.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAAwBYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-18T15:22:07.386Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-18T15:22:07.386Z"
             },
             {
               "$type": "Document",
@@ -1183,8 +1147,7 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_popupBarang.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAP0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-18T06:54:31.713Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-18T06:54:31.713Z"
             },
             {
               "$type": "Document",
@@ -1196,8 +1159,7 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_dashboardCust.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-18T06:56:07.876Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-18T06:56:07.876Z"
             },
             {
               "$type": "Document",
@@ -1209,8 +1171,7 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_keranjangCust.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-18T06:55:45.349Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-18T06:55:45.349Z"
             },
             {
               "$type": "Document",
@@ -1222,8 +1183,7 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_profleAdmin.Designer.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAYwBcAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T14:38:41.957Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-13T14:38:41.957Z"
             },
             {
               "$type": "Document",
@@ -1246,8 +1206,7 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\V_kelolaAlatAdmin.Designer.cs",
               "ViewState": "AgIAAMwAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T19:19:13.535Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-15T19:19:13.535Z"
             },
             {
               "$type": "Document",
@@ -1295,8 +1254,7 @@
               "RelativeToolTip": "MechanicalFaRm\\App\\Views\\v_mainForm.Designer.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAQwCwAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T15:07:19.66Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-07T15:07:19.66Z"
             },
             {
               "$type": "Document",

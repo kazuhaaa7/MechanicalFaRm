@@ -14,7 +14,6 @@ namespace MechanicalFaRm.App.Service
         public M_user? Login(string username, string password);
         bool Register(string username, string password, string no_telp, string email);
         bool UpdateUser(M_user user);
-        void Delete(M_user user);
         List<M_user> GetAllCust();
     }
 }

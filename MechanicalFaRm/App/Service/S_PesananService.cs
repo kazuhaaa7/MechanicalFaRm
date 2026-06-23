@@ -23,7 +23,7 @@ namespace MechanicalFaRm.App.Service
         }
         
       
-
+        //logic
         public string  AddToKeranjang(M_Keranjang itemkeranjang)
         {
             if (itemkeranjang.tglKembali < itemkeranjang.tglSewa)
@@ -50,6 +50,7 @@ namespace MechanicalFaRm.App.Service
             return _repopesan.AddToKeranjang(itemkeranjang);
         }
 
+        //logic
         public string SubmitCheckout(int idUser, string alamat, string metodePembayaran, List<M_Keranjang> keranjang)
         {
 
@@ -70,151 +71,10 @@ namespace MechanicalFaRm.App.Service
         {
             return _repopesan.GetNamaPenyewaLama(idUser);
         }
-        public int GetIdPesananTerbaru(int idUser)
-        {
-            using var conn = dbconnect.GetConn();
-            conn.Open();
-            string sql = "SELECT id_pesanan FROM pesanan WHERE id_user = @id_user ORDER BY id_pesanan DESC LIMIT 1;";
-            using var cmd = new NpgsqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@id_user", idUser);
-
-            object res = cmd.ExecuteScalar();
-            return res != null ? Convert.ToInt32(res) : 0;
-        }
-
-        public List<M_Pesanan> GetPesananBelumBayar(int idUser)
-        {
-            List<M_Pesanan> listData = new List<M_Pesanan>();
-
-            // Gunakan blok using agar koneksi otomatis tertutup jika terjadi error
-            using (var conn = dbconnect.GetConn())
-            {
-                conn.Open();
-
-                // 1. Ambil data induk pesanan
-                string sqlInduk = @"SELECT p.id_pesanan, u.nama, p.""totalBayar"", p.status 
-                            FROM pesanan p 
-                            JOIN public.user u ON p.id_user = u.id_user 
-                            WHERE p.id_user = @id_user AND p.status = 'Menunggu Verifikasi Admin' 
-                            ORDER BY p.id_pesanan DESC";
-
-                using (var cmd = new NpgsqlCommand(sqlInduk, conn))
-                {
-                    cmd.Parameters.AddWithValue("@id_user", idUser);
-
-                    // Menggunakan using pada reader agar langsung bersih setelah loop selesai
-                    using (var reader = cmd.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            M_user userObjek = new M_user();
-                            userObjek.namaPenyewa = reader.GetString(1);
-                            listData.Add(new M_Pesanan
-                            {
-                                id_pesanan = reader.GetInt32(0),
-                                Penyewa = userObjek,
-                                total = reader.GetInt32(2),   
-                                status = reader.GetString(3)
-                            });
-                        }
-                    } 
-                }
-
-                
-                foreach (var pesanan in listData)
-                {
-                    string sqlAnak = @"SELECT b.nama_barang, dp.jumlah 
-                               FROM detail_pesanan dp 
-                               JOIN barang b ON dp.id_barang = b.id_barang 
-                               WHERE dp.id_pesanan = @id_pesanan";
-
-                    using (var cmdAnak = new NpgsqlCommand(sqlAnak, conn))
-                    {
-                        cmdAnak.Parameters.AddWithValue("@id_pesanan", pesanan.id_pesanan);
-
-                        using (var readerAnak = cmdAnak.ExecuteReader())
-                        {
-                            while (readerAnak.Read())
-                            {
-         
-                                pesanan.detailBarang.Add(new M_DetailPesanan
-                                {
-                                    namaBarang = readerAnak.GetString(0),
-                                    jumlah = readerAnak.GetInt32(1)
-                                });
-                            }
-                        } 
-                    }
-                }
-            } 
-
-            return listData;
-        }
 
         public bool UpdatePesanan(int idPesanan, string statusBaru)
         {
             return _repopesan.UpdatePesanan(idPesanan, statusBaru);
-        }
-
-        public M_Pesanan GetPesananById(int idPesanan)
-        {
-            M_Pesanan pesanan = null;
-
-            using (var conn = dbconnect.GetConn())
-            {
-                conn.Open();
-
-                string sqlInduk = @"SELECT p.id_pesanan, u.nama, p.total_bayar, p.status 
-                            FROM pesanan p 
-                            JOIN public.user u ON p.id_user = u.id_user 
-                            WHERE p.id_pesanan = @id_pesanan";
-
-                using (var cmd = new NpgsqlCommand(sqlInduk, conn))
-                {
-                    cmd.Parameters.AddWithValue("@id_pesanan", idPesanan);
-
-                    using (var reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            pesanan = new M_Pesanan
-                            {
-                                id_pesanan = reader.GetInt32(0),
-                                Penyewa = new M_user { namaPenyewa = reader.IsDBNull(1) ? "" : reader.GetString(1) },
-                                total = reader.IsDBNull(2) ? 0 : reader.GetDecimal(2),
-                                status = reader.IsDBNull(3) ? "" : reader.GetString(3),
-                                detailBarang = new List<M_DetailPesanan>()
-                            };
-                        }
-                    }
-                }
-
-                if (pesanan != null)
-                {
-                    string sqlAnak = @"SELECT b.nama_barang, dp.jumlah 
-                               FROM detail_pesanan dp 
-                               JOIN barang b ON dp.id_barang = b.id_barang 
-                               WHERE dp.id_pesanan = @id_pesanan";
-
-                    using (var cmdAnak = new NpgsqlCommand(sqlAnak, conn))
-                    {
-                        cmdAnak.Parameters.AddWithValue("@id_pesanan", idPesanan);
-
-                        using (var readerAnak = cmdAnak.ExecuteReader())
-                        {
-                            while (readerAnak.Read())
-                            {
-                                pesanan.detailBarang.Add(new M_DetailPesanan
-                                {
-                                    namaBarang = readerAnak.IsDBNull(0) ? "" : readerAnak.GetString(0),
-                                    jumlah = readerAnak.GetInt32(1)
-                                });
-                            }
-                        }
-                    }
-                }
-            }
-            return pesanan;
         }
 
         public List<M_DetailPesanan> GetAllPesananByUser(int idUser)

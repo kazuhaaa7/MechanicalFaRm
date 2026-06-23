@@ -1,0 +1,3 @@
+problem .net c#:
+promt ke cmd
+taskkill /f /im MechanicalFarm.exe

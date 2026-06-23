@@ -38,7 +38,7 @@ namespace MechanicalFaRm.App.Controllers
                 new V_dashboardCust().Show();
             }
             return true;
-        }
+        } 
 
         public void Logout(Form currentForm)
         {
