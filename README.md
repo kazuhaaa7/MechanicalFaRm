@@ -81,10 +81,10 @@ Ikuti langkah-langkah di bawah ini untuk menjalankan aplikasi di komputer kamu.
 
 | Config Key | Description |
 | :--- | :--- |
-| 🖥️ **Host/Server** | host database miliki anda |
-| 📁 **Database** | nama Database |
-| 👤 **Username** | pengguna PostgreSQL |
-| 🔒 **Password** | password pengguna |
+| 🖥️ **Host/Server** | Host Database Milik Anda |
+| 📁 **Database** | Nama Database |
+| 👤 **Username** | Pengguna PostgreSQL |
+| 🔒 **Password** | Password Pengguna |
 ---
 
 > ### ▶️ Jalankan Aplikasi
