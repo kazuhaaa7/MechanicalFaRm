@@ -36,7 +36,7 @@ Ikuti langkah-langkah di bawah ini untuk menjalankan aplikasi di komputer kamu.
 
 > 💡 **Penting:** Pastikan semua prasyarat di atas sudah terpenuhi sebelum masuk ke langkah pertama.
 
-> ### 1️⃣ Clone Repositori 
+> ### 1️⃣ Klon Repositori 
 > Buka terminal atau command prompt, lalu jalankan perintah berikut:
 > #### -> Melakukan git clone
 > ```bash 
@@ -66,7 +66,14 @@ Ikuti langkah-langkah di bawah ini untuk menjalankan aplikasi di komputer kamu.
 
 | Config Key | Description |
 | :--- | :--- |
-| 🖥️ **Host/Server** | Your database host |
-| 📁 **Database** | Database name |
-| 👤 **Username** | PostgreSQL user |
-| 🔒 **Password** | User password |
+| 🖥️ **Host/Server** | host database miliki anda |
+| 📁 **Database** | nama Database |
+| 👤 **Username** | pengguna PostgreSQL |
+| 🔒 **Password** | password pengguna |
+---
+
+> ###▶️ Jalankan Aplikasi
+> #### 1️⃣ Mulai aplikasi atau debugging file solusi
+> Tekan F5 atau klik tombol **Start▶️** pada visual studio
+> #### 2️⃣ Kamu sudah siap! 🎉
+>  aplikasi akan menjalankan program dengan kesesuain database yang sudah dikonfigurasi
