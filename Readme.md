@@ -1,4 +1,4 @@
-#  🚜 Judul Project: MechanicalFaRm
+#  🚜 Judul Proyek: MechanicalFaRm
 
 ### MechanicalFaRm merupakan suatu plaftform yang menyediakan penyewaan alat berat yang bisa dijangkau dengan skala kabupaten.
 ### Sistem ini merupakan sistem oneline berbasis website dengan menghadirkan beberapa fitur untuk customer seperti regis, login, dasboard penyewaan alat, daftar keranjang, serta histori penyewaaan
@@ -36,10 +36,35 @@ Ikuti langkah-langkah di bawah ini untuk menjalankan aplikasi di komputer kamu.
 
 > 💡 **Penting:** Pastikan semua prasyarat di atas sudah terpenuhi sebelum masuk ke langkah pertama.
 
-### 1️⃣ Clone Repositori 
-Buka terminal atau command prompt, lalu jalankan perintah berikut:
-#### 1.) melakukan git clone
-```bash 
-git clone [link repo]
-```
-#### 2.) cd (nama-repo)
+> ### 1️⃣ Clone Repositori 
+> Buka terminal atau command prompt, lalu jalankan perintah berikut:
+> #### -> Melakukan git clone
+> ```bash 
+> git clone [link repo]
+> ```
+> #### -> Masuk ke file directory - cd (nama-repo)
+
+> ### 2️⃣ Memuat Proyek 
+
+> * **Memuat file solusi:** klik dua kali pada file solusi proyek:
+> ```text
+>  MechanicalFaRm.sln
+> ```
+---
+
+> ### 🔧 Konfigurasi Database
+> Pergi ke:
+> ``` text
+> MechanicalFaRm\App\DbHelper
+>  ```
+> dan buka file:
+> ``` text
+> dbconnect.cs
+> ```
+> Sesuaikan nilai di dalam file tersebut dengan kredensial PostgreSQL milikmu:
+| Config Key | Description |
+| :--- | :--- |
+| 🖥️ **Host/Server** | Your database host |
+| 📁 **Database** | Database name |
+| 👤 **Username** | PostgreSQL user |
+| 🔒 **Password** | User password |
