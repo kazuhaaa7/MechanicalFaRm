@@ -30,10 +30,10 @@ Sebelum menjalankan proyek ini, pastikan perangkat kamu sudah terinstal:
 
 ## 🐘 Mulai Penggunaan Database
 > ### 1️⃣ Memasang dan Memulai PostgreSQL
-> *Pastikan PostgreSQL sudah terpasang dan berjalan di komputer Anda.
+> * Pastikan PostgreSQL sudah terpasang dan berjalan di komputer Anda.
 
 >### 2️⃣ Siapkan Database
->  * Mebuat manual database, atau
+>  * Membuat manual database, atau
 >  * Impor struktur database yang disediakan dalam proyek ini.
 > Masuk ke Folder:
 > ```text
