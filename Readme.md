@@ -39,5 +39,7 @@ Ikuti langkah-langkah di bawah ini untuk menjalankan aplikasi di komputer kamu.
 ### 1️⃣ Clone Repositori 
 Buka terminal atau command prompt, lalu jalankan perintah berikut:
 #### 1.) melakukan git clone
-##### ```bash git clone [link repo]
+```bash 
+git clone [link repo]
+```
 #### 2.) cd (nama-repo)
