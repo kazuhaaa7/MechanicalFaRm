@@ -8,16 +8,16 @@ Proyek ini menghadirkan sistem multi-role yang memisahkan hak akses antara pihak
 ### 👤 Fitur Customer
 * 🖥️ **Dashboard Alat Berat:** Menampilkan alat berat yang tersedia dengan stok < 0, deskripsi singkat, stok, nama serta harga.
 * 🛒 **Keranjang & Checkout:** Manajemen item penyewaan alat (bisa menghapus alat yang pernah masuk keranjang) dan kalkulasi total penyewaan otomatis.
-* 📜 **Riwayat Penyewaan:** Memaantau status (Menunggu diverifikasi admin dan Sudah diverifikasi admin) penyewaan setelah transaksi.  
-* ⚙️ **Manajemen Profile:** Mengubah data diri: username, nomer telepon, email.
-* 🛍️ **Pembayaran:** Menampilkan daftar alat yang disewa, harga tiap alat, durasi penyewaa, serta kolom pengisian alamat tujuan.
-* 📝 **Deskripsi Alat:** Menampilkan chard detail alat yang berisi stok(tanpa ada perkondisian < 0), nama alat, harga, dan deskripsi. 
+* 📜 **Riwayat Penyewaan:** Memantau status (Menunggu diverifikasi admin dan Sudah diverifikasi admin) penyewaan setelah transaksi.  
+* ⚙️ **Manajemen Profile:** Mengubah data diri: username, nomor telepon, email.
+* 🛍️ **Pembayaran:** Menampilkan daftar alat yang disewa, harga tiap alat, durasi penyewaan, serta kolom pengisian alamat tujuan.
+* 📝 **Deskripsi Alat:** Menampilkan chart detail alat yang berisi stok(tanpa ada perkondisian < 0), nama alat, harga, dan deskripsi. 
 
 
 ### 🔐 Fitur Admin
 * 📊 **Ringkasan Penyewaan:** Melihat daftar penyewaan, dan validasi status pembayaran customer.
-* 🙋 **Daftar Customer yang pernah Loggin:** Menampilkan daftar customer yang pernah loggin.
-* 📦 **Manajemen Alat Berat (CRUD):** Menambah, dan mengubahdata stok barang, nama, harga serta deskripsi.
+* 🙋 **Daftar Customer yang pernah Login:** Menampilkan daftar customer yang pernah login.
+* 📦 **Manajemen Alat Berat (CRUD):** Menambah, dan mengubah data stok barang, nama, harga serta deskripsi.
 ---
 
 ## ⚙️ Prasyarat Sistem
